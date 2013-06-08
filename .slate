@@ -22,10 +22,10 @@ bind k:ctrl;cmd  push up    bar-resize:screenSizeY/2
 bind j:ctrl;cmd  push down  bar-resize:screenSizeY/2
 
 # Nudge Bindings
-bind l:shift;alt nudge +10% +0
-bind h:shift;alt nudge -10% +0
-bind k:shift;alt nudge +0   -10%
-bind j:shift;alt nudge +0   +10%
+bind l:shift;alt nudge +5% +0
+bind h:shift;alt nudge -5% +0
+bind k:shift;alt nudge +0   -5%
+bind j:shift;alt nudge +0   +5%
 
 # Focus Bindings
 bind right:cmd    focus right
