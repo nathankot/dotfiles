@@ -47,6 +47,10 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'closetag.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "rcyrus/snipmate-snippets-rubymotion"
 """""
 
 filetype on
