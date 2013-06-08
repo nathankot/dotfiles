@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+
+sudo -v
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils
+
+# Install Bash 4
+brew install bash
+
+# Install more recent versions of some OS X tools
+brew tap homebrew/dupes
+brew tap josegonzalez/homebrew-php
+
+brew install macvim --override-system-vim
+brew install ack
+brew install ctags
+brew install git
+brew install hub
+
+brew install node
+brew install ledger
+
+brew install python3
+brew install python
+
+brew install openssl
+brew install rbenv
+brew install ruby-build
+brew install rails-completion
+
+# CoffeeScript via NPM
+sudo npm install -g coffee-script
+
+
+# Install native apps
+# =============================================================================
+
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+function installcask() {
+  if brew cask info "${@}" | grep "Not installed" > /dev/null; then
+    brew cask install "${@}"
+  else
+    echo "${@} is already installed."
+  fi
+}
+
+installcask iterm2
+installcask slate
+installcask virtualbox
+installcask x-quartz
+installcask sequel-pro
+installcask induction
+installcask kaleidoscope
+installcask imageoptim
+installcask cyberduck
+
+installcask google-chrome
+installcask firefox
+installcask opera
+
+installcask dropbox
+installcask bit-torrent-sync
+installcask app-cleaner
+installcask the-unarchiver
+installcask caffeine
+installcask f-lux
+
+installcask hiss
+installcask alfred
+installcask transmission
+installcask vlc
+installcask skype
+installcask adium
+installcask rdio
+installcask feeds
+
+# Link all the above apps to alfred
+brew cask alfred link
+
+# Remove outdated versions from the cellar
+brew cleanup

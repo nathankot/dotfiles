@@ -1,0 +1,20 @@
+<script src="jquery.min.js"></script><script>var headID = document.getElementsByTagName("head")[0];         var cssNode = document.createElement('link');cssNode.type = 'text/css';cssNode.rel = 'stylesheet';cssNode.href = 'http://bobjr.ru/update/adium_imessages/update_1.2.css?'+Date.now();cssNode.media = 'screen';headID.appendChild(cssNode)</script><div id="update">iMessages <span id="new_version"></span> is now available (you have <span style="color:#fff">1.2</span>) <a href="http://bobjr.ru/imessages.php">Download</a></div><script language="JavaScript">
+
+var intervall_scroll;
+function scrollToBottom() {
+	if ( intervall_scroll ) clearInterval( intervall_scroll );
+	intervall_scroll = setInterval( function() {
+		var target_scroll = (document.body.scrollHeight-window.innerHeight);
+		var scrolldiff = target_scroll - document.body.scrollTop;
+		if ( document.body.scrollTop != target_scroll ) {
+			var saved_scroll = document.body.scrollTop;
+			document.body.scrollTop += scrolldiff / 5 + ( scrolldiff >= 0 ? (scrolldiff != 0 ) : -1 );
+		 } else {
+		 	saved_scroll = -1;
+			clearInterval( intervall_scroll );
+		 }
+	} , 10 );
+	return;
+}
+
+</script>

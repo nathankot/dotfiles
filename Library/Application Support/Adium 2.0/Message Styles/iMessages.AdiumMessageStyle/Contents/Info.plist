@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowTextColors</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>iMessages v1.2</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.adiumx.iMessages</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>2.0</string>
+	<key>CFBundleName</key>
+	<string>iMessages</string>
+	<key>CFBundlePackageType</key>
+	<string>AdIM</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.2</string>
+	<key>DefaultFontFamily</key>
+	<string>Helvetica</string>
+	<key>DefaultFontSize</key>
+	<integer>12</integer>
+	<key>DefaultVariant</key>
+	<string>Lemon vs Purple</string>
+	<key>DisableCombineConsecutive</key>
+	<false/>
+	<key>DisableCustomBackground</key>
+	<false/>
+	<key>MessageViewVersion</key>
+	<integer>4</integer>
+	<key>ShowsUserIcons</key>
+	<true/>
+</dict>
+</plist>

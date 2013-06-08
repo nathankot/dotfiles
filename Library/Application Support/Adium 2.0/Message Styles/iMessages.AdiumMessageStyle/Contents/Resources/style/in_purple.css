@@ -1,0 +1,3 @@
+.in #body_mask{
+   	-webkit-border-image: url(../gfx/in_purple.png) 10 11 12 17 repeat;
+}

@@ -1,0 +1,41 @@
+[core]
+	excludesfile = ~/.gitignore
+	quotepath = false
+	autocrlf = false
+	preloadindex = true
+	editor = /usr/bin/vim
+
+[user]
+	name = Nathan Kot
+	email = me@nathankot.com
+
+[credential]
+	helper = osxkeychain
+
+[push]
+	default = simple
+
+[color]
+	ui = auto
+
+[branch]
+	autosetupmerge = true
+
+[alias]
+	accept-ours = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --ours -- $files; git add -u $files; }; f"
+	accept-theirs = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --theirs -- $files; git add -u $files; }; f"
+	todo = grep --heading --break --ignore-case -e '@todo *'
+	
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope

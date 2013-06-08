@@ -1,0 +1,45 @@
+# Ignore sensitive information
+.bash_private
+
+# Source File Sym #
+###################
+.source
+
+# Compiled source #
+###################
+*.exe
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+
+# VIM swap files #
+##################
+*~
+*.sw[^f]
+.netrwhist
+
+# Git generated files #
+#######################
+*.orig
+
+# Sublime Text Workspace #
+##########################
+*.sublime-workspace
+.tags
+.tags_sorted_by_file
+
+# Rails #
+#########
+.rails_generators~
