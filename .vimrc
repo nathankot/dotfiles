@@ -26,7 +26,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
 Bundle 'janx/vim-rubytest'
 Bundle 'airblade/vim-gitgutter'
@@ -52,6 +51,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "rcyrus/snipmate-snippets-rubymotion"
+Bundle "Valloric/YouCompleteMe"
 """""
 
 filetype on
