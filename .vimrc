@@ -263,6 +263,13 @@ let g:easytags_resolve_links = 1
 
 " Command-T
 let g:CommandTMaxHeight = 25
+let g:CommandTMatchWindowReverse = 1
+
+" You Complete me
+let g:ycm_complete_in_comments = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+
 
 " Syntastic
 let g:syntastic_check_on_open=1
