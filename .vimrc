@@ -102,7 +102,7 @@ set viminfo^=%  "
 set tags=./tags;
 
 set shell=bash\ -i
-set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip
+set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~
 
 set modelines=0
 set encoding=utf8
@@ -272,6 +272,7 @@ let g:easytags_updatetime_warn = 0
 " Command-T
 let g:CommandTMaxHeight = 25
 let g:CommandTMatchWindowReverse = 1
+let g:CommandTAlwaysShowDotFiles = 1
 
 " You Complete me
 let g:ycm_complete_in_comments = 1
