@@ -268,7 +268,7 @@ let g:easytags_resolve_links = 1
 let g:easytags_dynamic_files = 1
 let g:easytags_updatetime_min = 4000
 let g:easytags_autorecurse = 1
-let g:easytags_suppress_ctags_warning = 1
+let g:easytags_updatetime_warn = 0
 
 " Command-T
 let g:CommandTMaxHeight = 25
