@@ -1,5 +1,6 @@
 # Ignore sensitive information
 .bash_private
+.repl_history
 
 # Source File Sym #
 ###################
