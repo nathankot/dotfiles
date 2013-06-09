@@ -34,7 +34,6 @@ Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-easytags'
 Bundle 'mileszs/ack.vim'
 Bundle 'L9'
-Bundle 'FuzzyFinder'
 Bundle 'Rename'
 Bundle 'DetectIndent'
 Bundle 'ZenCoding.vim'
@@ -283,10 +282,6 @@ let g:user_zen_expandabbr_key = '<leader>z'
 let g:user_zen_removetag_key = '<leader>Z'
 let g:use_zen_complete_tag = 1
 
-" FuzzyFinder
-let g:fuf_keyOpenVsplit = '<c-v>'
-let g:fuf_keyOpenTabpage = '<c-t>'
-
 " DetectIndent
 autocmd BufReadPost * :DetectIndent
 let g:detectindent_preferred_expandtab = 1
@@ -312,9 +307,6 @@ nnoremap <leader>a :Ack
 " Command-T
 nnoremap <silent> <c-p> :CommandT<CR>
 nnoremap <silent> <c-f> :CommandTTag<CR>
-
-" FuzzyFinder
-map <c-f> :FufTag<cr>
 
 " Tagbar
 nmap <leader>r :TagbarOpenAutoClose<cr>
