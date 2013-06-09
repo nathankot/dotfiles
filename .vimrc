@@ -99,7 +99,7 @@ set viminfo^=%  "
 " Look for tag def in a "tags" file in the dir of the current file, then for
 " that same file in every folder above the folder of the current file, until the
 " root.
-set tags=./tags;/
+set tags=./tags;
 
 set shell=bash\ -i
 set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip
@@ -265,9 +265,8 @@ let NERDTreeShowHidden = 1
 " EasyTags
 let g:easytags_auto_highlight = 0
 let g:easytags_resolve_links = 1
-let g:easytags_dynamic_files = 1
+let g:easytags_dynamic_files = 2
 let g:easytags_updatetime_min = 4000
-let g:easytags_autorecurse = 1
 let g:easytags_updatetime_warn = 0
 
 " Command-T
