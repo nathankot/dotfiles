@@ -16,7 +16,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'CSApprox'
 Bundle 'tpope/vim-sensible'
-Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
@@ -51,7 +50,10 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "rcyrus/snipmate-snippets-rubymotion"
+
+" requires compilation
 Bundle "Valloric/YouCompleteMe"
+Bundle 'git://git.wincent.com/command-t.git'
 """""
 
 filetype on
@@ -260,14 +262,8 @@ let NERDTreeShowHidden = 1
 let g:easytags_auto_highlight = 0
 let g:easytags_resolve_links = 1
 
-" CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_max_height = 25
-let g:ctrlp_follow_symlinks = 1
-" Use VCS index inside git repository [DISABLED - Need to follow symlinks]
-" let g:ctrlp_user_cmd = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
+" Command-T
+let g:CommandTMaxHeight = 25
 
 " Syntastic
 let g:syntastic_check_on_open=1
@@ -299,16 +295,23 @@ let g:detectindent_preferred_indent = 2
 
 """ Key Mappings
 
-nnoremap ; :
-nnoremap <leader>a :Ack 
+
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
+nnoremap ; :
 map <c-a> :AV<cr>
 nnoremap ' `
 nnoremap ` '
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Ack
+nnoremap <leader>a :Ack 
+
+" Command-T
+nnoremap <silent> <c-p> :CommandT<CR>
+nnoremap <silent> <c-f> :CommandTTag<CR>
 
 " FuzzyFinder
 map <c-f> :FufTag<cr>
