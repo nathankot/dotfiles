@@ -26,11 +26,16 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null
 done
 
+
 # System-Specific Settings
 source ~/.bash_specific
 
 # Private Settings
 source ~/.bash_private
+
+# Functions
+source ~/.functions
+
 
 ### Theming
 
@@ -59,17 +64,6 @@ fi
 
 ###
 
-
-### Aliases and functions
-
-alias vim_session="vim -S /usr/local/var/tmp/session.vim"
-alias fixairplay="sudo kill `ps -ax | grep 'coreaudiod' | grep 'sbin' |awk '{print $1}'`"
-
-function new_rails {
-  rails new $1 -m https://raw.github.com/nathankot/rails-composer/master/composer.rb
-}
-
-###
 
 
 

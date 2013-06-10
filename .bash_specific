@@ -4,21 +4,15 @@ HOST_NAME=`uname -n`
 
 if [ $HOST_NAME == 'server.local' ]; then
 	export CURRENT_WORKSTATION = 'home'
-	DEV_ROOT='~/development'
-	SITE_ROOT="${DEV_ROOT}/sites"
 fi;
 
 if [ $HOST_NAME == 'air.local' ]; then
 	export CURRENT_WORKSTATION = 'mobile'
-	DEV_ROOT='~/development'
-	SITE_ROOT=$DEV_ROOT
 fi;
 
 # This is the Grabone work settings.
 if [ `hostname` == 'nathank.admin.grabonestore.ie' ]; then
 	export CURRENT_WORKSTATION = 'work'
-	DEV_ROOT='~/Development'
-	SITE_ROOT=$DEV_ROOT
 
 	PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
 

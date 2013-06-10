@@ -51,7 +51,6 @@ function installcask() {
 
 installcask iterm2
 installcask slate
-installcask x-quartz
 installcask sequel-pro
 installcask kaleidoscope
 
@@ -76,3 +75,4 @@ brew cask alfred link
 
 # Remove outdated versions from the cellar
 brew cleanup
+
