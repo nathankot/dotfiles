@@ -11,7 +11,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-
 """"" Bundles
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
@@ -89,8 +88,8 @@ set clipboard=unnamed
 
 " Use relative line numbers
 if exists("&relativenumber")
- set relativenumber
- au BufReadPost * set relativenumber
+  set relativenumber
+  au BufReadPost * set relativenumber
 endif
 
 " Return to last edit position when opening files (You want this!)
@@ -114,6 +113,9 @@ set tags=./tags;/
 
 set shell=bash\ -i
 set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~
+
+" Saving for crontabs won't work if vim tries to back the files up
+set backupskip=/tmp/*,/private/tmp/*
 
 set modelines=0
 set encoding=utf8
@@ -165,7 +167,7 @@ set gdefault
 set scroll=20
 
 " Don't draw split lines
-set fillchars+=vert:\
+set fillchars+=vert:\ 
 
 
 """ Theming
@@ -320,7 +322,6 @@ let g:detectindent_preferred_indent = 2
 
 
 """ Key Mappings
-
 
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
