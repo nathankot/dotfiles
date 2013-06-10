@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  
- 
+
+
 "                          Nathan Kot's VimRC :)                            "
 
 
@@ -14,20 +14,16 @@ call vundle#rc()
 
 """"" Bundles
 Bundle 'gmarik/vundle'
-Bundle 'CSApprox'
 Bundle 'tpope/vim-sensible'
+
+" Theme
+Bundle 'CSApprox'
+Bundle 'flazz/vim-colorschemes'
+
+" Core
 Bundle 'scrooloose/nerdtree'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-bundler'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'wavded/vim-stylus'
-Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'majutsushi/tagbar'
-Bundle 'janx/vim-rubytest'
-Bundle 'airblade/vim-gitgutter'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'xolox/vim-misc'
@@ -36,23 +32,37 @@ Bundle 'mileszs/ack.vim'
 Bundle 'L9'
 Bundle 'Rename'
 Bundle 'DetectIndent'
-Bundle 'ZenCoding.vim'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'StanAngeloff/php.vim'
-Bundle 'othree/html5.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'closetag.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "rcyrus/snipmate-snippets-rubymotion"
 
-" requires compilation
+" Requires compilation
 Bundle "Valloric/YouCompleteMe"
 Bundle 'git://git.wincent.com/command-t.git'
+
+" VCS
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
+
+" Ruby
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-bundler'
+Bundle 'janx/vim-rubytest'
+
+" PHP
+Bundle 'StanAngeloff/php.vim'
+
+" HTML
+Bundle 'othree/html5.vim'
+Bundle 'ZenCoding.vim'
+
+" Preprocessors
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'wavded/vim-stylus'
+
 """""
 
 filetype on
@@ -60,14 +70,15 @@ filetype plugin indent on
 filetype plugin on
 syntax on
 
+set noswapfile
+
 " Centralize backups, swapfiles and undo history
+"set directory=~/.vim/swaps
 set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
 if exists("&undodir")
   set undodir=~/.vim/undo
 endif
 
-set noswapfile
 
 " Save on focus lost
 au FocusLost * silent! wa
@@ -99,7 +110,7 @@ set viminfo^=%  "
 " Look for tag def in a "tags" file in the dir of the current file, then for
 " that same file in every folder above the folder of the current file, until the
 " root.
-set tags=./tags;
+set tags=./tags;/
 
 set shell=bash\ -i
 set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~
@@ -112,7 +123,7 @@ set showmatch
 set matchtime=3
 set history=1000
 set cursorline
-set ignorecase 
+set ignorecase
 set smartcase
 set title
 set noerrorbells
@@ -154,7 +165,7 @@ set gdefault
 set scroll=20
 
 " Don't draw split lines
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 
 
 """ Theming
@@ -205,7 +216,7 @@ hi leadbar ctermbg=54
 hi gitmessage ctermbg=53
 hi pastemessage ctermbg=24
 
-"filename 
+"filename
 hi User1 ctermfg=NONE ctermbg=235
 "line number
 hi User2 ctermfg=NONE ctermbg=236
@@ -215,7 +226,7 @@ hi User3 ctermfg=239 ctermbg=236
 hi User4 ctermfg=249 ctermbg=236
 "file type
 hi User5 ctermfg=NONE ctermbg=54
-"modified flag 
+"modified flag
 hi User6 ctermfg=NONE ctermbg=88
 
 set statusline=
@@ -237,7 +248,7 @@ set statusline+=%{&paste?'\ paste\ ':''}
 
 "fugitive message
 set statusline+=%#gitmessage#
-set statusline+=\ %{fugitive#statusline()}\ 
+set statusline+=\ %{fugitive#statusline()}\
 
 "syntastic message
 set statusline+=%#warningmsg#
@@ -275,8 +286,12 @@ let g:CommandTMatchWindowReverse = 1
 let g:CommandTAlwaysShowDotFiles = 1
 
 " You Complete me
+if $CURRENT_WORKSTATION != 'work'
+  " Too many tags at work
+  let g:ycm_collect_identifiers_from_tags_files = 1
+endif
+
 let g:ycm_complete_in_comments = 1
-let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_register_as_syntastic_checker = 0
 let g:ycm_min_num_of_chars_for_completion = 4
 
@@ -294,7 +309,7 @@ let g:rubytest_cmd_example = "rspec --drb %p -l %c"
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 " ZenCoding
-let g:user_zen_expandabbr_key = '<leader>z' 
+let g:user_zen_expandabbr_key = '<leader>z'
 let g:user_zen_removetag_key = '<leader>Z'
 let g:use_zen_complete_tag = 1
 
@@ -318,7 +333,7 @@ inoremap <Up> <C-o>gk
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Ack
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack
 
 " Command-T
 nnoremap <silent> <c-p> :CommandT<CR>
