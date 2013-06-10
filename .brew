@@ -16,7 +16,6 @@ brew install bash
 
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
-brew tap josegonzalez/homebrew-php
 
 brew install macvim --override-system-vim
 brew install ack
@@ -26,9 +25,6 @@ brew install hub
 
 brew install node
 brew install ledger
-
-brew install python3
-brew install python
 
 brew install openssl
 brew install rbenv
@@ -55,7 +51,6 @@ function installcask() {
 
 installcask iterm2
 installcask slate
-installcask virtualbox
 installcask x-quartz
 installcask sequel-pro
 installcask kaleidoscope
