@@ -69,11 +69,10 @@ filetype plugin indent on
 filetype plugin on
 syntax on
 
+" Don't use backups or swaps
 set noswapfile
+set nobackup
 
-" Centralize backups, swapfiles and undo history
-"set directory=~/.vim/swaps
-set backupdir=~/.vim/backups
 if exists("&undodir")
   set undodir=~/.vim/undo
 endif
@@ -113,9 +112,6 @@ set tags=./tags;/
 
 set shell=bash\ -i
 set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~
-
-" Saving for crontabs won't work if vim tries to back the files up
-set backupskip=/tmp/*,/private/tmp/*
 
 set modelines=0
 set encoding=utf8
