@@ -11,7 +11,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-""""" Bundles
+""""" Bundles =================================================================
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
 
@@ -62,7 +62,8 @@ Bundle 'ZenCoding.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'wavded/vim-stylus'
 
-"""""
+
+""""" Core Settings ===========================================================
 
 filetype on
 filetype plugin indent on
@@ -110,10 +111,45 @@ set viminfo^=%  "
 " root.
 set tags=./tags;/
 
-set shell=bash\ -i
-set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~
+" Respect modelines
+set modeline
+set modelines=4
 
-set modelines=0
+" Enable per-directory .vimrc files and disable unsafe commands in them
+set exrc
+set secure
+
+" Some stuff to get the mouse going in term
+set mouse=a
+set ttymouse=xterm2
+
+" Reload files changed outside of vim
+set autoread
+
+" Tabs
+set shiftwidth=2
+set tabstop=4
+set softtabstop=2
+set smarttab
+set expandtab
+set lbr "LineBreak
+set tw=119 "TextWidth
+set ai "Auto indent
+set si "Smart indent
+set nowrap "Don't wrap lines
+
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
+" Folding
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+" I find scrolling a bit less helps with maintaining context.
+set scroll=20
+
+" And the rest
 set encoding=utf8
 set number
 set hlsearch
@@ -129,46 +165,21 @@ set visualbell
 set t_vb=
 set lazyredraw
 set ttyfast
-
-" Some stuff to get the mouse going in term
-set mouse=a
-set ttymouse=xterm2
-
-" Enable per-directory .vimrc files and disable unsafe commands in them
-set exrc
-set secure
-
-" Tabs
-set shiftwidth=2
-set tabstop=4
-set softtabstop=2
-set smarttab
-set expandtab
-set lbr "LineBreak
-set tw=119 "TextWidth
-set ai "Auto indent
-set si "Smart indent
-set nowrap "Don't wrap lines
-
-""" These settings taken from
-" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 set hidden
 set ruler
 set scrolloff=3
 set undofile
 set gdefault
-"""
+set shell=bash\ -i
+set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~
 
-" I find scrolling a bit less helps with maintaining context.
-set scroll=20
+
+"""" Theming ==================================================================
+
+color jellybeans
 
 " Don't draw split lines
 set fillchars+=vert:\ 
-
-
-""" Theming
-
-color jellybeans
 
 hi Normal         cterm=NONE   ctermbg=232
 hi NonText        cterm=NONE   ctermbg=232
@@ -201,8 +212,6 @@ hi TabLine ctermfg=240 ctermbg=233
 hi Title ctermfg=NONE ctermbg=NONE
 " This one is reversed,,, a bit weird
 hi TabLineSel ctermfg=53 ctermbg=250
-
-"""
 
 
 """ The Status Line
@@ -252,10 +261,8 @@ set statusline+=\ %{fugitive#statusline()}\
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 
-"""
 
-
-""" Package Settings
+"""" Package Settings =========================================================
 
 " Buffergator
 let g:buffergator_suppress_keymaps=1
@@ -317,7 +324,7 @@ let g:detectindent_preferred_expandtab = 1
 let g:detectindent_preferred_indent = 2
 
 
-""" Key Mappings
+"""" Key Mappings =============================================================
 
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
@@ -375,10 +382,8 @@ map <leader>[ :tabp<cr>
 nmap <space> /
 nmap <c-space> ?
 
-"""
 
-
-""" Helper Functions
+"""" Helper Functions =========================================================
 
 function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
@@ -447,5 +452,3 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
-
-"""
