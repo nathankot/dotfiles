@@ -36,7 +36,6 @@ source ~/.bash_private
 # Functions
 source ~/.functions
 
-
 ### Theming
 
 # Enable shell coloring
@@ -51,6 +50,9 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # Ruby Environment
 export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)";
+
+# Fix for some compiled gems
+export CC=gcc
 
 ###
 
