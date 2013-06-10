@@ -21,9 +21,6 @@
 [color]
 	ui = auto
 
-[branch]
-	autosetuprebase = true
-
 [diff]
 	tool = Kaleidoscope
 
