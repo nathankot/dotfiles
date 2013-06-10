@@ -58,10 +58,7 @@ installcask slate
 installcask virtualbox
 installcask x-quartz
 installcask sequel-pro
-installcask induction
 installcask kaleidoscope
-installcask imageoptim
-installcask cyberduck
 
 installcask google-chrome
 installcask firefox
@@ -76,12 +73,8 @@ installcask f-lux
 
 installcask hiss
 installcask alfred
-installcask transmission
-installcask vlc
 installcask skype
-installcask adium
 installcask rdio
-installcask feeds
 
 # Link all the above apps to alfred
 brew cask alfred link
