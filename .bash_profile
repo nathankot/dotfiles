@@ -52,7 +52,7 @@ export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)";
 
 # Fix for some compiled gems
-export CC=gcc
+# export CC=gcc
 
 ###
 
