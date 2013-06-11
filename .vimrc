@@ -143,6 +143,7 @@ set nowrap "Don't wrap lines
 
 " Display tabs and trailing spaces visually
 set list
+set listchars=""
 set listchars+=tab:»\ " Note the literal space
 set listchars+=trail:·
 
