@@ -74,6 +74,9 @@ syntax on
 set noswapfile
 set nobackup
 
+" Turn off YCM preview window
+set completeopt-=preview
+
 if exists("&undodir")
   set undodir=~/.vim/undo
 endif
@@ -299,6 +302,7 @@ endif
 let g:ycm_complete_in_comments = 1
 let g:ycm_register_as_syntastic_checker = 0
 let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_add_preview_to_completeopt = 0
 
 " Syntastic
 let g:syntastic_check_on_open=1
