@@ -142,7 +142,9 @@ set si "Smart indent
 set nowrap "Don't wrap lines
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
+set list
+set listchars+=tab:»\ " Note the literal space
+set listchars+=trail:·
 
 " Folding
 set foldmethod=indent   "fold based on indent
