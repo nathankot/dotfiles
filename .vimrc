@@ -216,6 +216,9 @@ hi Title ctermfg=NONE ctermbg=NONE
 " This one is reversed,,, a bit weird
 hi TabLineSel ctermfg=53 ctermbg=250
 
+" Command P Selection
+hi PmenuSel ctermbg=235
+
 
 """ The Status Line
 
@@ -293,6 +296,8 @@ let g:CommandTMaxHeight = 25
 let g:CommandTMatchWindowReverse = 1
 let g:CommandTAlwaysShowDotFiles = 1
 let g:CommandTCancelMap = ['<ESC>', '<C-c>']
+let g:CommandTSelectNextMap = ['<C-j>', '<ESC>OB']
+let g:CommandTSelectPrevMap = ['<C-k>', '<ESC>OA']
 
 " You Complete me
 let g:ycm_collect_identifiers_from_tags_files = 1
