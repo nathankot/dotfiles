@@ -21,7 +21,7 @@ brew install macvim --override-system-vim
 brew install ack
 brew install ctags
 brew install git
-brew install hub
+brew install https://raw.github.com/jingweno/gh/master/homebrew/gh.rb
 
 brew install node
 brew install ledger
