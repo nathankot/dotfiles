@@ -217,7 +217,7 @@ hi Title ctermfg=NONE ctermbg=NONE
 hi TabLineSel ctermfg=53 ctermbg=250
 
 " Command P Selection
-hi PmenuSel ctermbg=235
+hi PmenuSel ctermfg=255 ctermbg=235
 
 
 """ The Status Line
