@@ -17,7 +17,7 @@ if [ `hostname` == 'nathank.admin.grabonestore.ie' ]; then
 	PATH="$(brew --prefix nathankot/php/php53)/bin:$PATH"
 
 	alias assets_mount='sudo mount 10.50.0.52:/ssdpool/grabone/nathank /srv/repslave/grabone/nathank'
-	alias symfony_refresh='./symfony mu --snapshot && ./symfony cc && assets_remount'
+	alias symfony_refresh='./symfony mu --snapshot && ./symfony cc && assets_mount'
 	alias clear_image_cache="sudo rm -rfv /var/www/localcache/grabone/image/*"
 	alias ssh="( ssh-add -l > /dev/null || ssh-add ) && ssh"
 
