@@ -341,13 +341,17 @@ let g:detectindent_preferred_indent = 2
 
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
+
+" Common typos
 nnoremap ; :
-map <c-a> :AV<cr>
 nnoremap ' `
 nnoremap ` '
+nnoremap K <nop>
+nnoremap Q <nop>
+
+" 'Soft' Movement (<super-[hjkl]> should be mapped to arrow keys by keymapper)
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Ack
 nnoremap <leader>a :Ack
@@ -383,7 +387,7 @@ map <C-l> <C-W>l
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 
-" Toggle/RevealFileIn NerdTree Sidebar
+" Toggle/RevealFile in NerdTree Sidebar
 map <C-k><C-b> :NERDTreeToggle<CR>
 map <C-k><C-r> :NERDTreeFind<CR>
 
