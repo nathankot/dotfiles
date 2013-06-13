@@ -392,7 +392,7 @@ map <leader>[ :tabp<cr>
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
-map <S-space> ?
+map <C-space> ?
 
 
 """" Helper Functions =========================================================
