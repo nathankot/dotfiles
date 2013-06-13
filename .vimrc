@@ -220,7 +220,8 @@ hi Title ctermfg=NONE ctermbg=NONE
 " This one is reversed,,, a bit weird
 hi TabLineSel ctermfg=53 ctermbg=250
 
-" Command P Selection
+" The Popup Menu
+hi Pmenu ctermfg=246 ctermbg=234
 hi PmenuSel ctermfg=255 ctermbg=235
 
 
