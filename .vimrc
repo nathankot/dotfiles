@@ -21,6 +21,7 @@ Bundle 'flazz/vim-colorschemes'
 
 " Core
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
