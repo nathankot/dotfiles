@@ -9,6 +9,9 @@
 	name = Nathan Kot
 	email = me@nathankot.com
 
+[github]
+	user = nathankot
+
 [credential]
 	helper = osxkeychain
 
