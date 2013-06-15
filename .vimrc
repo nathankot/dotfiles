@@ -332,11 +332,6 @@ let g:user_zen_expandabbr_key = '<leader>z'
 let g:user_zen_removetag_key = '<leader>Z'
 let g:use_zen_complete_tag = 1
 
-" DetectIndent
-autocmd BufReadPost * :DetectIndent
-let g:detectindent_preferred_expandtab = 1
-let g:detectindent_preferred_indent = 2
-
 
 """" Key Mappings =============================================================
 
