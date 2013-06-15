@@ -36,6 +36,7 @@ source ~/.bash_private
 # Functions
 source ~/.functions
 
+
 ### Theming
 
 # Enable shell coloring
@@ -57,11 +58,16 @@ eval "$(rbenv init -)";
 ###
 
 
-### Git
+### Bash Completion
 
-# Git Autocompletion
+# Git completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
+fi
+
+# Pass completion
+if [ -f $(brew --prefix)/etc/bash_completion.d/password-store ]; then
+  source $(brew --prefix)/etc/bash_completion.d/password-store
 fi
 
 ###
