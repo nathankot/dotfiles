@@ -17,6 +17,7 @@ brew install bash
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 
+brew install gpg
 brew install pass
 brew install macvim --override-system-vim
 brew install ack
