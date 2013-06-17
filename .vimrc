@@ -182,6 +182,7 @@ set tabpagemax=50
 
 
 " And the rest
+set smartindent
 set encoding=utf8
 set number
 set hlsearch
