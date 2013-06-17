@@ -109,10 +109,8 @@ endif
 " Remember info about open buffers on close
 set viminfo^=%  "
 
-" Look for tag def in a "tags" file in the dir of the current file, then for
-" that same file in every folder above the folder of the current file, until the
-" root.
-set tags=./tags;/
+" Only use one tagfile - from the project root
+set tags=.tags;
 
 " Respect modelines
 set modeline
@@ -376,6 +374,9 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <C-j> <C-w>j
 map <C-k> <C-w>k
+
+" Refresh tags
+nmap <F8> :!ctags .<CR>
 
 " Toggle/RevealFile in NerdTree Sidebar
 map <C-k><C-b> :NERDTreeToggle<CR>
