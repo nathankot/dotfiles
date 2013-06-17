@@ -164,6 +164,9 @@ set scroll=20
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
 
+" Don't save other session stuff
+set sessionoptions=buffers
+
 " Ported from Vim-Sensible
 set autoindent
 set backspace=indent,eol,start
