@@ -310,7 +310,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=233
 
 " GitGutter ( This can be real slow )
-let g:gitgutter_eager = 0
+" let g:gitgutter_eager = 0
 
 " NERDTree
 let NERDTreeShowHidden = 1
