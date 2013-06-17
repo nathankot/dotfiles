@@ -37,12 +37,11 @@ ehthumbs.db
 
 # Ctag Files #
 ##############
-tags
+.tags
 
 # Sublime Text Workspace #
 ##########################
 *.sublime-workspace
-.tags
 .tags_sorted_by_file
 
 # Vim Settings #
