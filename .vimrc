@@ -29,7 +29,8 @@ Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'L9' " Fuzzy Finder dependency
+" FuzzyFinder dependency
+Bundle 'L9'
 Bundle 'FuzzyFinder'
 
 " Requires compilation
