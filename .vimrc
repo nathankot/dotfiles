@@ -78,6 +78,8 @@ if exists("&undodir")
   set undodir=~/.vim/undo
 endif
 
+" Interactive shell
+set shellcmdflag=-ic
 
 " Save on focus lost
 au FocusLost * silent! wa
