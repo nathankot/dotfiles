@@ -241,11 +241,10 @@ hi link SyntasticErrorLine ErrorMsg
 hi link SyntasticWarningLine WarningMsg
 
 " Tab bar
-hi TabLineFill ctermfg=240 ctermbg=233
 hi TabLine ctermfg=240 ctermbg=233
+hi TabLineFill ctermfg=240 ctermbg=233
+hi TabLineSel ctermfg=250 ctermbg=53
 hi Title ctermfg=NONE ctermbg=NONE
-" This one is reversed,,, a bit weird
-hi TabLineSel ctermfg=53 ctermbg=250
 
 " The Popup Menu
 hi Pmenu ctermfg=246 ctermbg=234
