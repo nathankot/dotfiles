@@ -13,7 +13,6 @@ call vundle#rc()
 
 """"" Bundles =================================================================
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-sensible'
 
 " Theme
 Bundle 'CSApprox'
@@ -25,15 +24,12 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'mileszs/ack.vim'
-Bundle 'L9'
-Bundle 'Rename'
-Bundle 'DetectIndent'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'L9' " Fuzzy Finder dependency
 Bundle 'FuzzyFinder'
 
 " Requires compilation
@@ -106,6 +102,15 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
   set t_Co=256
 endif
 
+if &encoding ==# 'latin1' && has('gui_running')
+  set encoding=utf-8
+endif
+
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^linux'
+  set t_Co=16
+endi
+
 " Remember info about open buffers on close
 set viminfo^=%  "
 
@@ -153,6 +158,26 @@ set nofoldenable        "dont fold by default
 " I find scrolling a bit less helps with maintaining context.
 set scroll=20
 
+" Make Y consistent with C and D.  See :help Y.
+nnoremap Y y$
+
+" Ported from Vim-Sensible
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set nrformats-=octal
+set shiftround
+set ttimeout
+set ttimeoutlen=50
+set incsearch
+set laststatus=2
+set showcmd
+set wildmenu
+set display+=lastline
+set fileformats+=mac
+set tabpagemax=50
+
+
 " And the rest
 set encoding=utf8
 set number
@@ -172,6 +197,7 @@ set ttyfast
 set hidden
 set ruler
 set scrolloff=3
+set sidescrolloff=12
 set undofile
 set gdefault
 set shell=bash\ -i
