@@ -36,6 +36,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'FuzzyFinder'
 
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
@@ -354,7 +355,9 @@ nnoremap <leader>a :Ack
 
 " Command-T
 nnoremap <silent> <c-p> :CommandT<CR>
-nnoremap <silent> <c-f> :CommandTTag<CR>
+
+" Fuzzy Finder
+nnoremap <silent> <c-f> :FufTag<CR>
 
 " Tagbar
 nmap <leader>r :TagbarOpenAutoClose<cr>
