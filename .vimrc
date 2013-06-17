@@ -302,9 +302,6 @@ set statusline+=%{SyntasticStatuslineFlag()}
 
 """" Package Settings =========================================================
 
-" Buffergator
-let g:buffergator_suppress_keymaps=1
-
 " Indent Guide
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
@@ -395,9 +392,6 @@ nmap <leader>s :mksession! /usr/local/var/tmp/session.vim<cr>
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gc :Gcommit<cr>
-
-" Buffergator
-nmap <leader>b :BuffergatorToggle<cr>
 
 " Smart way to move between windows
 map <C-h> <C-W>h
