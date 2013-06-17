@@ -2,3 +2,4 @@
 --type-add=css=.styl
 --type-set=coffee=.coffee
 --type-set=stylus=.styl
+--smart-case
