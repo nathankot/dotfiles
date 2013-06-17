@@ -26,8 +26,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
+"Bundle 'xolox/vim-misc'
+"Bundle 'xolox/vim-easytags'
 Bundle 'mileszs/ack.vim'
 Bundle 'L9'
 Bundle 'Rename'
@@ -291,11 +291,11 @@ let g:gitgutter_eager = 0
 let NERDTreeShowHidden = 1
 
 " EasyTags
-let g:easytags_auto_highlight = 0
-let g:easytags_resolve_links = 1
-let g:easytags_dynamic_files = 1
-let g:easytags_updatetime_min = 4000
-let g:easytags_updatetime_warn = 0
+"let g:easytags_auto_highlight = 0
+"let g:easytags_resolve_links = 1
+"let g:easytags_dynamic_files = 1
+"let g:easytags_updatetime_min = 4000
+"let g:easytags_updatetime_warn = 0
 
 " Command-T
 let g:CommandTMaxHeight = 25
