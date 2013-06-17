@@ -1,49 +1,56 @@
 [core]
-	excludesfile = ~/.gitignore
-	quotepath = false
-	autocrlf = false
-	preloadindex = true
-	editor = /usr/bin/vim
+  excludesfile = ~/.gitignore
+  quotepath = false
+  autocrlf = false
+  preloadindex = true
+  editor = /usr/bin/vim
 
 [user]
-	name = Nathan Kot
-	email = me@nathankot.com
+  name = Nathan Kot
+  email = me@nathankot.com
 
 [github]
-	user = nathankot
+  user = nathankot
 
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
+
+[log]
+  abbrevCommit = true
+  decorate = true
+
+[format]
+  pretty = oneline
 
 [push]
-	default = simple
+  default = simple
 
 [pull]
-	rebase = true
+  rebase = true
 
 [color]
-	ui = auto
+  ui = auto
 
 [diff]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
 
 [difftool]
-	prompt = false
+  prompt = false
 
 [mergetool]
-	prompt = false
+  prompt = false
 
 [merge]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
 
 [alias]
-	accept-ours = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --ours -- $files; git add -u $files; }; f"
-	accept-theirs = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --theirs -- $files; git add -u $files; }; f"
-	todo = grep --heading --break --ignore-case -e '@todo *'
+  accept-ours = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --ours -- $files; git add -u $files; }; f"
+  accept-theirs = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --theirs -- $files; git add -u $files; }; f"
+  todo = grep --heading --break --ignore-case -e '@todo *'
 
 [difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
