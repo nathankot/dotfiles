@@ -1,1 +1,2 @@
-[ -n "$PS1" ] && source ~/.bash_profile
+# This is usually loaded by Vim
+source ~/.bash/paths.sh
