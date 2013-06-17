@@ -41,8 +41,10 @@ fi
 
 ### Ruby Environment
 
-export RBENV_ROOT=/usr/local/var/rbenv
-eval "$(rbenv init -)";
+if [ -d /usr/local/var/rbenv ]; then
+  export RBENV_ROOT=/usr/local/var/rbenv
+  eval "$(rbenv init -)";
+fi
 
 # Fix for some compiled gems
 # export CC=gcc
