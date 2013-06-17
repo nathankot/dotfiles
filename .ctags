@@ -1,4 +1,4 @@
 -R
 --fields=+l
-
 -f .tags
+--links=yes
