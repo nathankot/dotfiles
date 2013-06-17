@@ -352,6 +352,10 @@ let g:user_zen_expandabbr_key = '<leader>z'
 let g:user_zen_removetag_key = '<leader>Z'
 let g:use_zen_complete_tag = 1
 
+" Delimit mate
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+
 
 """" Key Mappings =============================================================
 
