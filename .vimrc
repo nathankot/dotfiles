@@ -82,6 +82,9 @@ endif
 au FocusLost * silent! wa
 set autowrite
 
+" Interactive shell
+set shellcmdflag=-ic
+
 " Try to use OSX clipboard
 set clipboard=unnamed
 
