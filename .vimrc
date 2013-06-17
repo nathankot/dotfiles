@@ -15,8 +15,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Theme
-Bundle 'CSApprox'
-Bundle 'flazz/vim-colorschemes'
+" Bundle 'flazz/vim-colorschemes'
+Bundle 'nanotech/jellybeans.vim'
 
 " Core
 Bundle 'scrooloose/nerdtree'
