@@ -46,6 +46,7 @@ ehthumbs.db
 # Vim Settings #
 ################
 .vimrc
+Session.vim
 !./.vimrc
 
 # Rails #
