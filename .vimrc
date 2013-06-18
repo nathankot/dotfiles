@@ -295,7 +295,7 @@ set statusline+=%{&paste?'\ paste\ ':''}
 
 "fugitive message
 set statusline+=%#gitmessage#
-set statusline+=\ %{fugitive#statusline()}\
+set statusline+=\ %{fugitive#statusline()}\    " Fugitive
 
 "syntastic message
 set statusline+=%#warningmsg#
