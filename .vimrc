@@ -30,7 +30,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
-Bundle 'tpope/vim-commentary'
+Bundle 'tComment'
 " FuzzyFinder dependency
 Bundle 'L9'
 Bundle 'FuzzyFinder'
