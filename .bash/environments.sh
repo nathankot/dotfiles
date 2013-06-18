@@ -1,7 +1,7 @@
 ### Ruby Environment
 
-export RBENV_ROOT=/usr/local/var/rbenv
-if [ -d /usr/local/var/rbenv ]; then
+export RBENV_ROOT=~/.rbenv
+if [ -d ~/.rbenv ]; then
   eval "$(rbenv init -)";
 fi
 
