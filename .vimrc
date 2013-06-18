@@ -29,6 +29,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'tpope/vim-obsession'
 " FuzzyFinder dependency
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -54,6 +55,9 @@ Bundle 'StanAngeloff/php.vim'
 " HTML
 Bundle 'othree/html5.vim'
 Bundle 'ZenCoding.vim'
+
+" Markdown
+Bundle 'tpope/vim-markdown'
 
 " Preprocessors
 Bundle 'kchmck/vim-coffee-script'
@@ -163,9 +167,6 @@ set scroll=20
 
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
-
-" Don't save other session stuff
-set sessionoptions=buffers
 
 " Ported from Vim-Sensible
 set autoindent
@@ -387,9 +388,6 @@ nmap <leader>r :TagbarOpenAutoClose<cr>
 
 " Fast saving
 nmap <leader>w :w!<cr>
-
-" Fast Save Session
-nmap <leader>s :mksession! /usr/local/var/tmp/session.vim<cr>
 
 " Git status
 nmap <leader>gs :Gstatus<cr>
