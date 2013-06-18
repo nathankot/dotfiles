@@ -1,5 +1,0 @@
-gem install gem-ctags
-gem install lunchy
-gem install mailcatcher
-gem install ghi
-gem install annotate
