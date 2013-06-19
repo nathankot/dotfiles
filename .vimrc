@@ -33,9 +33,13 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'tComment'
 Bundle 'Gundo'
 Bundle 'msanders/snipmate.vim'
-" FuzzyFinder dependency
+" FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+" Snipmate and dependencies
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
 
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
