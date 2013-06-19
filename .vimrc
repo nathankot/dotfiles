@@ -32,7 +32,6 @@ Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tComment'
 Bundle 'Gundo'
-Bundle 'msanders/snipmate.vim'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
