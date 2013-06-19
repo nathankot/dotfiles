@@ -19,7 +19,6 @@ Bundle 'gmarik/vundle'
 Bundle 'nanotech/jellybeans.vim'
 
 " Core
-Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'majutsushi/tagbar'
@@ -32,6 +31,9 @@ Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tComment'
 Bundle 'Gundo'
+" NerdTree
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -417,8 +419,9 @@ map <C-k> <C-w>k
 nmap <F8> :!ctags .<CR>
 
 " Toggle/RevealFile in NerdTree Sidebar
-map <C-k><C-b> :NERDTreeToggle<CR>
+map <C-k><C-b> <plug>NERDTreeTabsToggle<CR>
 map <C-k><C-r> :NERDTreeFind<CR>
+
 
 " Useful mappings for managing tabs
 map <leader>] :tabn<cr>
