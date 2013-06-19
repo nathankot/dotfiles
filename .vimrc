@@ -421,7 +421,7 @@ map <C-k> <C-w>k
 nmap <F8> :!ctags .<CR>
 
 " Toggle/RevealFile in NerdTree Sidebar
-map <C-k><C-b> <plug>NERDTreeToggle<CR>
+map <C-k><C-b> :NERDTreeToggle<CR>
 map <C-k><C-r> :NERDTreeFind<CR>
 
 " Useful mappings for managing tabs
