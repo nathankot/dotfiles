@@ -359,6 +359,11 @@ let g:use_zen_complete_tag = 1
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 
+" Gundo
+let g:gundo_width = 45
+let g:gundo_preview_height = 30
+let g:gundo_right = 0
+
 
 """" Key Mappings =============================================================
 
@@ -395,6 +400,9 @@ nmap <leader>w :w!<cr>
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gc :Gcommit<cr>
+
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
 
 " Smart way to move between windows
 map <C-h> <C-W>h
