@@ -31,15 +31,13 @@ Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
+Bundle "SirVer/ultisnips"
 " NerdTree
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-" Snippets
-Bundle "SirVer/ultisnips"
-Bundle "honza/vim-snippets"
 
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
@@ -413,6 +411,7 @@ nnoremap <F5> :GundoToggle<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
 
 " Smart way to move between windows
 map <C-h> <C-W>h
