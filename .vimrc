@@ -409,6 +409,11 @@ nmap <leader>gc :Gcommit<cr>
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
 " Smart way to move between windows
 map <C-h> <C-W>h
 map <C-l> <C-W>l
@@ -422,7 +427,6 @@ nmap <F8> :!ctags .<CR>
 map <C-k><C-b> <plug>NERDTreeTabsToggle<CR>
 map <C-k><C-r> :NERDTreeFind<CR>
 
-
 " Useful mappings for managing tabs
 map <leader>] :tabn<cr>
 map <leader>[ :tabp<cr>
@@ -430,6 +434,17 @@ map <leader>[ :tabp<cr>
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <C-space> ?
+
+
+"""" Auto commands ============================================================
+
+autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
+autocmd BufWrite *.rb :call DeleteTrailingWS()
+autocmd BufWrite *.erb :call DeleteTrailingWS()
+
+" Snippets
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 
 
 """" Helper Functions =========================================================
@@ -441,10 +456,6 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-autocmd BufWrite *.rb :call DeleteTrailingWS()
-autocmd BufWrite *.erb :call DeleteTrailingWS()
 
 " Returns true if paste mode is enabled
 function! HasPaste()
@@ -452,4 +463,21 @@ function! HasPaste()
         return 'PASTE MODE  '
     en
     return ''
+endfunction
+
+" To expand and jump forward snippets with tab
+" @see https://github.com/Valloric/YouCompleteMe/issues/36#issuecomment-17680963
+function! g:UltiSnips_Complete()
+    call UltiSnips_ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips_JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
 endfunction
