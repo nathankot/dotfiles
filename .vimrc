@@ -35,10 +35,8 @@ Bundle 'Gundo'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-" Snipmate and dependencies
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+" Snippets
+Bundle "UltiSnips"
 Bundle "honza/vim-snippets"
 
 " Requires compilation
