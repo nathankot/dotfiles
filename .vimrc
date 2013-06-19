@@ -436,17 +436,6 @@ map <space> /
 map <C-space> ?
 
 
-"""" Auto commands ============================================================
-
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-autocmd BufWrite *.rb :call DeleteTrailingWS()
-autocmd BufWrite *.erb :call DeleteTrailingWS()
-
-" Snippets
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-
-
 """" Helper Functions =========================================================
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
@@ -481,3 +470,14 @@ function! g:UltiSnips_Complete()
     endif
     return ""
 endfunction
+
+
+"""" Auto commands ============================================================
+
+autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
+autocmd BufWrite *.rb :call DeleteTrailingWS()
+autocmd BufWrite *.erb :call DeleteTrailingWS()
+
+" Snippets
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
