@@ -19,6 +19,7 @@ Bundle 'gmarik/vundle'
 Bundle 'nanotech/jellybeans.vim'
 
 " Core
+Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'majutsushi/tagbar'
@@ -32,9 +33,6 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle "SirVer/ultisnips"
-" NerdTree
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -423,7 +421,7 @@ map <C-k> <C-w>k
 nmap <F8> :!ctags .<CR>
 
 " Toggle/RevealFile in NerdTree Sidebar
-map <C-k><C-b> <plug>NERDTreeTabsToggle<CR>
+map <C-k><C-b> <plug>NERDTreeToggle<CR>
 map <C-k><C-r> :NERDTreeFind<CR>
 
 " Useful mappings for managing tabs
@@ -433,6 +431,9 @@ map <leader>[ :tabp<cr>
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <C-space> ?
+
+" Allow 'enter' to do ycm completion
+imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 
 
 """" Helper Functions =========================================================
