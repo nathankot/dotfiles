@@ -31,6 +31,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tComment'
+Bundle 'Gundo'
 " FuzzyFinder dependency
 Bundle 'L9'
 Bundle 'FuzzyFinder'
