@@ -38,7 +38,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " Snippets
-Bundle "SirVer/UltiSnips"
+Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
 
 " Requires compilation
