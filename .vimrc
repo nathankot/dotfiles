@@ -377,6 +377,7 @@ nnoremap ' `
 nnoremap ` '
 nnoremap K <nop>
 nnoremap Q <nop>
+vnoremap <s-k> <nop>
 
 " 'Soft' Movement (<super-[hjkl]> should be mapped to arrow keys by keymapper)
 inoremap <Down> <C-o>gj
