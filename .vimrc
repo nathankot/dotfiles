@@ -23,6 +23,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'majutsushi/tagbar'
+Bundle 'Raimondi/delimitMate'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
@@ -355,6 +356,10 @@ let g:user_zen_expandabbr_key = '<leader>z'
 let g:user_zen_removetag_key = '<leader>Z'
 let g:use_zen_complete_tag = 1
 
+" Delimit mate
+let delimitMate_expand_cr = 0
+let delimitMate_expand_space = 0
+
 " Gundo
 let g:gundo_width = 45
 let g:gundo_preview_height = 30
@@ -428,7 +433,7 @@ map <space> /
 map <C-space> ?
 
 " Allow 'enter' to do ycm completion
-imap <expr> <CR> "\<c-y>"
+imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 
 
 """" Helper Functions =========================================================
