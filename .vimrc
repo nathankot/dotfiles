@@ -314,7 +314,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=233
 
 " GitGutter ( This can be real slow )
-let g:gitgutter_eager = 1
+let g:gitgutter_eager = 0
 
 " NERDTree
 let NERDTreeShowHidden = 1
@@ -332,7 +332,7 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_register_as_syntastic_checker = 0
-let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_min_num_of_chars_for_completion = 3
 let g:ycm_add_preview_to_completeopt = 0
 " Not using semantic completion
 let g:ycm_key_invoke_completion = ''
