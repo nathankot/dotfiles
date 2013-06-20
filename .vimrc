@@ -32,7 +32,8 @@ Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
-Bundle "SirVer/ultisnips"
+Bundle 'SirVer/ultisnips'
+Bundle 'kshenoy/vim-signature'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
