@@ -38,14 +38,11 @@
             },
             {
                 "name": "weather",
-                "priority": 50
+                "priority": 50,
                 "args": {
                   "units": "c",
-                  "location_query": "Auckland, New Zealand
+                  "location_query": "Auckland, New Zealand"
                 }
-            },
-            {
-                "name": "date"
             },
             {
                 "name": "date",
@@ -53,10 +50,6 @@
                     "format": "%H:%M",
                     "istime": true
                 }
-            },
-            {
-                "name": "email_imap_alert",
-                "priority": 10
             },
             {
                 "name": "hostname"
