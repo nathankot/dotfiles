@@ -38,8 +38,11 @@
                 "priority": 50
             },
             {
-                "name": "fuzzy_time",
-                "priority": 100
+                "name": "date",
+                "args": {
+                    "format": "%H:%M",
+                    "istime": true
+                }
             }
         ]
     }
