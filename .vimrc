@@ -353,8 +353,8 @@ let g:rubytest_cmd_example = "rspec --drb %p -l %c"
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 " ZenCoding
-let g:user_zen_expandabbr_key = './'
-let g:user_zen_removetag_key = '/.'
+let g:user_zen_expandabbr_key = '<c-.>/'
+let g:user_zen_removetag_key = '<c-/>.'
 let g:use_zen_complete_tag = 1
 
 " Delimit mate
