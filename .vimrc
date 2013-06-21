@@ -59,6 +59,7 @@ Bundle 'StanAngeloff/php.vim'
 " HTML
 Bundle 'othree/html5.vim'
 Bundle 'ZenCoding.vim'
+Bundle 'juvenn/mustache.vim'
 
 " Markdown
 Bundle 'tpope/vim-markdown'
