@@ -413,6 +413,10 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
 
+" Signature
+nmap <C-Down> <Plug>SIG_NextSpotByPos
+nmap <C-Up> <Plug>SIG_PrevSpotByPos
+
 " Smart way to move between windows
 map <C-h> <C-W>h
 map <C-l> <C-W>l
