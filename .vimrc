@@ -33,7 +33,6 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'SirVer/ultisnips'
-Bundle 'kshenoy/vim-signature'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-dispatch'
 " FuzzyFinder and dependencies
@@ -366,9 +365,6 @@ let g:gundo_width = 45
 let g:gundo_preview_height = 30
 let g:gundo_right = 0
 
-" Signature
-let g:SignaturePeriodicRefresh = 0
-
 
 """" Key Mappings =============================================================
 
@@ -415,10 +411,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
-
-" Signature
-nnoremap m] <Plug>SIG_NextSpotByPos
-nnoremap m[ <Plug>SIG_PrevSpotByPos
 
 " Smart way to move between windows
 noremap <C-h> <C-W>h
