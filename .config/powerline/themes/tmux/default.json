@@ -10,12 +10,11 @@
         "date": {
             "before": "⌚ "
         },
-        "email_imap_alert": {
-            "before": "✉ ",
-            "args": {
-                "username": "",
-                "password": ""
-            }
+        "weather": {
+          "args": {
+            "units": "c",
+            "location_query": "Auckland, New Zealand"
+          }
         }
     },
     "segments": {
@@ -38,11 +37,7 @@
             },
             {
                 "name": "weather",
-                "priority": 50,
-                "args": {
-                  "units": "c",
-                  "location_query": "Auckland, New Zealand"
-                }
+                "priority": 50
             },
             {
                 "name": "date",

@@ -24,9 +24,6 @@ brew install tmux
 brew install reattach-to-user-namespace
 brew install gpg
 brew install pass
-brew install macvim --override-system-vim
-brew install ack
-brew install ctags
 brew install git
 brew install https://raw.github.com/jingweno/gh/master/homebrew/gh.rb
 
@@ -34,6 +31,11 @@ source ~/.brewery/python.sh
 source ~/.brewery/ruby.sh
 source ~/.brewery/node.sh
 source ~/.brewery/apps.sh
+
+# Want to compile against user Python.
+brew install macvim --override-system-vim
+brew install ack
+brew install ctags
 
 # Remove outdated versions from the cellar
 brew cleanup
