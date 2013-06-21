@@ -52,7 +52,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-bundler'
-Bundle 'janx/vim-rubytest'
+Bundle 'skalnik/vim-vroom'
 
 " PHP
 Bundle 'StanAngeloff/php.vim'
@@ -344,9 +344,11 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_enable_signs=1
 let g:syntastic_enable_highlighting=1
 
-" RubyTest
-let g:rubytest_cmd_spec = "rspec --drb %p"
-let g:rubytest_cmd_example = "rspec --drb %p -l %c"
+" Vroom
+let g:vroom_map_keys = 0
+let g:vroom_use_colors = 0
+let g:vroom_use_dispatch = 1
+let g:vroom_spec_command = "rspec --drb"
 
 " CoffeeScript
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
@@ -411,6 +413,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
+
+" Vroom
+nnoremap <leader>t :VroomRunNearestTest<cr>
+nnoremap <leader>T :VroomRunTestFile<cr>
 
 " Smart way to move between windows
 noremap <C-h> <C-W>h

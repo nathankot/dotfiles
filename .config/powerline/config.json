@@ -3,11 +3,11 @@
 		"term_truecolor": false,
 		"dividers": {
 			"left": {
-				"hard": " ",
+				"hard": " ",
 				"soft": " "
 			},
 			"right": {
-				"hard": " ",
+				"hard": " ",
 				"soft": " "
 			}
 		},
