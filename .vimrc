@@ -44,7 +44,7 @@ Bundle 'git://git.wincent.com/command-t.git'
 
 " VCS
 Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
+Bundle 'mhinz/vim-signify'
 
 " Ruby
 Bundle 'vim-ruby/vim-ruby'
@@ -235,7 +235,7 @@ hi VertSplit ctermbg=233
 hi ErrorMsg ctermbg=88 ctermfg=255
 hi WarningMsg ctermbg=94 ctermfg=255
 
-" Git Gutter Columns
+" Gutter Columns
 highlight clear SignColumn
 
 " Color columns
@@ -315,9 +315,6 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=233
 
-" GitGutter ( This can be real slow )
-let g:gitgutter_eager = 0
-
 " NERDTree
 let NERDTreeShowHidden = 1
 
@@ -367,6 +364,9 @@ let g:gundo_width = 45
 let g:gundo_preview_height = 30
 let g:gundo_right = 0
 
+" Signature
+let g:SignaturePeriodicRefresh = 0
+
 
 """" Key Mappings =============================================================
 
@@ -395,15 +395,15 @@ nnoremap <silent> <c-p> :CommandT<CR>
 nnoremap <silent> <c-f> :FufTag<CR>
 
 " Tagbar
-nmap <leader>r :TagbarOpenAutoClose<cr>
+nnoremap <leader>r :TagbarOpenAutoClose<cr>
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " Git status
-nmap <leader>gs :Gstatus<cr>
-nmap <leader>gw :Gwrite<cr>
-nmap <leader>gc :Gcommit<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gw :Gwrite<cr>
+nnoremap <leader>gc :Gcommit<cr>
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -415,29 +415,29 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
 
 " Signature
-nmap <C-Down> <Plug>SIG_NextSpotByPos
-nmap <C-Up> <Plug>SIG_PrevSpotByPos
+nnoremap m] <Plug>SIG_NextSpotByPos
+nnoremap m[ <Plug>SIG_PrevSpotByPos
 
 " Smart way to move between windows
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-map <C-j> <C-w>j
-map <C-k> <C-w>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
 
 " Refresh tags
-nmap <F8> :!ctags .<CR>
+nnoremap <F8> :!ctags .<CR>
 
 " Toggle/RevealFile in NerdTree Sidebar
-map <C-k><C-b> :NERDTreeToggle<CR>
-map <C-k><C-r> :NERDTreeFind<CR>
+noremap <C-k><C-b> :NERDTreeToggle<CR>
+noremap <C-k><C-r> :NERDTreeFind<CR>
 
 " Useful mappings for managing tabs
-map <leader>] :tabn<cr>
-map <leader>[ :tabp<cr>
+noremap <leader>] :tabn<cr>
+noremap <leader>[ :tabp<cr>
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <C-space> ?
+noremap <space> /
+noremap <C-space> ?
 
 " Allow 'enter' to do ycm completion
 imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
