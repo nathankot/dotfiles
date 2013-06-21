@@ -35,6 +35,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'kshenoy/vim-signature'
 Bundle 'chrisbra/NrrwRgn'
+Bundle 'tpope/vim-dispatch'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
