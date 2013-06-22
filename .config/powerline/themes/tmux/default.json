@@ -14,9 +14,6 @@
                 "name": "external_ip"
             },
             {
-                "name": "system_load"
-            },
-            {
                 "name": "weather",
                 "args": {
                   "interval": 1800
