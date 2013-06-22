@@ -350,6 +350,7 @@ let g:vroom_map_keys = 0
 let g:vroom_clear_screen = 0
 let g:vroom_use_dispatch = 1
 let g:vroom_use_bundle_exec = 0
+let g:vroom_spec_command = 'rspec --drb '
 
 " CoffeeScript
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
