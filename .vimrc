@@ -96,7 +96,7 @@ set autowrite
 set shellcmdflag=-ic
 
 " Try to use OSX clipboard
-set clipboard=unnamed
+set clipboard+=unnamed
 
 " Use relative line numbers
 if exists("&relativenumber")
