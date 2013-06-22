@@ -13,6 +13,9 @@
             "temp_coldest": 10,
             "temp_hottest": 28
           }
+        },
+        "date": {
+          "before": "  "
         }
     },
     "segments": {
