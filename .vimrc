@@ -345,11 +345,10 @@ let g:syntastic_enable_signs=1
 let g:syntastic_enable_highlighting=1
 
 " Vroom
-let g:vroom_map_keys = 0
-let g:vroom_use_colors = 0
-let g:vroom_use_dispatch = 1
-let g:vroom_spec_command = "rspec --drb "
 let g:vroom_clear_screen = 0
+let g:vroom_map_keys = 0
+let g:vroom_use_colors = 1
+let g:vroom_use_dispatch = 1
 
 " CoffeeScript
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
