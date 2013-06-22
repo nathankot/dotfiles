@@ -1,5 +1,8 @@
 ### Terminal Environment
 
+# Colors
+export TERM="screen-256color"
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
