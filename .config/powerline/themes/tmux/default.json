@@ -10,8 +10,7 @@
         "weather": {
           "args": {
             "unit": "c",
-            "temp_coldest": 10,
-            "temp_hottest": 28
+            "location_query": "Auckland, New Zealand"
           }
         },
         "date": {
@@ -38,10 +37,11 @@
             },
             {
                 "name": "weather",
-                "priority": 50
+                "priority": 100
             },
             {
                 "name": "date",
+                "priority": 100,
                 "args": {
                     "format": "%H:%M",
                     "istime": true
