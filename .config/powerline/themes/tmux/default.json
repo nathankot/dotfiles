@@ -1,9 +1,6 @@
 {
     "default_module": "powerline.segments.common",
     "segment_data": {
-        "uptime": {
-            "before": "⇑  "
-        },
         "external_ip": {
             "before": "ⓦ  "
         },
@@ -14,13 +11,7 @@
     "segments": {
         "right": [
             {
-                "name": "uptime"
-            },
-            {
                 "name": "external_ip"
-            },
-            {
-                "name": "network_load"
             },
             {
                 "name": "system_load"
