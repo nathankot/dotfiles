@@ -28,7 +28,7 @@
             {
                 "name": "weather",
                 "args": {
-                  "location_query": "Auckland, New Zealand"
+                  "interval": 1800
                 }
             },
             {

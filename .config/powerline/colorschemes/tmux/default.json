@@ -1,7 +1,6 @@
 {
     "name": "Default color scheme for terminal prompts",
     "groups": {
-        "background": { "fg": "white", "bg": "gray0" },
         "background:divider": { "fg": "gray5", "bg": "gray0" },
         "session": { "fg": "black", "bg": "gray10", "attr": ["bold"] },
         "date": { "fg": "gray8", "bg": "gray2" },

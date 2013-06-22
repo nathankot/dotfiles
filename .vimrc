@@ -251,8 +251,8 @@ hi link SyntasticErrorLine ErrorMsg
 hi link SyntasticWarningLine WarningMsg
 
 " Tab bar
-hi TabLine ctermfg=240 ctermbg=233
-hi TabLineFill ctermfg=240 ctermbg=233
+hi TabLine ctermfg=240 ctermbg=232
+hi TabLineFill ctermfg=240 ctermbg=232
 hi TabLineSel ctermfg=250 ctermbg=53
 hi Title ctermfg=NONE ctermbg=NONE
 
