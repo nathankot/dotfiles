@@ -301,10 +301,6 @@ set statusline+=%=                              "seperator
 set statusline+=%#pastemessage#
 set statusline+=%{&paste?'\ paste\ ':''}
 
-"fugitive message
-set statusline+=%#gitmessage#
-set statusline+=\ %{fugitive#statusline()}\    " Fugitive
-
 "syntastic message
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
