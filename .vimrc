@@ -264,15 +264,15 @@ hi PmenuSel ctermfg=255 ctermbg=235
 
 """ The Status Line
 
-hi StatusLine   ctermfg=255 ctermbg=233 cterm=NONE
-hi StatusLineNC ctermfg=239 ctermbg=233 cterm=NONE
+hi StatusLine   ctermfg=255 ctermbg=235
+hi StatusLineNC ctermfg=255 ctermbg=233
 
 hi leadbar ctermbg=54
 hi gitmessage ctermbg=53
 hi pastemessage ctermbg=24
 
 "filename
-hi User1 ctermfg=NONE ctermbg=235
+hi User1 ctermfg=NONE ctermbg=54
 "line number
 hi User2 ctermfg=NONE ctermbg=236
 "line# seperator
@@ -280,7 +280,7 @@ hi User3 ctermfg=239 ctermbg=236
 "line count
 hi User4 ctermfg=249 ctermbg=236
 "file type
-hi User5 ctermfg=NONE ctermbg=54
+hi User5 ctermfg=NONE ctermbg=53
 "modified flag
 hi User6 ctermfg=NONE ctermbg=88
 
@@ -487,6 +487,37 @@ function! g:UltiSnips_Complete()
     return ""
 endfunction
 
+" pretty mode display - converts the one letter status notifiers to words
+function! Mode()
+    let l:mode = mode()
+
+    if     mode ==# "n"  | return "NORMAL"
+    elseif mode ==# "i"  | return "INSERT"
+    elseif mode ==# "R"  | return "REPLACE"
+    elseif mode ==# "v"  | return "VISUAL"
+    elseif mode ==# "V"  | return "V-LINE"
+    elseif mode ==# "^V" | return "V-BLOCK"
+    else                 | return l:mode
+    endif
+
+endfunc    
+
+" Change the values for User1 color preset depending on mode
+function! ModeChanged(mode)
+    if     a:mode ==# "n"  | hi User1 ctermfg=NONE ctermbg=54
+    elseif a:mode ==# "i"  | hi User1 ctermfg=NONE ctermbg=89
+    elseif a:mode ==# "r"  | hi User1 ctermfg=NONE ctermbg=54
+    else                   | hi User1 ctermfg=NONE ctermbg=54
+    endif
+   
+    " Sometimes in console the status line starts repeating so we redraw
+    " there is probably a better way to fix this
+    if !has('gui_running')
+      redraw!
+    endif
+endfunc
+
+
 
 """" Auto commands ============================================================
 
@@ -494,6 +525,10 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 autocmd BufWrite *.rb :call DeleteTrailingWS()
 autocmd BufWrite *.erb :call DeleteTrailingWS()
+
+au InsertEnter  * call ModeChanged(v:insertmode)
+au InsertChange * call ModeChanged(v:insertmode)
+au InsertLeave  * call ModeChanged(mode())
 
 " Snippets
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
