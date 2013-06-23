@@ -21,7 +21,7 @@ brew install bash
 brew tap homebrew/dupes
 
 brew install tmux
-brew install reattach-to-user-namespace
+brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 brew install gpg
 brew install pass
 brew install git
