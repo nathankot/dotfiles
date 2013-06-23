@@ -84,8 +84,6 @@ set nobackup
 " Turn off YCM preview window
 set completeopt-=preview
 
-set clipboard^=unnamed
-
 if exists("&undodir")
   set undodir=~/.vim/undo
 endif
