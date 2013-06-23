@@ -264,8 +264,8 @@ hi PmenuSel ctermfg=255 ctermbg=235
 
 """ The Status Line
 
-hi StatusLine   ctermfg=255 ctermbg=235
-hi StatusLineNC ctermfg=255 ctermbg=233
+hi StatusLine   ctermfg=255 ctermbg=233
+hi StatusLineNC ctermfg=255 ctermbg=232
 
 hi gitmessage ctermbg=53
 hi pastemessage ctermbg=24

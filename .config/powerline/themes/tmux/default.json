@@ -20,12 +20,6 @@
                 }
             },
             {
-                "name": "branch",
-                "args": {
-                  "status_colors": true
-                }
-            },
-            {
                 "name": "date",
                 "args": {
                     "format": "%H:%M",
