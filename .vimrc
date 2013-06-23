@@ -284,7 +284,7 @@ hi User5 ctermfg=NONE ctermbg=53
 hi User6 ctermfg=NONE ctermbg=88
 
 set statusline=
-set statusline+=%1*%<\                        "aesthetic coloring
+set statusline+=%1*%<\                          "aesthetic coloring
 set statusline+=%5*\ %{strlen(&ft)?&ft:'?'}\    "filetype
 set statusline+=%*                              "reset coloring
 set statusline+=%1*\ %20.t\                     "filename
@@ -301,6 +301,8 @@ set statusline+=%#pastemessage#
 set statusline+=%{&paste?'\ paste\ ':''}
 
 "syntastic message
+set statusline+=%#gitmessage#
+set statusline+=\ %{fugitive#head()}\           " Branch Name
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 
