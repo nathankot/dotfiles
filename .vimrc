@@ -267,7 +267,6 @@ hi PmenuSel ctermfg=255 ctermbg=235
 hi StatusLine   ctermfg=255 ctermbg=235
 hi StatusLineNC ctermfg=255 ctermbg=233
 
-hi leadbar ctermbg=54
 hi gitmessage ctermbg=53
 hi pastemessage ctermbg=24
 
@@ -285,7 +284,7 @@ hi User5 ctermfg=NONE ctermbg=53
 hi User6 ctermfg=NONE ctermbg=88
 
 set statusline=
-set statusline+=%#leadbar#%<\                   "aesthetic coloring
+set statusline+=%1*%<\                        "aesthetic coloring
 set statusline+=%5*\ %{strlen(&ft)?&ft:'?'}\    "filetype
 set statusline+=%*                              "reset coloring
 set statusline+=%1*\ %20.t\                     "filename
@@ -320,7 +319,8 @@ let NERDTreeShowHidden = 1
 let g:CommandTMaxHeight = 25
 let g:CommandTMatchWindowReverse = 1
 let g:CommandTAlwaysShowDotFiles = 1
-let g:CommandTCancelMap = ['<ESC>', '<C-c>']
+let g:CommandTScanDotDirectories = 1
+let g:CommandTCancelMap = ['<ESC>', '<C-c>', '<C-p>']
 let g:CommandTSelectNextMap = ['<C-j>', '<ESC>OB']
 let g:CommandTSelectPrevMap = ['<C-k>', '<ESC>OA']
 
@@ -388,6 +388,7 @@ nnoremap <leader>a :Ack
 
 " Command-T
 nnoremap <silent> <c-p> :CommandT<CR>
+nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 " Fuzzy Finder
 nnoremap <silent> <c-f> :FufTag<CR>
