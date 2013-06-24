@@ -80,6 +80,9 @@ syntax on
 set noswapfile
 set nobackup
 
+" Use OS clipboard
+set clipboard=unnamed
+
 " Turn off YCM preview window
 set completeopt-=preview
 
