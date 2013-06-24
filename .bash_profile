@@ -1,21 +1,21 @@
 # Paths
-source ~/.bash/paths.sh
+source ~/.shell/paths.sh
 
 # Terminal Environment
-source ~/.bash/shell_env.sh
+source ~/.shell/shell_env.sh
 
 # System-Specific Settings
-source ~/.bash/specific.sh
+source ~/.shell/specific.sh
 
 # Private Settings
-if [ -f ~/.bash/private.sh ]; then
-  source ~/.bash/private.sh
+if [ -f ~/.shell/private.sh ]; then
+  source ~/.shell/private.sh
 fi
 
 # Functions
-source ~/.bash/functions.sh
+source ~/.shell/functions.sh
 
 # Environments
-source ~/.bash/environments.sh
+source ~/.shell/environments.sh
 
 
