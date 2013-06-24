@@ -4,6 +4,9 @@ source ~/.shell/paths.sh
 # Terminal Environment
 source ~/.shell/shell_env.sh
 
+# Bash Env
+source ~/.shell/bash_env.sh
+
 # System-Specific Settings
 source ~/.shell/specific.sh
 
