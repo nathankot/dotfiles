@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="cloud"
+ZSH_THEME="gallois"
 
 # CASE_SENSITIVE="true"
 
@@ -21,7 +21,7 @@ ZSH_THEME="cloud"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git pass)
+plugins=(git pass rbenv brew osx tmux tmuxinator web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,3 +41,5 @@ fi
 # Functions
 source ~/.shell/functions.sh
 
+# Aliases
+source ~/.shell/aliases.sh

@@ -33,5 +33,3 @@ function new_rails {
 
 alias vim_session="vim -S /usr/local/var/tmp/session.vim"
 alias fixairplay="sudo kill `ps -ax | grep 'coreaudiod' | grep 'sbin' |awk '{print $1}'`"
-alias issue="ghi"
-alias issues="ghi"
