@@ -343,7 +343,9 @@ let g:ycm_semantic_triggers = {}
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_enable_signs=1
-let g:syntastic_enable_highlighting=1
+let g:syntastic_enable_highlighting=0
+" take the current ruby version specified by rbenv
+let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 
 " Vroom
 let g:vroom_map_keys = 0
