@@ -430,8 +430,8 @@ noremap <leader>] :tabn<cr>
 noremap <leader>[ :tabp<cr>
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-noremap <space> /
-noremap <C-space> ?
+map <space> /
+map <C-space> ?
 
 " Allow 'enter' to do ycm completion
 imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
