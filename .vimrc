@@ -139,8 +139,8 @@ set exrc
 set secure
 
 " Some stuff to get the mouse going in term
-set mouse=a
-set ttymouse=xterm2
+" set mouse=a
+" set ttymouse=xterm2
 
 " Reload files changed outside of vim
 set autoread
@@ -432,9 +432,6 @@ noremap <leader>[ :tabp<cr>
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <C-space> ?
-
-" Allow 'enter' to do ycm completion
-imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 
 " Quick tab switching
 map <C-1> 1gt
