@@ -8,20 +8,15 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Make sure we’re using the latest Homebrew
 brew update
 
+# Install more recent versions of some OS X tools
+brew tap homebrew/dupes
+
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
-# Install Bash 4
-brew install bash
-
-# Install more recent versions of some OS X tools
-brew tap homebrew/dupes
-
-brew install tmux
-brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 brew install gpg
 brew install pass
 brew install git
@@ -31,11 +26,10 @@ source ~/.brewery/python.sh
 source ~/.brewery/ruby.sh
 source ~/.brewery/node.sh
 source ~/.brewery/apps.sh
+source ~/.brewery/workflow.sh
 
-# Want to compile against user Python.
-brew install macvim --override-system-vim
-brew install ack
-brew install ctags
+# source ~/.brewery/bash.sh
+source ~/.brewery/zsh.sh
 
 # Remove outdated versions from the cellar
 brew cleanup
