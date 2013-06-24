@@ -139,8 +139,8 @@ set exrc
 set secure
 
 " Some stuff to get the mouse going in term
-" set mouse=a
-" set ttymouse=xterm2
+set mouse=a
+set ttymouse=xterm2
 
 " Reload files changed outside of vim
 set autoread
