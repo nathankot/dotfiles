@@ -32,7 +32,6 @@ Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
-Bundle 'SirVer/ultisnips'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-dispatch'
 " FuzzyFinder and dependencies
@@ -409,12 +408,6 @@ nnoremap <leader>gc :Gcommit<cr>
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
-" Ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
-
 " Vroom
 nnoremap <leader>t :VroomRunNearestTest<cr>
 nnoremap <leader>T :VroomRunTestFile<cr>
@@ -473,23 +466,6 @@ function! HasPaste()
     return ''
 endfunction
 
-" To expand and jump forward snippets with tab
-" @see https://github.com/Valloric/YouCompleteMe/issues/36#issuecomment-17680963
-function! g:UltiSnips_Complete()
-    call UltiSnips_ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips_JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
-
 " pretty mode display - converts the one letter status notifiers to words
 function! Mode()
     let l:mode = mode()
@@ -532,6 +508,3 @@ autocmd BufWrite *.erb :call DeleteTrailingWS()
 au InsertEnter  * call ModeChanged(v:insertmode)
 au InsertChange * call ModeChanged(v:insertmode)
 au InsertLeave  * call ModeChanged(mode())
-
-" Snippets
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
