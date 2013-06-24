@@ -18,6 +18,9 @@ fi
 # Functions
 source ~/.shell/functions.sh
 
+# Aliases
+source ~/.shell/aliases.sh
+
 # Environments
 source ~/.shell/environments.sh
 
