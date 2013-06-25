@@ -231,7 +231,7 @@ set fillchars+=vert:\
 hi Normal         cterm=NONE   ctermbg=232
 hi NonText        cterm=NONE   ctermbg=232
 
-hi LineNr ctermfg=234 ctermbg=232
+hi LineNr ctermfg=235 ctermbg=232
 hi CursorLine ctermbg=NONE
 
 hi VertSplit ctermbg=233
