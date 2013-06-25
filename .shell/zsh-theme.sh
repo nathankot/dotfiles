@@ -1,8 +1,15 @@
-# ZSH Theme - Preview: http://img.skitch.com/20091113-qqtd3j8xinysujg5ugrsbr7x1y.jpg
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+local make_yellow="%{$fg[yellow]%}"
+local make_reset="%{$reset_color%}"
 
-PROMPT='%(1j.%j .)%{$fg[magenta]%}%m%{$reset_color%} %2~ $(git_prompt_info)%{$reset_color%}%B»%b '
-RPS1="${return_code}"
+local background_processes="${make_yellow}%(1j.%jz .)${make_reset}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
-ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="${make_yellow}‹"
+ZSH_THEME_GIT_PROMPT_SUFFIX="›${reset_color}"
+
+if which rbenv &> /dev/null; then
+  RPS1='$(git_prompt_info)%{$fg[red]%} ‹`rbenv local | sed -e "s/ (set.*$//"`›%{$reset_color%}'
+else
+  RPS1='$(git_prompt_info)'
+fi
+
+PROMPT='${background_processes}%{$fg[magenta]%}%m%{$reset_color%} %2~ %B» %b '
