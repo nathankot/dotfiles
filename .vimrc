@@ -372,6 +372,10 @@ let g:gundo_width = 45
 let g:gundo_preview_height = 30
 let g:gundo_right = 0
 
+" NarrowRegion
+let g:nrrw_rgn_vert = 1
+let g:nrrw_rgn_wdth = 80
+
 
 """" Key Mappings =============================================================
 
@@ -417,6 +421,9 @@ nnoremap <F5> :GundoToggle<CR>
 " Vroom
 nnoremap <leader>t :VroomRunNearestTest<cr>
 nnoremap <leader>T :VroomRunTestFile<cr>
+
+" NarrowRegion
+vnoremap <leader>n <Plug>NrrwrgnDo
 
 " Smart way to move between windows
 noremap <C-h> <C-W>h
