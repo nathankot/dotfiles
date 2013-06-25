@@ -340,10 +340,11 @@ let g:ycm_key_invoke_completion = ''
 let g:ycm_semantic_triggers = {}
 
 " Syntastic
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_enable_signs=1
-let g:syntastic_enable_highlighting=0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_signs = 1
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_enable_balloons = 0
 " take the current ruby version specified by rbenv
 let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 
