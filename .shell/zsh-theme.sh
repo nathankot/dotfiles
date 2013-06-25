@@ -10,4 +10,4 @@ if which rbenv &> /dev/null; then
   RPS1='%{$fg[red]%}‹`rbenv version | sed -e "s/ (set.*$//"`›%{$reset_color%}'
 fi
 
-PROMPT='${background_processes}%{$fg[magenta]%}%m%{$reset_color%} %2~ $(git_prompt_info)%B» %b '
+PROMPT='${background_processes}%{$fg[magenta]%}%m%{$reset_color%} %2~ $(git_prompt_info)%B» %b'
