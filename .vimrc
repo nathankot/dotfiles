@@ -94,8 +94,6 @@ endif
 au FocusLost * silent! wa
 set autowrite
 
-" Interactive shell
-set shellcmdflag=-ic
 
 " Use relative line numbers
 if exists("&relativenumber")
@@ -193,7 +191,6 @@ set display+=lastline
 set fileformats+=mac
 set tabpagemax=50
 
-
 " And the rest
 set smartindent
 set encoding=utf8
@@ -217,8 +214,11 @@ set scrolloff=3
 set sidescrolloff=12
 set undofile
 set gdefault
-set shell=bash\ -i
 set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~
+
+" Interactive shell
+set shell=bash\ -i
+set shellcmdflag=-ic
 
 
 """" Theming ==================================================================
