@@ -217,7 +217,7 @@ set gdefault
 set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~
 
 " Interactive shell
-set shell=bash\ -i
+set shell=bash
 set shellcmdflag=-ic
 
 
