@@ -518,3 +518,5 @@ autocmd BufWrite *.erb :call DeleteTrailingWS()
 au InsertEnter  * call ModeChanged(v:insertmode)
 au InsertChange * call ModeChanged(v:insertmode)
 au InsertLeave  * call ModeChanged(mode())
+" Open QuickFix Window after Grep
+au QuickFixCmdPost *grep* cwindow
