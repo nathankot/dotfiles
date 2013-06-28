@@ -514,13 +514,14 @@ endfunc
 
 """" Auto commands ============================================================
 
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-autocmd BufWrite *.rb :call DeleteTrailingWS()
-autocmd BufWrite *.erb :call DeleteTrailingWS()
+au BufWrite *.py :call DeleteTrailingWS()
+au BufWrite *.coffee :call DeleteTrailingWS()
+au BufWrite *.rb :call DeleteTrailingWS()
+au BufWrite *.erb :call DeleteTrailingWS()
 
 au InsertEnter  * call ModeChanged(v:insertmode)
 au InsertChange * call ModeChanged(v:insertmode)
 au InsertLeave  * call ModeChanged(mode())
+
 " Open QuickFix Window after Grep
 au QuickFixCmdPost *grep* cwindow
