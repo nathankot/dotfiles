@@ -376,6 +376,10 @@ let g:gundo_right = 0
 let g:nrrw_rgn_vert = 1
 let g:nrrw_rgn_wdth = 80
 
+" Signify
+let g:signify_vcs_list = [ 'git' ]
+let g:signify_sign_overwrite = 0
+
 
 """" Key Mappings =============================================================
 
