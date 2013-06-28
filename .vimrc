@@ -451,15 +451,15 @@ map <space> /
 map <C-space> ?
 
 " Quick tab switching
-map <C-1> 1gt
-map <C-2> 2gt
-map <C-3> 3gt
-map <C-4> 4gt
-map <C-5> 5gt
-map <C-6> 6gt
-map <C-7> 7gt
-map <C-8> 8gt
-map <C-9> 9gt
+map <c-k>1 1gt
+map <c-k>2 2gt
+map <c-k>3 3gt
+map <c-k>4 4gt
+map <c-k>5 5gt
+map <c-k>6 6gt
+map <c-k>7 7gt
+map <c-k>8 8gt
+map <c-k>9 9gt
 
 
 """" Helper Functions =========================================================
