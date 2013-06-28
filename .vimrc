@@ -408,6 +408,11 @@ nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 " Fuzzy Finder
 nnoremap <silent> <c-f> :FufTag<CR>
 
+let g:fuf_keyOpenSplit = '<C-s>'
+let g:fuf_keyOpenVsplit = '<C-v>'
+let g:fuf_keyOpenTabpage = '<C-t>'
+let g:fuf_patternSeparator = ' '
+
 " Tagbar
 nnoremap <leader>r :TagbarOpenAutoClose<cr>
 
