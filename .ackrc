@@ -3,3 +3,4 @@
 --type-set=coffee=.coffee
 --type-set=stylus=.styl
 --smart-case
+--ignore-file=.tags
