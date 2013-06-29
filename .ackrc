@@ -3,3 +3,6 @@
 --type-set=coffee=.coffee
 --type-set=stylus=.styl
 --smart-case
+--ignore-dir=.git
+--ignore-dir=.source
+--ignore-file=is:.tags
