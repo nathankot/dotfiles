@@ -284,11 +284,11 @@ set statusline+=%=                              "seperator
 set statusline+=%#pastemessage#
 set statusline+=%{&paste?'\ paste\ ':''}
 
-"syntastic message
 set statusline+=%#gitmessage#
 set statusline+=\ %{fugitive#head()}\           " Branch Name
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
 
 
 """" Package Settings =========================================================
