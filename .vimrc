@@ -30,13 +30,11 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-dispatch'
+Bundle 'scrooloose/syntastic'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 
-" This seems to be causing the weird cursor disappearance
-" Unrelated to ycm.
-" Bundle 'scrooloose/syntastic'
 
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
@@ -287,8 +285,8 @@ set statusline+=%{&paste?'\ paste\ ':''}
 set statusline+=%#gitmessage#
 set statusline+=\ %{fugitive#head()}\           " Branch Name
 
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
 
 
 """" Package Settings =========================================================
