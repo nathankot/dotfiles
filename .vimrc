@@ -15,7 +15,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Theme
-Bundle 'nanotech/jellybeans.vim'
+" Bundle 'nanotech/jellybeans.vim'
 
 " Core
 Bundle 'scrooloose/nerdtree'
@@ -223,7 +223,7 @@ set shellcmdflag=-ic
 
 """" Theming ==================================================================
 
-color jellybeans
+color ir_black
 
 " Don't draw split lines
 set fillchars+=vert:\ 
