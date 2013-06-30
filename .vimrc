@@ -14,9 +14,6 @@ call vundle#rc()
 """"" Bundles =================================================================
 Bundle 'gmarik/vundle'
 
-" Theme
-" Bundle 'nanotech/jellybeans.vim'
-
 " Core
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-repeat'
@@ -25,7 +22,6 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-obsession'
@@ -37,6 +33,10 @@ Bundle 'tpope/vim-dispatch'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+
+" This seems to be causing the weird cursor disappearance
+" Unrelated to ycm.
+" Bundle 'scrooloose/syntastic'
 
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
@@ -323,9 +323,10 @@ let g:ycm_semantic_triggers = {}
 " Syntastic
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_signs = 1
+let g:syntastic_enable_signs = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_enable_balloons = 0
+let g:syntastic_auto_loc_list=0
 " take the current ruby version specified by rbenv
 let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 
@@ -487,14 +488,7 @@ function! ModeChanged(mode)
     elseif a:mode ==# "r"  | hi User1 ctermfg=NONE ctermbg=54
     else                   | hi User1 ctermfg=NONE ctermbg=54
     endif
-   
-    " Sometimes in console the status line starts repeating so we redraw
-    " there is probably a better way to fix this
-    " if !has('gui_running')
-    "   redraw!
-    " endif
 endfunc
-
 
 
 """" Auto commands ============================================================
