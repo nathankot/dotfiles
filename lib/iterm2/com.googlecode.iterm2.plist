@@ -310,7 +310,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>427 410 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>581 220 924 485 0 0 1920 1178 </string>
+	<string>583 220 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>768 787 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -515,11 +515,11 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.37647059559822083</real>
+				<real>0.66063350439071655</real>
 				<key>Green Component</key>
-				<real>0.64705878496170044</real>
+				<real>0.14241921901702881</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.41586604714393616</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -928,7 +928,7 @@
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
-			<true/>
+			<false/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
