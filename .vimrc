@@ -15,7 +15,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Theme
-" Bundle 'flazz/vim-colorschemes'
 Bundle 'nanotech/jellybeans.vim'
 
 " Core
@@ -110,7 +109,7 @@ autocmd BufReadPost *
 
 " Kick vim to use 256 colors
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal" || &term =~ '256color'
-  set t_Co=256
+  set t_Co=257
   " Disable Background Color Erase (BCE) so that color schemes
   " work properly when Vim is used inside tmux and GNU screen.
   " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
@@ -224,7 +223,7 @@ set shellcmdflag=-ic
 
 """" Theming ==================================================================
 
-color ir_black
+color jellybeans
 
 " Don't draw split lines
 set fillchars+=vert:\ 
