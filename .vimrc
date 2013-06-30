@@ -251,7 +251,6 @@ hi link SyntasticWarningLine WarningMsg
 " The Status Line
 hi StatusLine   ctermfg=255 ctermbg=233
 hi StatusLineNC ctermfg=255 ctermbg=232
-
 hi gitmessage ctermbg=53
 hi pastemessage ctermbg=24
 
@@ -341,8 +340,7 @@ let g:vroom_spec_command = 'rspec --drb '
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 " ZenCoding
-let g:user_zen_expandabbr_key = '<c-.>/'
-let g:user_zen_removetag_key = '<c-/>.'
+let g:user_zen_expandabbr_key = '<leader>z'
 let g:use_zen_complete_tag = 1
 
 " Delimit mate
