@@ -199,7 +199,7 @@ set number
 set hlsearch
 set showmatch
 set matchtime=3
-set history=1000
+set history=300
 set cursorline
 set ignorecase
 set smartcase
