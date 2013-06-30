@@ -223,21 +223,16 @@ set shellcmdflag=-ic
 
 """" Theming ==================================================================
 
-color ir_black
+color grb256
 
 " Don't draw split lines
 set fillchars+=vert:\ 
 
-hi Normal         cterm=NONE   ctermbg=232
-hi NonText        cterm=NONE   ctermbg=232
-
-hi LineNr ctermfg=235 ctermbg=232
-hi CursorLine ctermbg=NONE
-
-hi VertSplit ctermbg=233
-
-hi ErrorMsg ctermbg=88 ctermfg=255
-hi WarningMsg ctermbg=94 ctermfg=255
+" Tab bar
+hi TabLineFill ctermfg=232 ctermbg=232
+hi TabLine ctermfg=240 ctermbg=232
+hi TabLineSel ctermfg=250 ctermbg=53
+hi Title ctermfg=NONE ctermbg=NONE
 
 " Gutter Columns
 highlight clear SignColumn
@@ -253,19 +248,7 @@ hi link EasyMotionTarget Comment
 hi link SyntasticErrorLine ErrorMsg
 hi link SyntasticWarningLine WarningMsg
 
-" Tab bar
-hi TabLine ctermfg=240 ctermbg=232
-hi TabLineFill ctermfg=240 ctermbg=232
-hi TabLineSel ctermfg=250 ctermbg=53
-hi Title ctermfg=NONE ctermbg=NONE
-
-" The Popup Menu
-hi Pmenu ctermfg=246 ctermbg=234
-hi PmenuSel ctermfg=255 ctermbg=235
-
-
-""" The Status Line
-
+" The Status Line
 hi StatusLine   ctermfg=255 ctermbg=233
 hi StatusLineNC ctermfg=255 ctermbg=232
 
