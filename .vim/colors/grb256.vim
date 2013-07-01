@@ -10,7 +10,7 @@ hi Comment ctermfg=darkgray
 hi Normal         cterm=NONE   ctermbg=232
 hi NonText        cterm=NONE   ctermbg=232
 
-hi VertSplit      ctermbg=233 ctermfg=NONE
+hi VertSplit      ctermbg=232 ctermfg=NONE
 hi LineNr         ctermfg=235 ctermbg=232
 hi CursorLine     guifg=NONE        guibg=NONE     gui=NONE      ctermfg=NONE        ctermbg=NONE
 hi Function       guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=yellow       ctermbg=NONE        cterm=NONE
