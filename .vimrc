@@ -237,7 +237,7 @@ highlight clear SignColumn
 
 " Color columns
 execute "set colorcolumn=" . join(range(81,335), ',')
-hi ColorColumn ctermbg=16
+hi ColorColumn ctermfg=NONE ctermbg=16
 
 " Syntastic
 hi link SyntasticErrorLine ErrorMsg
@@ -444,6 +444,11 @@ map <c-k>6 6gt
 map <c-k>7 7gt
 map <c-k>8 8gt
 map <c-k>9 9gt
+
+" Find the highlight under the cursor
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 
 """" Helper Functions =========================================================

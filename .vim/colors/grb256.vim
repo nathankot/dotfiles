@@ -32,3 +32,4 @@ highlight DiffDelete term=reverse cterm=bold ctermbg=88 ctermfg=16
 " The Popup Menu
 hi Pmenu ctermfg=246 ctermbg=234
 hi PmenuSel ctermfg=255 ctermbg=235
+
