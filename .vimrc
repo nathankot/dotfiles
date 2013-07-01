@@ -51,9 +51,6 @@ Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-bundler'
 Bundle 'skalnik/vim-vroom'
 
-" PHP
-Bundle 'StanAngeloff/php.vim'
-
 " HTML
 Bundle 'othree/html5.vim'
 Bundle 'ZenCoding.vim'
