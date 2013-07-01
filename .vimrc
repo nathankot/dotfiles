@@ -30,7 +30,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-dispatch'
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -282,8 +282,8 @@ set statusline+=%{&paste?'\ paste\ ':''}
 set statusline+=%#gitmessage#
 set statusline+=\ %{fugitive#head()}\           " Branch Name
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
 
 
 """" Package Settings =========================================================
@@ -319,14 +319,14 @@ let g:ycm_key_invoke_completion = ''
 let g:ycm_filetype_specific_completion_to_disable = { 'php' : '', 'ruby': '' }
 
 " Syntastic
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_signs = 0
-let g:syntastic_enable_highlighting = 0
-let g:syntastic_enable_balloons = 0
-let g:syntastic_auto_loc_list=0
-" take the current ruby version specified by rbenv
-let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_enable_signs = 0
+" let g:syntastic_enable_highlighting = 0
+" let g:syntastic_enable_balloons = 0
+" let g:syntastic_auto_loc_list=0
+" " take the current ruby version specified by rbenv
+" let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 
 " Vroom
 let g:vroom_map_keys = 0
