@@ -22,14 +22,14 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'mileszs/ack.vim'
-"Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-dispatch'
-"Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/syntastic'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -114,11 +114,6 @@ if &encoding ==# 'latin1' && has('gui_running')
   set encoding=utf-8
 endif
 
-" Allow color schemes to do bright colors without forcing bold.
-if &t_Co == 8 && $TERM !~# '^linux'
-  set t_Co=16
-endi
-
 " Remember info about open buffers on close
 set viminfo^=%  "
 
@@ -200,7 +195,6 @@ set title
 set noerrorbells
 set visualbell
 set t_vb=
-set lazyredraw
 set ttyfast
 set hidden
 set ruler
@@ -213,6 +207,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~
 " Interactive shell
 set shell=bash
 set shellcmdflag=-ic
+
+" THIS SETTING when on prevents the cursor from being drawn ...
+set nolazyredraw
 
 
 """" Theming ==================================================================
@@ -278,8 +275,8 @@ set statusline+=%{&paste?'\ paste\ ':''}
 set statusline+=%#gitmessage#
 set statusline+=\ %{fugitive#head()}\           " Branch Name
 
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
 
 
 """" Package Settings =========================================================
@@ -310,14 +307,14 @@ let g:ycm_key_invoke_completion = ''
 let g:ycm_filetype_specific_completion_to_disable = { 'php' : '', 'ruby': '' }
 
 " Syntastic
-" let g:syntastic_check_on_open = 0
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_enable_signs = 0
-" let g:syntastic_enable_highlighting = 0
-" let g:syntastic_enable_balloons = 0
-" let g:syntastic_auto_loc_list=0
-" " take the current ruby version specified by rbenv
-" let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_signs = 0
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_enable_balloons = 0
+let g:syntastic_auto_loc_list=0
+" take the current ruby version specified by rbenv
+let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 
 " Vroom
 let g:vroom_map_keys = 0
