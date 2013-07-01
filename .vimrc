@@ -161,7 +161,7 @@ set listchars+=trail:·
 " Folding
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
-set foldenable          "enable folding
+set nofoldenable        "disable folding on open
 
 " I find scrolling a bit less helps with maintaining context.
 set scroll=20
