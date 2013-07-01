@@ -348,7 +348,7 @@ let g:nrrw_rgn_wdth = 80
 
 " Signify
 let g:signify_vcs_list = [ 'git' ]
-let g:signify_sign_overwrite = 0
+let g:signify_sign_overwrite = 1
 
 
 """" Key Mappings =============================================================
@@ -450,7 +450,6 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
-
 
 " Returns true if paste mode is enabled
 function! HasPaste()
