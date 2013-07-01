@@ -23,7 +23,6 @@ Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'mileszs/ack.vim'
 "Bundle 'Lokaltog/vim-easymotion'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tomtom/tcomment_vim'
@@ -162,7 +161,7 @@ set listchars+=trail:·
 " Folding
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
+set foldenable          "enable folding
 
 " I find scrolling a bit less helps with maintaining context.
 set scroll=20
@@ -284,11 +283,6 @@ set statusline+=\ %{fugitive#head()}\           " Branch Name
 
 
 """" Package Settings =========================================================
-
-" Indent Guide
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=233
 
 " NERDTree
 let NERDTreeShowHidden = 1
