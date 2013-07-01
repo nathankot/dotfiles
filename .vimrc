@@ -239,9 +239,6 @@ highlight clear SignColumn
 execute "set colorcolumn=" . join(range(81,335), ',')
 hi ColorColumn ctermbg=16
 
-" EasyMotion
-hi link EasyMotionTarget Comment
-
 " Syntastic
 hi link SyntasticErrorLine ErrorMsg
 hi link SyntasticWarningLine WarningMsg
