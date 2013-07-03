@@ -1,3 +1,4 @@
+brew install mosh
 brew install tmux
 brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
