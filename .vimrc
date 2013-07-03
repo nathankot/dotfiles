@@ -193,7 +193,6 @@ set title
 set noerrorbells
 set visualbell
 set t_vb=
-set ttyfast
 set hidden
 set ruler
 set scrolloff=3
