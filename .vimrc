@@ -234,7 +234,7 @@ hi ColorColumn ctermfg=NONE ctermbg=16
 
 " Fold column (extra padding)
 set foldcolumn=1
-hi FoldColumn ctermfg=233 ctermbg=233
+hi FoldColumn ctermfg=232 ctermbg=232
 
 " Syntastic
 hi link SyntasticErrorLine ErrorMsg
