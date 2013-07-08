@@ -24,10 +24,10 @@ hi SpellBad       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=16  
 " ir_black doesn't highlight operators for some reason
 hi Operator        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=lightblue   ctermbg=NONE        cterm=NONE
 
-highlight DiffAdd term=reverse cterm=bold ctermbg=lightgreen ctermfg=255
-highlight DiffChange term=reverse cterm=bold ctermbg=lightblue ctermfg=255
-highlight DiffText term=reverse cterm=bold ctermbg=lightgray ctermfg=255
-highlight DiffDelete term=reverse cterm=bold ctermbg=88 ctermfg=255
+highlight DiffAdd term=reverse cterm=bold ctermbg=NONE ctermfg=lightgreen
+highlight DiffChange term=reverse cterm=bold ctermbg=NONE ctermfg=lightblue
+highlight DiffText term=reverse cterm=bold ctermbg=NONE ctermfg=lightgray
+highlight DiffDelete term=reverse cterm=bold ctermbg=NONE ctermfg=88
 
 " The Popup Menu
 hi Pmenu ctermfg=246 ctermbg=234
