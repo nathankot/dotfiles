@@ -220,10 +220,10 @@ color grb256
 set fillchars+=vert:\ 
 
 " Tab bar
-hi TabLineFill ctermfg=232 ctermbg=232
-hi TabLine ctermfg=240 ctermbg=232
-hi TabLineSel ctermfg=250 ctermbg=53
-hi Title ctermfg=NONE ctermbg=NONE
+hi TabLineFill ctermfg=232 ctermbg=232 cterm=NONE
+hi TabLine ctermfg=240 ctermbg=232 cterm=NONE
+hi TabLineSel ctermfg=53 ctermbg=232 cterm=NONE
+hi Title ctermfg=240 ctermbg=232 cterm=NONE
 
 " Gutter Columns
 highlight clear SignColumn
