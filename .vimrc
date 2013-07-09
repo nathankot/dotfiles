@@ -352,6 +352,9 @@ let g:nrrw_rgn_wdth = 80
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_sign_overwrite = 1
 
+" Ragtag
+let g:ragtag_global_maps = 1
+
 
 """" Key Mappings =============================================================
 
