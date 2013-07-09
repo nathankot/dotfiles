@@ -221,10 +221,12 @@ color grb256
 set fillchars+=vert:\ 
 
 " Tab bar
-hi TabLineFill ctermfg=232 ctermbg=232 cterm=NONE
+hi TabLineFill ctermfg=233 ctermbg=233 cterm=NONE
 hi TabLine ctermfg=240 ctermbg=232 cterm=NONE
 hi TabLineSel ctermfg=225 ctermbg=232 cterm=NONE
 hi Title ctermfg=240 ctermbg=232 cterm=NONE
+
+set tabline=%!Tabline()
 
 " Gutter Columns
 highlight clear SignColumn
@@ -487,6 +489,31 @@ function! ModeChanged(mode)
     else                   | hi User1 ctermfg=NONE ctermbg=54
     endif
 endfunc
+
+" Tabline function
+function! Tabline()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    let tab = i + 1
+    let winnr = tabpagewinnr(tab)
+    let buflist = tabpagebuflist(tab)
+    let bufnr = buflist[winnr - 1]
+    let bufname = bufname(bufnr)
+    let bufmodified = getbufvar(bufnr, "&mod")
+
+    let s .= '%' . tab . 'T'
+    let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
+    let s .= ' ' . tab .':'
+    let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
+
+    if bufmodified
+      let s .= '[+] '
+    endif
+  endfor
+
+  let s .= '%#TabLineFill#'
+  return s
+endfunction
 
 
 """" Auto commands ============================================================
