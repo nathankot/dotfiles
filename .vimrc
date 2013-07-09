@@ -224,7 +224,6 @@ set fillchars+=vert:\
 hi TabLineFill ctermfg=233 ctermbg=232 cterm=NONE
 hi TabLine ctermfg=240 ctermbg=232 cterm=NONE
 hi TabLineSel ctermfg=225 ctermbg=233 cterm=NONE
-hi Title ctermfg=240 ctermbg=232 cterm=NONE
 
 set tabline=%!Tabline()
 
