@@ -470,12 +470,12 @@ endfunction
 function! Mode()
     let l:mode = mode()
 
-    if     mode ==# "n"  | return "NORMAL"
-    elseif mode ==# "i"  | return "INSERT"
-    elseif mode ==# "R"  | return "REPLACE"
-    elseif mode ==# "v"  | return "VISUAL"
-    elseif mode ==# "V"  | return "V-LINE"
-    elseif mode ==# "^V" | return "V-BLOCK"
+    if     mode ==# "n"  | return "<normal>"
+    elseif mode ==# "i"  | return "<insert>"
+    elseif mode ==# "R"  | return "<replace>"
+    elseif mode ==# "v"  | return "<visual>"
+    elseif mode ==# "V"  | return "<v-line>"
+    elseif mode ==# "^V" | return "<v-block>"
     else                 | return l:mode
     endif
 
@@ -484,7 +484,7 @@ endfunc
 " Change the values for User1 color preset depending on mode
 function! ModeChanged(mode)
     if     a:mode ==# "n"  | hi User1 ctermfg=NONE ctermbg=54
-    elseif a:mode ==# "i"  | hi User1 ctermfg=NONE ctermbg=89
+    elseif a:mode ==# "i"  | hi User1 ctermfg=NONE ctermbg=53
     elseif a:mode ==# "r"  | hi User1 ctermfg=NONE ctermbg=54
     else                   | hi User1 ctermfg=NONE ctermbg=54
     endif
