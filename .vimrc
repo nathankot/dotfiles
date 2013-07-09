@@ -205,6 +205,9 @@ set shellcmdflag=-ic
 " THIS SETTING when on prevents the cursor from being drawn ...
 set nolazyredraw
 
+" Format options
+set formatoptions+=j
+
 
 """" Theming ==================================================================
 
