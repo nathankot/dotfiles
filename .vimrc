@@ -89,18 +89,11 @@ endif
 au FocusLost * silent! wa
 set autowrite
 
-
 " Use relative line numbers
 if exists("&relativenumber")
   set relativenumber
   au BufReadPost * set relativenumber
 endif
-
-" Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
 
 " Kick vim to use 256 colors
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal" || &term =~ '256color'
@@ -303,7 +296,7 @@ let g:CommandTSelectPrevMap = ['<C-k>', '<ESC>OA']
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1
-let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_min_num_of_chars_for_completion = 4
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_allow_changing_updatetime = 0
 let g:ycm_register_as_syntastic_checker = 0
@@ -513,3 +506,9 @@ au InsertLeave  * call ModeChanged(mode())
 
 " Open QuickFix Window after Grep
 au QuickFixCmdPost *grep* cwindow
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
