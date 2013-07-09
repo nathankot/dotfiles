@@ -222,7 +222,7 @@ set fillchars+=vert:\
 
 " Tab bar
 hi TabLineFill ctermfg=233 ctermbg=233 cterm=NONE
-hi TabLine ctermfg=240 ctermbg=232 cterm=NONE
+hi TabLine ctermfg=240 ctermbg=233 cterm=NONE
 hi TabLineSel ctermfg=225 ctermbg=232 cterm=NONE
 hi Title ctermfg=240 ctermbg=232 cterm=NONE
 
