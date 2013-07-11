@@ -245,7 +245,7 @@ hi gitmessage ctermbg=53
 hi pastemessage ctermbg=24
 
 "filename
-hi User1 ctermfg=NONE ctermbg=54
+hi User1 ctermfg=NONE ctermbg=235
 "line number
 hi User2 ctermfg=NONE ctermbg=236
 "line# seperator
