@@ -31,6 +31,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-dispatch'
 Bundle 'scrooloose/syntastic'
+Bundle 'myusuf3/numbers.vim'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -429,6 +430,9 @@ noremap <leader>[ :tabp<cr>
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <C-space> ?
+
+" Numbers.vim
+nnoremap <F3> :NumbersToggle<CR>
 
 " Quick tab switching
 map <c-k>1 1gt
