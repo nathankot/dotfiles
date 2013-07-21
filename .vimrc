@@ -158,6 +158,10 @@ set scroll=20
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
 
+" Underscores and hyphens are word separators
+set iskeyword -=_
+set iskeyword -=-
+
 " Ported from Vim-Sensible
 set autoindent
 set backspace=indent,eol,start
