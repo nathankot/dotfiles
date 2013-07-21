@@ -159,7 +159,6 @@ set scroll=20
 nnoremap Y y$
 
 " Underscores and hyphens are word separators
-set iskeyword -=_
 set iskeyword -=-
 
 " Ported from Vim-Sensible
