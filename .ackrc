@@ -8,3 +8,4 @@
 --ignore-dir=tmp
 --ignore-file=is:.tags
 --ignore-file=is:.log
+--ignore-file=is:.log*
