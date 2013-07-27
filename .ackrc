@@ -5,4 +5,6 @@
 --smart-case
 --ignore-dir=.git
 --ignore-dir=.source
+--ignore-dir=tmp
 --ignore-file=is:.tags
+--ignore-file=is:.log
