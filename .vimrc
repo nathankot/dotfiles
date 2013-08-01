@@ -211,6 +211,8 @@ set nolazyredraw
 " Format options
 set formatoptions+=j
 
+" Use more memory
+set maxmemtot=2000000
 
 """" Theming ==================================================================
 
