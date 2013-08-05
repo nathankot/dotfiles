@@ -48,6 +48,7 @@
   accept-theirs = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --theirs -- $files; git add -u $files; }; f"
   todo = grep --heading --break --ignore-case -e '@todo *'
   rank-contributors = !ruby ~/bin/git-rank-contributors
+  issues = !ghi
 
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
