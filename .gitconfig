@@ -49,6 +49,7 @@
   todo = grep --heading --break --ignore-case -e '@todo *'
   rank-contributors = !ruby ~/bin/git-rank-contributors
   issues = !ghi
+  browse = !hub browse
 
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
