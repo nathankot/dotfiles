@@ -32,6 +32,7 @@ Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-dispatch'
 Bundle 'scrooloose/syntastic'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'amdt/vim-niji'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
