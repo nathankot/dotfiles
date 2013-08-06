@@ -317,7 +317,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_enable_balloons = 0
-let g:syntastic_auto_loc_list=0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_full_redraws = 0
 " take the current ruby version specified by rbenv
 let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 
