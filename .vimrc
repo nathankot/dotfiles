@@ -22,13 +22,11 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'mileszs/ack.vim'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
-Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-dispatch'
 Bundle 'scrooloose/syntastic'
 Bundle 'myusuf3/numbers.vim'
@@ -36,7 +34,6 @@ Bundle 'amdt/vim-niji'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-
 
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
@@ -347,10 +344,6 @@ let g:gundo_width = 45
 let g:gundo_preview_height = 30
 let g:gundo_right = 0
 
-" NarrowRegion
-let g:nrrw_rgn_vert = 1
-let g:nrrw_rgn_wdth = 80
-
 " Signify
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_sign_overwrite = 1
@@ -412,9 +405,6 @@ nnoremap <F5> :GundoToggle<CR>
 " Vroom
 nnoremap <leader>t :VroomRunNearestTest<cr>
 nnoremap <leader>T :VroomRunTestFile<cr>
-
-" NarrowRegion
-vnoremap <leader>n <Plug>NrrwrgnDo
 
 " Smart way to move between windows
 noremap <C-h> <C-W>h
