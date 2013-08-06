@@ -358,6 +358,9 @@ let g:signify_sign_overwrite = 1
 " Ragtag
 let g:ragtag_global_maps = 1
 
+" Niji
+let g:niji_matching_filetypes = ['lisp', 'scheme', 'clojure', 'ruby', 'python', 'php']
+
 
 """" Key Mappings =============================================================
 
