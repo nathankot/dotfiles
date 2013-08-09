@@ -469,7 +469,7 @@ endfunction
 " Change the values for User1 color preset depending on mode
 function! ModeChanged(mode)
     if     a:mode ==# "n"  | hi User1 ctermfg=NONE ctermbg=54 guifg=NONE guibg=#5f0087
-    elseif a:mode ==# "i"  | hi User1 ctermfg=NONE ctermbg=89 guifg=NONE guibg=#87005f
+    elseif a:mode ==# "i"  | hi User2 ctermfg=NONE ctermbg=89 guifg=NONE guibg=#87005f
     elseif a:mode ==# "r"  | hi User1 ctermfg=NONE ctermbg=54 guifg=NONE guibg=#5f0088
     else                   | hi User1 ctermfg=NONE ctermbg=54 guifg=NONE guibg=#5f0087
     endif
