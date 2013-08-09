@@ -220,9 +220,9 @@ color grb256
 set fillchars+=vert:\ 
 
 " Tab bar
-hi TabLineFill ctermfg=233 ctermbg=232 cterm=NONE
-hi TabLine ctermfg=240 ctermbg=232 cterm=NONE
-hi TabLineSel ctermfg=225 ctermbg=233 cterm=NONE
+hi TabLineFill ctermfg=233 ctermbg=232 cterm=NONE gui=NONE guifg=#121212 guibg=#080808
+hi TabLine ctermfg=240 ctermbg=232 cterm=NONE gui=NONE guifg=#585858 guibg=#080808
+hi TabLineSel ctermfg=226 ctermbg=233 cterm=NONE gui=NONE guifg=#ffd7ff guibg=#121212
 
 set tabline=%!Tabline()
 
@@ -231,34 +231,34 @@ highlight clear SignColumn
 
 " Color columns
 execute "set colorcolumn=" . join(range(81,335), ',')
-hi ColorColumn ctermfg=NONE ctermbg=16
+hi ColorColumn ctermfg=NONE ctermbg=16 guifg=NONE guibg=#000000
 
 " Fold column (extra padding)
 set foldcolumn=1
-hi FoldColumn ctermfg=232 ctermbg=232
+hi FoldColumn ctermfg=232 ctermbg=232 guifg=#080808 guibg=#080808
 
 " Syntastic
 hi link SyntasticErrorLine ErrorMsg
 hi link SyntasticWarningLine WarningMsg
 
 " The Status Line
-hi StatusLine   ctermfg=255 ctermbg=233
-hi StatusLineNC ctermfg=255 ctermbg=232
-hi gitmessage ctermbg=53
-hi pastemessage ctermbg=24
+hi StatusLine   ctermfg=255 ctermbg=233 guifg=white guibg=#121212
+hi StatusLineNC ctermfg=255 ctermbg=232 guifg=white guibg=#080808
+hi gitmessage ctermbg=53 guibg=#5f005f
+hi pastemessage ctermbg=24 guibg=#005f87
 
 "filename
-hi User1 ctermfg=NONE ctermbg=235
+hi User1 ctermfg=NONE ctermbg=235 guifg=NONE guibg=#262626
 "line number
-hi User2 ctermfg=NONE ctermbg=236
+hi User2 ctermfg=NONE ctermbg=236 guifg=NONE guibg=#303030
 "line# seperator
-hi User3 ctermfg=239 ctermbg=236
+hi User3 ctermfg=239 ctermbg=236 guifg=#4e4e4e guibg=#303030
 "line count
-hi User4 ctermfg=249 ctermbg=236
+hi User4 ctermfg=249 ctermbg=236 guifg=#b2b2b2 guibg=#303030
 "file type
-hi User5 ctermfg=NONE ctermbg=53
+hi User5 ctermfg=NONE ctermbg=53 guifg=NONE guibg=#5f005f
 "modified flag
-hi User6 ctermfg=NONE ctermbg=88
+hi User6 ctermfg=NONE ctermbg=88 guifg=NONE guibg=#870000
 
 set statusline=
 set statusline+=%1*%<\                          "aesthetic coloring
