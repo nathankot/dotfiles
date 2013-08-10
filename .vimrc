@@ -56,7 +56,7 @@ Bundle 'ZenCoding.vim'
 Bundle 'juvenn/mustache.vim'
 
 " Markdown
-Bundle 'tpope/vim-markdown'
+Bundle 'plasticboy/vim-markdown'
 
 " Preprocessors
 Bundle 'kchmck/vim-coffee-script'
