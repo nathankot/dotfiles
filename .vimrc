@@ -220,9 +220,9 @@ color grb256
 set fillchars+=vert:\ 
 
 " Tab bar
-hi TabLineFill ctermfg=233 ctermbg=232 cterm=NONE
-hi TabLine ctermfg=240 ctermbg=232 cterm=NONE
-hi TabLineSel ctermfg=226 ctermbg=233 cterm=NONE
+hi TabLineFill ctermfg=233 ctermbg=232 cterm=NONE guifg=#121212 guibg=#080808
+hi TabLine ctermfg=240 ctermbg=232 cterm=NONE guifg=#585858 guibg=#080808
+hi TabLineSel ctermfg=225 ctermbg=233 cterm=NONE guifg=#ffd7ff guibg=#121212
 
 set tabline=%!Tabline()
 
