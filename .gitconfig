@@ -50,6 +50,7 @@
   rank-contributors = !ruby ~/bin/git-rank-contributors
   issues = !ghi
   browse = !hub browse
+  hub = !hub
 
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
