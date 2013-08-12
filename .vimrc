@@ -359,6 +359,9 @@ let g:ragtag_global_maps = 1
 let g:loaded_niji = 1
 let g:niji_matching_filetypes = ['lisp', 'scheme', 'clojure', 'ruby', 'python', 'php']
 
+" vim css color
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+
 
 """" Key Mappings =============================================================
 
