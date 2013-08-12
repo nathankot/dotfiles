@@ -31,6 +31,8 @@ Bundle 'tpope/vim-dispatch'
 Bundle 'scrooloose/syntastic'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'amdt/vim-niji'
+Bundle 'iandoe/vim-osx-colorpicker'
+Bundle 'skammer/vim-css-color'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
