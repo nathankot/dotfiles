@@ -65,6 +65,10 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'wavded/vim-stylus'
 
+" Text Objects
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+
 
 """"" Core Settings ===========================================================
 
@@ -72,6 +76,9 @@ filetype on
 filetype plugin indent on
 filetype plugin on
 syntax on
+
+" Enable match it
+runtime macros/matchit.vim
 
 " Don't use backups or swaps
 set noswapfile
