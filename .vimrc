@@ -36,6 +36,7 @@ Bundle 'skammer/vim-css-color'
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'tpope/vim-abolish'
 
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
