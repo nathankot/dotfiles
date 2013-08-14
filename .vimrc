@@ -68,7 +68,6 @@ Bundle 'wavded/vim-stylus'
 " NEW BUNDLES THAT NEED TO BE GROK'd
 
 Bundle 'rking/ag.vim'
-Bundle 'vim-scripts/Conque-Shell'
 Bundle 'amdt/vim-niji'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-endwise'
