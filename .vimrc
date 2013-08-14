@@ -15,29 +15,28 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Core
-Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'majutsushi/tagbar'
-Bundle 'Raimondi/delimitMate'
-Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-endwise'
+
+Bundle 'scrooloose/nerdtree'
+Bundle 'majutsushi/tagbar'
+Bundle 'Raimondi/delimitMate'
+Bundle 'mileszs/ack.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-dispatch'
 Bundle 'scrooloose/syntastic'
 Bundle 'myusuf3/numbers.vim'
-Bundle 'amdt/vim-niji'
 Bundle 'iandoe/vim-osx-colorpicker'
-Bundle 'skammer/vim-css-color'
+
 " FuzzyFinder and dependencies
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'tpope/vim-abolish'
+
 
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
@@ -65,6 +64,15 @@ Bundle 'plasticboy/vim-markdown'
 " Preprocessors
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'wavded/vim-stylus'
+
+" NEW BUNDLES THAT NEED TO BE GROK'd
+
+Bundle 'rking/ag.vim'
+Bundle 'vim-scripts/Conque-Shell'
+Bundle 'amdt/vim-niji'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-endwise'
+Bundle 'skammer/vim-css-color'
 
 " Text Objects
 Bundle 'kana/vim-textobj-user'
@@ -390,7 +398,7 @@ inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
 " Ack
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ag
 
 " Command-T
 nnoremap <silent> <c-p> :CommandT<CR>
