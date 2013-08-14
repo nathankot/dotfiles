@@ -55,7 +55,7 @@ Bundle 'skalnik/vim-vroom'
 
 " HTML
 Bundle 'othree/html5.vim'
-Bundle 'ZenCoding.vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'juvenn/mustache.vim'
 
 " Markdown
@@ -351,9 +351,9 @@ let g:vroom_spec_command = 'rspec --drb '
 " CoffeeScript
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
-" ZenCoding
-let g:user_zen_expandabbr_key = '<leader>z'
-let g:use_zen_complete_tag = 1
+" Emmet
+let g:user_emmet_expandabbr_key = '<leader>z'
+let g:use_emmet_complete_tag = 1
 
 " Delimit mate
 let delimitMate_expand_cr = 0
