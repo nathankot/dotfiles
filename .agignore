@@ -1,0 +1,8 @@
+/.source/
+/.git/
+/tmp/
+/.tags/
+
+.log
+.log*
+.tags
