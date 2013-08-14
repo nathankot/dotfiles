@@ -76,6 +76,7 @@ Bundle 'skammer/vim-css-color'
 " Text Objects
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'argtextobj.vim'
 
 
 """"" Core Settings ===========================================================
