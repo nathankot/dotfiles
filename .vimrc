@@ -72,6 +72,7 @@ Bundle 'amdt/vim-niji'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-endwise'
 Bundle 'skammer/vim-css-color'
+Bundle 'joonty/vdebug.git'
 
 " Text Objects
 Bundle 'kana/vim-textobj-user'
