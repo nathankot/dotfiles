@@ -73,6 +73,7 @@ Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-endwise'
 Bundle 'skammer/vim-css-color'
 Bundle 'joonty/vdebug.git'
+Bundle 'godlygeek/tabular'
 
 " Text Objects
 Bundle 'kana/vim-textobj-user'
