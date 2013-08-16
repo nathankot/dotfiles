@@ -32,7 +32,7 @@
   ui = auto
 
 [diff]
-  tool = Kaleidoscope
+  tool = vimdiff
 
 [difftool]
   prompt = false
@@ -41,7 +41,7 @@
   prompt = false
 
 [merge]
-  tool = Kaleidoscope
+  tool = vimdiff
 
 [alias]
   accept-ours = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --ours -- $files; git add -u $files; }; f"
