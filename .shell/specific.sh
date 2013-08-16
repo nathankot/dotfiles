@@ -11,7 +11,7 @@ if [ $HOST_NAME = 'air.local' ]; then
 fi;
 
 # This is the Grabone work settings.
-if [ `hostname` = 'nathank.admin.grabonestore.ie' ]; then
+if [ `hostname` = 'nathan-H87M-D3H' ]; then
   export CURRENT_WORKSTATION='work'
 
   PATH="$(brew --prefix nathankot/php/php53)/bin:$PATH"
