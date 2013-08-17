@@ -72,7 +72,6 @@ Bundle 'amdt/vim-niji'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-endwise'
 Bundle 'skammer/vim-css-color'
-Bundle 'joonty/vdebug.git'
 Bundle 'godlygeek/tabular'
 
 " Text Objects
