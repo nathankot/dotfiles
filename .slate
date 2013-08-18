@@ -1,25 +1,24 @@
-# This is the default .slate file.
-# If no ~/.slate file exists this is the file that will be used.
-
 config defaultToCurrentScreen true
 config nudgePercentOf screenSize
+config windowHintsShowIcons true
 config resizePercentOf screenSize
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+
+# Abstract positions
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 
 # Resize Bindings
 bind l:alt       resize +10% +0
 bind h:alt       resize -10% +0
 bind k:alt       resize +0   -10%
 bind j:alt       resize +0   +10%
-bind l:ctrl;alt  resize -10% +0 bottom-right
-bind h:ctrl;alt  resize +10% +0 bottom-right
-bind k:ctrl;alt  resize +0   +10% bottom-right
-bind j:ctrl;alt  resize +0   -10% bottom-right
-
-# Push Bindings
-bind l:ctrl;cmd  push right bar-resize:screenSizeX/3
-bind h:ctrl;cmd  push left  bar-resize:screenSizeX/3
-bind k:ctrl;cmd  push up    bar-resize:screenSizeY/2
-bind j:ctrl;cmd  push down  bar-resize:screenSizeY/2
 
 # Nudge Bindings
 bind l:shift;alt nudge +5% +0
@@ -27,22 +26,16 @@ bind h:shift;alt nudge -5% +0
 bind k:shift;alt nudge +0   -5%
 bind j:shift;alt nudge +0   +5%
 
-# Focus Bindings
-bind right:cmd    focus right
-bind left:cmd     focus left
-bind up:cmd       focus up
-bind down:cmd     focus down
-bind up:cmd;alt   focus behind
-bind down:cmd;alt focus behind
-
 # Window Hints
 bind esc:cmd hint
 
 # Grid
 bind esc:ctrl grid padding:5
 
-# Application switching
-bind tab:cmd switch
+# Full Screen
+bind return:ctrl;alt ${full}
 
-# Undo your errors
-bind z:cmd;alt undo
+# Application shortcuts
+bind b:cmd;alt focus 'Google Chrome'
+bind t:cmd;alt focus 'iTerm'
+bind s:cmd;alt focus 'Skype'
