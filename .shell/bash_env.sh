@@ -14,11 +14,6 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null
 done
 
-# Assumes Liquid Prompt
-if [ -f ~/bin/liquidprompt/liquidprompt ]; then
-  source ~/bin/liquidprompt/liquidprompt
-fi
-
 # Enable shell coloring
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
