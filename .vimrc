@@ -380,6 +380,9 @@ let g:niji_matching_filetypes = ['lisp', 'scheme', 'clojure', 'ruby', 'python', 
 " vim css color
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
+" Ag
+let g:agprg="ag --smart-case"
+
 
 """" Key Mappings =============================================================
 
