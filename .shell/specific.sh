@@ -14,8 +14,6 @@ fi;
 if [ `hostname` = 'nathan-H87M-D3H' ]; then
   export CURRENT_WORKSTATION='work'
 
-  PATH="$(brew --prefix nathankot/php/php53)/bin:$PATH"
-
   alias assets_remount='sudo umount /srv/repslave/grabone/nathank; sudo mount 10.50.0.52:/ssdpool/grabone/nathank /srv/repslave/grabone/nathank'
   alias symfony_refresh='./symfony mu --snapshot && ./symfony cc && assets_remount'
   alias clear_image_cache="sudo rm -rfv /var/www/localcache/grabone/image/*"
