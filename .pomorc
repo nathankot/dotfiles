@@ -1,0 +1,4 @@
+---
+:notifier: notification_center
+:progress: true
+:tmux: true
