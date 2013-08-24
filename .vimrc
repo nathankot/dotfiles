@@ -471,7 +471,7 @@ map <c-k>9 9gt
 
 " Mini Buffer Explorer
 map <Leader>e :MBEToggle<cr>
-noremap <leader>bd :MBEbd!<cr>
+noremap <leader>bd :MBEbd<cr>
 noremap <leader>] :MBEbn<CR>
 noremap <leader>[ :MBEbp<CR>
 
