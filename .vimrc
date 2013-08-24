@@ -256,6 +256,8 @@ hi ColorColumn ctermfg=NONE ctermbg=16 guifg=NONE guibg=#000000
 set foldcolumn=1
 hi FoldColumn ctermfg=232 ctermbg=232 guifg=#080808 guibg=#080808
 
+hi NonText ctermfg=bg
+
 " Syntastic
 hi link SyntasticErrorLine ErrorMsg
 hi link SyntasticWarningLine WarningMsg
