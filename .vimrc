@@ -422,9 +422,9 @@ nnoremap <leader>r :TagbarOpenAutoClose<cr>
 nnoremap <leader>w :w!<cr>
 
 " Fast tab switching
-noremap <leader>] :tabnext<cr>
-noremap <leader>[ :tabprevious<cr>
 noremap <leader>E :call ToggleTabline()<cr>
+noremap <leader><TAB>   :tabnext<cr>
+noremap <leader><S-TAB> :tabprevious<cr>
 
 " Git status
 nnoremap <leader>gs :Gstatus<cr>
@@ -472,8 +472,8 @@ map <c-k>9 9gt
 " Mini Buffer Explorer
 map <Leader>e :MBEToggle<cr>
 noremap <leader>bd :MBEbd!<cr>
-noremap <C-TAB>   :MBEbn<CR>
-noremap <C-S-TAB> :MBEbp<CR>
+noremap <leader>] :MBEbn<CR>
+noremap <leader>[ :MBEbp<CR>
 
 
 " Find the highlight under the cursor
