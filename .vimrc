@@ -378,6 +378,10 @@ let g:niji_matching_filetypes = ['lisp', 'scheme', 'clojure', 'ruby', 'python', 
 " vim css color
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
+" Mini buf explorer
+let g:miniBufExplorerAutoStart = 0
+
+
 """" Key Mappings =============================================================
 
 " Clear highlights
@@ -441,10 +445,6 @@ nnoremap <F8> :!ctags .<CR>
 noremap <C-k><C-b> :NERDTreeToggle<CR>
 noremap <C-k><C-r> :NERDTreeFind<CR>
 
-" Useful mappings for managing tabs
-noremap <leader>] :tabn<cr>
-noremap <leader>[ :tabp<cr>
-
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <C-space> ?
@@ -462,6 +462,13 @@ map <c-k>6 6gt
 map <c-k>7 7gt
 map <c-k>8 8gt
 map <c-k>9 9gt
+
+" Mini Buffer Explorer
+map <Leader>e :MBEToggle<cr>
+noremap <leader>bd :MBEbd!<cr>
+noremap <leader>] :MBEbn<cr>
+noremap <leader>[ :MBEbp<cr>
+
 
 " Find the highlight under the cursor
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
