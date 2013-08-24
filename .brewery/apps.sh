@@ -12,26 +12,22 @@ function installcask() {
   fi
 }
 
+installcask keyremap4macbook
 installcask iterm2
 installcask slate
-installcask sequel-pro
 installcask kaleidoscope
 
 installcask google-chrome
-installcask firefox
-installcask opera
 
-installcask dropbox
-installcask bit-torrent-sync
 installcask app-cleaner
 installcask the-unarchiver
 installcask caffeine
 installcask f-lux
-
-installcask hiss
 installcask alfred
+
+installcask dropbox
 installcask skype
-installcask rdio
 
 # Link all the above apps to alfred
+brew cask linkapps
 brew cask alfred link
