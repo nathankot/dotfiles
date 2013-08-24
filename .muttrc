@@ -6,7 +6,7 @@ account-hook imap://gmail/ “set
 set imap_user = "me@nathankot.com"
 set imap_pass = `pass Personal/me@nathankot.com/Google`
 set smtp_url = "smtp://me@nathankot.com@smtp.gmail.com:587/"
-set smtp_pass = `pass Personal/me@nathankot.com/Google`
+set smtp_pass = "${imap_pass}"
 set from = "me@nathankot.com"
 set realname = "Nathan Kot"
 
@@ -61,4 +61,4 @@ macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
 macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
 macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 
-source lib/mutt-colors/mutt-colors-solarized-dark-256.muttrc
+source ~/lib/mutt-colors/mutt-colors-solarized-dark-256.muttrc
