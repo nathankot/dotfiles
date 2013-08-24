@@ -128,9 +128,6 @@ if &encoding ==# 'latin1' && has('gui_running')
   set encoding=utf-8
 endif
 
-" Remember info about open buffers on close
-set viminfo^=%  "
-
 " Only use one tagfile - from the project root
 set tags=.tags;
 
