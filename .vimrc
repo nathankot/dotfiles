@@ -263,7 +263,7 @@ hi link SyntasticWarningLine WarningMsg
 " The Status Line
 hi StatusLine   ctermfg=255 ctermbg=233 guifg=white guibg=#121212
 hi StatusLineNC ctermfg=255 ctermbg=232 guifg=white guibg=#080808
-hi gitmessage ctermbg=53 guibg=#5f005f
+hi gitmessage ctermbg=235 guibg=#5f005f
 hi pastemessage ctermbg=24 guibg=#005f87
 
 "filename
@@ -275,7 +275,7 @@ hi User3 ctermfg=239 ctermbg=236 guifg=#4e4e4e guibg=#303030
 "line count
 hi User4 ctermfg=249 ctermbg=236 guifg=#b2b2b2 guibg=#303030
 "file type
-hi User5 ctermfg=NONE ctermbg=53 guifg=NONE guibg=#5f005f
+hi User5 ctermfg=NONE ctermbg=235 guifg=NONE guibg=#5f005f
 "modified flag
 hi User6 ctermfg=NONE ctermbg=88 guifg=NONE guibg=#870000
 
@@ -542,10 +542,10 @@ endfunction
 
 " Change the values for User1 color preset depending on mode
 function! ModeChanged(mode)
-    if     a:mode ==# "n"  | hi User1 ctermfg=NONE ctermbg=54 guifg=NONE guibg=#5f0087
-    elseif a:mode ==# "i"  | hi User2 ctermfg=NONE ctermbg=89 guifg=NONE guibg=#87005f
-    elseif a:mode ==# "r"  | hi User1 ctermfg=NONE ctermbg=54 guifg=NONE guibg=#5f0088
-    else                   | hi User1 ctermfg=NONE ctermbg=54 guifg=NONE guibg=#5f0087
+    if     a:mode ==# "n"  | hi User1 ctermfg=NONE ctermbg=235 guifg=NONE guibg=#5f0087
+    elseif a:mode ==# "i"  | hi User1 ctermfg=NONE ctermbg=236 guifg=NONE guibg=#87005f
+    elseif a:mode ==# "r"  | hi User1 ctermfg=NONE ctermbg=235 guifg=NONE guibg=#5f0088
+    else                   | hi User1 ctermfg=NONE ctermbg=235 guifg=NONE guibg=#5f0087
     endif
 endfunc
 
