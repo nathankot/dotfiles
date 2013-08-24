@@ -242,6 +242,7 @@ hi TabLineFill ctermfg=233 ctermbg=232 cterm=NONE guifg=#121212 guibg=#080808
 hi TabLine ctermfg=240 ctermbg=232 cterm=NONE guifg=#585858 guibg=#080808
 hi TabLineSel ctermfg=225 ctermbg=233 cterm=NONE guifg=#ffd7ff guibg=#121212
 
+set showtabline=1
 set tabline=%!Tabline()
 
 " Gutter Columns
@@ -420,6 +421,11 @@ nnoremap <leader>r :TagbarOpenAutoClose<cr>
 " Fast saving
 nnoremap <leader>w :w!<cr>
 
+" Fast tab switching
+noremap <leader>] :tabnext<cr>
+noremap <leader>[ :tabprevious<cr>
+noremap <leader>E :call ToggleTabline()<cr>
+
 " Git status
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gw :Gwrite<cr>
@@ -466,8 +472,8 @@ map <c-k>9 9gt
 " Mini Buffer Explorer
 map <Leader>e :MBEToggle<cr>
 noremap <leader>bd :MBEbd!<cr>
-noremap <leader>] :MBEbn<cr>
-noremap <leader>[ :MBEbp<cr>
+noremap <C-TAB>   :MBEbn<CR>
+noremap <C-S-TAB> :MBEbp<CR>
 
 
 " Find the highlight under the cursor
@@ -511,11 +517,20 @@ function! QFDo(command)
 endfunction
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
+function! DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
+
+" Toggle the tabline
+function! ToggleTabline()
+  if &showtabline
+    set showtabline=0
+  else
+    set showtabline=1
+  endif
+endfunction
 
 " Returns true if paste mode is enabled
 function! HasPaste()
