@@ -17,19 +17,14 @@ brew install coreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
-brew install gpg
-brew install pass
-brew install git
 brew install https://raw.github.com/jingweno/gh/master/homebrew/gh.rb
 
+source ~/.brewery/zsh.sh
+source ~/.brewery/workflow.sh
 source ~/.brewery/python.sh
 source ~/.brewery/ruby.sh
 source ~/.brewery/node.sh
 source ~/.brewery/apps.sh
-source ~/.brewery/workflow.sh
-
-# source ~/.brewery/bash.sh
-source ~/.brewery/zsh.sh
 
 # Remove outdated versions from the cellar
 brew cleanup

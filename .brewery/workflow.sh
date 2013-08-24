@@ -1,7 +1,11 @@
+brew install git
+
 brew install tmux
 brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
+brew install gpg
 brew intall mutt
+brew install pass
 
 # Want to compile against homebrew's Python.
 brew install macvim --override-system-vim

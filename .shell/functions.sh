@@ -31,5 +31,4 @@ function new_rails {
   rails new $1 -m https://raw.github.com/nathankot/rails-composer/master/composer.rb
 }
 
-alias vim_session="vim -S /usr/local/var/tmp/session.vim"
 alias fixairplay="sudo kill `ps -ax | grep 'coreaudiod' | grep 'sbin' |awk '{print $1}'`"
