@@ -3,7 +3,7 @@
   quotepath = false
   autocrlf = false
   preloadindex = true
-  editor = /usr/bin/vim
+  editor = vim
 
 [user]
   name = Nathan Kot
