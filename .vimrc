@@ -94,6 +94,7 @@ runtime macros/matchit.vim
 " Don't use backups or swaps
 set noswapfile
 set nobackup
+set nowritebackup
 
 " Use OS clipboard
 set clipboard=unnamed
@@ -201,7 +202,7 @@ set number
 set hlsearch
 set showmatch
 set matchtime=3
-set history=300
+set history=100
 set cursorline
 set ignorecase
 set smartcase
@@ -223,6 +224,10 @@ set shellcmdflag=-ic
 
 " THIS SETTING when on prevents the cursor from being drawn ...
 set nolazyredraw
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
 
 " Format options
 set formatoptions+=j
@@ -388,6 +393,9 @@ let g:miniBufExplCycleArround = 1
 let g:miniBufExplStatusLineText = ' '
 let g:miniBufExplShowBufNumbers = 0
 
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
 
 """" Key Mappings =============================================================
 
@@ -449,6 +457,9 @@ noremap <C-h> <C-W>h
 noremap <C-l> <C-W>l
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
+
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
 
 " Refresh tags
 nnoremap <F8> :!ctags .<CR>
@@ -582,6 +593,9 @@ endfunction
 
 
 """" Auto commands ============================================================
+
+au FileType text,markdown,mkd setlocal textwidth=78
+au FileType text,markdown,mkd setlocal spell
 
 au BufWrite *.py :call DeleteTrailingWS()
 au BufWrite *.coffee :call DeleteTrailingWS()
