@@ -384,7 +384,7 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 " Mini buf explorer
 let g:miniBufExplorerAutoStart = 0
 let g:miniBufExplCycleArround = 1
-let g:miniBufExplStatusLineText = ''
+let g:miniBufExplStatusLineText = ' '
 let g:miniBufExplShowBufNumbers = 0
 
 
