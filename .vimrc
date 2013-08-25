@@ -343,6 +343,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_full_redraws = 0
 " take the current ruby version specified by rbenv
 let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
+let g:syntastic_coffee_checkers = ['coffee']
 
 " Vroom
 let g:vroom_map_keys = 0
