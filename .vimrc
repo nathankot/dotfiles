@@ -68,7 +68,6 @@ Bundle 'wavded/vim-stylus'
 " NEW BUNDLES THAT NEED TO BE GROK'd
 
 Bundle 'rking/ag.vim'
-Bundle 'amdt/vim-niji'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-endwise'
 Bundle 'skammer/vim-css-color'
@@ -474,17 +473,6 @@ map <C-space> ?
 
 " Numbers.vim
 nnoremap <F3> :NumbersToggle<CR>
-
-" Quick tab switching
-map <c-k>1 1gt
-map <c-k>2 2gt
-map <c-k>3 3gt
-map <c-k>4 4gt
-map <c-k>5 5gt
-map <c-k>6 6gt
-map <c-k>7 7gt
-map <c-k>8 8gt
-map <c-k>9 9gt
 
 " Mini Buffer Explorer
 map <Leader>e :MBEToggle<cr>
