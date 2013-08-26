@@ -389,8 +389,9 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 " Mini buf explorer
 let g:miniBufExplorerAutoStart = 0
 let g:miniBufExplCycleArround = 1
-let g:miniBufExplStatusLineText = ' '
+let g:miniBufExplStatusLineText = '%=%#gitmessage#\ ☂\ '
 let g:miniBufExplShowBufNumbers = 0
+let g:miniBufExplDebugLevel = 0
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
