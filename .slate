@@ -29,13 +29,11 @@ bind j:shift;alt nudge +0   +5%
 # Window Hints
 bind esc:cmd hint
 
-# Grid
-bind esc:ctrl grid padding:5
+# Left half
+bind h:ctrl;alt ${lefthalf}
+bind l:ctrl;alt ${righthalf}
+bind j:ctrl;alt ${bottomhalf}
+bind k:ctrl;alt ${tophalf}
 
 # Full Screen
 bind return:ctrl;alt ${full}
-
-# Application shortcuts
-bind b:cmd;alt focus 'Google Chrome'
-bind t:cmd;alt focus 'iTerm'
-bind s:cmd;alt focus 'Skype'
