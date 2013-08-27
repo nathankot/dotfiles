@@ -15,6 +15,7 @@ function installcask() {
 installcask keyremap4macbook
 installcask iterm2
 installcask slate
+installcask amethyst
 installcask kaleidoscope
 
 installcask google-chrome
@@ -31,3 +32,4 @@ installcask skype
 # Link all the above apps to alfred
 brew cask linkapps
 brew cask alfred link
+
