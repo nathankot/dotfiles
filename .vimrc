@@ -58,6 +58,9 @@ Bundle 'othree/html5.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'juvenn/mustache.vim'
 
+" JS
+Bundle 'elzr/vim-json'
+
 " Markdown
 Bundle 'plasticboy/vim-markdown'
 
