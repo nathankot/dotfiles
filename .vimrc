@@ -109,16 +109,6 @@ if exists("&undodir")
   set undodir=~/.vim/undo
 endif
 
-" Save on focus lost
-au FocusLost * silent! wa
-set autowrite
-
-" Use relative line numbers
-if exists("&relativenumber")
-  set relativenumber
-  au BufReadPost * set relativenumber
-endif
-
 " Kick vim to use 256 colors
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal" || &term =~ '256color'
   set t_Co=257
@@ -138,10 +128,6 @@ set tags=.tags;
 " Respect modelines
 set modeline
 set modelines=4
-
-" Enable per-directory .vimrc files and disable unsafe commands in them
-set exrc
-set secure
 
 " Some stuff to get the mouse going in term
 set mouse=a
@@ -228,14 +214,12 @@ set shellcmdflag=-ic
 " THIS SETTING when on prevents the cursor from being drawn ...
 set nolazyredraw
 
-" Open new split panes to right and bottom, which feels more natural
+" Open new split panes to right which feels more natural
 set splitright
 
 " Format options
 set formatoptions+=j
 
-" Use more memory
-set maxmemtot=2000000
 
 """" Theming ==================================================================
 
@@ -316,6 +300,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 
 " NERDTree
 let NERDTreeShowHidden = 1
+let NERDTreeMapJumpNextSibling = ''
+let NERDTreeMapJumpPrevSibling = ''
 
 " Command-T
 let g:CommandTMaxHeight = 25
@@ -359,9 +345,6 @@ let g:vroom_use_dispatch = 1
 let g:vroom_use_bundle_exec = 0
 let g:vroom_spec_command = 'rspec --drb '
 
-" CoffeeScript
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
-
 " Emmet
 let g:user_emmet_expandabbr_key = '<leader>z'
 let g:use_emmet_complete_tag = 1
@@ -395,7 +378,7 @@ let g:miniBufExplDebugLevel = 0
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
-" Use custom dwm mappings
+" DWM
 let g:dwm_map_keys = 1
 let g:dwm_master_pane_width="50%"
 
