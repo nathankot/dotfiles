@@ -405,7 +405,7 @@ nnoremap <leader>a :Ag\ -S\
 
 " Command-T
 nnoremap <silent> <c-p> :CommandT<CR>
-nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+nnoremap <silent> <c-b> :CommandTBuffer<CR>
 
 " Fuzzy Finder (Better for tags)
 nnoremap <silent> <c-f> :FufTag<CR>
