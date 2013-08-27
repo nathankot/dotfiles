@@ -379,10 +379,6 @@ let g:signify_sign_overwrite = 1
 " Ragtag
 let g:ragtag_global_maps = 1
 
-" Niji
-let g:loaded_niji = 1
-let g:niji_matching_filetypes = ['lisp', 'scheme', 'clojure', 'ruby', 'python', 'php']
-
 " vim css color
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
@@ -395,6 +391,10 @@ let g:miniBufExplDebugLevel = 0
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
+
+" Use custom dwm mappings
+let g:dwm_map_keys = 1
+let g:dwm_master_pane_width="50%"
 
 
 """" Key Mappings =============================================================
@@ -415,13 +415,13 @@ inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
 " Ack
-nnoremap <leader>a :Ag
+nnoremap <leader>a :Ag\ -S\ 
 
 " Command-T
 nnoremap <silent> <c-p> :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
-" Fuzzy Finder
+" Fuzzy Finder (Better for tags)
 nnoremap <silent> <c-f> :FufTag<CR>
 
 let g:fuf_keyOpenSplit = '<C-s>'
@@ -436,9 +436,9 @@ nnoremap <leader>r :TagbarOpenAutoClose<cr>
 nnoremap <leader>w :w!<cr>
 
 " Fast tab switching
-noremap <leader>E :call ToggleTabline()<cr>
 noremap <leader><TAB>   :tabnext<cr>
 noremap <leader><S-TAB> :tabprevious<cr>
+noremap <leader>E :call ToggleTabline()<cr>
 
 " Git status
 nnoremap <leader>gs :Gstatus<cr>
@@ -452,12 +452,6 @@ nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>t :VroomRunNearestTest<cr>
 nnoremap <leader>T :VroomRunTestFile<cr>
 
-" Smart way to move between windows
-noremap <C-h> <C-W>h
-noremap <C-l> <C-W>l
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
@@ -468,19 +462,15 @@ nnoremap <F8> :!ctags .<CR>
 noremap <C-k><C-b> :NERDTreeToggle<CR>
 noremap <C-k><C-r> :NERDTreeFind<CR>
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+" Map <Space> to / (search) and Shfit-<Space> to ? (backwards search)
 map <space> /
-map <C-space> ?
-
-" Numbers.vim
-nnoremap <F3> :NumbersToggle<CR>
+map <S-space> ?
 
 " Mini Buffer Explorer
 map <Leader>e :MBEToggle<cr>
 noremap <leader>d :MBEbd<cr>
 noremap <leader>] :MBEbn<CR>
 noremap <leader>[ :MBEbp<CR>
-
 
 " Find the highlight under the cursor
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
