@@ -56,7 +56,7 @@
     },
 
     "cycle-layout": {
-        "mod": "mod1",
+        "mod": "mod2",
         "key": "space"
     },
     "focus-ccw": {
@@ -68,7 +68,7 @@
         "key": "k"
     },
     "swap-main": {
-        "mod": "mod2",
+        "mod": "mod1",
         "key": "space"
     },
     "shrink-main": {
