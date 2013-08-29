@@ -75,7 +75,6 @@ Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-endwise'
 Bundle 'skammer/vim-css-color'
 Bundle 'godlygeek/tabular'
-Bundle 'fholgado/minibufexpl.vim'
 Bundle 'spolu/dwm.vim'
 
 " Text Objects
@@ -368,13 +367,6 @@ let g:ragtag_global_maps = 1
 " vim css color
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
-" Mini buf explorer
-let g:miniBufExplorerAutoStart = 0
-let g:miniBufExplCycleArround = 1
-let g:miniBufExplStatusLineText = '%=%#gitmessage#\ ☂\ '
-let g:miniBufExplShowBufNumbers = 0
-let g:miniBufExplDebugLevel = 0
-
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
@@ -452,11 +444,10 @@ noremap <C-k><C-r> :NERDTreeFind<CR>
 map <space> /
 map <S-space> ?
 
-" Mini Buffer Explorer
-map <Leader>e :MBEToggle<cr>
-noremap <leader>d :MBEbd<cr>
-noremap <leader>] :MBEbn<CR>
-noremap <leader>[ :MBEbp<CR>
+" Buffer management
+noremap <leader>] :bnext<CR>
+noremap <leader>[ :bprev<CR>
+noremap <leader>d <Plug>Kwbd
 
 " Find the highlight under the cursor
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
