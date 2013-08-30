@@ -686,7 +686,7 @@
 	<key>HideActivityIndicator</key>
 	<false/>
 	<key>HideScrollbar</key>
-	<false/>
+	<true/>
 	<key>HideTab</key>
 	<true/>
 	<key>HighlightTabLabels</key>
@@ -732,7 +732,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>427 410 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>285 323 924 485 0 0 1920 1200 </string>
+	<string>849 429 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>768 787 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -767,11 +767,11 @@
 			<key>Ansi 10 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.45697799324989319</real>
+				<real>0.46742546558380127</real>
 				<key>Green Component</key>
-				<real>0.81902217864990234</real>
+				<real>0.87802249193191528</real>
 				<key>Red Component</key>
-				<real>0.073218315839767456</real>
+				<real>0.70129555463790894</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
@@ -1299,7 +1299,7 @@
 			<key>Normal Font</key>
 			<string>SourceCodePro-RegularForPowerline 11</string>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
@@ -1542,7 +1542,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-08-24T10:16:09Z</date>
+	<date>2013-08-30T14:28:34Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
