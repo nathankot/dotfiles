@@ -41,6 +41,7 @@ Bundle 'FuzzyFinder'
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'kien/ctrlp.vim'
 
 " VCS
 Bundle 'tpope/vim-fugitive'
