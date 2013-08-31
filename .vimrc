@@ -400,7 +400,7 @@ nnoremap <silent> <c-b> :CtrlPBuffer<CR>
 nnoremap <silent> <c-t> :CtrlPTag<CR>
 
 " Fast saving
-nnoremap <c-w> :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " Fast tab switching
 noremap <leader><TAB>   :tabnext<cr>
