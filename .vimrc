@@ -323,6 +323,8 @@ let g:ycm_register_as_syntastic_checker = 0
 let g:ycm_semantic_triggers = {}
 let g:ycm_key_invoke_completion = ''
 let g:ycm_filetype_specific_completion_to_disable = { 'php' : '', 'ruby': '' }
+let g:ycm_key_list_select_completion = ['<C-i>']
+let g:ycm_key_list_previous_completion = ['<C-o>']
 
 " Syntastic
 let g:syntastic_check_on_open = 0
