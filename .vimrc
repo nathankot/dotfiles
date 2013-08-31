@@ -296,11 +296,6 @@ let NERDTreeShowHidden = 1
 let NERDTreeMapJumpNextSibling = ''
 let NERDTreeMapJumpPrevSibling = ''
 
-" ctrlp
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
-
 let g:ctrlp_switch_buffer = 'e'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_follow_symlinks = 1
@@ -394,7 +389,7 @@ inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
 " Ack
-nnoremap <leader>a :Ag -S\ 
+nnoremap <leader>a :Ag -S 
 
 nnoremap <silent> <c-p> :CtrlP<CR>
 nnoremap <silent> <c-T> :CtrlPBufTag<CR>
