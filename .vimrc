@@ -256,7 +256,7 @@ hi gitmessage ctermbg=235 guibg=#5f005f
 hi pastemessage ctermbg=24 guibg=#005f87
 
 "filename
-hi User1 ctermfg=NONE ctermbg=235 guifg=NONE guibg=#262626
+hi User1 ctermfg=255 ctermbg=235 guifg=NONE guibg=#262626
 "line number
 hi User2 ctermfg=NONE ctermbg=236 guifg=NONE guibg=#303030
 "line# seperator
@@ -270,7 +270,7 @@ hi User6 ctermfg=NONE ctermbg=88 guifg=NONE guibg=#870000
 
 set statusline=
 set statusline+=%1*%<\                          "aesthetic coloring
-set statusline+=%5*\ %{strlen(&ft)?&ft:'?'}\    "filetype
+set statusline+=%2*\ %{strlen(&ft)?&ft:'?'}\    "filetype
 set statusline+=%*                              "reset coloring
 set statusline+=%1*\ %20.t\                     "filename
 set statusline+=%*                              "reset coloring
