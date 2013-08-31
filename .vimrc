@@ -92,6 +92,9 @@ set noswapfile
 set nobackup
 set nowritebackup
 
+" REMAP LEADER
+let mapleader = "'"
+
 " Use OS clipboard
 set clipboard=unnamed
 
