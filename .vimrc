@@ -23,9 +23,7 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-ragtag'
 
 Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
-Bundle 'mileszs/ack.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-dispatch'
@@ -33,15 +31,10 @@ Bundle 'scrooloose/syntastic'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'iandoe/vim-osx-colorpicker'
 
-" FuzzyFinder and dependencies
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-
+Bundle 'kien/ctrlp.vim'
 
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'kien/ctrlp.vim'
 
 " VCS
 Bundle 'tpope/vim-fugitive'
@@ -303,14 +296,21 @@ let NERDTreeShowHidden = 1
 let NERDTreeMapJumpNextSibling = ''
 let NERDTreeMapJumpPrevSibling = ''
 
-" Command-T
-let g:CommandTMaxHeight = 25
-let g:CommandTMatchWindowReverse = 1
-let g:CommandTAlwaysShowDotFiles = 1
-let g:CommandTScanDotDirectories = 1
-let g:CommandTCancelMap = ['<ESC>', '<C-c>', '<C-p>']
-let g:CommandTSelectNextMap = ['<C-j>', '<ESC>OB']
-let g:CommandTSelectPrevMap = ['<C-k>', '<ESC>OA']
+" ctrlp
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+let g:ctrlp_switch_buffer = 'e'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_open_func = {
+                        \ 'files' : 'OpenWithDwm',
+                        \ 'buffers' : 'OpenWithDwm',
+                        \ 'mru files' : 'OpenWithDwm'
+                        \ }
+
+
 
 " You Complete me
 let g:ycm_collect_identifiers_from_tags_files = 1
@@ -394,22 +394,12 @@ inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
 " Ack
-nnoremap <leader>a :Ag\ -S\ 
+nnoremap <leader>a :Ag -S\ 
 
-" Command-T
-nnoremap <silent> <c-p> :CommandT<CR>
-nnoremap <silent> <c-b> :CommandTBuffer<CR>
-
-" Fuzzy Finder (Better for tags)
-nnoremap <silent> <c-f> :FufTag<CR>
-
-let g:fuf_keyOpenSplit = '<C-s>'
-let g:fuf_keyOpenVsplit = '<C-v>'
-let g:fuf_keyOpenTabpage = '<C-t>'
-let g:fuf_patternSeparator = ' '
-
-" Tagbar
-nnoremap <leader>r :TagbarOpenAutoClose<cr>
+nnoremap <silent> <c-p> :CtrlP<CR>
+nnoremap <silent> <c-T> :CtrlPBufTag<CR>
+nnoremap <silent> <c-b> :CtrlPBuffer<CR>
+nnoremap <silent> <c-t> :CtrlPTag<CR>
 
 " Fast saving
 nnoremap <leader>w :w!<cr>
@@ -503,6 +493,17 @@ function! Tabline()
   return s
 endfunction
 
+" Ctrlp - open with DWM
+function! OpenWithDwm(action, line)
+  if a:action == "v"
+    let l:filename = fnameescape(fnamemodify(a:line, ':p'))
+    call ctrlp#exit()
+    call DWM_New()
+    exec "edit " . l:filename
+  else
+    call call('ctrlp#acceptfile', [a:action, a:line])
+  endif
+endfunction
 
 """" Auto commands ============================================================
 
