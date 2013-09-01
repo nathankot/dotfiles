@@ -1,6 +1,7 @@
 # Install native apps
 # =============================================================================
 
+brew update
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
