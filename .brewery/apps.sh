@@ -25,6 +25,7 @@ installcask the-unarchiver
 installcask caffeine
 installcask f-lux
 installcask alfred
+installcask shortcat
 
 installcask dropbox
 installcask skype
