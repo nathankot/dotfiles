@@ -1,11 +1,9 @@
 # ~/.tmuxinator/ideasaurus.yml
 # you can make as many tabs as you wish...
 
-project_name: Ideasaurus
-project_root: ~/Sites/ideasaurus
-pre:
-  - export RBENV_DIR=
-  - export RBENV_VERSION=
+name: Ideasaurus
+root: ~/Sites/ideasaurus
+pre_window: rbenv shell 2.0.0-p247
 windows:
   - editor: vim -S
   - shells:
