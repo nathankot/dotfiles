@@ -1,0 +1,28 @@
+# ~/.tmuxinator/ideasaurus.yml
+# you can make as many tabs as you wish...
+
+project_name: Ideasaurus
+project_root: ~/Sites/ideasaurus
+pre:
+  - export RBENV_DIR=
+  - export RBENV_VERSION=
+windows:
+  - editor: vim -S
+  - shells:
+      layout: main-vertical
+      panes:
+        - git status
+        - rails c
+        - psql ideasaurus_development
+  - processes:
+      layout: even-horizontal
+      panes:
+        - foreman start
+        - bundle exec guard
+  - logs:
+      layout: even-horizontal
+      panes:
+        - nocorrect tail -f log/development.log
+        - nocorrect production logs --tail
+  - blog: cd ~/Sites/nathankot.com
+  - email: mutt
