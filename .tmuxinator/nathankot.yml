@@ -1,0 +1,15 @@
+# ~/.tmuxinator/.yml
+# you can make as many tabs as you wish...
+
+name: nathankot.com
+root: ~/Development/Sites/nathankot.com
+pre:
+  - export RBENV_DIR=
+  - export RBENV_VERSION=
+windows:
+  - editor: vim -S
+  - shells:
+      layout: main-vertical
+      panes:
+        - # bash
+        - rake watch
