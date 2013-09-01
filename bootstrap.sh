@@ -11,7 +11,7 @@ function doIt() {
         --exclude "README.md" \
         -av --no-perms . ~
 
-  rsync -av ~/.tmuxinator ./
+  rsync -av ~/.tmuxinator .
 }
 
 doIt

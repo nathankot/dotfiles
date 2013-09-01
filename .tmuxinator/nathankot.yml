@@ -12,4 +12,4 @@ windows:
       layout: main-vertical
       panes:
         - # bash
-        - rake watch
+        - rake preview
