@@ -732,9 +732,9 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>427 410 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>849 429 924 485 0 0 1920 1178 </string>
+	<string>858 536 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>768 787 384 129 0 0 1920 1178 </string>
+	<string>960 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1920 1200 0 0 1920 1178 </string>
 	<key>New Bookmarks</key>
@@ -1481,7 +1481,7 @@
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
-	<false/>
+	<true/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>1</integer>
 	<key>PMPrintingExpandedStateForPrint2</key>
@@ -1542,7 +1542,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-08-30T14:28:34Z</date>
+	<date>2013-09-01T02:47:57Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1554,7 +1554,7 @@
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
-	<true/>
+	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.49262821674346924</real>
 	<key>SwitchTabModifier</key>
