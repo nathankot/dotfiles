@@ -1,7 +1,7 @@
 # ~/.tmuxinator/ideasaurus.yml
 # you can make as many tabs as you wish...
 
-name: Ideasaurus
+name: ideasaurus
 root: ~/Sites/ideasaurus
 pre_window: rbenv shell 2.0.0-p247
 windows:

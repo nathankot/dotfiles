@@ -139,7 +139,6 @@ set softtabstop=2
 set smarttab
 set expandtab
 set lbr "LineBreak
-set tw=119 "TextWidth
 set ai "Auto indent
 set si "Smart indent
 set nowrap "Don't wrap lines
@@ -507,8 +506,8 @@ endfunction
 
 """" Auto commands ============================================================
 
-au FileType text,markdown,mkd setlocal textwidth=78
-au FileType text,markdown,mkd setlocal spell
+au FileType text,markdown setlocal textwidth=78
+au FileType markdown setlocal spell
 
 au BufWrite *.py :call DeleteTrailingWS()
 au BufWrite *.coffee :call DeleteTrailingWS()

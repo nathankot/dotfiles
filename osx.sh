@@ -2,12 +2,7 @@
 
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
 
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
@@ -27,23 +22,17 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
-# Automatically illuminate built-in MacBook keyboard in low light
-defaults write com.apple.BezelServices kDim -bool true
-
-# Turn off keyboard illumination when computer is not used for 5 minutes
-defaults write com.apple.BezelServices kDimTime -int 300
-
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
-# Disable shadow in screenshots
-defaults write com.apple.screencapture disable-shadow -bool true
-
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+# Fast dialogs
+defaults write NSGlobalDomain NSWindowResizeTime .001
 
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
@@ -76,7 +65,7 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
 # Use multi list view in finder as default
-defaults write com.apple.Finder FXPreferredViewStyle clmv && killall Finder
+defaults write com.apple.Finder FXPreferredViewStyle clmv
 
 # Set help-viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
@@ -92,18 +81,36 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# Trackpad: Set faster speed
+defaults write -g com.apple.trackpad.scaling -int 3
+
+# Disbale mission control zoom effect
+defaults write com.apple.dock expose-animation-duration -int 0
+
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
+# Display sleep in 5
+systemsetup -setdisplaysleep 5
 
-for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
-  "Mail" "Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" \
-  "Twitter" "iCal" "iTunes"; do
-  killall "$app" > /dev/null 2>&1
-done
+# Wake on network access
+systemsetup -setwakeonnetworkaccess on
 
-echo "Done. Note that some of these changes require a logout/restart to take effect."
+# Turn on assistive devices
+sudo touch /private/var/db/.AccessibilityAPIEnabled
+
+### LOGIN ITEMS (Need to run this after installation.)
+osascript -e "tell app \"System Events\"
+                make login item at end with properties {path:\"$HOME/Applications/Amethyst.app\", hidden:true}
+                make login item at end with properties {path:\"$HOME/Applications/Slate.app\", hidden:true}
+                make login item at end with properties {path:\"$HOME/Applications/Shortcat.app\", hidden:true}
+                make login item at end with properties {path:\"$HOME/Applications/Flux.app\", hidden:true}
+                make login item at end with properties {path:\"$HOME/Applications/Alfred 2.app\", hidden:true}
+                make login item at end with properties {path:\"$HOME/Applications/Hiss.app\", hidden:true}
+                make login item at end with properties {path:\"$HOME/Applications/Skype.app\", hidden:true}
+              end tell"
+
+
+
+echo "Done. Please restart computer for change to take effect."

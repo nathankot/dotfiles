@@ -8,6 +8,7 @@ function doIt() {
         --exclude "bootstrap.sh" \
         --exclude "install.sh" \
         --exclude "brew.sh" \
+        --exclude "osx.sh" \
         --exclude "README.md" \
         --exclude ".tmuxinator/" \
         -av --no-perms . ~

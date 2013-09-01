@@ -4,3 +4,4 @@ cd "$(dirname "${BASH_SOURCE}")"
 
 source bootstrap.sh
 source brew.sh
+source osx.sh
