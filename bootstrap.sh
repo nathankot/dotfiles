@@ -13,6 +13,7 @@ function doIt() {
         --exclude "install.sh" \
         --exclude "brew.sh" \
         --exclude "osx.sh" \
+        Make boostrap script simpler.
         --exclude "README.md" \
         -av --no-perms . ~
 }
