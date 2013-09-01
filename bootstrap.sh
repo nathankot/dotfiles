@@ -9,6 +9,7 @@ function doIt() {
         --exclude "install.sh" \
         --exclude "brew.sh" \
         --exclude "README.md" \
+        --exclude ".tmuxinator/" \
         -av --no-perms . ~
 
   rsync -av ~/.tmuxinator .
