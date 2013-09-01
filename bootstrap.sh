@@ -9,9 +9,9 @@ function doIt() {
         --exclude "install.sh" \
         --exclude "brew.sh" \
         --exclude "README.md" \
-        --exclude ".vim/backups/" \
-        --exclude ".vim/swaps" \
         -av --no-perms . ~
+
+  rsync -av ~/.tmuxinator .tmuxinator
 }
 
 doIt
