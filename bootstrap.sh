@@ -10,10 +10,12 @@ function doIt() {
         --exclude "brew.sh" \
         --exclude "osx.sh" \
         --exclude "README.md" \
+        --exclude "lib/iterm2/com.googlecode.iterm2.plist" \
         --exclude ".tmuxinator/" \
         -av --no-perms . ~
 
   rsync -av ~/.tmuxinator .
+  rsync -av ~/lib/iterm2/com.googlecode.iterm2.plist ./lib/iterm2/com.googlecode.iterm2.plist
 }
 
 doIt
