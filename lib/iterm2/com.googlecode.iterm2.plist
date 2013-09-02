@@ -1295,11 +1295,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>AnonymousProForPowerline 13</string>
+			<string>AnonymousProForPowerline 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>AnonymousProForPowerline 13</string>
+			<string>AnonymousProForPowerline 12</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1467,7 +1467,7 @@
 			<key>Use Italic Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.0016496181488037</real>
+			<real>1.1131360530853271</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>

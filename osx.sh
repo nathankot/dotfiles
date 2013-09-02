@@ -4,6 +4,9 @@ sudo -v
 
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Use ligher font smoothing (default is 2)
+defaults write -g AppleFontSmoothing -int 1
+
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
