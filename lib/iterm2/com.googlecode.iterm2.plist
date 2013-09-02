@@ -719,6 +719,8 @@
 	<string>6</string>
 	<key>NSColorPickerSlidersDefaults</key>
 	<string>3</string>
+	<key>NSFontPanelPreviewHeight</key>
+	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Development/Packages/dotfiles/lib/iterm2/colors</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
@@ -732,7 +734,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>427 410 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>858 536 924 485 0 0 1920 1178 </string>
+	<string>860 507 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>960 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1293,11 +1295,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodePro-RegularForPowerline 11</string>
+			<string>AnonymousProForPowerline 13</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SourceCodePro-RegularForPowerline 11</string>
+			<string>AnonymousProForPowerline 13</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1463,9 +1465,9 @@
 			<key>Use Canonical Parser</key>
 			<false/>
 			<key>Use Italic Font</key>
-			<true/>
+			<false/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>1.0016496181488037</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
@@ -1542,7 +1544,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-09-01T02:47:57Z</date>
+	<date>2013-09-02T02:47:57Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
