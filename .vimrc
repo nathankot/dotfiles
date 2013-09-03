@@ -254,7 +254,7 @@ hi link SyntasticErrorLine ErrorMsg
 hi link SyntasticWarningLine WarningMsg
 
 " The Status Line
-hi StatusLine   ctermfg=255 ctermbg=233 guifg=white guibg=#121212
+hi StatusLine   ctermfg=255 ctermbg=234 guifg=white guibg=#121212
 hi StatusLineNC ctermfg=255 ctermbg=black guifg=white guibg=#080808
 hi gitmessage ctermbg=235 guibg=#5f005f
 hi pastemessage ctermbg=24 guibg=#005f87
