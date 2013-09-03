@@ -661,6 +661,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>Default Arrangement Name</key>
+	<string>Null</string>
 	<key>Default Bookmark Guid</key>
 	<string>6F4AAFBD-435D-4CC8-9AB5-C430CCA2F1C0</string>
 	<key>DimBackgroundWindows</key>
@@ -738,7 +740,7 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>960 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1280 10 640 1168 0 0 1920 1200 </string>
+	<string>0 0 1920 1200 0 0 1920 1178 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -973,11 +975,11 @@
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.77828055620193481</real>
 				<key>Green Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.77828055620193481</real>
 				<key>Red Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.77828055620193481</real>
 			</dict>
 			<key>Guid</key>
 			<string>6F4AAFBD-435D-4CC8-9AB5-C430CCA2F1C0</string>
@@ -1481,7 +1483,7 @@
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
-	<false/>
+	<true/>
 	<key>OpenBookmark</key>
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
@@ -1588,6 +1590,11 @@
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
 	<string>Lucida Grande</string>
+	<key>Window Arrangements</key>
+	<dict>
+		<key>Null</key>
+		<array/>
+	</dict>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
