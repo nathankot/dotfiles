@@ -301,6 +301,7 @@ let NERDTreeMapJumpPrevSibling = ''
 let g:ctrlp_switch_buffer = 'e'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_use_caching = 0
 let g:ctrlp_open_func = {
                         \ 'files' : 'OpenWithDwm',
                         \ 'buffers' : 'OpenWithDwm',
