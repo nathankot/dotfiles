@@ -235,9 +235,13 @@ set tabline=%!Tabline()
 " Gutter Columns
 highlight clear SignColumn
 
-" Color columns
-set colorcolumn=80
-hi ColorColumn ctermfg=NONE ctermbg=black guifg=NONE guibg=#000000
+" No Color columns
+set colorcolumn=
+hi ColorColumn ctermfg=NONE ctermbg=233 guifg=NONE guibg=#000000
+
+" Instead, custom highlighting for lines too long
+highlight OverLength ctermbg=234 ctermfg=NONE
+match OverLength /\%81v.\+/
 
 " Fold column (extra padding)
 set foldcolumn=1
