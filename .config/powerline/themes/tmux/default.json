@@ -2,7 +2,7 @@
     "default_module": "powerline.segments.common",
     "segment_data": {
         "external_ip": {
-            "before": "ⓦ  "
+            "before": ""
         },
         "date": {
           "before": "  "
