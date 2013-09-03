@@ -10,3 +10,5 @@ after do |seconds_left|
   `terminal-notifier -title "⧗" -message "Nearly there" -subtitle "5 Minutes left"` if seconds_left == 300
   `terminal-notifier -title "⧗" -message "Times up" -subtitle "Go take a break"` if seconds_left == 0
 end
+
+# vim: ft=ruby
