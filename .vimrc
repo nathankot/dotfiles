@@ -443,7 +443,7 @@ map <S-space> ?
 " Buffer management
 noremap <leader>] :bnext<CR>
 noremap <leader>[ :bprev<CR>
-noremap <leader>d :call Kwbd(1)<CR>
+noremap <leader>d :bd<CR>
 
 " Find the highlight under the cursor
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
