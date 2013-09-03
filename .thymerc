@@ -1,0 +1,16 @@
+set :timer, 25*60
+set :interval, 15
+set :tmux, true
+
+option :b, :break, 'take a break' do
+  set :timer, 5*60
+end
+
+before do
+  `notify-send -u critical "Starting pomo."`
+end
+
+
+after do |seconds_left|
+  `notify-send -u critical "Times Up!"` if seconds_left == 0
+end
