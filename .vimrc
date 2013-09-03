@@ -51,6 +51,7 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'othree/html5.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'juvenn/mustache.vim'
+Bundle 'tpope/vim-haml'
 
 " JS
 Bundle 'elzr/vim-json'
