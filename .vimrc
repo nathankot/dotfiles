@@ -225,8 +225,8 @@ color grb256
 set fillchars+=vert:\ 
 
 " Tab bar
-hi TabLineFill ctermfg=233 ctermbg=232 cterm=NONE guifg=#121212 guibg=#080808
-hi TabLine ctermfg=240 ctermbg=232 cterm=NONE guifg=#585858 guibg=#080808
+hi TabLineFill ctermfg=233 ctermbg=black cterm=NONE guifg=#121212 guibg=#080808
+hi TabLine ctermfg=240 ctermbg=black cterm=NONE guifg=#585858 guibg=#080808
 hi TabLineSel ctermfg=225 ctermbg=233 cterm=NONE guifg=#ffd7ff guibg=#121212
 
 set showtabline=0
@@ -236,12 +236,12 @@ set tabline=%!Tabline()
 highlight clear SignColumn
 
 " Color columns
-execute "set colorcolumn=" . join(range(81,335), ',')
-hi ColorColumn ctermfg=NONE ctermbg=16 guifg=NONE guibg=#000000
+set colorcolumn=80
+hi ColorColumn ctermfg=NONE ctermbg=black guifg=NONE guibg=#000000
 
 " Fold column (extra padding)
 set foldcolumn=1
-hi FoldColumn ctermfg=232 ctermbg=232 guifg=#080808 guibg=#080808
+hi FoldColumn ctermfg=black ctermbg=black guifg=#080808 guibg=#080808
 
 hi NonText ctermfg=bg
 
@@ -251,7 +251,7 @@ hi link SyntasticWarningLine WarningMsg
 
 " The Status Line
 hi StatusLine   ctermfg=255 ctermbg=233 guifg=white guibg=#121212
-hi StatusLineNC ctermfg=255 ctermbg=232 guifg=white guibg=#080808
+hi StatusLineNC ctermfg=255 ctermbg=black guifg=white guibg=#080808
 hi gitmessage ctermbg=235 guibg=#5f005f
 hi pastemessage ctermbg=24 guibg=#005f87
 

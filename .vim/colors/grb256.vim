@@ -7,11 +7,11 @@ hi pythonSpaceError ctermbg=red guibg=red
 
 hi Comment ctermfg=darkgray guifg=#3D3D3D
 
-hi Normal         cterm=NONE   ctermbg=232   gui=NONE    guibg=#080808
-hi NonText        cterm=NONE   ctermbg=232   gui=NONE    guibg=#080808
+hi Normal         cterm=NONE   ctermbg=black   gui=NONE    guibg=#080808
+hi NonText        cterm=NONE   ctermbg=black   gui=NONE    guibg=#080808
 
-hi VertSplit      ctermbg=232  ctermfg=NONE  guibg=#080808  guifg=NONE
-hi LineNr         ctermfg=235  ctermbg=232   guibg=#080808  guifg=#262626
+hi VertSplit      ctermbg=black  ctermfg=NONE  guibg=#080808  guifg=NONE
+hi LineNr         ctermfg=235  ctermbg=black   guibg=#080808  guifg=#262626
 
 hi CursorLine     guifg=NONE        guibg=NONE     gui=NONE      ctermfg=NONE        ctermbg=NONE
 hi Function       guifg=#FFD2A7     guibg=NONE     gui=NONE      ctermfg=yellow      ctermbg=NONE        cterm=NONE
