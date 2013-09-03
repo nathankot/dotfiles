@@ -1,16 +1,12 @@
 set :timer, 25*60
-set :interval, 15
+set :interval, 1
 set :tmux, true
 
-option :b, :break, 'take a break' do
-  set :timer, 5*60
-end
-
 before do
-  `notify-send -u critical "Starting pomo."`
+  `terminal-notifier -title "⧗" -message "Starting pomo" -subtitle "25 Minutes left"`
 end
-
 
 after do |seconds_left|
-  `notify-send -u critical "Times Up!"` if seconds_left == 0
+  `terminal-notifier -title "⧗" -message "Nearly there" -subtitle "5 Minutes left"` if seconds_left == 300
+  `terminal-notifier -title "⧗" -message "Times up" -subtitle "Go take a break"` if seconds_left == 0
 end
