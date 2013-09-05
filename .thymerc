@@ -4,11 +4,19 @@ set :tmux, true
 
 before do
   `terminal-notifier -title "⧗" -message "Starting pomo" -subtitle "25 Minutes left"`
+  `say 'You have 25 Minutes.'`
 end
 
 after do |seconds_left|
-  `terminal-notifier -title "⧗" -message "Nearly there" -subtitle "5 Minutes left"` if seconds_left == 300
-  `terminal-notifier -title "⧗" -message "Times up" -subtitle "Go take a break"` if seconds_left == 0
+  if seconds_left == 300
+    `terminal-notifier -title "⧗" -message "Nearly there" -subtitle "5 Minutes left"` 
+    `say 'Five minutes left.'`
+  end
+
+  if seconds_left == 0
+    `terminal-notifier -title "⧗" -message "Times up" -subtitle "Go take a break"` 
+    `say 'Time for a break.'`
+  end
 end
 
 # vim: ft=ruby
