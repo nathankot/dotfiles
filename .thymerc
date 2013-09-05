@@ -8,7 +8,7 @@ before do
 end
 
 after do |seconds_left|
-  if seconds_left == 300
+  if seconds_left.between? 298..300
     `terminal-notifier -title "⧗" -message "Nearly there" -subtitle "5 Minutes left"` 
     `say 'Five minutes left.'`
   end
