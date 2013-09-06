@@ -6,7 +6,7 @@ brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 brew install gpg
 brew install pass
 brew install w3m
-brew intall mutt --sidebar-patch
+brew intall mutt --with-sidebar-patch
 
 # Want to compile against homebrew's Python.
 brew install macvim --override-system-vim
