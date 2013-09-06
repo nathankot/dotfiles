@@ -1,4 +1,5 @@
 account-hook imap://gmail/ “set
+set mailcap_path = ~/.mutt/mailcap 
 
 # User creds
 set imap_user = "me@nathankot.com"
