@@ -1,43 +1,19 @@
-# A basic .muttrc for use with Gmail
-
 account-hook imap://gmail/ “set
 
-
-# Change the following six lines to match your Gmail account details
+# User creds
 set imap_user = "me@nathankot.com"
 set imap_pass = `pass Personal/me@nathankot.com/Google`
 set smtp_url = "smtp://me@nathankot.com@smtp.gmail.com:587/"
 set smtp_pass = "${imap_pass}"
-set from = "me@nathankot.com"
-set realname = "Nathan Kot"
 
-# Change the following line to a different editor you prefer.
-set editor = "vim"
-
-# Basic config, you can leave this as is
+# Gmail settings
 set folder = "imaps://imap.gmail.com:993"
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
-
-set wait_key = no
-
 set spoolfile = "+INBOX"
 set postponed = "+[Gmail]/Drafts"
 set record = "+[Gmail]/Sent Mail"
-
-unset markold
-set beep_new
-
-# Status Bar -----------------------------------------
-set status_chars  = " *%A"
-set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
-
-ignore *                                # ignore all headers
-unignore from: to: cc: date: subject:   # show only these
-unhdr_order *                           # some distros order things by default
-hdr_order from: to: cc: date: subject:  # and in this order
-
 set imap_check_subscribed
 set hostname = gmail.com
 set mail_check = 120
@@ -49,30 +25,114 @@ set sort = 'threads'
 set sort_aux = 'reverse-last-date-received'
 set auto_tag = yes
 
+# Header stuff
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order
+hdr_order Date From To Cc
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
 
-hdr_order Date From To Cc
+# Composing
+set from = "me@nathankot.com"
+set realname = "Nathan Kot"
+set sig_dashes                       # dashes before sig
+set edit_headers                     # show headers when composing
+set fast_reply                       # skip to compose when replying
+set fcc_attach                       # save attachments with the body
+unset mime_forward                   # forward attachments as part of body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set forward_quote                    # include message in forwards
+# Address Book querying
+set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
+bind editor <Tab> complete-query
+bind editor ^T    complete
+
+# Misc Settings
+set wait_key = no
+set beep_new
+set pager_context = 3
+set nostrict_threads
+set sendmail_wait = -1
+set thorough_search # Strip headers before searching
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+# Pager View
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+
+# Viewable html files
 alternative_order text/plain text/html *
 auto_view text/html
 
+# Editor
+set editor = "vim"
 bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop 
+
+# Sync and check intervals
+set read_inc = 100
+set mail_check = 90
+set timeout = 15
+
+# Status Bar -----------------------------------------
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Sidebar
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
+bind index,pager <down>   sidebar-next
+bind index,pager <up>     sidebar-prev
+bind index,pager <right>  sidebar-open
+set sidebar_width=45
+set sidebar_delim='│'
 
 # Vimlike paging
 bind index,pager \cd half-down
 bind index,pager \ce next-line
 bind index,pager \cu half-up
 bind index,pager \cy previous-line
+bind index gg        first-entry
+bind index G         last-entry
+bind pager j         next-line
+bind pager k         previous-line
+bind pager J         next-entry
+bind pager K         previous-entry
+bind pager gg        top
+bind pager G         bottom
+bind index N search-opposite
+bind pager N search-opposite
 
 # Gmail-style keyboard shortcuts
 macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
 macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
-macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
-macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
-macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 
+# Saner copy/move dialogs
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+# Open urlview
+macro pager \Cu "|urlview<enter>" "call urlview to open links"
+
+# Other Bindings
+bind index R        group-reply
+bind index <tab>    sync-mailbox
+bind index <space>  collapse-thread
+bind compose p postpone-message
+bind index p recall-message
+
+# Theme
 source ~/lib/mutt-colors/mutt-colors-solarized-dark-256.muttrc

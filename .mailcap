@@ -1,6 +1,6 @@
-text/html; open -a Google\ Chrome '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
 image/gif; open -a Preview %s
 image/jpg; open -a Preview %s; needsterminal; description=JPEG Image; nametemplate=%s.jpg
 image/jpeg; open -a Preview %s; needsterminal; description=JPEG Image; nametemplate=%s.jpg
+text/html; open -a Google\ Chrome '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
 

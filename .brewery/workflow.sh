@@ -6,6 +6,8 @@ brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 brew install gpg
 brew install pass
 brew install w3m
+brew install urlview
+brew install contacts
 brew intall mutt --with-sidebar-patch
 
 # Want to compile against homebrew's Python.
