@@ -1,9 +1,0 @@
-config defaultToCurrentScreen true
-config nudgePercentOf screenSize
-config windowHintsShowIcons false
-config resizePercentOf screenSize
-config windowHintsIgnoreHiddenWindows false
-config windowHintsSpread true
-
-# Window Hints
-bind esc:cmd hint

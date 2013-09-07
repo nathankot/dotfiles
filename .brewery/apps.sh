@@ -14,7 +14,6 @@ function installcask() {
 }
 
 installcask iterm2
-installcask slate
 installcask amethyst
 installcask kaleidoscope
 
