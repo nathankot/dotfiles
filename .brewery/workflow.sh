@@ -9,6 +9,7 @@ brew install offlineimap
 brew install w3m
 brew install urlview
 brew install contacts
+brew install curl-ca-bundle
 brew intall mutt --with-sidebar-patch
 
 # Want to compile against homebrew's Python.
