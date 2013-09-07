@@ -15,6 +15,12 @@ mailboxes +gmail/INBOX +gmail/sent +gmail/archive +gmail/drafts
 set mbox = "+gmail/archive"
 set postponed = "+gmail/drafts"
 
+# Sending email
+set from     = "me@nathankot.com"
+set sendmail = "/usr/local/bin/msmtp -a nathankot"
+set sendmail_wait = 0
+unset record
+
 # Header stuff
 ignore *                                # ignore all headers
 unignore from: to: cc: date: subject:   # show only these
