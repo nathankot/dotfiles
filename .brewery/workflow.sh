@@ -5,6 +5,7 @@ brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
 brew install gpg
 brew install pass
+brew install offlineimap
 brew install w3m
 brew install urlview
 brew install contacts
