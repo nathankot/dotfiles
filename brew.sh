@@ -21,7 +21,6 @@ brew install https://raw.github.com/jingweno/gh/master/homebrew/gh.rb
 source ~/.brewery/repos.sh
 source ~/.brewery/zsh.sh
 source ~/.brewery/workflow.sh
-source ~/.brewery/python.sh
 source ~/.brewery/ruby.sh
 source ~/.brewery/node.sh
 source ~/.brewery/apps.sh
