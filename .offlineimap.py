@@ -3,9 +3,6 @@
 import re, subprocess
 from subprocess import call
 
-def cert_file():
-  return call(["echo", "$SSL_CERT_FILE"])
-
 def get_keychain_pass(account=None, server=None):
     params = {
         'security': '/usr/bin/security',
