@@ -3,7 +3,9 @@
 cd "$(dirname "${BASH_SOURCE}")"
 
 # Keys
-ln -s /Volumes/NK ~/.gnupg
+if [ ! -d "$HOME/.gnupg" ]; then
+  ln -s /Volumes/NK ~/.gnupg
+fi
 
 if [ "$1" == "update" ]; then
   rsync -av ~/.tmuxinator .
