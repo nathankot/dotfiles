@@ -49,6 +49,7 @@ set include                          # include message in replies
 set forward_quote                    # include message in forwards
 
 # Misc Settings
+set sort = reverse-date-received
 set wait_key = no
 set timeout = 3
 set mail_check = 0
