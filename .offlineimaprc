@@ -44,12 +44,7 @@ quick = 5
 [Repository gmail-local]
 type = Maildir
 localfolders = ~/.mail/gmail
-nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
-                            'sent':    '[Gmail]/Sent Mail',
-                            'flagged': '[Gmail]/Starred',
-                            'trash':   '[Gmail]/Trash',
-                            'archive': '[Gmail]/All Mail',
-                            }.get(folder, folder)
+nametrans = get_remote_name
 
 
 [Repository gmail-remote]
@@ -58,6 +53,8 @@ ssl = yes
 sslcacertfile = /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 remoteuser = me@nathankot.com
 remotepasseval = get_keychain_pass(account="me@nathankot.com", server="imap.gmail.com")
-maxconnections = 3
+maxconnections = 2
 holdconnectionopen = no
 subscribedonly = no
+nametrans = get_local_name
+folderfilter = is_included
