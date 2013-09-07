@@ -16,8 +16,6 @@ brew install coreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
-brew install https://raw.github.com/jingweno/gh/master/homebrew/gh.rb
-
 source ~/.brewery/repos.sh
 source ~/.brewery/zsh.sh
 source ~/.brewery/workflow.sh
