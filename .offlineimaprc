@@ -46,7 +46,6 @@ type = Maildir
 localfolders = ~/.mail/gmail
 nametrans = get_remote_name
 
-
 [Repository gmail-remote]
 type = Gmail
 ssl = yes
