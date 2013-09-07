@@ -1,30 +1,19 @@
-account-hook imap://gmail/ “set
-set mailcap_path = ~/.mutt/mailcap 
+set mbox_type = Maildir
 
-# User creds
-set imap_user = "me@nathankot.com"
-set imap_pass = `pass Personal/me@nathankot.com/Google`
-set smtp_url = "smtp://me@nathankot.com@smtp.gmail.com:587/"
-set smtp_pass = "${imap_pass}"
-
-# Gmail settings
-set folder = "imaps://imap.gmail.com:993"
+# Paths
+set folder = ~/.mail
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
-set spoolfile = "+INBOX"
-set postponed = "+[Gmail]/Drafts"
-set record = "+[Gmail]/Sent Mail"
-set imap_check_subscribed
-set hostname = gmail.com
-set mail_check = 120
-set timeout = 300
-set imap_keepalive = 300
-set move = no # Gmail does this
-set include
-set sort = 'threads'
-set sort_aux = 'reverse-last-date-received'
-set auto_tag = yes
+set mailcap_path = ~/.mutt/mailcap 
+set tmpdir = ~/.mutt/tmp
+set signature = ~/.mutt/signature
+
+# Inboxes
+set spoolfile = "+gmail/INBOX"
+mailboxes +gmail/INBOX +gmail/sent +gmail/archive +gmail/drafts
+set mbox = "+gmail/archive"
+set postponed = "+gmail/drafts"
 
 # Header stuff
 ignore *                                # ignore all headers
@@ -58,6 +47,8 @@ bind editor ^T    complete
 
 # Misc Settings
 set wait_key = no
+set timeout = 3
+set mail_check = 0
 set beep_new
 set pager_context = 3
 set nostrict_threads
@@ -82,11 +73,6 @@ set editor = "vim"
 bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop 
-
-# Sync and check intervals
-set read_inc = 100
-set mail_check = 90
-set timeout = 15
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
@@ -117,9 +103,9 @@ bind pager G         bottom
 bind index N search-opposite
 bind pager N search-opposite
 
-# Gmail-style keyboard shortcuts
-macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
-macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
+# Offlineimap sync
+macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
 
 # Saner copy/move dialogs
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
