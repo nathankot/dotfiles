@@ -1,4 +1,5 @@
 set mbox_type = Maildir
+set editor = "vim"
 
 # Paths
 set folder = ~/.mail
@@ -46,10 +47,6 @@ set reply_to                         # reply to Reply to: field
 set reverse_name                     # reply as whomever it was to
 set include                          # include message in replies
 set forward_quote                    # include message in forwards
-# Address Book querying
-set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
-bind editor <Tab> complete-query
-bind editor ^T    complete
 
 # Misc Settings
 set wait_key = no
@@ -75,7 +72,7 @@ alternative_order text/plain text/html *
 auto_view text/html
 
 # Editor
-set editor = "vim"
+set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
 bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop 
@@ -122,7 +119,6 @@ macro pager \Cu "|urlview<enter>" "call urlview to open links"
 
 # Other Bindings
 bind index R        group-reply
-bind index <tab>    sync-mailbox
 bind index <space>  collapse-thread
 bind compose p postpone-message
 bind index p recall-message
