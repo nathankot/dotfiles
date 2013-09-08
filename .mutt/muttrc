@@ -14,11 +14,11 @@ set signature = ~/.mutt/signature
 set spoolfile = "+me@nathankot.com/INBOX"
 set mbox = "+me@nathankot.com/[Gmail]/All Mail"
 set postponed = "+me@nathankot.com/[Gmail]/Drafts"
-mailboxes +me@nathankot.com/INBOX +me@nathankot.com/[Gmail]/Sent +me@nathankot.com/[Gmail]/Drafts
+mailboxes +me@nathankot.com/INBOX +me@nathankot.com/[Gmail]/Sent\ Mail +me@nathankot.com/[Gmail]/Drafts
 
 # Sending email
 set from     = "me@nathankot.com"
-set sendmail = "/usr/local/bin/msmtp -a nathankot"
+set sendmail = "/usr/local/bin/msmtp -a me@nathankot.com"
 set sendmail_wait = 0
 unset record
 
@@ -47,6 +47,7 @@ set reply_to                         # reply to Reply to: field
 set reverse_name                     # reply as whomever it was to
 set include                          # include message in replies
 set forward_quote                    # include message in forwards
+set sig_on_top
 
 # Misc Settings
 set sort = reverse-date-received
