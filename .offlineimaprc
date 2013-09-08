@@ -43,8 +43,8 @@ quick = 5
 
 [Repository gmail-local]
 type = Maildir
+sep = /
 localfolders = ~/.mail/gmail
-nametrans = get_remote_name
 
 [Repository gmail-remote]
 type = Gmail
@@ -55,5 +55,8 @@ remotepasseval = get_keychain_pass(account="me@nathankot.com", server="imap.gmai
 maxconnections = 2
 holdconnectionopen = no
 subscribedonly = no
-nametrans = get_local_name
-folderfilter = is_included
+folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
+                                             '[Gmail]/All Mail',
+                                             '[Gmail]/Important',
+                                             '[Gmail]/Spam',
+                                             ]
