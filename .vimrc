@@ -384,6 +384,11 @@ let g:html_indent_tags = 'li\|p'
 let g:dwm_map_keys = 1
 let g:dwm_master_pane_width="50%"
 
+" Gists
+let g:gist_clip_command = 'pbcopy'
+let g:gist_open_browser_after_post = 1
+let g:gist_show_privates = 1
+
 
 """" Key Mappings =============================================================
 
