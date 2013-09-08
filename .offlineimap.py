@@ -3,22 +3,6 @@
 import re, subprocess
 from subprocess import call
 
-exclusion_patterns = [
-  "important",
-  "spam",
-  "trash"
-]
-
-name_mappings = [
-  NameMapping('sent', '[Gmail]/Sent Mail'),
-  NameMapping('spam', '[Gmail]/Spam'),
-  NameMapping('important', '[Gmail]/Important'),
-  NameMapping('starred', '[Gmail]/Starred'),
-  NameMapping('trash',   '[Gmail]/Trash'),
-  NameMapping('archive', '[Gmail]/All Mail'),
-  NameMapping('drafts', '[Gmail]/Drafts')
-]
-
 def get_keychain_pass(account=None, server=None):
     params = {
         'security': '/usr/bin/security',
@@ -87,3 +71,19 @@ def get_remote_name(local_folder_name):
 def get_local_name(remote_folder_name):
   name = LocalName(remote_folder_name)
   return get_name_mapping(name)
+
+exclusion_patterns = [
+  "important",
+  "spam",
+  "trash"
+]
+
+name_mappings = [
+  NameMapping('sent', '[Gmail]/Sent Mail'),
+  NameMapping('spam', '[Gmail]/Spam'),
+  NameMapping('important', '[Gmail]/Important'),
+  NameMapping('starred', '[Gmail]/Starred'),
+  NameMapping('trash',   '[Gmail]/Trash'),
+  NameMapping('archive', '[Gmail]/All Mail'),
+  NameMapping('drafts', '[Gmail]/Drafts')
+]
