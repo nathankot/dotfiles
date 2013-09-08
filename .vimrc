@@ -72,6 +72,10 @@ Bundle 'skammer/vim-css-color'
 Bundle 'godlygeek/tabular'
 Bundle 'spolu/dwm.vim'
 
+" Gists
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+
 " Text Objects
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
