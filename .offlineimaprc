@@ -23,7 +23,7 @@
 
 [general]
 metadata = ~/.mail
-accounts = gmail
+accounts = me@nathankot
 maxsyncaccounts = 1
 ui = ttyui
 ignore-readonly = no
@@ -35,18 +35,18 @@ fsync = false
 # Accounts
 ##################################################
 
-[Account gmail]
-localrepository = gmail-local
-remoterepository = gmail-remote
+[Account me@nathankot]
+localrepository = me_at_nathankot-local
+remoterepository = me_at_nathankot-remote
 autorefresh = 5
 quick = 5
 
-[Repository gmail-local]
+[Repository me_at_nathankot-local]
 type = Maildir
 sep = /
-localfolders = ~/.mail/gmail
+localfolders = ~/.mail/me@nathankot.com
 
-[Repository gmail-remote]
+[Repository me_at_nathankot-remote]
 type = Gmail
 ssl = yes
 sslcacertfile = /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt

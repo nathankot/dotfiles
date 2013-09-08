@@ -11,10 +11,10 @@ set tmpdir = ~/.mutt/tmp
 set signature = ~/.mutt/signature
 
 # Inboxes
-set spoolfile = "+INBOX"
-set mbox = "+[Gmail]/All Mail"
-set postponed = "+[Gmail]/Drafts"
-mailboxes +INBOX +[Gmail]/Sent +[Gmail]/Drafts
+set spoolfile = "+me@nathankot.com/INBOX"
+set mbox = "+me@nathankot.com/[Gmail]/All Mail"
+set postponed = "+me@nathankot.com/[Gmail]/Drafts"
+mailboxes +me@nathankot.com/INBOX +me@nathankot.com/[Gmail]/Sent +me@nathankot.com/[Gmail]/Drafts
 
 # Sending email
 set from     = "me@nathankot.com"
