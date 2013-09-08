@@ -43,6 +43,22 @@ class RemoteName:
   def mapped_folder_name(self, mapping):
     return mapping.remote_name
 
+exclusion_patterns = [
+  "important",
+  "spam",
+  "trash"
+]
+
+name_mappings = [
+  NameMapping('sent', '[Gmail]/Sent Mail'),
+  NameMapping('spam', '[Gmail]/Spam'),
+  NameMapping('important', '[Gmail]/Important'),
+  NameMapping('starred', '[Gmail]/Starred'),
+  NameMapping('trash',   '[Gmail]/Trash'),
+  NameMapping('archive', '[Gmail]/All Mail'),
+  NameMapping('drafts', '[Gmail]/Drafts')
+]
+
 def is_included(folder):
   result = True
 
@@ -72,18 +88,3 @@ def get_local_name(remote_folder_name):
   name = LocalName(remote_folder_name)
   return get_name_mapping(name)
 
-exclusion_patterns = [
-  "important",
-  "spam",
-  "trash"
-]
-
-name_mappings = [
-  NameMapping('sent', '[Gmail]/Sent Mail'),
-  NameMapping('spam', '[Gmail]/Spam'),
-  NameMapping('important', '[Gmail]/Important'),
-  NameMapping('starred', '[Gmail]/Starred'),
-  NameMapping('trash',   '[Gmail]/Trash'),
-  NameMapping('archive', '[Gmail]/All Mail'),
-  NameMapping('drafts', '[Gmail]/Drafts')
-]
