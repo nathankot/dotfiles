@@ -185,6 +185,7 @@ set fileformats+=mac
 set tabpagemax=50
 
 " And the rest
+set ttyfast
 set smartindent
 set encoding=utf8
 set number
