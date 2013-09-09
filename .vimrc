@@ -410,8 +410,6 @@ vnoremap <s-k> <nop>
 " 'Soft' Movement
 inoremap <Down> gj
 inoremap <Up> gk
-inoremap <Left> gh
-inoremap <Right> gl
 
 " Ack
 nnoremap <leader>a :Ag -S 
