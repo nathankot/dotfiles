@@ -433,10 +433,6 @@ nnoremap <leader>gc :Gcommit<cr>
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
-" Vroom
-nnoremap <leader>t :VroomRunNearestTest<cr>
-nnoremap <leader>T :VroomRunTestFile<cr>
-
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
