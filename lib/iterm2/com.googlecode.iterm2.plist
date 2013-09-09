@@ -700,9 +700,9 @@
 	<key>Hotkey</key>
 	<true/>
 	<key>HotkeyChar</key>
-	<integer>27</integer>
+	<integer>96</integer>
 	<key>HotkeyCode</key>
-	<integer>53</integer>
+	<integer>50</integer>
 	<key>HotkeyModifiers</key>
 	<integer>262401</integer>
 	<key>IRMemory</key>
@@ -736,7 +736,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>427 410 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>826 510 924 485 0 0 1920 1178 </string>
+	<string>826 510 924 485 0 0 1920 1200 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>960 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1546,7 +1546,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-09-03T02:47:59Z</date>
+	<date>2013-09-09T02:48:06Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
