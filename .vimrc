@@ -307,6 +307,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 let NERDTreeShowHidden = 1
 let NERDTreeMapJumpNextSibling = ''
 let NERDTreeMapJumpPrevSibling = ''
+let NERDTreeMinimalUI=0
+let NERDTreeAutoDeleteBuffer=1
 
 let g:ctrlp_switch_buffer = 'e'
 let g:ctrlp_show_hidden = 1
@@ -518,9 +520,6 @@ function! OpenWithDwm(action, line)
 endfunction
 
 """" Auto commands ============================================================
-
-au FileType text,markdown setlocal textwidth=78
-au FileType markdown setlocal spell
 
 au BufWrite *.py :call DeleteTrailingWS()
 au BufWrite *.coffee :call DeleteTrailingWS()
