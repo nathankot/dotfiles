@@ -397,7 +397,7 @@ let g:gist_detect_filetype = 0
 nnoremap <leader><space> :noh<cr>
 
 " Common typos
-nnoremap ; :
+noremap ; :
 nnoremap ' `
 nnoremap ` '
 nnoremap K <nop>
