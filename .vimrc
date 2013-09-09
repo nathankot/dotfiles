@@ -407,9 +407,11 @@ nnoremap K <nop>
 nnoremap Q <nop>
 vnoremap <s-k> <nop>
 
-" 'Soft' Movement (<super-[hjkl]> should be mapped to arrow keys by keymapper)
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
+" 'Soft' Movement
+inoremap <Down> gj
+inoremap <Up> gk
+inoremap <Left> gh
+inoremap <Right> gl
 
 " Ack
 nnoremap <leader>a :Ag -S 
