@@ -407,10 +407,6 @@ nnoremap K <nop>
 nnoremap Q <nop>
 vnoremap <s-k> <nop>
 
-" 'Soft' Movement
-inoremap <Down> gj
-inoremap <Up> gk
-
 " Ack
 nnoremap <leader>a :Ag -S 
 
