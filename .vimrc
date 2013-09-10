@@ -89,6 +89,9 @@ filetype plugin indent on
 filetype plugin on
 syntax on
 
+" Allow Custom Syntax
+set rtp+=~/.vim/syntax/
+
 " Enable match it
 runtime macros/matchit.vim
 
@@ -112,11 +115,14 @@ endif
 
 " Kick vim to use 256 colors
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal" || &term =~ '256color'
+  set term=xterm
   set t_Co=256
   " Disable Background Color Erase (BCE) so that color schemes
   " work properly when Vim is used inside tmux and GNU screen.
   " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
   set t_ut=
+  let &t_AB="\e[48;5;%dm"
+  let &t_AF="\e[38;5;%dm"
 endif
 
 if &encoding ==# 'latin1' && has('gui_running')
@@ -242,7 +248,8 @@ highlight clear SignColumn
 
 " No Color columns
 set colorcolumn=
-hi ColorColumn ctermfg=NONE ctermbg=233 guifg=NONE guibg=#000000
+hi ColorColumn ctermfg=NONE ctermbg=black guifg=NONE guibg=#000000
+hi SignColumn ctermfg=NONE ctermbg=black guifg=NONE guibg=#000000
 
 " Instead, custom highlighting for lines too long
 highlight OverLength ctermbg=234 ctermfg=NONE
