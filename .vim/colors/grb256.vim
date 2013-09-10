@@ -63,7 +63,7 @@ hi Folded               guifg=#a0a8b0  guibg=#384048  gui=NONE       ctermfg=NON
 hi Title                guifg=#f6f3e8  guibg=NONE     gui=bold       ctermfg=NONE      ctermbg=NONE      cterm=NONE
 hi ModeMsg              guifg=black    guibg=#C6C5FE  gui=BOLD       ctermfg=darkgray  ctermbg=235       cterm=BOLD
 hi Cursor               guifg=black    guibg=white    gui=NONE       ctermfg=black     ctermbg=white     cterm=reverse
-hi CursorLine           guifg=NONE     guibg=NONE     gui=NONE       cterm=BOLD        ctermfg=NONE      ctermbg=NONE
+hi CursorLine           guifg=NONE     guibg=NONE     gui=NONE       cterm=NONE        ctermfg=NONE      ctermbg=NONE
 hi CursorColumn         guifg=NONE     guibg=#121212  gui=NONE       ctermfg=NONE      ctermbg=NONE      cterm=NONE
 
 " ATTENTION GRABBERS "
