@@ -755,11 +755,11 @@
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.069256335496902466</real>
+				<real>0.051155880093574524</real>
 				<key>Green Component</key>
-				<real>0.080882355570793152</real>
+				<real>0.058770503848791122</real>
 				<key>Red Component</key>
-				<real>0.078641429543495178</real>
+				<real>0.056899223476648331</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -782,11 +782,11 @@
 			<key>Ansi 11 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.79964911937713623</real>
+				<real>0.75140076875686646</real>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.93131363391876221</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.92553389072418213</real>
 			</dict>
 			<key>Ansi 12 Color</key>
 			<dict>
@@ -836,11 +836,11 @@
 			<key>Ansi 3 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.7137255072593689</real>
+				<real>0.71748554706573486</real>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.98943012952804565</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.98827385902404785</real>
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
@@ -903,11 +903,11 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.068548649549484253</real>
+				<real>0.051377147436141968</real>
 				<key>Green Component</key>
-				<real>0.08193594217300415</real>
+				<real>0.058884460479021072</real>
 				<key>Red Component</key>
-				<real>0.078929148614406586</real>
+				<real>0.053876124322414398</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
