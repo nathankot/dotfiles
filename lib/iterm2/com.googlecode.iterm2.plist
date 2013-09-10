@@ -738,7 +738,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>173 191 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>333 475 924 485 0 0 1920 1178 </string>
+	<string>490 176 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>576 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -764,11 +764,11 @@
 			<key>Ansi 1 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.19316376745700836</real>
+				<real>0.20283235609531403</real>
 				<key>Green Component</key>
-				<real>0.1332632452249527</real>
+				<real>0.13272811472415924</real>
 				<key>Red Component</key>
-				<real>0.91902929544448853</real>
+				<real>0.92157453298568726</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
@@ -890,11 +890,11 @@
 			<key>Ansi 9 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.14145715534687042</real>
+				<real>0.38298487663269043</real>
 				<key>Green Component</key>
-				<real>0.1084066703915596</real>
+				<real>0.35665956139564514</real>
 				<key>Red Component</key>
-				<real>0.81926977634429932</real>
+				<real>0.27671992778778076</real>
 			</dict>
 			<key>Automatically Log</key>
 			<false/>
@@ -977,11 +977,11 @@
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.88767319917678833</real>
+				<real>0.56363654136657715</real>
 				<key>Green Component</key>
-				<real>0.88767319917678833</real>
+				<real>0.56485837697982788</real>
 				<key>Red Component</key>
-				<real>0.88767319917678833</real>
+				<real>0.50599193572998047</real>
 			</dict>
 			<key>Guid</key>
 			<string>6F4AAFBD-435D-4CC8-9AB5-C430CCA2F1C0</string>
