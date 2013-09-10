@@ -721,6 +721,8 @@
 	<string>6</string>
 	<key>NSColorPickerSlidersDefaults</key>
 	<string>3</string>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 0</string>
 	<key>NSFontPanelPreviewHeight</key>
 	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
@@ -736,11 +738,11 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>174 368 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>52 322 924 485 0 0 1920 1178 </string>
+	<string>664 151 924 485 0 0 1920 1200 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>576 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>960 4 960 1174 0 0 1920 1178 </string>
+	<string>0 0 1920 1200 0 0 1920 1178 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -753,11 +755,11 @@
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.10056821256875992</real>
+				<real>0.069256335496902466</real>
 				<key>Green Component</key>
-				<real>0.11820217967033386</real>
+				<real>0.080882355570793152</real>
 				<key>Red Component</key>
-				<real>0.11481468379497528</real>
+				<real>0.078641429543495178</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -771,11 +773,11 @@
 			<key>Ansi 10 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.48551401495933533</real>
+				<real>0.52088832855224609</real>
 				<key>Green Component</key>
-				<real>0.81672441959381104</real>
+				<real>0.89514988660812378</real>
 				<key>Red Component</key>
-				<real>0.61580294370651245</real>
+				<real>0.73296862840652466</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
@@ -789,11 +791,11 @@
 			<key>Ansi 12 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.75427740812301636</real>
+				<real>0.98264282941818237</real>
 				<key>Green Component</key>
-				<real>0.68300241231918335</real>
+				<real>0.98230957984924316</real>
 				<key>Red Component</key>
-				<real>0.61009681224822998</real>
+				<real>0.72760385274887085</real>
 			</dict>
 			<key>Ansi 13 Color</key>
 			<dict>
@@ -809,9 +811,9 @@
 				<key>Blue Component</key>
 				<real>1</real>
 				<key>Green Component</key>
-				<real>0.96735411882400513</real>
+				<real>0.95282876491546631</real>
 				<key>Red Component</key>
-				<real>0.73642241954803467</real>
+				<real>0.69408506155014038</real>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
@@ -825,11 +827,11 @@
 			<key>Ansi 2 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.39120426774024963</real>
+				<real>0.69509208202362061</real>
 				<key>Green Component</key>
-				<real>0.54685729742050171</real>
+				<real>0.87680286169052124</real>
 				<key>Red Component</key>
-				<real>0.4902433454990387</real>
+				<real>0.68880873918533325</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -843,11 +845,11 @@
 			<key>Ansi 4 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.91220659017562866</real>
+				<real>0.93009400367736816</real>
 				<key>Green Component</key>
-				<real>0.75613069534301758</real>
+				<real>0.76328092813491821</real>
 				<key>Red Component</key>
-				<real>0.5307844877243042</real>
+				<real>0.53293764591217041</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
@@ -901,11 +903,11 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.10056821256875992</real>
+				<real>0.068548649549484253</real>
 				<key>Green Component</key>
-				<real>0.11820217967033386</real>
+				<real>0.08193594217300415</real>
 				<key>Red Component</key>
-				<real>0.11481468379497528</real>
+				<real>0.078929148614406586</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -975,11 +977,11 @@
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.67970520257949829</real>
 				<key>Green Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.67970520257949829</real>
 				<key>Red Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.67970520257949829</real>
 			</dict>
 			<key>Guid</key>
 			<string>6F4AAFBD-435D-4CC8-9AB5-C430CCA2F1C0</string>
@@ -1297,11 +1299,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>AnonymousProForPowerline 13</string>
+			<string>GohuFontMedium 13</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>AnonymousProForPowerline 13</string>
+			<string>GohuFontMedium 13</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1461,7 +1463,7 @@
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
-			<false/>
+			<true/>
 			<key>Use Bright Bold</key>
 			<false/>
 			<key>Use Canonical Parser</key>
@@ -1469,7 +1471,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1.0117847919464111</real>
+			<real>0.97924143075942993</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
