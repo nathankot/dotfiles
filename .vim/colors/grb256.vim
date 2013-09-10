@@ -15,16 +15,16 @@ hi NonText      cterm=NONE        ctermbg=black  gui=NONE  guibg=#080808
 hi Statement    guifg=#f6f3e8     guibg=black    gui=NONE  ctermfg=NONE      ctermbg=NONE  cterm=NONE
 hi Comment      ctermfg=darkgray  guifg=#3D3D3D
 hi Function     guifg=#FFD2A7     guibg=NONE     gui=NONE  ctermfg=yellow    ctermbg=NONE  cterm=NONE
-hi Operator     guifg=#6699CC     guibg=NONE     gui=NONE  ctermfg=12        ctermbg=NONE  cterm=NONE
+hi Operator     guifg=#6699CC     guibg=NONE     gui=NONE  ctermfg=blue        ctermbg=NONE  cterm=NONE
 
 hi String       guifg=#CEFFAB     guibg=NONE     gui=NONE  ctermfg=green     ctermbg=NONE  cterm=NONE
 hi Number       guifg=#FF73FD     guibg=NONE     gui=NONE  ctermfg=magenta   ctermbg=NONE  cterm=NONE
 
-hi Keyword      guifg=#96CBFE     guibg=NONE     gui=NONE  ctermfg=9         ctermbg=NONE  cterm=NONE
-hi PreProc      guifg=#96CBFE     guibg=NONE     gui=NONE  ctermfg=12        ctermbg=NONE  cterm=NONE
+hi Keyword      guifg=#96CBFE     guibg=NONE     gui=NONE  ctermfg=darkred         ctermbg=NONE  cterm=NONE
+hi PreProc      guifg=#96CBFE     guibg=NONE     gui=NONE  ctermfg=blue        ctermbg=NONE  cterm=NONE
 hi Conditional  guifg=#6699CC     guibg=NONE     gui=NONE  ctermfg=red       ctermbg=NONE  cterm=NONE
 
-hi Todo         guifg=#8f8f8f     guibg=NONE     gui=NONE  ctermfg=red       ctermbg=NONE  cterm=NONE
+hi Todo         guifg=#8f8f8f     guibg=NONE     gui=NONE  ctermfg=darkred       ctermbg=NONE  cterm=NONE
 hi Constant     guifg=#99CC99     guibg=NONE     gui=NONE  ctermfg=cyan      ctermbg=NONE  cterm=NONE
 
 hi Identifier   guifg=#C6C5FE     guibg=NONE     gui=NONE  ctermfg=darkblue  ctermbg=NONE  cterm=NONE
@@ -148,5 +148,5 @@ hi link stylusVariable    String
 hi    DiffAdd        term=reverse  cterm=bold  ctermbg=NONE       ctermfg=green
 hi    DiffChange     term=reverse  cterm=bold  ctermbg=NONE       ctermfg=blue
 hi    DiffText       term=reverse  cterm=bold  ctermbg=NONE       ctermfg=white
-hi    DiffDelete     term=reverse  cterm=bold  ctermbg=NONE       ctermfg=red
+hi    DiffDelete     term=reverse  cterm=bold  ctermbg=NONE       ctermfg=darkred
 
