@@ -736,7 +736,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>427 410 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>826 510 924 485 0 0 1920 1200 </string>
+	<string>638 277 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>960 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -901,11 +901,11 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.097787037491798401</real>
+				<real>0.10056821256875992</real>
 				<key>Green Component</key>
-				<real>0.11530427634716034</real>
+				<real>0.11820217967033386</real>
 				<key>Red Component</key>
-				<real>0.11193875968456268</real>
+				<real>0.11481468379497528</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -1297,11 +1297,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>AnonymousProForPowerline 12</string>
+			<string>AnonymousProForPowerline 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>AnonymousProForPowerline 12</string>
+			<string>AnonymousProForPowerline 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
