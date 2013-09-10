@@ -9,7 +9,8 @@ else
 endif
 
 syn case match
-syn keyword specFunctions afterEach beforeEach describe it expect addMatchers spyOn not context Given When Then And
+syn keyword specControls afterEach beforeEach describe it context Given When Then And
+syn keyword specFunctions expect addMatchers spyOn not
 syn keyword specDisabled xit xdescribe
 syn keyword specAsync runs waits waitsFor
 syn match specMatcher "to[A-Za-z0-9_]*"
