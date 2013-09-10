@@ -11,7 +11,7 @@ hi Normal         cterm=NONE   ctermbg=black   gui=NONE    guibg=#080808
 hi NonText        cterm=NONE   ctermbg=black   gui=NONE    guibg=#080808
 
 hi VertSplit      ctermbg=black  ctermfg=NONE  guibg=#080808  guifg=NONE
-hi LineNr         ctermfg=235  ctermbg=black   guibg=#080808  guifg=#262626
+hi LineNr         ctermfg=238  ctermbg=black   guibg=#080808  guifg=#262626
 
 hi CursorLine     guifg=NONE        guibg=NONE     gui=NONE      ctermfg=NONE        ctermbg=NONE
 hi Function       guifg=#FFD2A7     guibg=NONE     gui=NONE      ctermfg=yellow      ctermbg=NONE        cterm=NONE

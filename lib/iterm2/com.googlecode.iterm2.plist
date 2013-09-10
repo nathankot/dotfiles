@@ -740,7 +740,7 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>960 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1920 1200 0 0 1920 1178 </string>
+	<string>1152 4 766 1174 0 0 1920 1200 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -753,11 +753,11 @@
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.05429864302277565</real>
+				<real>0.10056821256875992</real>
 				<key>Green Component</key>
-				<real>0.053695324808359146</real>
+				<real>0.11820217967033386</real>
 				<key>Red Component</key>
-				<real>0.053996983915567398</real>
+				<real>0.11481468379497528</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -901,11 +901,11 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.053734101355075836</real>
+				<real>0.097787037491798401</real>
 				<key>Green Component</key>
-				<real>0.053733188658952713</real>
+				<real>0.11530427634716034</real>
 				<key>Red Component</key>
-				<real>0.053734797984361649</real>
+				<real>0.11193875968456268</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
