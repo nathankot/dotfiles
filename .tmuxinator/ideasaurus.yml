@@ -6,21 +6,26 @@ root: ~/Sites/ideasaurus
 pre_window: rbenv shell 2.0.0-p247
 windows:
   - editor: vim -S
+
   - shells:
       layout: main-vertical
       panes:
         - git status
         - rails c
         - psql ideasaurus_development
+
   - processes:
       layout: even-horizontal
       panes:
         - foreman start
         - bundle exec guard
+
   - logs:
       layout: even-horizontal
       panes:
         - nocorrect tail -f log/development.log
         - nocorrect production logs --tail
+
   - blog: cd ~/Sites/nathankot.com
+
   - email: mutt
