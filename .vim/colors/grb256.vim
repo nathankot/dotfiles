@@ -124,7 +124,7 @@ hi link javaScriptNumber      Number
 
 " JASMINE "
 
-hi specFunctions  ctermfg=darkgreen
+hi specControls  ctermfg=darkgreen
 hi link specMatcher  Identifier
 
 " STYLUS "
