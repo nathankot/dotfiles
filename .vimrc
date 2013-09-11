@@ -421,6 +421,8 @@ au BufWrite *.coffee :call DeleteTrailingWS()
 au BufWrite *.rb :call DeleteTrailingWS()
 au BufWrite *.erb :call DeleteTrailingWS()
 
+au BufEnter * match OverLength /\%75v.*/
+
 " Open QuickFix Window after Grep
 au QuickFixCmdPost *grep* cwindow
 

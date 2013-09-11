@@ -3,8 +3,7 @@ hi Pmenu                ctermfg=246    ctermbg=234
 hi PmenuSel             ctermfg=255    ctermbg=235
 
 " Instead, custom highlighting for lines too long
-hi link OverLength ErrorMsg
-syn match OverLength /\%81v.\+/
+hi link OverLength WarningMsg
 
 " No Color columns
 " Don't draw split lines
