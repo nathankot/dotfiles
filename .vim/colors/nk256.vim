@@ -22,7 +22,7 @@ hi WarningMsg       ctermfg=white       ctermbg=red         cterm=NONE
 hi ModeMsg          ctermfg=white       ctermbg=black        cterm=BOLD
 
 if version >= 700 " Vim 7.x specific colors
-  hi CursorLine     ctermfg=NONE        ctermbg=7        cterm=BOLD
+  hi CursorLine     ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi CursorColumn   ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi MatchParen     ctermfg=white       ctermbg=8    cterm=NONE
   hi Search         ctermfg=NONE        ctermbg=NONE        cterm=underline
