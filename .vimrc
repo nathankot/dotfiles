@@ -237,35 +237,6 @@ set background=dark
 color solarized
 let g:solarized_termcolors=256
 
-" Don't draw split lines
-set fillchars+=vert:\ 
-
-" Tab bar
-hi TabLineFill ctermfg=233 ctermbg=black cterm=NONE guifg=#121212 guibg=#080808
-hi TabLine ctermfg=240 ctermbg=black cterm=NONE guifg=#585858 guibg=#080808
-hi TabLineSel ctermfg=225 ctermbg=233 cterm=NONE guifg=#ffd7ff guibg=#121212
-
-set showtabline=0
-set tabline=%!Tabline()
-
-" Gutter Columns
-highlight clear SignColumn
-
-" No Color columns
-set colorcolumn=
-hi ColorColumn ctermfg=NONE ctermbg=black guifg=NONE guibg=#000000
-hi SignColumn ctermfg=NONE ctermbg=black guifg=NONE guibg=#000000
-
-" Instead, custom highlighting for lines too long
-highlight OverLength ctermbg=234 ctermfg=NONE
-match OverLength /\%81v.\+/
-
-" Fold column (extra padding)
-set foldcolumn=1
-hi FoldColumn ctermfg=black ctermbg=black guifg=#080808 guibg=#080808
-
-hi NonText ctermfg=bg
-
 
 """" Package Settings =========================================================
 
@@ -433,32 +404,6 @@ function! HasPaste()
         return 'PASTE MODE  '
     en
     return ''
-endfunction
-
-
-" Tabline function
-function! Tabline()
-  let s = ''
-  for i in range(tabpagenr('$'))
-    let tab = i + 1
-    let winnr = tabpagewinnr(tab)
-    let buflist = tabpagebuflist(tab)
-    let bufnr = buflist[winnr - 1]
-    let bufname = bufname(bufnr)
-    let bufmodified = getbufvar(bufnr, "&mod")
-
-    let s .= '%=' " Align everything to the right
-    let s .= '%' . tab . 'T'
-    let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
-    let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
-
-    if bufmodified
-      let s .= '[+] '
-    endif
-  endfor
-
-  let s .= '%#TabLineFill#'
-  return s
 endfunction
 
 " Ctrlp - open with DWM

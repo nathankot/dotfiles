@@ -8,7 +8,7 @@ hi StatusInsertMode ctermfg=white ctermbg=black
 hi link StatusNormalMode  StatusLine
 
 hi StatusLine   ctermfg=black ctermbg=green
-hi StatusLineNC ctermfg=darkgray ctermbg=black
+hi StatusLineNC ctermfg=black ctermbg=darkgray
 
 "filename
 hi link User1 StatusNormalMode
