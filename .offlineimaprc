@@ -49,10 +49,11 @@ localfolders = ~/.mail/me@nathankot.com
 [Repository me_at_nathankot-remote]
 type = Gmail
 ssl = yes
+realdelete = no
 sslcacertfile = /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 remoteuser = me@nathankot.com
 remotepasseval = get_keychain_pass(account="me@nathankot.com", server="imap.gmail.com")
-maxconnections = 2
+maxconnections = 1
 holdconnectionopen = no
 subscribedonly = no
 folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
