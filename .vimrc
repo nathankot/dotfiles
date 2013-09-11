@@ -33,9 +33,6 @@ Bundle 'iandoe/vim-osx-colorpicker'
 
 Bundle 'kien/ctrlp.vim'
 
-" Color
-Bundle "altercation/vim-colors-solarized"
-
 " Requires compilation
 Bundle "Valloric/YouCompleteMe"
 
@@ -234,8 +231,7 @@ set formatoptions+=j
 """" Theming ==================================================================
 
 set background=dark
-color solarized
-let g:solarized_termcolors=256
+color nk256
 
 
 """" Package Settings =========================================================
