@@ -33,7 +33,7 @@ hi Comment          ctermfg=8    ctermbg=NONE        cterm=NONE
 hi String           ctermfg=green       ctermbg=NONE        cterm=NONE
 hi Number           ctermfg=magenta     ctermbg=NONE        cterm=NONE
 
-hi Keyword          ctermfg=blue        ctermbg=NONE        cterm=NONE
+hi Keyword          ctermfg=darkblue        ctermbg=NONE        cterm=NONE
 hi PreProc          ctermfg=blue        ctermbg=NONE        cterm=NONE
 hi Conditional      ctermfg=blue        ctermbg=NONE        cterm=NONE  " if else end
 
@@ -59,7 +59,7 @@ hi link Include         PreProc
 hi link Define          PreProc
 hi link Macro           PreProc
 hi link PreCondit       PreProc
-hi link StorageClass    Type
+hi link StorageClass    Normal
 hi link Structure       Type
 hi link Typedef         Type
 hi link Tag             Special

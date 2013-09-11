@@ -1265,11 +1265,11 @@
 			<key>Ansi 4 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.99250566959381104</real>
+				<real>0.8546026349067688</real>
 				<key>Green Component</key>
-				<real>0.78989285230636597</real>
+				<real>0.72058588266372681</real>
 				<key>Red Component</key>
-				<real>0.5784151554107666</real>
+				<real>0.52310693264007568</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
