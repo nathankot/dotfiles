@@ -1310,11 +1310,11 @@
 			<key>Ansi 9 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.35148319602012634</real>
+				<real>0.068051367998123169</real>
 				<key>Green Component</key>
-				<real>0.65945738554000854</real>
+				<real>0.12517450749874115</real>
 				<key>Red Component</key>
-				<real>0.98980480432510376</real>
+				<real>0.18682833015918732</real>
 			</dict>
 			<key>Automatically Log</key>
 			<false/>
