@@ -1158,7 +1158,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>173 191 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>0 366 924 485 0 0 1920 1178 </string>
+	<string>760 333 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>576 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1397,11 +1397,11 @@
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.56280046701431274</real>
+				<real>0.6701958179473877</real>
 				<key>Green Component</key>
-				<real>0.56280046701431274</real>
+				<real>0.6701958179473877</real>
 				<key>Red Component</key>
-				<real>0.56280046701431274</real>
+				<real>0.6701958179473877</real>
 			</dict>
 			<key>Guid</key>
 			<string>6F4AAFBD-435D-4CC8-9AB5-C430CCA2F1C0</string>
