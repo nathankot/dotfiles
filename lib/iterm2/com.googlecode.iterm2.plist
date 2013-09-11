@@ -1158,7 +1158,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>173 191 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>760 333 924 485 0 0 1920 1178 </string>
+	<string>249 674 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>576 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1229,11 +1229,11 @@
 			<key>Ansi 14 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.44093143939971924</real>
+				<real>0.42734736204147339</real>
 				<key>Green Component</key>
-				<real>0.3903338611125946</real>
+				<real>0.37094661593437195</real>
 				<key>Red Component</key>
-				<real>0.83984375</real>
+				<real>0.75715041160583496</real>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
@@ -1274,11 +1274,11 @@
 			<key>Ansi 5 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.40668052434921265</real>
+				<real>0.55913424491882324</real>
 				<key>Green Component</key>
-				<real>0.40016001462936401</real>
+				<real>0.43231356143951416</real>
 				<key>Red Component</key>
-				<real>0.78881502151489258</real>
+				<real>0.82418340444564819</real>
 			</dict>
 			<key>Ansi 6 Color</key>
 			<dict>
