@@ -8,9 +8,9 @@ hi pastemessage ctermbg=darkblue
 highlight clear StatusLine
 highlight clear StatusLineNC
 
-hi StatusLine   ctermfg=green ctermbg=black
-hi StatusLineNC ctermfg=8 ctermbg=black
-hi StatusInsertMode ctermfg=white ctermbg=black
+hi StatusLine   ctermfg=white ctermbg=7
+hi StatusLineNC ctermfg=black ctermbg=7
+hi StatusInsertMode ctermfg=green ctermbg=black
 hi link StatusNormalMode  StatusLine
 
 "filename
