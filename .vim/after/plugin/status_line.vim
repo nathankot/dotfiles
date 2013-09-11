@@ -2,11 +2,14 @@
 
 hi link SyntasticErrorLine ErrorMsg
 hi link SyntasticWarningLine WarningMsg
-hi gitmessage ctermbg=darkgray
+hi gitmessage ctermbg=8
 hi pastemessage ctermbg=darkblue
 
+highlight clear StatusLine
+highlight clear StatusLineNC
+
 hi StatusLine   ctermfg=green ctermbg=black
-hi StatusLineNC ctermfg=darkgray ctermbg=black
+hi StatusLineNC ctermfg=8 ctermbg=black
 hi StatusInsertMode ctermfg=white ctermbg=black
 hi link StatusNormalMode  StatusLine
 
@@ -15,9 +18,9 @@ hi link User1 StatusNormalMode
 "line number
 hi User2 ctermfg=NONE ctermbg=black
 "line# seperator
-hi User3 ctermfg=darkgray ctermbg=black
+hi User3 ctermfg=8 ctermbg=black
 "line count
-hi User4 ctermfg=darkgray ctermbg=black
+hi User4 ctermfg=8 ctermbg=black
 "file type
 hi User5 ctermfg=NONE ctermbg=black
 "modified flag
