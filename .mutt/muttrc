@@ -116,7 +116,7 @@ macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
 # Open urlview
-macro pager \Cu "|urlview<enter>" "call urlview to open links"
+macro pager \Cl "|urlview<enter>" "call urlview to open links"
 
 # Other Bindings
 bind index R        group-reply
