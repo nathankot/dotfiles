@@ -266,52 +266,6 @@ hi FoldColumn ctermfg=black ctermbg=black guifg=#080808 guibg=#080808
 
 hi NonText ctermfg=bg
 
-" Syntastic
-hi link SyntasticErrorLine ErrorMsg
-hi link SyntasticWarningLine WarningMsg
-
-" The Status Line
-hi StatusLine   ctermfg=255 ctermbg=234 guifg=white guibg=#121212
-hi StatusLineNC ctermfg=255 ctermbg=black guifg=white guibg=#080808
-hi gitmessage ctermbg=235 guibg=#5f005f
-hi pastemessage ctermbg=24 guibg=#005f87
-
-"filename
-hi User1 ctermfg=255 ctermbg=235 guifg=NONE guibg=#262626
-"line number
-hi User2 ctermfg=NONE ctermbg=236 guifg=NONE guibg=#303030
-"line# seperator
-hi User3 ctermfg=239 ctermbg=236 guifg=#4e4e4e guibg=#303030
-"line count
-hi User4 ctermfg=249 ctermbg=236 guifg=#b2b2b2 guibg=#303030
-"file type
-hi User5 ctermfg=NONE ctermbg=235 guifg=NONE guibg=#5f005f
-"modified flag
-hi User6 ctermfg=NONE ctermbg=88 guifg=NONE guibg=#870000
-
-set statusline=
-set statusline+=%1*%<\                          "aesthetic coloring
-set statusline+=%2*\ %{strlen(&ft)?&ft:'?'}\    "filetype
-set statusline+=%*                              "reset coloring
-set statusline+=%1*\ %20.t\                     "filename
-set statusline+=%*                              "reset coloring
-set statusline+=%2*\ %l%3*:%4*%L\               "line#/totallines
-set statusline+=%*                              "reset coloring
-set statusline+=%6*%m                           "modified flag
-set statusline+=%*                              "reset coloring
-
-set statusline+=%=                              "seperator
-
-"display a warning if &paste is set
-set statusline+=%#pastemessage#
-set statusline+=%{&paste?'\ paste\ ':''}
-
-set statusline+=%#gitmessage#
-set statusline+=\ %{fugitive#head()}\           " Branch Name
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-
 
 """" Package Settings =========================================================
 
@@ -481,14 +435,6 @@ function! HasPaste()
     return ''
 endfunction
 
-" Change the values for User1 color preset depending on mode
-function! ModeChanged(mode)
-    if     a:mode ==# "n"  | hi User1 ctermfg=NONE ctermbg=235 guifg=NONE guibg=#5f0087
-    elseif a:mode ==# "i"  | hi User1 ctermfg=NONE ctermbg=236 guifg=NONE guibg=#87005f
-    elseif a:mode ==# "r"  | hi User1 ctermfg=NONE ctermbg=235 guifg=NONE guibg=#5f0088
-    else                   | hi User1 ctermfg=NONE ctermbg=235 guifg=NONE guibg=#5f0087
-    endif
-endfunc
 
 " Tabline function
 function! Tabline()
@@ -533,10 +479,6 @@ au BufWrite *.py :call DeleteTrailingWS()
 au BufWrite *.coffee :call DeleteTrailingWS()
 au BufWrite *.rb :call DeleteTrailingWS()
 au BufWrite *.erb :call DeleteTrailingWS()
-
-au InsertEnter  * call ModeChanged(v:insertmode)
-au InsertChange * call ModeChanged(v:insertmode)
-au InsertLeave  * call ModeChanged(mode())
 
 " Open QuickFix Window after Grep
 au QuickFixCmdPost *grep* cwindow
