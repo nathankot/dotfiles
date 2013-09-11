@@ -41,7 +41,7 @@ hi Todo             ctermfg=red         ctermbg=NONE        cterm=NONE
 hi Constant         ctermfg=cyan        ctermbg=NONE        cterm=NONE
 
 hi Identifier       ctermfg=cyan        ctermbg=NONE        cterm=NONE
-hi Function         ctermfg=brown       ctermbg=NONE        cterm=NONE
+hi Function         ctermfg=darkmagenta       ctermbg=NONE        cterm=NONE
 hi Type             ctermfg=yellow      ctermbg=NONE        cterm=NONE
 hi Statement        ctermfg=lightblue   ctermbg=NONE        cterm=NONE
 

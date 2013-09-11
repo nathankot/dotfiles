@@ -11,7 +11,7 @@ match OverLength /\%81v.\+/
 set fillchars+=vert:\ 
 set colorcolumn=
 highlight clear SignColumn
-hi VertSplit ctermbg=black
+hi VertSplit ctermbg=black ctermfg=black
 hi ColorColumn ctermfg=black ctermbg=black
 hi SignColumn ctermfg=black ctermbg=black
 

@@ -9,4 +9,4 @@ hi link specControls      Normal
 " COFFEE "
 
 hi link coffeeObjAssign  Type
-hi coffeeSpecialIdent  ctermfg=blue
+hi link coffeeSpecialIdent  Identifier

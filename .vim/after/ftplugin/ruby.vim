@@ -9,7 +9,6 @@ hi rubyRegexpDelimiter         guifg=#FF8000      guibg=NONE  gui=NONE  ctermfg=
 hi rubyEscape                  guifg=white        guibg=NONE  gui=NONE  ctermfg=cyan      ctermbg=NONE  cterm=NONE
 hi rubyInterpolationDelimiter  guifg=#00A0A0      guibg=NONE  gui=NONE  ctermfg=darkblue  ctermbg=NONE  cterm=NONE
 hi rubyStringDelimiter         guifg=#336633      guibg=NONE  gui=NONE  ctermfg=green     ctermbg=NONE  cterm=NONE
-hi rubyRailsTestMethod         ctermfg=darkgreen
 
 hi link rubyClass             Keyword 
 hi link rubyModule            Keyword 
@@ -21,3 +20,5 @@ hi link rubyGlobalVariable    Identifier
 hi link rubyClassVariable     Identifier
 hi link rubyconstant          type  
 hi link rubyControl           Conditional
+
+hi link rubyRailsFilterMethod  Normal
