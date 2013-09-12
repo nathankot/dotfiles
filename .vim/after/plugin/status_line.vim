@@ -2,7 +2,6 @@
 
 hi link SyntasticErrorLine ErrorMsg
 hi link SyntasticWarningLine WarningMsg
-hi gitmessage ctermbg=black
 hi pastemessage ctermbg=darkblue
 
 highlight clear StatusLine
@@ -39,7 +38,5 @@ set statusline+=%=                              "seperator
 "display a warning if &paste is set
 set statusline+=%#pastemessage#
 set statusline+=%{&paste?'\ paste\ ':''}
-set statusline+=%#gitmessage#
-set statusline+=\ %{fugitive#head()}\           " Branch Name
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
