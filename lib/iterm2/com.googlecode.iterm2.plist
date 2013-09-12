@@ -1158,7 +1158,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>173 191 214 309 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>249 674 924 485 0 0 1920 1178 </string>
+	<string>783 350 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>576 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1292,11 +1292,11 @@
 			<key>Ansi 7 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.060785491019487381</real>
+				<real>0.097161337733268738</real>
 				<key>Green Component</key>
-				<real>0.060785491019487381</real>
+				<real>0.097161337733268738</real>
 				<key>Red Component</key>
-				<real>0.060785491019487381</real>
+				<real>0.097161337733268738</real>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
@@ -1968,7 +1968,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-09-11T02:05:59Z</date>
+	<date>2013-09-12T02:06:00Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>

@@ -2,19 +2,17 @@
 
 hi link SyntasticErrorLine ErrorMsg
 hi link SyntasticWarningLine WarningMsg
-hi gitmessage ctermbg=8
+hi gitmessage ctermbg=black
 hi pastemessage ctermbg=darkblue
 
 highlight clear StatusLine
 highlight clear StatusLineNC
 
-hi StatusLine   ctermfg=white ctermbg=7
-hi StatusLineNC ctermfg=black ctermbg=7
-hi StatusInsertMode ctermfg=green ctermbg=black
-hi link StatusNormalMode  StatusLine
+hi StatusLine   ctermfg=darkred ctermbg=7
+hi StatusLineNC ctermfg=white ctermbg=7
 
 "filename
-hi link User1 StatusNormalMode
+hi User1 ctermfg=white ctermbg=7
 "line number
 hi User2 ctermfg=NONE ctermbg=black
 "line# seperator
@@ -45,16 +43,3 @@ set statusline+=%#gitmessage#
 set statusline+=\ %{fugitive#head()}\           " Branch Name
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
-
-au InsertEnter  * call ModeChanged(v:insertmode)
-au InsertChange * call ModeChanged(v:insertmode)
-au InsertLeave  * call ModeChanged(mode())
-
-" Change the values for User1 color preset depending on mode
-function! ModeChanged(mode)
-    if     a:mode ==# "n"  | hi link User1 StatusNormalMode
-    elseif a:mode ==# "i"  | hi link User1 StatusInsertMode
-    elseif a:mode ==# "r"  | hi link User1 StatusNormalMode
-    else                   | hi link User1 StatusNormalMode
-    endif
-endfunc
