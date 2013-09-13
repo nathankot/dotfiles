@@ -277,11 +277,12 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_enable_balloons = 0
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_full_redraws = 0
 " take the current ruby version specified by rbenv
 let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 let g:syntastic_coffee_checkers = ['coffee']
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 " Vroom
 let g:vroom_map_keys = 0
