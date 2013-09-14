@@ -13,7 +13,6 @@ brew install curl-ca-bundle
 brew install msmtp
 brew intall mutt --with-sidebar-patch
 
-# Want to compile against homebrew's Python.
 brew install macvim --override-system-vim
 brew install ack
 brew install the_silver_searcher
@@ -21,3 +20,6 @@ brew install ctags
 
 # For spec-ing
 brew install phantomjs
+
+# Install Heroku
+wget -qO- https://toolbelt.heroku.com/install.sh | sh
