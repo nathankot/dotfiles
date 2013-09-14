@@ -1,11 +1,11 @@
 call NERDTreeAddKeyMap({
-       \ 'key': 'o',
+       \ 'key': 'v',
        \ 'scope': 'FileNode',
        \ 'callback': "NERDTreeOpenWithDWM",
        \ 'quickhelpText': 'Open in new dwm pane.' })
 
 call NERDTreeAddKeyMap({
-       \ 'key': '<enter>',
+       \ 'key': 's',
        \ 'scope': 'FileNode',
        \ 'callback': "NERDTreeOpenWithDWM",
        \ 'quickhelpText': 'Open in new dwm pane.' })
