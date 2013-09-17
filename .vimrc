@@ -24,7 +24,7 @@ Bundle 'tpope/vim-ragtag'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'Raimondi/delimitMate'
-Bundle 'tomtom/tcomment_vim'
+Bundle 'nathankot/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-dispatch'
 Bundle 'scrooloose/syntastic'
