@@ -1162,7 +1162,7 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>576 460 384 129 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>960 10 955 1168 0 0 1920 1200 </string>
+	<string>0 0 1920 1200 0 0 1920 1178 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1301,11 +1301,11 @@
 			<key>Ansi 8 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.20220588147640228</real>
+				<real>0.30733880400657654</real>
 				<key>Green Component</key>
-				<real>0.20220588147640228</real>
+				<real>0.30733880400657654</real>
 				<key>Red Component</key>
-				<real>0.19990809261798859</real>
+				<real>0.30384629964828491</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1968,7 +1968,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-09-12T02:06:00Z</date>
+	<date>2013-09-17T09:00:46Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
