@@ -26,7 +26,7 @@
   default = simple
 
 [pull]
-  rebase = true
+  rebase = false
 
 [color]
   ui = auto
