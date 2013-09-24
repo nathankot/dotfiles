@@ -1,0 +1,9 @@
+# ~/.tmuxinator/socialreach.yml
+
+name: socialreach
+root: ~/Development/Sites/socialreach
+pre_window: rbenv shell 2.0.0-p247
+
+windows:
+  - editor: vim -S
+  - server: always app.js
