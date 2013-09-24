@@ -68,7 +68,6 @@ Bundle 'wavded/vim-stylus'
 Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-endwise'
-Bundle 'skammer/vim-css-color'
 Bundle 'godlygeek/tabular'
 Bundle 'spolu/dwm.vim'
 
