@@ -29,7 +29,4 @@ installcask shortcat
 installcask dropbox
 installcask skype
 
-# Link all the above apps to alfred
 brew cask linkapps
-brew cask alfred link
-
