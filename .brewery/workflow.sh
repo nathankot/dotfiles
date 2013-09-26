@@ -18,8 +18,5 @@ brew install ack
 brew install the_silver_searcher
 brew install ctags
 
-# For spec-ing
-brew install phantomjs
-
 # Install Heroku
 wget -qO- https://toolbelt.heroku.com/install.sh | sh
