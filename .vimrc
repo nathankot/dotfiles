@@ -45,7 +45,6 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-bundler'
-Bundle 'skalnik/vim-vroom'
 
 " HTML
 Bundle 'othree/html5.vim'
@@ -283,15 +282,6 @@ let g:syntastic_full_redraws = 0
 let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 let g:syntastic_coffee_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-
-" Vroom
-let g:vroom_map_keys = 0
-let g:vroom_clear_screen = 0
-let g:vroom_use_dispatch = 1
-let g:vroom_detect_spec_helper = 1
-let g:vroom_use_bundle_exec = 1
-let g:vroom_use_colors = 1
-" let g:vroom_spec_command = 'rspec '
 
 " Emmet
 let g:user_emmet_expandabbr_key = '<leader>z'
