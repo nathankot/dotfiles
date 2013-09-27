@@ -288,8 +288,10 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:vroom_map_keys = 0
 let g:vroom_clear_screen = 0
 let g:vroom_use_dispatch = 1
+let g:vroom_detect_spec_helper = 1
 let g:vroom_use_bundle_exec = 1
-let g:vroom_spec_command = 'rspec --drb '
+let g:vroom_use_colors = 1
+" let g:vroom_spec_command = 'rspec '
 
 " Emmet
 let g:user_emmet_expandabbr_key = '<leader>z'
