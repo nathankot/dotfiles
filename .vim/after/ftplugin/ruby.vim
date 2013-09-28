@@ -1,14 +1,6 @@
 " Vroom
-nnoremap <leader>t :call RSpecCurrentLine()<cr>
-nnoremap <leader>T :call RSpecCurrentFile()<cr>
-
-func! RSpecCurrentLine()
-  execute "Dispatch bundle exec rspec %:" . line(".")
-endfunc
-
-func! RSpecCurrentFile()
-  execute "Dispatch bundle exec rspec %"
-endfunc
+nnoremap <leader>t :.Rake<cr>
+nnoremap <leader>T :Rake<cr>
 
 " RUBY "
 
