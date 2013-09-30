@@ -127,3 +127,6 @@ bind index p recall-message
 
 # Theme
 source ~/lib/mutt-colors/mutt-colors-solarized-dark-256.muttrc
+
+auto_view text/html
+alternative_order text/plain text/enriched text/html
