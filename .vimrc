@@ -298,7 +298,7 @@ let g:gundo_right = 0
 
 " Signify
 let g:signify_vcs_list = [ 'git' ]
-let g:signify_sign_overwrite = 1
+let g:signify_sign_overwrite = 0
 
 " Ragtag
 let g:ragtag_global_maps = 1
