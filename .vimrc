@@ -303,9 +303,6 @@ let g:signify_sign_overwrite = 0
 " Ragtag
 let g:ragtag_global_maps = 1
 
-" vim css color
-let g:cssColorVimDoNotMessMyUpdatetime = 1
-
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
