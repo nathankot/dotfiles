@@ -19,4 +19,5 @@ brew install the_silver_searcher
 brew install ctags
 
 # Install Heroku
+brew install wget
 wget -qO- https://toolbelt.heroku.com/install.sh | sh
