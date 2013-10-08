@@ -6,3 +6,6 @@ export PATH="./bin:$HOME/bin:$PATH"
 
 # Homebrew executables
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+# Heroku toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
