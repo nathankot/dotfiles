@@ -50,6 +50,8 @@
   issues = !ghi
   browse = !hub browse
   hub = !hub
+  # Usage: `git publish-pull-request 123 ideasaurus staging
+  publish-pull-request = "!f() { hub pull-request -i ${1} -b ${2}:${3} -h ${2}:issue/${1};  }; f"
 
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
