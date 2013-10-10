@@ -50,7 +50,6 @@
   issues = !ghi
   browse = !hub browse
   hub = !hub
-  publish-branch = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
 
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
