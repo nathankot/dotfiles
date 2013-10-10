@@ -1,4 +1,5 @@
 brew install git
+brew install hub
 
 brew install tmux
 brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
