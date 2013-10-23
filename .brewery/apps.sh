@@ -18,6 +18,7 @@ installcask amethyst
 installcask kaleidoscope
 
 installcask google-chrome
+installcask google-chrome-canary
 
 installcask app-cleaner
 installcask the-unarchiver
