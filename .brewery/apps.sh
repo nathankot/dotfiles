@@ -28,6 +28,7 @@ installcask alfred
 installcask shortcat
 
 installcask dropbox
+installcask layervault
 installcask skype
 
 brew cask linkapps
