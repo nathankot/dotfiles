@@ -76,9 +76,6 @@ defaults write com.apple.helpviewer DevMode -bool true
 # Avoid creating .DS_Store on network drives
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 
-# Disable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
