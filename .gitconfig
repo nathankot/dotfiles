@@ -15,6 +15,9 @@
 [credential]
   helper = osxkeychain
 
+[hub]
+  protocol = https
+
 [log]
   abbrevCommit = true
   decorate = true
