@@ -12,7 +12,7 @@ brew install urlview
 brew install contacts
 brew install curl-ca-bundle
 brew install msmtp
-brew install mutt --with-sidebar-patch
+brew install mutt --sidebar-patch
 
 brew install macvim --override-system-vim
 brew install ack
