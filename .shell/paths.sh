@@ -11,4 +11,4 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # NPM
-export PATH="./node_modules:/usr/local/share/npm/bin:$PATH"
+export PATH="./node_modules/.bin:/usr/local/share/npm/bin:$PATH"
