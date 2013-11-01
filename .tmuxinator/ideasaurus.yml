@@ -14,18 +14,22 @@ windows:
         - rails c
         - psql ideasaurus_development
 
-  - email: mutt
-  - blog: cd ~/Sites/nathankot.com; vim -S
-
   - processes:
       layout: even-horizontal
       panes:
         - foreman start
         - bundle exec guard
+        - grunt watch
+        - karma start
 
   - logs:
       layout: even-horizontal
       panes:
         - nocorrect tail -f log/development.log
         - nocorrect production logs --tail
+
+  - email: mutt
+  - blog: cd ~/Sites/nathankot.com; vim -S
+
+
 
