@@ -48,6 +48,9 @@ source ~/.shell/specific.sh
 if [ -f ~/.shell/private.sh ]; then
   source ~/.shell/private.sh
 fi
+if [ -f ~/.bash_private ]; then
+  source ~/.bash_private
+fi
 
 # Functions
 source ~/.shell/functions.sh
