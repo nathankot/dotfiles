@@ -15,12 +15,11 @@ windows:
         - psql ideasaurus_development
 
   - processes:
-      layout: even-horizontal
+      layout: even-vertical
       panes:
         - foreman start
         - bundle exec guard
         - grunt watch
-        - karma start
 
   - logs:
       layout: even-horizontal
