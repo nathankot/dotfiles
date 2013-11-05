@@ -1,7 +1,7 @@
 # ~/.tmuxinator/wedding.yml
 
 name: wedding
-root: ~/Development/Sites/wedding-registry
+root: ~/Development/Sites/wed.is
 
 # Optional tmux socket
 # socket_name: foo
