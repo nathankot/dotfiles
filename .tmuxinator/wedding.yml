@@ -19,5 +19,6 @@ windows:
   - editor: vim -S
   - shell: # Shell
   - processes:
-    - grunt server
-    - node start
+      layout: even-vertical
+      panes:
+        - grunt server
