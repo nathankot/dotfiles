@@ -27,6 +27,7 @@ installcask f-lux
 installcask alfred
 installcask shortcat
 
+installcask google-drive
 installcask dropbox
 installcask layervault
 installcask skype
