@@ -280,7 +280,7 @@ let g:syntastic_full_redraws = 0
 let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 let g:syntastic_coffee_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_javascript_checkers = ['jshint']
 
 " Emmet
 let g:user_emmet_expandabbr_key = '<leader>z'
