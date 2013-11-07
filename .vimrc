@@ -141,9 +141,6 @@ set ttymouse=xterm2
 " Reload files changed outside of vim
 set autoread
 
-" Automatically update cwd to current file dir.
-set autochdir
-
 " Tabs
 set shiftwidth=2
 set tabstop=2
