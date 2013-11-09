@@ -22,3 +22,6 @@ windows:
       layout: even-vertical
       panes:
         - grunt server
+  - app-editor: cd ~/Development/Apps/wedis && vim -S
+  - app-shell: cd ~/Development/Apps/wedis
+
