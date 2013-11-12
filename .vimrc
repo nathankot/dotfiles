@@ -46,6 +46,7 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'argtextobj.vim'
 Bundle 'mhinz/vim-signify'
+Bundle 'goldfeld/vim-seek'
 " Languages
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mattn/emmet-vim'
