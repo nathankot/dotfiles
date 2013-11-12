@@ -1,9 +1,7 @@
 -R
 --fields=+l
--f .tags
 --links=yes
---exclude=.git/
---exclude=*.min.*
---exclude=*.gz
+--exclude=.min
+--exclude=.gz
 --exclude=node_modules
 --exclude=bower_components

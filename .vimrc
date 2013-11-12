@@ -105,9 +105,6 @@ if &encoding ==# 'latin1' && has('gui_running')
   set encoding=utf-8
 endif
 
-" Only use one tagfile - from the project root
-set tags=.tags;
-
 " Respect modelines
 set modeline
 set modelines=4
@@ -339,9 +336,6 @@ nnoremap <F5> :GundoToggle<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
-
-" Refresh tags, defaults stored in .ctags
-nnoremap <F8> :Dispatch ctags .<CR>
 
 " Toggle/RevealFile in NerdTree Sidebar
 noremap <C-k><C-b> :NERDTreeToggle<CR>
