@@ -14,70 +14,46 @@ call vundle#rc()
 """"" Bundles =================================================================
 Bundle 'gmarik/vundle'
 
-" Core
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-ragtag'
-
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-bundler'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Raimondi/delimitMate'
 Bundle 'nathankot/tcomment_vim'
 Bundle 'sjl/gundo.vim'
-Bundle 'tpope/vim-dispatch'
 Bundle 'scrooloose/syntastic'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'iandoe/vim-osx-colorpicker'
-
-Bundle 'kien/ctrlp.vim'
-
-" Requires compilation
-Bundle "Valloric/YouCompleteMe"
-
-" VCS
-Bundle 'tpope/vim-fugitive'
-Bundle 'mhinz/vim-signify'
-
-" Ruby
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-bundler'
-
-" HTML
-Bundle 'othree/html5.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'juvenn/mustache.vim'
-Bundle 'tpope/vim-haml'
-
-" JS
-Bundle 'elzr/vim-json'
-
-" Markdown
-Bundle 'plasticboy/vim-markdown'
-
-" Preprocessors
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'wavded/vim-stylus'
-
-" NEW BUNDLES THAT NEED TO BE GROK'd
-
 Bundle 'rking/ag.vim'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-endwise'
+Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'spolu/dwm.vim'
-
-" Gists
+Bundle "Valloric/YouCompleteMe"
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-
-" Text Objects
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'argtextobj.vim'
+Bundle 'mhinz/vim-signify'
+" Languages
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'mattn/emmet-vim'
+Bundle 'juvenn/mustache.vim'
+Bundle 'tpope/vim-haml'
+Bundle 'elzr/vim-json'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'wavded/vim-stylus'
 
 
 """"" Core Settings ===========================================================
@@ -251,8 +227,6 @@ let g:ctrlp_open_func = {
                         \ 'mru files' : 'OpenWithDwm'
                         \ }
 
-
-
 " You Complete me
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 0
@@ -356,8 +330,8 @@ nnoremap <F5> :GundoToggle<CR>
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-" Refresh tags
-nnoremap <F8> :!ctags .<CR>
+" Refresh tags, defaults stored in .ctags
+nnoremap <F8> :Dispatch ctags .<CR>
 
 " Toggle/RevealFile in NerdTree Sidebar
 noremap <C-k><C-b> :NERDTreeToggle<CR>
@@ -368,8 +342,8 @@ map <space> /
 map <S-space> ?
 
 " Buffer management
-noremap <leader>] :bnext<CR>
-noremap <leader>[ :bprev<CR>
+noremap <leader>. :bnext<CR>
+noremap <leader>m :bprev<CR>
 noremap <leader>d :bd<CR>
 
 " Find the highlight under the cursor
@@ -391,26 +365,15 @@ function! HasPaste()
     return ''
 endfunction
 
-" Ctrlp - open with DWM
-function! OpenWithDwm(action, line)
-  if a:action == "v"
-    let l:filename = fnameescape(fnamemodify(a:line, ':p'))
-    call ctrlp#exit()
-    call DWM_New()
-    exec "edit " . l:filename
-  else
-    call call('ctrlp#acceptfile', [a:action, a:line])
-  endif
-endfunction
-
 """" Auto commands ============================================================
 
 au BufWrite *.py :call DeleteTrailingWS()
 au BufWrite *.coffee :call DeleteTrailingWS()
 au BufWrite *.rb :call DeleteTrailingWS()
 au BufWrite *.erb :call DeleteTrailingWS()
+au BufWrite *.js :call DeleteTrailingWS()
 
-au BufEnter * match OverLength /\%79v.*/
+au BufEnter * match OverLength /\%80v.*/
 
 " Open QuickFix Window after Grep
 au QuickFixCmdPost *grep* cwindow
