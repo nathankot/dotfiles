@@ -55,6 +55,7 @@ Bundle 'elzr/vim-json'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'wavded/vim-stylus'
+Bundle 'othree/html5.vim'
 
 
 """"" Core Settings ===========================================================
