@@ -39,6 +39,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'spolu/dwm.vim'
 Bundle "Valloric/YouCompleteMe"
+Bundle "SirVer/ultisnips"
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'kana/vim-textobj-user'
@@ -238,8 +239,16 @@ let g:ycm_allow_changing_updatetime = 0
 let g:ycm_register_as_syntastic_checker = 1
 let g:ycm_semantic_triggers = {} " Not using semantic completion
 let g:ycm_key_invoke_completion = ''
-let g:ycm_key_list_select_completion = ['<C-i>']
+let g:ycm_key_list_select_completion = ['<C-i>', '<tab>']
 let g:ycm_key_list_previous_completion = ['<C-o>']
+
+""" Ultisnips
+let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsJumpForwardTrigger="<C-l>"
+let g:UltiSnipsJumpBackwardTrigger="<C-h>"
+let g:UltiSnipsListSnippets="<c-e>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="~/.vim/snippets"
 
 " Syntastic
 let g:syntastic_check_on_open = 0
