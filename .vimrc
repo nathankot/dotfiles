@@ -263,6 +263,7 @@ let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 let g:syntastic_coffee_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_html_checkers = []
 
 " Emmet
 let g:user_emmet_expandabbr_key = '<leader>z'
