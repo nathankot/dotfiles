@@ -3,6 +3,9 @@
 name: meetingroom
 root: ~/Development/Sites/getmeetingroom
 
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: rbenv shell 2.0.0-p247; export PORT=3001
+
 windows:
   - editor: vim -S
   - shell: #
