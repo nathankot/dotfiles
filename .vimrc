@@ -14,6 +14,7 @@ call vundle#rc()
 """"" Bundles =================================================================
 Bundle 'gmarik/vundle'
 
+Bundle 'editorconfig/editorconfig-vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
