@@ -374,12 +374,6 @@ endfunction
 
 """" Auto commands ============================================================
 
-au BufWrite *.py :call DeleteTrailingWS()
-au BufWrite *.coffee :call DeleteTrailingWS()
-au BufWrite *.rb :call DeleteTrailingWS()
-au BufWrite *.erb :call DeleteTrailingWS()
-au BufWrite *.js :call DeleteTrailingWS()
-
 au BufEnter * match OverLength /\%80v.*/
 
 " Open QuickFix Window after Grep
