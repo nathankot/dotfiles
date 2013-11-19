@@ -1,7 +1,7 @@
 # ~/.tmuxinator/meetingroom.yml
 
 name: meetingroom
-root: ~/Development/Sites/meetingroom
+root: ~/Development/Sites/getmeetingroom
 
 windows:
   - editor: vim -S
