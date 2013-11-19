@@ -9,5 +9,4 @@ pre_window: rbenv shell 2.0.0-p247; export PORT=3001
 windows:
   - editor: vim -S
   - shell: #
-  - client: cd client && grunt server
-  - server: nodemon server/app.js
+  - client: grunt server
