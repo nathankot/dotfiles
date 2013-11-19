@@ -1,0 +1,8 @@
+# ~/.tmuxinator/meetingroom.yml
+
+name: meetingroom
+root: ~/Development/Sites/meetingroom
+
+windows:
+  - editor: vim -S
+  - server: grunt server
