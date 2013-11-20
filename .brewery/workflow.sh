@@ -18,6 +18,7 @@ brew install macvim --override-system-vim
 brew install ack
 brew install the_silver_searcher
 brew install ctags
+brew install editorconfig
 
 # Install Heroku
 brew install wget
