@@ -15,7 +15,7 @@ windows:
   - server-editor:
       layout: 4536,272x55,0,0[272x7,0,0,3,272x47,0,8,4]
       panes: 
-        - cd ../api.getmeetingroom.com
-        - cd ../api.getmeetingroom.com && vim -S
+        - export PORT=3002 && cd ../api.getmeetingroom.com
+        - export PORT=3002 && cd ../api.getmeetingroom.com && vim -S
   - client: grunt server
-  - server: cd ../api.getmeetingroom.com && nodemon app.js
+  - server: export PORT=3002 && cd ../api.getmeetingroom.com && nodemon app.js
