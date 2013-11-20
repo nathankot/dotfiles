@@ -7,6 +7,15 @@ root: ~/Development/Sites/getmeetingroom.com
 pre_window: rbenv shell 2.0.0-p247; export PORT=3001
 
 windows:
-  - editor: vim -S
-  - shell: #
+  - client-editor:
+      layout: 4536,272x55,0,0[272x7,0,0,3,272x47,0,8,4]
+      panes: 
+        - 
+        - vim -S
+  - server-editor:
+      layout: 4536,272x55,0,0[272x7,0,0,3,272x47,0,8,4]
+      panes: 
+        - cd ../api.getmeetingroom.com
+        - cd ../api.getmeetingroom.com && vim -S
   - client: grunt server
+  - server: cd ../api.getmeetingroom.com && nodemon app.js
