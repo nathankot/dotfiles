@@ -4,18 +4,18 @@ name: meetingroom
 root: ~/Development/Sites/getmeetingroom.com
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: rbenv shell 2.0.0-p247; export PORT=3001
+pre_window: rbenv shell 2.0.0-p247; 
 
 windows:
   - client-editor:
       layout: 4536,272x55,0,0[272x7,0,0,3,272x47,0,8,4]
       panes: 
-        - 
-        - vim -S
+        - export PORT=3001
+        - export PORT=3001 && vim -S
   - server-editor:
       layout: 4536,272x55,0,0[272x7,0,0,3,272x47,0,8,4]
       panes: 
         - export PORT=3002 && cd ../api.getmeetingroom.com
         - export PORT=3002 && cd ../api.getmeetingroom.com && vim -S
-  - client: grunt server
-  - server: export PORT=3002 && cd ../api.getmeetingroom.com && nodemon app.js
+  - client: export PORT=3001 && grunt server
+  - server: export PORT=3002 && cd ../api.getmeetingroom.com && grunt server
