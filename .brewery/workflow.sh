@@ -24,3 +24,4 @@ brew install editorconfig
 brew install wget
 wget -qO- https://toolbelt.heroku.com/install.sh | sh
 heroku plugins:install https://github.com/tpope/heroku-binstubs.git
+heroku plugins:install https://github.com/tpope/heroku-wildcards.git
