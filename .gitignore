@@ -44,6 +44,7 @@ ehthumbs.db
 .vimrc
 Session.vim
 !./.vimrc
+/tags
 
 # Rails #
 #########
