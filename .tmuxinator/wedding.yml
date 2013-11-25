@@ -16,12 +16,17 @@ root: ~/Development/Sites/wed.is
 # tmux_options: -f ~/.tmux.mac.conf
 
 windows:
-  - editor: vim -S
-  - shell: # Shell
+  - web: # Shell
+      layout: bbbb,272x55,0,0[272x12,0,0,21,272x42,0,13,23]
+      panes:
+        - #
+        - vim -S
+  - app: 
+      layout: bbbb,272x55,0,0[272x12,0,0,21,272x42,0,13,23]
+      panes:
+        - cd ~/Development/Apps/wedis
+        - cd ~/Development/Apps/wedis && vim -S
   - processes:
       layout: even-vertical
       panes:
         - grunt server
-  - app-editor: cd ~/Development/Apps/wedis && vim -S
-  - app-shell: cd ~/Development/Apps/wedis
-
