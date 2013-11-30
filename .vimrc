@@ -187,7 +187,7 @@ set scrolloff=3
 set sidescrolloff=12
 set undofile
 set gdefault
-set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~
+set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~,*/node_modules/*
 
 " Interactive shell
 set shell=bash
