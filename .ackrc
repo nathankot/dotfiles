@@ -4,6 +4,7 @@
 --type-set=stylus=.styl
 --smart-case
 --ignore-dir=.git
+--ignore-dir=node_modules
 --ignore-dir=.source
 --ignore-dir=tmp
 --ignore-file=is:.tags
