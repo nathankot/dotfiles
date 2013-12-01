@@ -230,23 +230,23 @@ let g:ctrlp_open_func = {
 
 " You Complete me
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_seed_identifiers_with_syntax = 0
+let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_min_num_identifier_candidate_chars = 3
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_allow_changing_updatetime = 0
-let g:ycm_register_as_syntastic_checker = 0
-let g:ycm_semantic_triggers = {}
+let g:ycm_register_as_syntastic_checker = 1
 let g:ycm_key_invoke_completion = ''
-let g:ycm_key_list_select_completion = ['<C-i>', '<C-j>', '<tab>']
+let g:ycm_key_list_select_completion = ['<C-i>', '<C-j>']
 let g:ycm_key_list_previous_completion = ['<C-o>', '<C-k>']
+let g:ycm_use_ultisnips_completer = 1
 
 """ Ultisnips
-let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsExpandTrigger="<C-e>"
 let g:UltiSnipsJumpForwardTrigger="<C-l>"
 let g:UltiSnipsJumpBackwardTrigger="<C-h>"
-let g:UltiSnipsListSnippets="<c-e>"
+let g:UltiSnipsListSnippets="<c-a>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir="~/.vim/snippets"
 
@@ -267,8 +267,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_html_checkers = []
 
 " Emmet
-let g:user_emmet_expandabbr_key = '<leader>z'
-let g:use_emmet_complete_tag = 1
+let g:user_emmet_expandabbr_key = '<tab>'
 
 " Delimit mate
 let delimitMate_expand_cr = 0
@@ -374,7 +373,7 @@ endfunction
 
 """" Auto commands ============================================================
 
-au BufEnter * match OverLength /\%80v.*/
+au BufEnter * match OverLength /\%81v.*/
 
 " Open QuickFix Window after Grep
 au QuickFixCmdPost *grep* cwindow
