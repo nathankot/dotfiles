@@ -58,6 +58,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'wavded/vim-stylus'
 Bundle 'othree/html5.vim'
+Bundle 'arecarn/crunch'
 
 
 """"" Core Settings ===========================================================
@@ -267,7 +268,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_html_checkers = []
 
 " Emmet
-let g:user_emmet_expandabbr_key = '<tab>'
+let g:user_emmet_expandabbr_key = '<leader>z'
 
 " Delimit mate
 let delimitMate_expand_cr = 0
@@ -300,6 +301,9 @@ let g:gist_detect_filetype = 0
 
 
 """" Key Mappings =============================================================
+
+" Crunch
+vnoremap <leader>c :CrunchLine<cr>
 
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
