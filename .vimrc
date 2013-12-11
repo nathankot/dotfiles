@@ -302,9 +302,6 @@ let g:gist_detect_filetype = 0
 
 """" Key Mappings =============================================================
 
-" Crunch
-vnoremap <leader>c :CrunchLine<cr>
-
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
 
