@@ -67,5 +67,6 @@
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustExitCode = true
+
 [init]
-	templatedir = ~/.git_template
+  templatedir = ~/.git_template
