@@ -1,17 +1,8 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"                          Nathan Kot's VimRC :)                            "
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-""""" Bundles =================================================================
 Bundle 'gmarik/vundle'
 
 Bundle 'editorconfig/editorconfig-vim'
@@ -19,7 +10,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-obsession'
-Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-endwise'
@@ -61,44 +51,19 @@ Bundle 'othree/html5.vim'
 Bundle 'arecarn/crunch'
 
 
-""""" Core Settings ===========================================================
-
 filetype on
 filetype plugin indent on
 filetype plugin on
 syntax on
-
-" Allow Custom Syntax
-set rtp+=~/.vim/syntax/
-
-" Enable match it
 runtime macros/matchit.vim
-
-" Don't use backups or swaps
-set noswapfile
-set nobackup
-set nowritebackup
-
-" REMAP LEADER
-let mapleader = ","
-
-" Use OS clipboard
-set clipboard=unnamed
-
-" Turn off YCM preview window
-set completeopt-=preview
 
 if exists("&undodir")
   set undodir=~/.vim/undo
 endif
 
-" Kick vim to use 256 colors
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal" || &term =~ '256color'
   set term=xterm
   set t_Co=256
-  " Disable Background Color Erase (BCE) so that color schemes
-  " work properly when Vim is used inside tmux and GNU screen.
-  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
   set t_ut=
   let &t_AB="\e[48;5;%dm"
   let &t_AF="\e[38;5;%dm"
@@ -108,50 +73,37 @@ if &encoding ==# 'latin1' && has('gui_running')
   set encoding=utf-8
 endif
 
-" Respect modelines
+
+let mapleader = ","
+set rtp+=~/.vim/syntax/
+set noswapfile
+set nobackup
+set nowritebackup
+set clipboard=unnamed
+set completeopt-=preview
 set modeline
 set modelines=4
-
-" Some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
-
-" Reload files changed outside of vim
 set autoread
-
-" Tabs
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set smarttab
 set expandtab
-set lbr "LineBreak
-set ai "Auto indent
-set si "Smart indent
+set linebreak "LineBreak
+set autoindent "Auto indent
+set smartindent "Smart indent
 set nowrap "Don't wrap lines
-
-" Display tabs and trailing spaces visually
 set list
 set listchars=""
 set listchars+=tab:»\ " Note the literal space
 set listchars+=trail:·
-
-" Folding
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "disable folding on open
-
-" I find scrolling a bit less helps with maintaining context.
 set scroll=20
-
-" Make Y consistent with C and D.  See :help Y.
-nnoremap Y y$
-
-" Underscores and hyphens are word separators
-set iskeyword -=-
-
-" Ported from Vim-Sensible
-set autoindent
+set iskeyword -=- " Underscores and hyphens are word separators
 set backspace=indent,eol,start
 set complete-=i
 set nrformats-=octal
@@ -165,8 +117,6 @@ set wildmenu
 set display+=lastline
 set fileformats+=mac
 set tabpagemax=50
-
-" And the rest
 set ttyfast
 set smartindent
 set encoding=utf8
@@ -189,28 +139,16 @@ set sidescrolloff=12
 set undofile
 set gdefault
 set wildignore+=*/tmp/*,*.so,*.swp,*.sw*,*.zip,*.un~,*/node_modules/*
-
-" Interactive shell
 set shell=bash
 set shellcmdflag=-ic
-
-" THIS SETTING when on prevents the cursor from being drawn ...
-set nolazyredraw
-
-" Open new split panes to right which feels more natural
 set splitright
-
-" Format options
 set formatoptions+=j
-
-
-"""" Theming ==================================================================
-
+set nolazyredraw " THIS SETTING when on prevents the cursor from being drawn
 set background=dark
+
+
 color nk256
 
-
-"""" Package Settings =========================================================
 
 " NERDTree
 let NERDTreeShowHidden = 1
@@ -295,7 +233,8 @@ let g:gist_show_privates = 1
 let g:gist_detect_filetype = 0
 
 
-"""" Key Mappings =============================================================
+" Make Y consistent with C and D.  See :help Y.
+nnoremap Y y$
 
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
@@ -309,7 +248,7 @@ nnoremap Q <nop>
 vnoremap <s-k> <nop>
 
 " Ack
-nnoremap <leader>a :Ag -S 
+nnoremap <leader>a :Ag -S
 
 nnoremap <silent> <c-p> :CtrlP<CR>
 nnoremap <silent> <c-T> :CtrlPBufTag<CR>
@@ -328,6 +267,7 @@ noremap <leader>E :call ToggleTabline()<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gr :Gread<cr>
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -343,11 +283,6 @@ noremap <C-k><C-r> :NERDTreeFind<CR>
 map <space> /
 map <S-space> ?
 
-" Buffer management
-noremap <leader>. :bnext<CR>
-noremap <leader>m :bprev<CR>
-noremap <leader>d :bd<CR>
-
 " Find the highlight under the cursor
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
@@ -357,8 +292,6 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 vnoremap . :normal .<CR>
 
 
-"""" Helper Functions =========================================================
-
 " Returns true if paste mode is enabled
 function! HasPaste()
     if &paste
@@ -367,7 +300,6 @@ function! HasPaste()
     return ''
 endfunction
 
-"""" Auto commands ============================================================
 
 au BufEnter * match OverLength /\%81v.*/
 
