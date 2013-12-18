@@ -233,6 +233,10 @@ let g:gist_open_browser_after_post = 1
 let g:gist_show_privates = 1
 let g:gist_detect_filetype = 0
 
+" Javascript
+let g:javascript_enable_domhtmlcss = 1
+let g:javascript_conceal = 1
+
 
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
