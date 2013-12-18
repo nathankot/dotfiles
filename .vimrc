@@ -178,12 +178,13 @@ let g:ycm_key_list_previous_completion = ['<C-o>', '<C-k>']
 let g:ycm_use_ultisnips_completer = 1
 
 """ Ultisnips
-let g:UltiSnipsExpandTrigger="<C-e>"
-let g:UltiSnipsJumpForwardTrigger="<C-l>"
-let g:UltiSnipsJumpBackwardTrigger="<C-h>"
-let g:UltiSnipsListSnippets="<c-a>"
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir="~/.vim/snippets"
+let g:UltiSnipsExpandTrigger = "<C-e>"
+let g:UltiSnipsJumpForwardTrigger = "<C-l>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-h>"
+let g:UltiSnipsListSnippets = "<c-a>"
+let g:UltiSnipsEditSplit = "vertical"
+let g:UltiSnipsSnippetsDir = "~/.vim/snippets"
+let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets"]
 
 " Syntastic
 let g:syntastic_check_on_open = 0
