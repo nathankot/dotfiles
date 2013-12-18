@@ -49,6 +49,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'wavded/vim-stylus'
 Bundle 'othree/html5.vim'
 Bundle 'arecarn/crunch'
+Bundle 'pangloss/vim-javascript'
 
 
 filetype on
