@@ -50,6 +50,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'othree/html5.vim'
 Bundle 'arecarn/crunch'
 Bundle 'pangloss/vim-javascript'
+Bundle 'dag/vim-fish'
 
 
 filetype on
