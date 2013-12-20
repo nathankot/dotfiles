@@ -1,5 +1,5 @@
 ### Ruby Environment
 
-set RBENV_ROOT ~/.rbenv
+set -x RBENV_ROOT ~/.rbenv
 
 ###

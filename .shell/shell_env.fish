@@ -1,12 +1,12 @@
 ### Terminal Environment
 
 # Colors
-set TERM screen-256color
+set -x TERM screen-256color
 
 # Like to use vim?
-set EDITOR vim
+set -x EDITOR vim
 
 # Where is the ssl cert bundle?
-set SSL_CERT_FILE /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+set -x SSL_CERT_FILE /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 ###
