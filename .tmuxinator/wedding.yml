@@ -10,7 +10,7 @@ root: ~/Development/Sites/wed.is
 # pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: export API_ENV=development
+pre_window: set API_ENV development
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -21,7 +21,7 @@ windows:
       panes:
         - #
         - vim -S
-  - app: 
+  - app:
       layout: bbbb,272x55,0,0[272x12,0,0,21,272x42,0,13,23]
       panes:
         - cd ~/Development/Apps/wedis

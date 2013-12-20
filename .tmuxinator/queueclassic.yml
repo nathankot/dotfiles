@@ -2,8 +2,8 @@
 
 name: queueclassic
 root: ~/Development/Packages/queue_classic
-pre_window: export QC_DATABASE_URL="postgres://nathan@localhost/queue_classic_test"
+pre_window: set QC_DATABASE_URL "postgres://nathan@localhost/queue_classic_test"
 
 windows:
   - editor: vim -S
-  - shell: 
+  - shell:
