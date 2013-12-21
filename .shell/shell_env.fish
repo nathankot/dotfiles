@@ -1,5 +1,7 @@
 ### Terminal Environment
 
+set fish_greeting "Hello."
+
 # Paste board
 set -x FISH_CLIPBOARD_CMD pbcopy
 
