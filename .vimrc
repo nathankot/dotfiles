@@ -147,7 +147,7 @@ set splitright
 set formatoptions+=j
 set nolazyredraw " THIS SETTING when on prevents the cursor from being drawn
 set background=dark
-
+set tw=80
 
 color nk256
 
