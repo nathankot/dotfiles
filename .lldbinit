@@ -1,4 +1,0 @@
-settings set prompt [lldb]$
-
-command alias b breakpoint set
-command alias si process step-in
