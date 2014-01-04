@@ -23,7 +23,6 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'nathankot/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'myusuf3/numbers.vim'
 Bundle 'iandoe/vim-osx-colorpicker'
 Bundle 'rking/ag.vim'
 Bundle 'kien/ctrlp.vim'
@@ -148,6 +147,8 @@ set formatoptions+=j
 set nolazyredraw " THIS SETTING when on prevents the cursor from being drawn
 set background=dark
 set tw=80
+set relativenumber
+set number
 
 color nk256
 
