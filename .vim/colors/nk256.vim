@@ -48,6 +48,7 @@ hi Statement        ctermfg=lightblue   ctermbg=NONE        cterm=NONE
 hi Special          ctermfg=white       ctermbg=NONE        cterm=NONE
 hi Delimiter        ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi Operator         ctermfg=white       ctermbg=NONE        cterm=NONE
+hi Conceal          ctermfg=yellow       ctermbg=NONE        cterm=NONE
 
 hi link Character       Constant
 hi link Boolean         Constant
