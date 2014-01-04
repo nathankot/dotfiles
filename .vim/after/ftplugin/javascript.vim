@@ -10,6 +10,4 @@ hi link jsObjectKey Constant
 hi link jsReturn Conditional
 hi link jsFunction Type
 
-abbreviate <buffer> @ this
-abbreviate <buffer> r return
-abbreviate <buffer> f function
+iabbrev <buffer> @ this
