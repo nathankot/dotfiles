@@ -1,1 +1,1 @@
-  syntax keyword jsReturn return conceal cchar=⇢
+syntax keyword jsReturn return conceal cchar=Γ
