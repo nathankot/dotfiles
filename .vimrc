@@ -291,6 +291,9 @@ nnoremap <leader><leader> <c-^>
 noremap <C-k><C-b> :NERDTreeToggle<CR>
 noremap <C-k><C-r> :NERDTreeFind<CR>
 
+" Reveal bookmarks
+noremap <C-k><C-m> :marks<CR>
+
 " Map <Space> to / (search) and Shfit-<Space> to ? (backwards search)
 map <space> /
 map <S-space> ?
