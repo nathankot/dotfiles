@@ -30,3 +30,4 @@ windows:
       layout: even-vertical
       panes:
         - grunt server
+        - ngrok -hostname=xip.wed.is 3000
