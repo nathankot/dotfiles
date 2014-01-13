@@ -1,20 +1,26 @@
-set :timer, 25*60
+
+set :timer, 25 * 60
 set :interval, 1
 set :tmux, true
+set :tmux_theme, '#[fg=yellow,bg=colour7]#[fg=%s]%s'
+
+option :b, :break, 'start a break' do
+  set :timer, 5 * 60
+  `say 'You have 5 Minutes.'`
+  run
+end
+
+option :t, :time, 'start timer' do
+  set :timer, 25 * 60
+  `say 'You have 25 Minutes.'`
+  run
+end
 
 before do
-  `terminal-notifier -title "⧗" -message "Starting pomo" -subtitle "25 Minutes left"`
-  `say 'You have 25 Minutes.'`
 end
 
 after do |seconds_left|
-  if seconds_left.between? 298..300
-    `terminal-notifier -title "⧗" -message "Nearly there" -subtitle "5 Minutes left"` 
-    `say 'Five minutes left.'`
-  end
-
   if seconds_left == 0
-    `terminal-notifier -title "⧗" -message "Times up" -subtitle "Go take a break"` 
     `say 'Time for a break.'`
   end
 end
