@@ -17,15 +17,15 @@ pre_window: set -x API_ENV development
 
 windows:
   - web: # Shell
-      layout: bbbb,272x55,0,0[272x12,0,0,21,272x42,0,13,23]
+      layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
       panes:
-        - #
         - vim -S
+        - #
   - app:
-      layout: bbbb,272x55,0,0[272x12,0,0,21,272x42,0,13,23]
+      layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
       panes:
-        - cd ~/Development/Apps/wedis
         - cd ~/Development/Apps/wedis; vim -S
+        - cd ~/Development/Apps/wedis
   - processes:
       layout: even-vertical
       panes:
