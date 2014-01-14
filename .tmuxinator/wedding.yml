@@ -31,3 +31,8 @@ windows:
       panes:
         - grunt server
         - ngrok -hostname=xip.wed.is 3000
+  - bookmarklet:
+      layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
+      panes:
+        - cd ~/Development/Sites/wed.is/client/app/vendor/wedis-bookmarklet; vim -S
+        - cd ~/Development/Sites/wed.is/client/app/vendor/wedis-bookmarklet
