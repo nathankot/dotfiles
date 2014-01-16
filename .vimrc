@@ -185,6 +185,7 @@ nnoremap gB :UniteBookmarkAdd<CR>
 let g:unite_enable_start_insert = 1
 let g:unite_winheight = 20
 let g:unite_split_rule = 'bot'
+let g:unite_enable_short_source_names = 1
 
 call unite#custom#source('file,buffer,file_rec,menu', 'matchers', 'matcher_fuzzy')
 call unite#custom#source('file,buffer,file_rec,menu', 'sorters', 'sorter_rank')
