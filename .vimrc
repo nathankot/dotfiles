@@ -306,6 +306,9 @@ noremap <silent> <C-c> :close<cr>
 noremap <silent> <C-h> 5<C-w><
 noremap <silent> <C-l> 5<C-w>>
 
+nnoremap <silent> ]] :bnext<cr>
+nnoremap <silent> [[ :bprevious<cr>
+
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
 
