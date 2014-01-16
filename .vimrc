@@ -39,7 +39,6 @@ Bundle 'mhinz/vim-signify'
 Bundle 'goldfeld/vim-seek'
 Bundle 'Keithbsmiley/investigate.vim'
 Bundle 'mattboehm/vim-unstack'
-Bundle 'kana/vim-arpeggio'
 " Languages
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mattn/emmet-vim'
@@ -293,9 +292,9 @@ set conceallevel=2
 set concealcursor=nciv
 
 " Window management
+noremap <silent> <C-i> :wincmd H<cr>
 noremap <silent> <C-j> :wincmd w<cr>
 noremap <silent> <C-k> :wincmd W<cr>
-noremap <silent> <C-i> :wincmd H<cr>
 noremap <silent> <C-c> :close<cr>
 noremap <silent> <C-h> 5<C-w><
 noremap <silent> <C-l> 5<C-w>>
