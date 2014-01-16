@@ -186,16 +186,17 @@ let g:unite_enable_start_insert = 1
 let g:unite_winheight = 20
 let g:unite_split_rule = 'bot'
 
-call unite#custom#source('file,file/new,buffer,file_rec,menu', 'matchers', 'matcher_fuzzy')
+call unite#custom#source('file,buffer,file_rec,menu', 'matchers', 'matcher_fuzzy')
+call unite#custom#source('file,buffer,file_rec,menu', 'sorters', 'sorter_rank')
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
    map <silent><buffer>                  <ESC>                <Plug>(unite_exit)
    map <silent><buffer>                  <C-c>                <Plug>(unite_exit)
    map <silent><buffer>                  <C-p>                <Plug>(unite_exit)
-   map <silent><buffer>                  <TAB>                <Plug>(unite_select_next_line)
-   map <silent><buffer>                  <c-j>                <Plug>(unite_select_next_line)
-   map <silent><buffer>                  <c-k>                <Plug>(unite_select_previous_line)
+   imap <silent><buffer>                  <TAB>                <Plug>(unite_select_next_line)
+   imap <silent><buffer>                  <c-j>                <Plug>(unite_select_next_line)
+   imap <silent><buffer>                  <c-k>                <Plug>(unite_select_previous_line)
    map <silent><buffer><expr>            <C-v>                unite#do_action('vsplit')
    map <silent><buffer><expr>            <C-s>                unite#do_action('vsplit')
 endfunction"}}}
