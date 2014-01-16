@@ -100,8 +100,6 @@ set nowrap "Don't wrap lines
 set list
 set listchars=""
 set listchars+=tab:»\ " Note the literal space
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "disable folding on open
 set scroll=20
 set iskeyword -=- " Underscores and hyphens are word separators
