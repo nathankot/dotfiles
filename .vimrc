@@ -194,11 +194,11 @@ function! s:unite_my_settings()"{{{
    map <silent><buffer>                  <ESC>                <Plug>(unite_exit)
    map <silent><buffer>                  <C-c>                <Plug>(unite_exit)
    map <silent><buffer>                  <C-p>                <Plug>(unite_exit)
-   imap <silent><buffer>                  <TAB>                <Plug>(unite_select_next_line)
-   imap <silent><buffer>                  <c-j>                <Plug>(unite_select_next_line)
-   imap <silent><buffer>                  <c-k>                <Plug>(unite_select_previous_line)
-   map <silent><buffer><expr>            <C-v>                unite#do_action('vsplit')
-   map <silent><buffer><expr>            <C-s>                unite#do_action('vsplit')
+   imap <silent><buffer>                 <TAB>                <Plug>(unite_select_next_line)
+   imap <silent><buffer>                 <c-j>                <Plug>(unite_select_next_line)
+   imap <silent><buffer>                 <c-k>                <Plug>(unite_select_previous_line)
+   imap <silent><buffer><expr>           <C-v>                unite#do_action('vsplit')
+   imap <silent><buffer><expr>           <C-s>                unite#do_action('vsplit')
 endfunction"}}}
 
 let g:unite_source_menu_menus = {}
