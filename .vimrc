@@ -24,7 +24,6 @@ Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'iandoe/vim-osx-colorpicker'
 Bundle 'rking/ag.vim'
-Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'godlygeek/tabular'
 Bundle "szw/vim-ctrlspace"
@@ -177,7 +176,7 @@ let NERDTreeMinimalUI=0
 let NERDTreeAutoDeleteBuffer=1
 
 " Unite
-nnoremap <c-p> :<C-u>Unite buffer file file_rec bookmark<CR>
+nnoremap <c-p> :<C-u>Unite buffer file:! file_rec:! bookmark<CR>
 nnoremap <c-t> :<C-u>Unite menu:git<CR>
 nnoremap gB :UniteBookmarkAdd<CR>
 
