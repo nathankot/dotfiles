@@ -19,12 +19,12 @@ windows:
   - web: # Shell
       layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
       panes:
-        - vim -S
+        - vim
         - #
   - app:
       layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
       panes:
-        - cd ~/Development/Apps/wedis; vim -S
+        - cd ~/Development/Apps/wedis; vim
         - cd ~/Development/Apps/wedis
   - processes:
       layout: even-vertical
@@ -34,5 +34,5 @@ windows:
   - bookmarklet:
       layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
       panes:
-        - cd ~/Development/Sites/wed.is/client/app/vendor/wedis-bookmarklet; vim -S
+        - cd ~/Development/Sites/wed.is/client/app/vendor/wedis-bookmarklet; vim
         - cd ~/Development/Sites/wed.is/client/app/vendor/wedis-bookmarklet
