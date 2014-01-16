@@ -24,6 +24,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'iandoe/vim-osx-colorpicker'
 Bundle 'rking/ag.vim'
+Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'godlygeek/tabular'
 Bundle "szw/vim-ctrlspace"
@@ -51,7 +52,6 @@ Bundle 'othree/html5.vim'
 Bundle 'arecarn/crunch'
 Bundle 'pangloss/vim-javascript'
 Bundle 'dag/vim-fish'
-
 
 filetype on
 filetype plugin indent on
@@ -177,7 +177,7 @@ let NERDTreeMinimalUI=0
 let NERDTreeAutoDeleteBuffer=1
 
 " Unite
-nnoremap <c-p> :<C-u>Unite file file_rec buffer bookmark -silent<CR>
+nnoremap <c-p> :<C-u>Unite buffer file file_rec bookmark<CR>
 nnoremap <c-t> :<C-u>Unite menu:git<CR>
 nnoremap gB :UniteBookmarkAdd<CR>
 
@@ -186,20 +186,25 @@ let g:unite_winheight = 20
 let g:unite_split_rule = 'bot'
 let g:unite_enable_short_source_names = 1
 
-call unite#custom#source('file,buffer,file_rec,menu', 'matchers', 'matcher_fuzzy')
-call unite#custom#source('file,buffer,file_rec,menu', 'sorters', 'sorter_rank')
+call unite#custom#source('buffer,bookmark,menu,file,buffer,file_rec', 'filters', [
+      \'matcher_fuzzy',
+      \'sorter_rank',
+      \'converter_relative_abbr',
+      \'converter_file_directory',
+      \])
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
    map <silent><buffer>                  <ESC>                <Plug>(unite_exit)
    map <silent><buffer>                  <C-c>                <Plug>(unite_exit)
    map <silent><buffer>                  <C-p>                <Plug>(unite_exit)
-   map <silent><buffer>                  <f5>                 <Plug>(unite_redraw)
    imap <silent><buffer>                 <TAB>                <Plug>(unite_select_next_line)
    imap <silent><buffer>                 <c-j>                <Plug>(unite_select_next_line)
    imap <silent><buffer>                 <c-k>                <Plug>(unite_select_previous_line)
    imap <silent><buffer><expr>           <C-v>                unite#do_action('vsplit')
    imap <silent><buffer><expr>           <C-s>                unite#do_action('vsplit')
+   imap <silent><buffer>                 <C-d>                <C-j>
+   imap <silent><buffer>                 <C-u>                <C-k>
 endfunction"}}}
 
 let g:unite_source_menu_menus = {}
