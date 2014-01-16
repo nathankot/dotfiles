@@ -25,9 +25,9 @@ Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'iandoe/vim-osx-colorpicker'
 Bundle 'rking/ag.vim'
-Bundle 'kien/ctrlp.vim'
+Bundle 'Shougo/unite.vim'
 Bundle 'godlygeek/tabular'
-Bundle 'spolu/dwm.vim'
+Bundle "szw/vim-ctrlspace"
 Bundle "Valloric/YouCompleteMe"
 Bundle "SirVer/ultisnips"
 Bundle 'mattn/webapi-vim'
@@ -37,6 +37,7 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'argtextobj.vim'
 Bundle 'mhinz/vim-signify'
 Bundle 'goldfeld/vim-seek'
+Bundle 'Keithbsmiley/investigate.vim'
 " Languages
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mattn/emmet-vim'
@@ -99,7 +100,6 @@ set nowrap "Don't wrap lines
 set list
 set listchars=""
 set listchars+=tab:»\ " Note the literal space
-set listchars+=trail:·
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "disable folding on open
@@ -152,6 +152,24 @@ set number
 
 color nk256
 
+" Ctrl-space
+let g:ctrlspace_use_tabline = 1
+let g:ctrlspace_height = 20
+let g:ctrlspace_show_unnamed = 2
+let g:ctrlspace_save_workspace_on_exit = 1
+let g:ctrlspace_symbols = {
+      \ "cs"      : "⚡",
+      \ "tab"     : "⊙",
+      \ "all"     : "∷",
+      \ "add"     : "○",
+      \ "load"    : "⋮ → ∙",
+      \ "save"    : "∙ → ⋮",
+      \ "ord"     : "₁²₃",
+      \ "abc"     : "авс",
+      \ "prv"     : "⌕",
+      \ "s_left"  : "›",
+      \ "s_right" : "‹"
+      \ }
 
 " NERDTree
 let NERDTreeShowHidden = 1
@@ -160,10 +178,43 @@ let NERDTreeMapJumpPrevSibling = ''
 let NERDTreeMinimalUI=0
 let NERDTreeAutoDeleteBuffer=1
 
-let g:ctrlp_switch_buffer = 'e'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_follow_symlinks = 1
-let g:ctrlp_use_caching = 1
+" Unite
+nnoremap <c-p> :<C-u>Unite file file_rec buffer bookmark -silent<CR>
+nnoremap <c-t> :<C-u>Unite menu:git<CR>
+nnoremap gB :UniteBookmarkAdd<CR>
+
+let g:unite_enable_start_insert = 1
+let g:unite_winheight = 20
+let g:unite_split_rule = 'bot'
+
+call unite#custom#source('file,file/new,buffer,file_rec,menu', 'matchers', 'matcher_fuzzy')
+
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()"{{{
+   map <silent><buffer>                  <ESC>                <Plug>(unite_exit)
+   map <silent><buffer>                  <C-c>                <Plug>(unite_exit)
+   map <silent><buffer>                  <C-p>                <Plug>(unite_exit)
+   map <silent><buffer>                  <TAB>                <Plug>(unite_select_next_line)
+   map <silent><buffer>                  <c-j>                <Plug>(unite_select_next_line)
+   map <silent><buffer>                  <c-k>                <Plug>(unite_select_previous_line)
+   map <silent><buffer><expr>            <C-v>                unite#do_action('vsplit')
+   map <silent><buffer><expr>            <C-s>                unite#do_action('vsplit')
+endfunction"}}}
+
+let g:unite_source_menu_menus = {}
+let g:unite_source_menu_menus.git = { 'description' : 'Manage git.' }
+let g:unite_source_menu_menus.git.command_candidates = [
+    \['git status       (Fugitive)', 'Gstatus'],
+    \['git diff         (Fugitive)', 'Gdiff'],
+    \['git commit       (Fugitive)', 'Gcommit'],
+    \['git log          (Fugitive)', 'Glog'],
+    \['git blame        (Fugitive)', 'Gblame'],
+    \['git stage        (Fugitive)', 'Gwrite'],
+    \['git checkout     (Fugitive)', 'Gread'],
+    \['git rm           (Fugitive)', 'Gremove'],
+    \['git push         (Fugitive)', 'Git! push'],
+    \['git pull         (Fugitive)', 'Git! pull'],
+    \]
 
 " You Complete me
 let g:ycm_collect_identifiers_from_tags_files = 1
@@ -229,10 +280,6 @@ let g:ragtag_global_maps = 1
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
-" DWM
-let g:dwm_map_keys = 1
-let g:dwm_master_pane_width="50%"
-
 " Gists
 let g:gist_clip_command = 'pbcopy'
 let g:gist_open_browser_after_post = 1
@@ -244,6 +291,14 @@ let javascript_enable_domhtmlcss = 1
 let g:javascript_conceal = 1
 set conceallevel=2
 set concealcursor=nciv
+
+" Window management
+noremap <silent> <C-j> :wincmd w<cr>
+noremap <silent> <C-k> :wincmd W<cr>
+noremap <silent> <C-i> :wincmd H<cr>
+noremap <silent> <C-c> :close<cr>
+noremap <silent> <C-h> 5<C-w><
+noremap <silent> <C-l> 5<C-w>>
 
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
@@ -262,18 +317,12 @@ vnoremap <s-k> <nop>
 " Ack
 nnoremap <leader>a :Ag -S
 
-nnoremap <silent> <c-p> :CtrlP<CR>
-nnoremap <silent> <c-T> :CtrlPBufTag<CR>
-nnoremap <silent> <c-b> :CtrlPBuffer<CR>
-nnoremap <silent> <c-t> :CtrlPTag<CR>
-
 " Fast saving
 nnoremap <leader>w :w!<cr>
 
 " Fast tab switching
 noremap <leader><TAB>   :tabnext<cr>
 noremap <leader><S-TAB> :tabprevious<cr>
-noremap <leader>E :call ToggleTabline()<cr>
 
 " Git status
 nnoremap <leader>gs :Gstatus<cr>

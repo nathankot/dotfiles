@@ -72,3 +72,7 @@ highlight DiffAdd ctermbg=NONE ctermfg=lightgreen
 highlight DiffChange ctermbg=NONE ctermfg=lightblue
 highlight DiffText ctermbg=NONE ctermfg=lightgray
 highlight DiffDelete ctermbg=NONE ctermfg=lightred
+
+hi CtrlSpaceSelected term=reverse ctermfg=187  ctermbg=23  cterm=bold
+hi CtrlSpaceNormal   term=NONE    ctermfg=244  ctermbg=232 cterm=NONE
+hi CtrlSpaceFound    ctermfg=220  ctermbg=NONE cterm=bold
