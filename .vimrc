@@ -39,6 +39,7 @@ Bundle 'mhinz/vim-signify'
 Bundle 'goldfeld/vim-seek'
 Bundle 'Keithbsmiley/investigate.vim'
 Bundle 'mattboehm/vim-unstack'
+Bundle 'kana/vim-arpeggio'
 " Languages
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mattn/emmet-vim'
