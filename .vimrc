@@ -25,6 +25,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'iandoe/vim-osx-colorpicker'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
+Bundle 'h1mesuke/unite-outline'
 Bundle 'godlygeek/tabular'
 Bundle "szw/vim-ctrlspace"
 Bundle "Valloric/YouCompleteMe"
@@ -179,6 +180,7 @@ let NERDTreeAutoDeleteBuffer=1
 nnoremap <c-p> :<C-u>Unite -toggle -buffer-name=files -start-insert file_rec/async:!<CR><c-u>
 nnoremap <c-t> :<C-u>Unite -buffer-name=menu -start-insert menu:git<CR><c-u>
 nnoremap <c-s> :<C-u>Unite -buffer-name=search -no-start-insert -no-quit grep:.<CR><c-u>
+nnoremap <c-/> :<C-u>Unite -buffer-name=outline -no-start-insert -no-quit outline<CR><c-u>
 
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_source_rec_max_cache_files=5000
