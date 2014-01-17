@@ -176,13 +176,12 @@ let NERDTreeMinimalUI=0
 let NERDTreeAutoDeleteBuffer=1
 
 " Unite
-nnoremap <c-p> :<C-u>Unite -toggle -buffer-name=files file_rec/async:!<CR><c-u>
-nnoremap <c-t> :<C-u>Unite -buffer-name=menu menu:git<CR><c-u>
-nnoremap <c-s> :<C-u>Unite -buffer-name=search grep:.<CR><c-u>
+nnoremap <c-p> :<C-u>Unite -toggle -buffer-name=files -start-insert file_rec/async:!<CR><c-u>
+nnoremap <c-t> :<C-u>Unite -buffer-name=menu -start-insert menu:git<CR><c-u>
+nnoremap <c-s> :<C-u>Unite -buffer-name=search -resume -no-start-insert grep:.<CR><c-u>
 
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_source_rec_max_cache_files=5000
-let g:unite_enable_start_insert = 1
 let g:unite_winheight = 20
 let g:unite_split_rule = 'bot'
 let g:unite_enable_short_source_names = 1
