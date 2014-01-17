@@ -176,7 +176,7 @@ let NERDTreeMinimalUI=0
 let NERDTreeAutoDeleteBuffer=1
 
 " Unite
-nnoremap <c-p> :<C-u>Unite -toggle -buffer-name=files -start-insert -auto-preview file_rec/async:!<CR><c-u>
+nnoremap <c-p> :<C-u>Unite -toggle -buffer-name=files -start-insert file_rec/async:!<CR><c-u>
 nnoremap <c-t> :<C-u>Unite -buffer-name=menu -start-insert menu:git<CR><c-u>
 nnoremap <c-s> :<C-u>Unite -buffer-name=search -no-start-insert -no-quit grep:.<CR><c-u>
 
