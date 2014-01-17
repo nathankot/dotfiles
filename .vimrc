@@ -23,7 +23,7 @@ Bundle 'nathankot/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'iandoe/vim-osx-colorpicker'
-Bundle 'rking/ag.vim'
+Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'godlygeek/tabular'
 Bundle "szw/vim-ctrlspace"
@@ -176,21 +176,30 @@ let NERDTreeMinimalUI=0
 let NERDTreeAutoDeleteBuffer=1
 
 " Unite
-nnoremap <c-p> :<C-u>Unite buffer file:! file_rec:! bookmark<CR>
-nnoremap <c-t> :<C-u>Unite menu:git<CR>
-nnoremap gB :UniteBookmarkAdd<CR>
+nnoremap <c-p> :<C-u>Unite -toggle -buffer-name=files file_rec/async:!<CR><c-u>
+nnoremap <c-t> :<C-u>Unite -buffer-name=menu menu:git<CR><c-u>
+nnoremap <c-s> :<C-u>Unite -buffer-name=search grep:.<CR><c-u>
 
+let g:unite_data_directory = '~/.vim/cache/unite'
+let g:unite_source_rec_max_cache_files=5000
 let g:unite_enable_start_insert = 1
 let g:unite_winheight = 20
 let g:unite_split_rule = 'bot'
 let g:unite_enable_short_source_names = 1
 
-call unite#custom#source('buffer,bookmark,menu,file,buffer,file_rec', 'filters', [
-      \'matcher_fuzzy',
-      \'sorter_rank',
-      \'converter_relative_abbr',
-      \'converter_file_directory',
-      \])
+if executable('ag')
+  let g:unite_source_grep_command='ag'
+  let g:unite_source_grep_default_opts='--nocolor --nogroup -S -C4'
+  let g:unite_source_grep_recursive_opt=''
+  let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -S -g ""'
+endif
+
+call unite#custom#source('grep', 'filters', ['sorter_rank'])
+call unite#custom#source('file/async', 'filters', [
+  \'matcher_glob',
+  \'sorter_rank',
+  \'converter_relative_abbr',
+  \'converter_file_directory'])
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
@@ -318,9 +327,6 @@ nnoremap ` '
 nnoremap K <nop>
 nnoremap Q <nop>
 vnoremap <s-k> <nop>
-
-" Ack
-nnoremap <leader>a :Ag -S
 
 " Fast saving
 nnoremap <leader>w :w!<cr>
