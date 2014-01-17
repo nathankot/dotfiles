@@ -193,12 +193,14 @@ if executable('ag')
   let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -S -g ""'
 endif
 
-call unite#custom#source('grep', 'filters', ['sorter_rank'])
+call unite#custom#source('grep', 'filters', [
+      \'sorter_rank'])
+
 call unite#custom#source('file/async', 'filters', [
-  \'matcher_glob',
-  \'sorter_rank',
-  \'converter_relative_abbr',
-  \'converter_file_directory'])
+      \'matcher_glob',
+      \'sorter_rank',
+      \'converter_relative_abbr',
+      \'converter_file_directory'])
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
