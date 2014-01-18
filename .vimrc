@@ -314,7 +314,7 @@ set conceallevel=2
 set concealcursor=nciv
 
 " Window management
-noremap <silent> <C-i> :wincmd H<cr>
+noremap <silent> <leader>i :wincmd H<cr>
 noremap <silent> <C-j> :wincmd w<cr>
 noremap <silent> <C-k> :wincmd W<cr>
 noremap <silent> <C-c> :close<cr>
