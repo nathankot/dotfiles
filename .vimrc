@@ -39,6 +39,7 @@ Bundle 'goldfeld/vim-seek'
 Bundle 'Keithbsmiley/investigate.vim'
 Bundle 'mattboehm/vim-unstack'
 Bundle 'mikewest/vimroom'
+Bundle 'nelstrom/vim-qargs'
 " Languages
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mattn/emmet-vim'
