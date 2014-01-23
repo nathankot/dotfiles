@@ -75,6 +75,11 @@ if &encoding ==# 'latin1' && has('gui_running')
   set encoding=utf-8
 endif
 
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor " Use ag over grep
+  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+  nnoremap \ :Ag<SPACE>
+endif
 
 let mapleader = ","
 set rtp+=~/.vim/syntax/
