@@ -363,7 +363,6 @@ noremap <C-k><C-m> :marks<CR>
 
 " Map <Space> to / (search) and Shfit-<Space> to ? (backwards search)
 map <space> /
-map <S-space> ?
 
 " Find the highlight under the cursor
 map <F2> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
@@ -372,7 +371,6 @@ map <F2> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
-
 
 " Returns true if paste mode is enabled
 function! HasPaste()
