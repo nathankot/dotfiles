@@ -38,7 +38,6 @@ Bundle 'mhinz/vim-signify'
 Bundle 'goldfeld/vim-seek'
 Bundle 'Keithbsmiley/investigate.vim'
 Bundle 'mattboehm/vim-unstack'
-Bundle 'mikewest/vimroom'
 Bundle 'nelstrom/vim-qargs'
 " Languages
 Bundle 'vim-ruby/vim-ruby'
@@ -181,11 +180,6 @@ let NERDTreeMapJumpNextSibling = ''
 let NERDTreeMapJumpPrevSibling = ''
 let NERDTreeMinimalUI=0
 let NERDTreeAutoDeleteBuffer=1
-
-" Vim room
-nnoremap <silent> <Leader>mz :VimroomToggle<cr>
-let g:vimroom_background = 'black'
-let g:vimroom_scrolloff = 20
 
 " Unite
 nnoremap <c-p> :<C-u>Unite -toggle -buffer-name=files -start-insert file_rec/async:!<CR><c-u>
