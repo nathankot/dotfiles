@@ -1,0 +1,25 @@
+# ~/.tmuxinator/btc.yml
+
+name: btc
+root: ~/Development/Sites/btc
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - editor:
+      layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
+      panes:
+        - vim
+        - # bash
+  - server: grunt serve
+  - repl: socat READLINE /tmp/repl/btc.sock
