@@ -26,6 +26,7 @@ installcask caffeine
 installcask f-lux
 installcask alfred
 installcask shortcat
+installcask authy-bluetooth
 
 installcask google-drive
 installcask dropbox
