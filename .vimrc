@@ -305,7 +305,8 @@ let g:html_indent_tags = 'li\|p'
 let g:gist_clip_command = 'pbcopy'
 let g:gist_open_browser_after_post = 1
 let g:gist_show_privates = 1
-let g:gist_detect_filetype = 0
+let g:gist_detect_filetype = 1
+let g:gist_update_on_write = 2
 
 " Javascript
 let javascript_enable_domhtmlcss = 1
