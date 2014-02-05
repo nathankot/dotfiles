@@ -13,6 +13,7 @@ function installcask() {
   fi
 }
 
+installcask keyremap4macbook
 installcask iterm2
 installcask amethyst
 installcask kaleidoscope
