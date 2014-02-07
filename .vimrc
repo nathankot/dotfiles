@@ -157,7 +157,8 @@ color nk256
 
 " Ctrl-space
 let g:ctrlspace_use_tabline = 1
-let g:ctrlspace_height = 20
+let g:ctrlspace_height = 6
+let g:ctrlspace_max_height = 12
 let g:ctrlspace_show_unnamed = 2
 let g:ctrlspace_save_workspace_on_exit = 1
 let g:ctrlspace_symbols = {
@@ -188,7 +189,7 @@ nnoremap <c-s> :<C-u>Unite -buffer-name=search -no-start-insert -no-quit grep:.<
 
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_source_rec_max_cache_files=5000
-let g:unite_winheight = 20
+let g:unite_winheight = 12
 let g:unite_split_rule = 'bot'
 let g:unite_enable_short_source_names = 1
 
