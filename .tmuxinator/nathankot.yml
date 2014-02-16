@@ -4,9 +4,8 @@ name: nathankot
 root: ~/Development/Sites/nathankot.com
 
 windows:
-  - editor: vim
+  - web: # Shell
       layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
       panes:
         - vim
-        - # bash
-  - shell: # shell
+        - #
