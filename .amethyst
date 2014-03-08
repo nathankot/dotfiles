@@ -79,6 +79,11 @@
         "mod": "mod1",
         "key": "l"
     },
+    "toggle-float": {
+        "mod": "mod2",
+        "key": "space"
+    },
+
     "throw-space-1": { "mod": "mod1", "key": "1" },
     "throw-space-2": { "mod": "mod1", "key": "2" },
     "throw-space-3": { "mod": "mod1", "key": "3" },
@@ -87,5 +92,11 @@
     "throw-space-6": { "mod": "mod1", "key": "6" },
     "throw-space-7": { "mod": "mod1", "key": "7" },
     "throw-space-8": { "mod": "mod1", "key": "8" },
-    "throw-space-9": { "mod": "mod1", "key": "9" }
+    "throw-space-9": { "mod": "mod1", "key": "9" },
+
+    "MISC": "----------------------",
+
+    "floating": [],
+    "float-small-windows": true,
+    "mouse-follows-focus": false
 }
