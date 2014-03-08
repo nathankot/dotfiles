@@ -261,7 +261,7 @@ let g:UltiSnipsJumpForwardTrigger = "<C-l>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-h>"
 let g:UltiSnipsListSnippets = "<c-a>"
 let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsSnippetsDir = "~/.vim/snippets"
+let g:UltiSnipsSnippetsDir = "~/.vim/ultisnippets"
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "ultisnippets"]
 
 " Syntastic
