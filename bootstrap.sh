@@ -11,7 +11,7 @@ if [ "$1" == "update" ]; then
   rsync -av ~/.tmuxinator .
   rsync -av ~/.gitconfig .
   rsync -av ~/.git_template .
-  rsync -av ~/.vim/snippets ./.vim/
+  rsync -av ~/.vim/ultisnippets ./.vim/
   rsync -av ~/.config/fish ./.config/ --exclude "fish_history" --exclude "generated_completions"
   rsync -av ~/lib/iterm2/com.googlecode.iterm2.plist ./lib/iterm2/com.googlecode.iterm2.plist
   rsync -av ~/Library/Preferences/org.pqrs.KeyRemap4MacBook.plist ./Library/Preferences/org.pqrs.KeyRemap4MacBook.plist
