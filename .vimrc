@@ -55,6 +55,7 @@ Bundle 'dag/vim-fish'
 " Grok these
 Bundle 'gcmt/wildfire.vim'
 Bundle 't9md/vim-choosewin'
+Bundle "gilligan/vim-lldb"
 
 filetype on
 filetype plugin indent on
