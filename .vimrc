@@ -31,8 +31,6 @@ Bundle "Valloric/YouCompleteMe"
 Bundle "SirVer/ultisnips"
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'argtextobj.vim'
 Bundle 'mhinz/vim-signify'
 Bundle 'goldfeld/vim-seek'
@@ -41,6 +39,7 @@ Bundle 'mattboehm/vim-unstack'
 Bundle 'nelstrom/vim-qargs'
 Bundle 'arecarn/crunch'
 " Languages
+Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mattn/emmet-vim'
 Bundle 'juvenn/mustache.vim'
@@ -158,6 +157,11 @@ set relativenumber
 set number
 
 color nk256
+
+" Wildfire
+let g:wildfire_fuel_map = "<ENTER>"
+let g:wildfire_water_map = "<BS>"
+let g:wildfire_objects = ["i'", 'i"', "ir", "i)", "i]", "i}", "ip", "it"]
 
 " Ctrl-space
 let g:ctrlspace_use_tabline = 0
