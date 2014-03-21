@@ -290,7 +290,8 @@ let g:syntastic_enable_highlighting = 0
 let g:syntastic_enable_balloons = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_full_redraws = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_auto_jump = 0
 " take the current ruby version specified by rbenv
 let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 let g:syntastic_coffee_checkers = ['coffee']
@@ -303,7 +304,7 @@ let g:user_emmet_expandabbr_key = '<leader>z'
 
 " Delimit mate
 let delimitMate_expand_cr = 0
-let delimitMate_expand_space = 0
+let delimitMate_expand_space = 1
 
 " Gundo
 let g:gundo_width = 45
