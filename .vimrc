@@ -52,6 +52,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'dag/vim-fish'
+Bundle 'StanAngeloff/php.vim'
 " Grok these
 Bundle 'gcmt/wildfire.vim'
 Bundle 't9md/vim-choosewin'
