@@ -54,6 +54,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'dag/vim-fish'
 " Grok these
 Bundle 'gcmt/wildfire.vim'
+Bundle 't9md/vim-choosewin'
 
 filetype on
 filetype plugin indent on
@@ -158,6 +159,10 @@ set relativenumber
 set number
 
 color nk256
+
+" Choosewin
+nmap - <Plug>(choosewin)
+let g:choosewin_overlay_enable = 1
 
 " Wildfire
 let g:wildfire_fuel_map = "<ENTER>"
