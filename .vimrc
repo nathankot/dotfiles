@@ -222,8 +222,7 @@ call unite#custom#source('grep', 'filters', [
 call unite#custom#source('file/async', 'filters', [
       \'matcher_fuzzy',
       \'sorter_rank',
-      \'converter_relative_word',
-      \'converter_file_directory'])
+      \'converter_relative_word'])
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
