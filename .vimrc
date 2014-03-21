@@ -52,6 +52,8 @@ Bundle 'wavded/vim-stylus'
 Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'dag/vim-fish'
+" Grok these
+Bundle 'gcmt/wildfire.vim'
 
 filetype on
 filetype plugin indent on
@@ -184,7 +186,6 @@ let g:ctrlspace_symbols = {
 let NERDTreeShowHidden = 1
 let NERDTreeMapJumpNextSibling = ''
 let NERDTreeMapJumpPrevSibling = ''
-let NERDTreeMinimalUI=0
 let NERDTreeAutoDeleteBuffer=1
 
 " Unite
