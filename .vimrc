@@ -98,14 +98,16 @@ set tabstop=2
 set softtabstop=2
 set smarttab
 set expandtab
-set linebreak "LineBreak
-set autoindent "Auto indent
-set smartindent "Smart indent
-set nowrap "Don't wrap lines
+set linebreak
+set autoindent
+set smartindent
+set nowrap
 set list
 set listchars=""
 set listchars+=tab:»\ " Note the literal space
-set nofoldenable        "disable folding on open
+set foldlevelstart = 99
+set foldmethod=indent
+set nofoldenable
 set scroll=20
 set iskeyword -=- " Underscores and hyphens are word separators
 set backspace=indent,eol,start
@@ -156,11 +158,14 @@ set number
 color nk256
 
 " Ctrl-space
-let g:ctrlspace_use_tabline = 1
+let g:ctrlspace_use_tabline = 0
 let g:ctrlspace_height = 6
 let g:ctrlspace_max_height = 12
-let g:ctrlspace_show_unnamed = 2
+let g:ctrlspace_show_unnamed = 1
 let g:ctrlspace_save_workspace_on_exit = 1
+let g:ctrlspace_default_sort_order = 1
+let g:ctrlspace_use_ruby_bindings = 1
+let g:ctrlspace_show_tab_info = 1
 let g:ctrlspace_symbols = {
       \ "cs"      : "⚡",
       \ "tab"     : "⊙",
