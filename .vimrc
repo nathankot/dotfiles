@@ -198,6 +198,10 @@ let NERDTreeShowHidden = 1
 let NERDTreeMapJumpNextSibling = ''
 let NERDTreeMapJumpPrevSibling = ''
 let NERDTreeAutoDeleteBuffer=1
+let NERDChristmasTree=0
+let NERDTreeMapOpenVSplit='v'
+noremap <C-k><C-b> :NERDTreeToggle<CR>
+noremap <C-k><C-r> :NERDTreeFind<CR>
 
 " Unite
 nnoremap <c-p> :<C-u>Unite -toggle -buffer-name=files -start-insert file_rec/async:!<CR><c-u>
@@ -371,10 +375,6 @@ nnoremap <F5> :GundoToggle<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
-
-" Toggle/RevealFile in NerdTree Sidebar
-noremap <C-k><C-b> :NERDTreeToggle<CR>
-noremap <C-k><C-r> :NERDTreeFind<CR>
 
 " Reveal bookmarks
 noremap <C-k><C-m> :marks<CR>
