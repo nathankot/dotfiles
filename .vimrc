@@ -39,6 +39,7 @@ Bundle 'mattboehm/vim-unstack'
 Bundle 'nelstrom/vim-qargs'
 Bundle 'arecarn/crunch'
 " Languages
+Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mattn/emmet-vim'
@@ -164,10 +165,10 @@ let g:wildfire_water_map = "<BS>"
 let g:wildfire_objects = ["i'", 'i"', "ir", "i)", "i]", "i}", "ip", "it"]
 
 " Ctrl-space
-let g:ctrlspace_use_tabline = 0
+let g:ctrlspace_use_tabline = 1
 let g:ctrlspace_height = 6
 let g:ctrlspace_max_height = 12
-let g:ctrlspace_show_unnamed = 1
+let g:ctrlspace_show_unnamed = 2
 let g:ctrlspace_save_workspace_on_exit = 1
 let g:ctrlspace_default_sort_order = 1
 let g:ctrlspace_use_ruby_bindings = 1
