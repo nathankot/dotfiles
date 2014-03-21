@@ -181,6 +181,7 @@ let g:ctrlspace_show_tab_info = 1
 let g:ctrlspace_symbols = {
       \ "cs"      : "⚡️",
       \ "tab"     : "⊙",
+      \ "tabs"    : "∘∘∘",
       \ "all"     : "∷",
       \ "add"     : "+",
       \ "load"    : "⋮ → ∙",
