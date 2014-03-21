@@ -266,12 +266,10 @@ let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_allow_changing_updatetime = 1
-let g:ycm_register_as_syntastic_checker = 0
 let g:ycm_key_invoke_completion = ''
 let g:ycm_key_list_select_completion = ['<C-i>', '<C-j>']
 let g:ycm_key_list_previous_completion = ['<C-o>', '<C-k>']
 let g:ycm_use_ultisnips_completer = 1
-let g:ycm_filetype_specific_completion_to_disable = { 'javascript': '', 'ruby': '' }
 let g:ycm_server_use_vim_stdout = 0
 let g:ycm_server_log_level = 'critical'
 
