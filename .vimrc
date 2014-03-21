@@ -105,7 +105,7 @@ set nowrap
 set list
 set listchars=""
 set listchars+=tab:»\ " Note the literal space
-set foldlevelstart = 99
+set foldlevelstart=99
 set foldmethod=indent
 set nofoldenable
 set scroll=20
@@ -167,10 +167,10 @@ let g:ctrlspace_default_sort_order = 1
 let g:ctrlspace_use_ruby_bindings = 1
 let g:ctrlspace_show_tab_info = 1
 let g:ctrlspace_symbols = {
-      \ "cs"      : "⚡",
+      \ "cs"      : "🔥",
       \ "tab"     : "⊙",
       \ "all"     : "∷",
-      \ "add"     : "○",
+      \ "add"     : "+",
       \ "load"    : "⋮ → ∙",
       \ "save"    : "∙ → ⋮",
       \ "ord"     : "₁²₃",
