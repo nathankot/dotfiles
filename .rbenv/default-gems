@@ -9,7 +9,6 @@ gemedit
 terminal-notifier
 thyme
 rubocop
-t
 asana-cli
 chef
 librarian-chef
