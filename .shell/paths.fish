@@ -1,3 +1,5 @@
+# **Don't forget to update paths.sh for VIM**
+
 # Python scripts (For Powerline)
 set -x PYTHONPATH /usr/local/lib/python2.7/site-packages $PYTHONPATH
 
@@ -10,6 +12,7 @@ set -x PATH /usr/local/bin /usr/local/sbin $PATH
 # Heroku toolbelt
 set -x PATH /usr/local/heroku/bin $PATH
 
+# PHP
 set -x PATH (brew --prefix josegonzalez/php/php55)/bin $PATH
 
 # NPM
