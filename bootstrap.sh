@@ -10,6 +10,7 @@ fi
 if [ "$1" == "update" ]; then
   rsync -av ~/.tmuxinator .
   rsync -av ~/.gitconfig .
+  rsync -av ~/.timetrap.yml .
   rsync -av ~/.git_template .
   rsync -av ~/.vim/ultisnippets ./.vim/
   rsync -av ~/.config/fish ./.config/ --exclude "fish_history" --exclude "generated_completions"

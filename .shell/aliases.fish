@@ -15,3 +15,7 @@ set fish_user_abbreviations $fish_user_abbreviations 'ga=git add'
 set fish_user_abbreviations $fish_user_abbreviations 'gaa=git add -A'
 set fish_user_abbreviations $fish_user_abbreviations 'gim=git issues milestone'
 
+set fish_user_abbreviations $fish_user_abbreviations 'ts=timetrap sheet'
+set fish_user_abbreviations $fish_user_abbreviations 'ti=timetrap in'
+set fish_user_abbreviations $fish_user_abbreviations 'to=timetrap out'
+set fish_user_abbreviations $fish_user_abbreviations 'td=timetrap out'
