@@ -10,6 +10,8 @@ set -x PATH /usr/local/bin /usr/local/sbin $PATH
 # Heroku toolbelt
 set -x PATH /usr/local/heroku/bin $PATH
 
+set -x PATH (brew --prefix josegonzalez/php/php55)/bin $PATH
+
 # NPM
 set -x PATH ./node_modules/.bin /usr/local/share/npm/bin $PATH
 
