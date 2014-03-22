@@ -11,4 +11,5 @@ thyme
 rubocop
 t
 asana-cli
-berkshelf
+chef
+librarian-chef
