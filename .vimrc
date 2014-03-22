@@ -298,7 +298,9 @@ let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 let g:syntastic_coffee_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_html_checkers = []
+let g:syntastic_php_phpcs_args = '--standard=PSR1,PSR2'
 
 " Emmet
 let g:user_emmet_expandabbr_key = '<leader>z'
