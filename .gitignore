@@ -41,9 +41,7 @@ ehthumbs.db
 
 # Vim Settings #
 ################
-.vimrc
 Session.vim
-!./.vimrc
 /tags
 .cs_workspaces
 

@@ -218,18 +218,18 @@ let g:unite_enable_short_source_names = 1
 
 if executable('ag')
   let g:unite_source_grep_command='ag'
-  let g:unite_source_grep_default_opts='--nocolor --nogroup -S -C2'
+  let g:unite_source_grep_default_opts='--nocolor --nogroup -S -C3'
   let g:unite_source_grep_recursive_opt=''
-  let g:unite_source_rec_async_command='ag --nocolor --nogroup --hidden -S -g ""'
+  let g:unite_source_rec_async_command='ag --nocolor --nogroup --hidden -S -g'
 endif
 
 call unite#custom#source('grep', 'filters', [
       \'sorter_rank'])
 
-call unite#custom#source('file/async', 'filters', [
+call unite#custom#source('file_rec/async', 'filters', [
       \'matcher_fuzzy',
       \'sorter_rank',
-      \'converter_relative_word'])
+      \'converter_relative_abbr'])
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
