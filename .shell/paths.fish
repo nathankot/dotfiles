@@ -22,3 +22,6 @@ set -x PATH ./node_modules/.bin /usr/local/share/npm/bin $PATH
 set -x PATH $HOME/.rbenv/bin $PATH
 set -x PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
+
+# Hackage
+set -x PATH /Users/nathan/.cabal/bin $PATH
