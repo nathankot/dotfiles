@@ -20,3 +20,7 @@ set fish_user_abbreviations $fish_user_abbreviations 'ti=timetrap in'
 set fish_user_abbreviations $fish_user_abbreviations 'to=timetrap out'
 set fish_user_abbreviations $fish_user_abbreviations 'td=timetrap display'
 set fish_user_abbreviations $fish_user_abbreviations 'tn=timetrap now'
+
+function legedit
+  vim ~/Documents/Personal/Accounts/current.ledger
+end
