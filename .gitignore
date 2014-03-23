@@ -48,3 +48,7 @@ Session.vim
 # Rails #
 #########
 .rails_generators~
+
+# Timetrap #
+############
+.timetrap-sheet
