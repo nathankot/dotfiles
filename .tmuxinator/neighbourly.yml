@@ -24,3 +24,4 @@ windows:
       panes:
         - vim
         - # bash
+  - server: # bash
