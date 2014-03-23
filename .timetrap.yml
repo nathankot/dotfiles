@@ -12,3 +12,4 @@ auto_sheet_search_paths:
 default_command:
 auto_checkout: false
 require_note: false
+day_length_hours: 8
