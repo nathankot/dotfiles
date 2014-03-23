@@ -39,6 +39,7 @@ Bundle 'mattboehm/vim-unstack'
 Bundle 'nelstrom/vim-qargs'
 Bundle 'arecarn/crunch'
 " Languages
+Bundle 'ledger/vim-ledger'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'vim-ruby/vim-ruby'
