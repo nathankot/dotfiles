@@ -383,6 +383,9 @@ nnoremap <leader><leader> <c-^>
 " Reveal bookmarks
 noremap <C-k><C-m> :marks<CR>
 
+" enter current dat
+inoremap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
+
 " Map <Space> to / (search) and Shfit-<Space> to ? (backwards search)
 map <space> /
 
