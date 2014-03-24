@@ -341,6 +341,10 @@ let g:javascript_conceal = 1
 set conceallevel=2
 set concealcursor=nciv
 
+" Symfony
+let g:symfony_enable_shell_mapping = 0
+map <leader>sf :execute ":!"g:symfony_enable_shell_cmd<CR>
+
 " Window management
 noremap <silent> <leader>i :wincmd H<cr>
 noremap <silent> <C-j> :wincmd w<cr>
