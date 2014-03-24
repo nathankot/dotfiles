@@ -344,6 +344,7 @@ set concealcursor=nciv
 
 " Symfony
 let g:symfony_enable_shell_mapping = 0
+let g:symfony_app_console_path= "app/console --env=nathan"
 map <leader>sf :execute ":!"g:symfony_enable_shell_cmd<CR>
 
 " Window management
