@@ -39,6 +39,7 @@ Bundle 'Keithbsmiley/investigate.vim'
 Bundle 'mattboehm/vim-unstack'
 Bundle 'nelstrom/vim-qargs'
 Bundle 'arecarn/crunch'
+Bundle 'groenewege/vim-less'
 " Languages
 Bundle 'ledger/vim-ledger'
 Bundle 'kana/vim-textobj-user'
