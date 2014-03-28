@@ -41,6 +41,7 @@ Bundle 'nelstrom/vim-qargs'
 Bundle 'arecarn/crunch'
 Bundle 'groenewege/vim-less'
 " Languages
+Bundle 'freitass/todo.txt-vim'
 Bundle 'ledger/vim-ledger'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
