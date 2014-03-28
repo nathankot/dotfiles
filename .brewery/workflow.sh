@@ -19,6 +19,7 @@ brew install ack
 brew install the_silver_searcher
 brew install ctags
 brew install editorconfig
+brew install todo-txt
 
 # Install Heroku
 brew install wget
