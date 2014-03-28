@@ -52,3 +52,8 @@ Session.vim
 # Timetrap #
 ############
 .timetrap-sheet
+
+# Todo #
+########
+todo.txt
+.todo.txt
