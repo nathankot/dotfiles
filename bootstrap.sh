@@ -12,7 +12,6 @@ if [ "$1" == "update" ]; then
   rsync -av ~/.gitconfig .
   rsync -av ~/.timetrap.yml .
   rsync -av ~/.git_template .
-  rsync -av ~/.todo .
   rsync -av ~/.vim/ultisnippets ./.vim/
   rsync -av ~/.config/fish ./.config/ --exclude "fish_history" --exclude "generated_completions"
   rsync -av ~/lib/iterm2/com.googlecode.iterm2.plist ./lib/iterm2/com.googlecode.iterm2.plist
