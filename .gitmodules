@@ -1,0 +1,3 @@
+[submodule ".rbenv/plugins/bundler"]
+	path = .rbenv/plugins/bundler
+	url = git://github.com/carsomyr/rbenv-bundler.git
