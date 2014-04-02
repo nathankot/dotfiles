@@ -1,7 +1,7 @@
 # ~/.tmuxinator/rssly.yml
 
 name: rssly
-root: ~/Development/Packages/rssly
+root: ~/Development/Sites/rss
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,8 +19,13 @@ root: ~/Development/Packages/rssly
 # tmux_command: byobu
 
 windows:
-  - main:
+  - site:
       layout: main-vertical
       panes:
         - vim
         - # shell
+  - gem:
+      layout: main-vertical
+      panes:
+        - cd ~/Development/Packages/rssly; vim
+        - cd ~/Development/Packages/rssly;
