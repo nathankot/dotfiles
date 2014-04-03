@@ -24,6 +24,13 @@ windows:
       panes:
         - # shell
         - vim
+
+  - processes:
+      layout: vertical
+      panes:
+        - gulp
+        - karma start
+
   - gem:
       layout: main-vertical
       panes:
