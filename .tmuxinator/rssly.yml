@@ -22,8 +22,8 @@ windows:
   - site:
       layout: main-vertical
       panes:
-        - vim
         - # shell
+        - vim
   - gem:
       layout: main-vertical
       panes:
