@@ -22,6 +22,7 @@ set fish_user_abbreviations $fish_user_abbreviations 'td=timetrap display'
 set fish_user_abbreviations $fish_user_abbreviations 'tn=timetrap now'
 
 set fish_user_abbreviations $fish_user_abbreviations 'todo=todo.sh'
+set fish_user_abbreviations $fish_user_abbreviations 'do=todo.sh do'
 
 function legedit
   vim ~/Documents/Personal/Accounts/current.ledger
