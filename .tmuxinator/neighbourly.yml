@@ -22,6 +22,6 @@ windows:
   - editor:
       layout: main-vertical
       panes:
-        - vim
         - # bash
+        - vim
   - server: vagrant ssh
