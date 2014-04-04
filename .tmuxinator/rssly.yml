@@ -26,11 +26,12 @@ windows:
         - vim
 
   - processes:
-      layout: vertical
+      layout: even-vertical
       panes:
         - gulp
-        - karma start
         - gulp server
+        - karma start
+        - gulp watchtests
 
   - gem:
       layout: main-vertical
