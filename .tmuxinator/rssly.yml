@@ -30,6 +30,7 @@ windows:
       panes:
         - gulp
         - karma start
+        - gulp server
 
   - gem:
       layout: main-vertical
