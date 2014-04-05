@@ -22,6 +22,7 @@ brew install findutils
 source ~/.brewery/shell.sh
 source ~/.brewery/workflow.sh
 source ~/.brewery/ruby.sh
+source ~/.brewery/python.sh
 source ~/.brewery/node.sh
 source ~/.brewery/apps.sh
 source ~/.brewery/repos.sh

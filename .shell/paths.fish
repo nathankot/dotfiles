@@ -23,6 +23,10 @@ set -x PATH $HOME/.rbenv/bin $PATH
 set -x PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
 
+# PYENV
+set -x PATH "$HOME/.pyenv/shims" $PATH
+. (pyenv init - | psub)
+
 # Hackage
 set -x PATH /Users/nathan/.cabal/bin $PATH
 
