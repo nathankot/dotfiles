@@ -13,5 +13,5 @@ set -x LEDGER ~/Documents/Personal/Accounts/current.ledger
 
 ### Python
 
-source ~/.shell/config/fish/virtualfish/virtual.fish
-source ~/.shell/config/fish/virtualfish/auto_activation.fish
+source ~/.config/fish/virtualfish/virtual.fish
+source ~/.config/fish/virtualfish/auto_activation.fish
