@@ -30,5 +30,3 @@ set -x PATH "$HOME/.pyenv/shims" $PATH
 # Hackage
 set -x PATH /Users/nathan/.cabal/bin $PATH
 
-# Python
-set -x PATH /usr/local/share/python $PATH
