@@ -25,3 +25,6 @@ rbenv rehash >/dev/null ^&1
 
 # Hackage
 set -x PATH /Users/nathan/.cabal/bin $PATH
+
+# Python
+set -x PATH /usr/local/share/python $PATH
