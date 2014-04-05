@@ -36,5 +36,5 @@ windows:
   - gem:
       layout: main-vertical
       panes:
-        - cd ~/Development/Packages/rssly; vim
         - cd ~/Development/Packages/rssly
+        - cd ~/Development/Packages/rssly; vim
