@@ -24,11 +24,9 @@ Bundle 'nathankot/tcomment_vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'iandoe/vim-osx-colorpicker'
-Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'godlygeek/tabular'
 Bundle "szw/vim-ctrlspace"
-Bundle "Valloric/YouCompleteMe"
 Bundle "SirVer/ultisnips"
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
@@ -60,6 +58,9 @@ Bundle 'StanAngeloff/php.vim'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'evidens/vim-twig'
 Bundle 'docteurklein/vim-symfony'
+" Build required
+Bundle 'Shougo/vimproc.vim'
+Bundle "Valloric/YouCompleteMe"
 " Grok these
 Bundle 'gcmt/wildfire.vim'
 Bundle 't9md/vim-choosewin'
