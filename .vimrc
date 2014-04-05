@@ -62,9 +62,7 @@ Bundle 'docteurklein/vim-symfony'
 Bundle 'Shougo/vimproc.vim'
 Bundle "Valloric/YouCompleteMe"
 " Grok these
-Bundle 'gcmt/wildfire.vim'
 Bundle 't9md/vim-choosewin'
-Bundle 'gilligan/vim-lldb'
 
 filetype on
 filetype plugin indent on
