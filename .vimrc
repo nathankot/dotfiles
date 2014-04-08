@@ -58,6 +58,7 @@ Bundle 'StanAngeloff/php.vim'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'evidens/vim-twig'
 Bundle 'docteurklein/vim-symfony'
+Bundle 'stephpy/vim-yaml'
 " Build required
 Bundle 'Shougo/vimproc.vim'
 Bundle "Valloric/YouCompleteMe"
