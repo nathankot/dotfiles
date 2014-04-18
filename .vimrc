@@ -250,6 +250,7 @@ function! s:unite_my_settings()"{{{
   imap <silent><buffer> <C-u> <C-k>
   imap <silent><buffer> <ENTER> <Plug>(unite_insert_leave)
 
+  nmap <silent><buffer> \ <Plug>(unite_insert_enter)
   nmap <silent><buffer> <ESC> <Plug>(unite_exit)
   nmap <silent><buffer> <C-c> <Plug>(unite_exit)
   nmap <silent><buffer> <C-p> <Plug>(unite_exit)
