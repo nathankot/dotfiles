@@ -213,7 +213,7 @@ nnoremap <c-p> :Unite -toggle -buffer-name=files -start-insert file_rec/async:!<
 nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus grep:.<CR>
 nnoremap <c-s> :UniteResume search<CR>
 nnoremap <c-m> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
-nnoremap <c-t> :Unite tag -buffer-name=tags<CR>
+nnoremap <c-t> :Unite tag -start-insert -buffer-name=tags<CR>
 
 let g:unite_prompt = '⚡️  '
 let g:unite_data_directory = '~/.vim/cache/unite'
