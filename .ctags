@@ -1,10 +1,13 @@
 -R
 --fields=+l
 --links=yes
+--exclude=.git
 --exclude=.min
 --exclude=.gz
 --exclude=node_modules
 --exclude=bower_components
+--exclude=vendor
 --exclude=dist
 --exclude=components
---languages=ruby,c,javascript,python
+--exclude=build
+--languages=ruby,c,javascript,python,php,java,lisp,make,sh,sql,vim
