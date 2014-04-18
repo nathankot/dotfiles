@@ -25,6 +25,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'iandoe/vim-osx-colorpicker'
 Bundle 'Shougo/unite.vim'
+Bundle 'tsukkee/unite-tag'
+Bundle 'Shougo/unite-outline'
 Bundle 'godlygeek/tabular'
 Bundle "szw/vim-ctrlspace"
 Bundle "SirVer/ultisnips"
@@ -172,11 +174,6 @@ color nk256
 nmap - <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
-" Wildfire
-let g:wildfire_fuel_map = "<ENTER>"
-let g:wildfire_water_map = "<BS>"
-let g:wildfire_objects = ["i'", 'i"', "ir", "i)", "i]", "i}", "ip", "it"]
-
 " Ctrl-space
 let g:ctrlspace_use_tabline = 1
 let g:ctrlspace_height = 6
@@ -212,11 +209,13 @@ noremap <C-k><C-b> :NERDTreeToggle<CR>
 noremap <C-k><C-r> :NERDTreeFind<CR>
 
 " Unite
-nnoremap <c-p> :<C-u>Unite -toggle -buffer-name=files -start-insert file_rec/async:!<CR><c-u>
-nnoremap <c-t> :<C-u>Unite -buffer-name=menu -start-insert menu:git<CR><c-u>
-nnoremap <c-s> :<C-u>Unite -buffer-name=search -no-start-insert -no-quit grep:.<CR><c-u>
-nnoremap \ :<C-u>Unite -buffer-name=search -no-start-insert -no-quit grep:.<CR><c-u>
+nnoremap <c-p> :Unite -toggle -buffer-name=files -start-insert file_rec/async:!<CR>
+nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus grep:.<CR>
+nnoremap <c-s> :UniteResume search<CR>
+nnoremap <c-m> :Unite -no-empty -no-quit -keep-focus -vertical outline<CR>
+nnoremap <c-t> :Unite tag<CR>
 
+let g:unite_prompt = '⚡️  '
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_winheight = 12
 let g:unite_split_rule = 'bot'
@@ -227,7 +226,7 @@ if executable('ag')
   let g:unite_source_grep_default_opts='--nocolor --nogroup -S -C3'
   let g:unite_source_grep_recursive_opt=''
   let g:unite_source_grep_max_candidates=200
-  let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".hg" --ignore ".svn" --ignore ".git" --ignore ".bzr" --hidden -S -g ""'
+  let g:unite_source_rec_async_command='ag --nocolor --nogroup --hidden -S -g ""'
 endif
 
 call unite#custom#source('grep', 'filters', [
@@ -241,16 +240,21 @@ call unite#custom#source('file_rec/async', 'filters', [
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
-   map <silent><buffer>                  <ESC>                <Plug>(unite_exit)
-   map <silent><buffer>                  <C-c>                <Plug>(unite_exit)
-   map <silent><buffer>                  <C-p>                <Plug>(unite_exit)
-   imap <silent><buffer>                 <TAB>                <Plug>(unite_select_next_line)
-   imap <silent><buffer>                 <c-j>                <Plug>(unite_select_next_line)
-   imap <silent><buffer>                 <c-k>                <Plug>(unite_select_previous_line)
-   imap <silent><buffer><expr>           <C-v>                unite#do_action('vsplit')
-   imap <silent><buffer><expr>           <C-s>                unite#do_action('vsplit')
-   imap <silent><buffer>                 <C-d>                <C-j>
-   imap <silent><buffer>                 <C-u>                <C-k>
+  imap <silent><buffer> <C-c> <Plug>(unite_exit)
+  imap <silent><buffer> <C-p> <Plug>(unite_exit)
+  imap <silent><buffer> <TAB> <Plug>(unite_select_next_line)
+  imap <silent><buffer> <c-j> <Plug>(unite_select_next_line)
+  imap <silent><buffer> <c-k> <Plug>(unite_select_previous_line)
+  imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+  imap <silent><buffer> <C-d> <C-j>
+  imap <silent><buffer> <C-u> <C-k>
+  imap <silent><buffer> <ENTER> <Plug>(unite_insert_leave)
+
+  nmap <silent><buffer> <ESC> <Plug>(unite_exit)
+  nmap <silent><buffer> <C-c> <Plug>(unite_exit)
+  nmap <silent><buffer> <C-p> <Plug>(unite_exit)
+  nmap <silent><buffer><expr> v unite#do_action('vsplit')
+  nmap <silent><buffer><expr> v unite#do_action('vsplit')
 endfunction"}}}
 
 let g:unite_source_menu_menus = {}
@@ -269,7 +273,7 @@ let g:unite_source_menu_menus.git.command_candidates = [
     \]
 
 " You Complete me
-let g:ycm_collect_identifiers_from_tags_files = 0
+let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_min_num_of_chars_for_completion = 2
@@ -349,6 +353,10 @@ set concealcursor=nciv
 let g:symfony_enable_shell_mapping = 0
 let g:symfony_app_console_path= "app/console --env=nathan"
 map <leader>sf :execute ":!"g:symfony_enable_shell_cmd<CR>
+
+" Numbering
+nnoremap - <C-x>
+nnoremap + <C-a>
 
 " Window management
 noremap <silent> <leader>i :wincmd H<cr>
