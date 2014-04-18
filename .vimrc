@@ -212,8 +212,8 @@ noremap <C-k><C-r> :NERDTreeFind<CR>
 nnoremap <c-p> :Unite -toggle -buffer-name=files -start-insert file_rec/async:!<CR>
 nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus grep:.<CR>
 nnoremap <c-s> :UniteResume search<CR>
-nnoremap <c-m> :Unite -no-empty -no-quit -keep-focus -vertical outline<CR>
-nnoremap <c-t> :Unite tag<CR>
+nnoremap <c-m> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
+nnoremap <c-t> :Unite tag -buffer-name=tags<CR>
 
 let g:unite_prompt = '⚡️  '
 let g:unite_data_directory = '~/.vim/cache/unite'
@@ -256,6 +256,11 @@ function! s:unite_my_settings()"{{{
   nmap <silent><buffer> <C-p> <Plug>(unite_exit)
   nmap <silent><buffer><expr> v unite#do_action('vsplit')
   nmap <silent><buffer><expr> v unite#do_action('vsplit')
+
+  let unite = unite#get_current_unite()
+  if unite.buffer_name == 'outline'
+    nmap <silent><buffer> <C-m> <Plug>(unite_exit)
+  endif
 endfunction"}}}
 
 let g:unite_source_menu_menus = {}
