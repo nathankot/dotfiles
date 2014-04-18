@@ -212,7 +212,7 @@ noremap <C-k><C-r> :NERDTreeFind<CR>
 nnoremap <c-p> :Unite -toggle -buffer-name=files -start-insert file_rec/async:!<CR>
 nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus grep:.<CR>
 nnoremap <c-s> :UniteResume search<CR>
-nnoremap <c-m> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical -auto-preview outline<CR>
+nnoremap <c-m> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
 nnoremap <c-t> :Unite tag -start-insert -buffer-name=tags<CR>
 
 let g:unite_prompt = '⚡️  '
