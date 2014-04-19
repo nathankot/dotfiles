@@ -232,6 +232,10 @@ endif
 call unite#custom#source('grep', 'filters', [
       \'sorter_rank'])
 
+call unite#custom#source('tags', 'filters', [
+      \'matcher_glob',
+      \'sorter_rank'])
+
 call unite#custom#source('file_rec/async', 'filters', [
       \'matcher_fuzzy',
       \'sorter_rank',
