@@ -212,7 +212,7 @@ noremap <C-k><C-r> :NERDTreeFind<CR>
 nnoremap <c-p> :Unite -toggle -buffer-name=files -start-insert file_rec/async:!<CR>
 nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus grep:.<CR>
 nnoremap <c-s> :UniteResume search<CR>
-nnoremap <c-m> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
+nnoremap <Enter> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
 nnoremap <c-t> :Unite tag -start-insert -buffer-name=tags<CR>
 
 let g:unite_prompt = '⚡️  '
@@ -243,7 +243,7 @@ call unite#custom#source('file_rec/async', 'filters', [
       \'converter_file_directory'])
 
 autocmd FileType unite call s:unite_my_settings()
-function! s:unite_my_settings()"{{{
+function! s:unite_my_settings()
   imap <silent><buffer> <C-c> <Plug>(unite_exit)
   imap <silent><buffer> <C-p> <Plug>(unite_exit)
   imap <silent><buffer> <TAB> <Plug>(unite_select_next_line)
@@ -264,9 +264,9 @@ function! s:unite_my_settings()"{{{
 
   let unite = unite#get_current_unite()
   if unite.buffer_name == 'outline'
-    nmap <silent><buffer> <C-m> <Plug>(unite_exit)
+    nmap <silent><buffer> <Enter> <Plug>(unite_do_default_action)
   endif
-endfunction"}}}
+endfunction
 
 let g:unite_source_menu_menus = {}
 let g:unite_source_menu_menus.git = { 'description' : 'Manage git.' }
@@ -366,7 +366,7 @@ let g:symfony_app_console_path= "app/console --env=nathan"
 map <leader>sf :execute ":!"g:symfony_enable_shell_cmd<CR>
 
 " Numbering
-nnoremap - <C-x>
+nnoremap _ <C-x>
 nnoremap + <C-a>
 
 " Window management
