@@ -57,3 +57,7 @@ Session.vim
 ########
 todo.txt
 .todo.txt
+
+# Tags Config #
+###############
+.ctags
