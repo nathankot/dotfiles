@@ -220,7 +220,8 @@ if executable('ag')
   let g:unite_source_grep_default_opts='--nocolor -S -C1'
   let g:unite_source_grep_recursive_opt=''
   let g:unite_source_grep_max_candidates=200
-  let g:unite_source_rec_async_command='ag --nocolor --hidden -g ""'
+  " To keep things consistent, ag will only look @ .agignore
+  let g:unite_source_rec_async_command='ag --nocolor --hidden -U -g ""'
   let g:unite_source_rec_max_cache_files=5000
 endif
 
