@@ -232,9 +232,9 @@ call unite#custom#source('tags', 'filters', [
       \'sorter_rank'])
 
 call unite#custom#source('file_rec/async', 'filters', [
-      \'matcher_fuzzy',
-      \'sorter_rank',
       \'converter_relative_abbr',
+      \'matcher_fuzzy',
+      \'sorter_selecta',
       \'converter_file_directory'])
 
 autocmd FileType unite call s:unite_my_settings()
