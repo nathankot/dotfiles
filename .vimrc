@@ -221,6 +221,7 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt=''
   let g:unite_source_grep_max_candidates=200
   let g:unite_source_rec_async_command='ag --nocolor --hidden -g ""'
+  let g:unite_source_rec_max_cache_files=5000
 endif
 
 call unite#custom#source('grep', 'filters', [
