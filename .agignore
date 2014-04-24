@@ -1,6 +1,10 @@
-/.source/
-/.git/
-/tmp/
+.source/
+.git/
+tmp/
+node_modules/
+vendor/
+bower_components/
+cache/
 .log
 .log*
 .tags
