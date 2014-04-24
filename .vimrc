@@ -31,16 +31,13 @@ Plugin 'szw/vim-ctrlspace'
 Plugin 'SirVer/ultisnips'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
-Plugin 'argtextobj.vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'goldfeld/vim-seek'
 Plugin 'Keithbsmiley/investigate.vim'
-Plugin 'mattboehm/vim-unstack'
 Plugin 'nelstrom/vim-qargs'
-Plugin 'arecarn/crunch'
-Plugin 'groenewege/vim-less'
 " Languages
-Plugin 'freitass/todo.txt-vim'
+Plugin 'argtextobj.vim'
+Plugin 'groenewege/vim-less'
 Plugin 'ledger/vim-ledger'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
@@ -58,13 +55,12 @@ Plugin 'dag/vim-fish'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'evidens/vim-twig'
-Plugin 'docteurklein/vim-symfony'
 Plugin 'stephpy/vim-yaml'
 " Build required
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Valloric/YouCompleteMe'
 " Grok these
-Plugin 't9md/vim-choosewin'
+Plugin 'mattboehm/vim-unstack'
 
 call vundle#end()
 filetype on
@@ -170,9 +166,8 @@ set number
 
 color nk256
 
-" Choosewin
-nmap - <Plug>(choosewin)
-let g:choosewin_overlay_enable = 1
+" Seek
+let g:seek_enable_jumps = 1
 
 " Ctrl-space
 let g:ctrlspace_use_tabline = 1
@@ -359,11 +354,6 @@ let javascript_enable_domhtmlcss = 1
 let g:javascript_conceal = 1
 set conceallevel=2
 set concealcursor=nciv
-
-" Symfony
-let g:symfony_enable_shell_mapping = 0
-let g:symfony_app_console_path= "app/console --env=nathan"
-map <leader>sf :execute ":!"g:symfony_enable_shell_cmd<CR>
 
 " Numbering
 nnoremap _ <C-x>
