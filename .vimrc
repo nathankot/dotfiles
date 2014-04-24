@@ -264,21 +264,6 @@ function! s:unite_my_settings()
   endif
 endfunction
 
-let g:unite_source_menu_menus = {}
-let g:unite_source_menu_menus.git = { 'description' : 'Manage git.' }
-let g:unite_source_menu_menus.git.command_candidates = [
-    \['git status       (Fugitive)', 'Gstatus'],
-    \['git diff         (Fugitive)', 'Gdiff'],
-    \['git commit       (Fugitive)', 'Gcommit'],
-    \['git log          (Fugitive)', 'Glog'],
-    \['git blame        (Fugitive)', 'Gblame'],
-    \['git stage        (Fugitive)', 'Gwrite'],
-    \['git checkout     (Fugitive)', 'Gread'],
-    \['git rm           (Fugitive)', 'Gremove'],
-    \['git push         (Fugitive)', 'Git! push'],
-    \['git pull         (Fugitive)', 'Git! pull'],
-    \]
-
 " You Complete me
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
@@ -376,8 +361,6 @@ nnoremap <leader><space> :noh<cr>
 
 " Common typos
 noremap ; :
-nnoremap ' `
-nnoremap ` '
 nnoremap K <nop>
 nnoremap Q <nop>
 vnoremap <s-k> <nop>
@@ -389,7 +372,7 @@ nnoremap <leader>w :w!<cr>
 noremap <leader><TAB>   :tabnext<cr>
 noremap <leader><S-TAB> :tabprevious<cr>
 
-" Git status
+" Git
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gc :Gcommit<cr>
