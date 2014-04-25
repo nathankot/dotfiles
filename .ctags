@@ -6,8 +6,11 @@
 --exclude=*.gz*
 --exclude=node_modules
 --exclude=bower_components
+--exclude=tmp
+--exclude=.tmp
 --exclude=vendor
 --exclude=dist
 --exclude=components
+--exclude=bower_components
 --exclude=build
 --languages=ruby,c,javascript,python,php,java,lisp,make,sh,sql,vim
