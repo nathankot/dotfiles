@@ -218,7 +218,7 @@ let g:unite_enable_short_source_names = 1
 if executable('ag')
   " To keep things consistent, ag will only look @ .agignore
   let g:unite_source_grep_command='ag'
-  let g:unite_source_grep_default_opts='--nocolor -S -U -C1'
+  let g:unite_source_grep_default_opts='--nocolor --nogroup -S -U -C1'
   let g:unite_source_grep_recursive_opt=''
   let g:unite_source_grep_max_candidates=200
   let g:unite_source_rec_async_command='ag --nocolor --hidden -U -g ""'
