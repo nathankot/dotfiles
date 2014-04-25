@@ -1,6 +1,7 @@
 .source/
 .git/
 tmp/
+.tmp/
 node_modules/
 vendor/
 bower_components/
