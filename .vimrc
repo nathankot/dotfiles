@@ -60,6 +60,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'Valloric/YouCompleteMe'
 " Grok these
 Plugin 'mattboehm/vim-unstack'
+Plugin 'arecarn/crunch'
 
 call vundle#end()
 filetype on
