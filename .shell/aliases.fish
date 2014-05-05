@@ -1,6 +1,7 @@
 set fish_user_abbreviations $fish_user_abbreviations 'mux=tmuxinator'
 set fish_user_abbreviations $fish_user_abbreviations 'issues=ghi'
-set fish_user_abbreviations $fish_user_abbreviations 'l=ls'
+set fish_user_abbreviations $fish_user_abbreviations 'l=ledger'
+set fish_user_abbreviations $fish_user_abbreviations 'hl=hledger'
 
 set fish_user_abbreviations $fish_user_abbreviations 'g=git'
 set fish_user_abbreviations $fish_user_abbreviations 'gs=git status'
