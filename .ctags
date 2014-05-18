@@ -13,4 +13,5 @@
 --exclude=components
 --exclude=bower_components
 --exclude=build
+--exclude=rtl
 --languages=ruby,c,javascript,python,php,java,lisp,make,sh,sql,vim
