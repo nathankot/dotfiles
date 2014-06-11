@@ -4,6 +4,14 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
+" Languages
+Plugin 'sheerun/vim-polyglot'
+Plugin 'ledger/vim-ledger'
+Plugin 'juvenn/mustache.vim'
+Plugin 'dag/vim-fish'
+Plugin 'stephpy/vim-yaml'
+
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
@@ -34,30 +42,14 @@ Plugin 'mhinz/vim-signify'
 Plugin 'goldfeld/vim-seek'
 Plugin 'Keithbsmiley/investigate.vim'
 Plugin 'nelstrom/vim-qargs'
-" Languages
 Plugin 'argtextobj.vim'
-Plugin 'groenewege/vim-less'
-Plugin 'ledger/vim-ledger'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'mattn/emmet-vim'
-Plugin 'juvenn/mustache.vim'
-Plugin 'tpope/vim-haml'
-Plugin 'elzr/vim-json'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'wavded/vim-stylus'
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'dag/vim-fish'
-Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'evidens/vim-twig'
-Plugin 'stephpy/vim-yaml'
-" Build required
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Valloric/YouCompleteMe'
+
 " Grok these
 Plugin 'mattboehm/vim-unstack'
 Plugin 'arecarn/crunch'
