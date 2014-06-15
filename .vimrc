@@ -49,6 +49,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
 
 " Grok these
 Plugin 'mattboehm/vim-unstack'
