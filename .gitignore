@@ -45,6 +45,7 @@ Session.vim
 /tags
 .cs_workspaces
 .agignore
+.tern-project
 
 # Rails #
 #########
