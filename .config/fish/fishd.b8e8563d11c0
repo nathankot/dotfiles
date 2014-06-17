@@ -23,7 +23,7 @@ SET fish_color_status:red
 SET fish_color_user:\x2do\x1egreen
 SET fish_color_valid_path:\x2d\x2dunderline
 SET fish_greeting:Hello\x2e
-SET fish_key_bindings:fish\x5fdefault\x5fkey\x5fbindings
+SET fish_key_bindings:fish_default_key_bindings
 SET fish_pager_color_completion:normal
 SET fish_pager_color_description:555\x1eyellow
 SET fish_pager_color_prefix:cyan
