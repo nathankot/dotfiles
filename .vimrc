@@ -1,61 +1,62 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'gmarik/Vundle.vim'
 
 " Languages
-Plugin 'sheerun/vim-polyglot'
-Plugin 'ledger/vim-ledger'
-Plugin 'juvenn/mustache.vim'
-Plugin 'dag/vim-fish'
-Plugin 'stephpy/vim-yaml'
+Plug 'sheerun/vim-polyglot'
+Plug 'ledger/vim-ledger'
+Plug 'juvenn/mustache.vim'
+Plug 'dag/vim-fish'
+Plug 'stephpy/vim-yaml'
 
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-ragtag'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-speeddating'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Raimondi/delimitMate'
-Plugin 'nathankot/tcomment_vim'
-Plugin 'sjl/gundo.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'Shougo/unite.vim'
-Plugin 'tsukkee/unite-tag'
-Plugin 'Shougo/unite-outline'
-Plugin 'godlygeek/tabular'
-Plugin 'szw/vim-ctrlspace'
-Plugin 'SirVer/ultisnips'
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
-Plugin 'mhinz/vim-signify'
-Plugin 'goldfeld/vim-seek'
-Plugin 'Keithbsmiley/investigate.vim'
-Plugin 'nelstrom/vim-qargs'
-Plugin 'argtextobj.vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'mattn/emmet-vim'
-Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-speeddating'
+Plug 'scrooloose/nerdtree'
+Plug 'Raimondi/delimitMate'
+Plug 'nathankot/tcomment_vim'
+Plug 'sjl/gundo.vim'
+Plug 'scrooloose/syntastic'
+Plug 'Shougo/unite.vim'
+Plug 'tsukkee/unite-tag'
+Plug 'Shougo/unite-outline'
+Plug 'godlygeek/tabular'
+Plug 'szw/vim-ctrlspace'
+Plug 'SirVer/ultisnips'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
+Plug 'mhinz/vim-signify'
+Plug 'goldfeld/vim-seek'
+Plug 'Keithbsmiley/investigate.vim'
+Plug 'nelstrom/vim-qargs'
+Plug 'argtextobj.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'mattn/emmet-vim'
+Plug 'shawncplus/phpcomplete.vim'
+Plug 'Shougo/vimproc.vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'marijnh/tern_for_vim'
 
 " Grok these
-Plugin 'mattboehm/vim-unstack'
-Plugin 'arecarn/crunch'
+Plug 'mattboehm/vim-unstack'
+Plug 'arecarn/crunch'
+Plug 'junegunn/goyo.vim'
 
-call vundle#end()
+call plug#end()
+
 filetype on
 filetype plugin indent on
 filetype plugin on
@@ -374,6 +375,9 @@ nnoremap <leader>gr :Gread<cr>
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
+
+" Goyo
+nnoremap <Leader>F :Goyo<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
