@@ -47,6 +47,7 @@ Plug 'shawncplus/phpcomplete.vim'
 Plug 'Shougo/vimproc.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'marijnh/tern_for_vim'
+Plug 'wellle/tmux-complete.vim'
 
 " Grok these
 Plug 'mattboehm/vim-unstack'
