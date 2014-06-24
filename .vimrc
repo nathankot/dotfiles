@@ -2,8 +2,6 @@ set nocompatible
 filetype off
 call plug#begin('~/.vim/plugged')
 
-Plug 'gmarik/Vundle.vim'
-
 " Languages
 Plug 'sheerun/vim-polyglot'
 Plug 'ledger/vim-ledger'
