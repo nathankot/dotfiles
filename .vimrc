@@ -273,6 +273,9 @@ let g:ycm_use_ultisnips_completer = 1
 let g:ycm_server_use_vim_stdout = 0
 let g:ycm_server_log_level = 'critical'
 
+" Tmux completion
+let g:tmuxcomplete#trigger = 'omnifunc'
+
 """ Ultisnips
 let g:UltiSnipsExpandTrigger = "<C-e>"
 let g:UltiSnipsJumpForwardTrigger = "<C-l>"
