@@ -47,7 +47,6 @@ Plug 'shawncplus/phpcomplete.vim'
 Plug 'Shougo/vimproc.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'marijnh/tern_for_vim'
-Plug 'wellle/tmux-complete.vim'
 
 " Grok these
 Plug 'mattboehm/vim-unstack'
@@ -272,9 +271,6 @@ let g:ycm_key_list_previous_completion = ['<C-o>', '<C-k>']
 let g:ycm_use_ultisnips_completer = 1
 let g:ycm_server_use_vim_stdout = 0
 let g:ycm_server_log_level = 'critical'
-
-" Tmux completion
-let g:tmuxcomplete#trigger = 'omnifunc'
 
 """ Ultisnips
 let g:UltiSnipsExpandTrigger = "<C-e>"
