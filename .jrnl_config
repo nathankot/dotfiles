@@ -2,12 +2,12 @@
   "default_hour": 9,
   "timeformat": "%Y-%m-%d %H:%M",
   "linewrap": 79,
-  "encrypt": true,
+  "encrypt": false,
   "editor": "vim",
   "default_minute": 0,
   "highlight": true,
   "journals": {
-    "default": "/Users/nathan/.journal.txt"
+    "default": "/Users/nathan/.journal/deault.txt"
   },
   "tagsymbols": "@"
 }
