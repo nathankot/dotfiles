@@ -7,7 +7,7 @@
   "default_minute": 0,
   "highlight": true,
   "journals": {
-    "default": "/Users/nathan/.journal/deault.txt"
+    "default": "/Users/nathan/.journal/default.txt"
   },
   "tagsymbols": "@"
 }
