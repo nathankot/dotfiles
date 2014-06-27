@@ -19,7 +19,6 @@ brew install coreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
-source ~/.brewery/shell.sh
 source ~/.brewery/workflow.sh
 source ~/.brewery/ruby.sh
 source ~/.brewery/python.sh

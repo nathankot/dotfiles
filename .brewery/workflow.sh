@@ -29,3 +29,8 @@ heroku plugins:install https://github.com/tpope/heroku-binstubs.git
 heroku plugins:install https://github.com/tpope/heroku-wildcards.git
 heroku plugins:install git://github.com/ddollar/heroku-config.git
 heroku plugins:install https://github.com/heroku/heroku-repo.git
+
+# Fish
+brew install fish
+sudo echo '/usr/local/bin/fish' >> /etc/shells
+chsh -s /user/local/bin/fish
