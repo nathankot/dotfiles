@@ -11,6 +11,26 @@ let colors_name = "nk256"
 hi Normal           ctermfg=NONE        ctermbg=black        cterm=NONE
 hi NonText          ctermfg=black       ctermbg=black        cterm=NONE
 
+set fillchars+=vert:\
+highlight clear SignColumn
+
+hi VertSplit ctermbg=16 ctermfg=16
+hi SignColumn ctermfg=black ctermbg=black
+
+" Fold column (extra padding)
+set foldcolumn=1
+hi FoldColumn ctermfg=black ctermbg=black
+
+augroup BgHighlight
+    autocmd!
+    autocmd WinEnter * set cul
+    autocmd WinLeave * set nocul
+augroup END
+
+hi PmenuSbar            ctermfg=black     ctermbg=white     cterm=NONE
+hi Pmenu                ctermfg=246    ctermbg=234
+hi PmenuSel             ctermfg=255    ctermbg=235
+
 hi Cursor           ctermfg=black       ctermbg=white       cterm=reverse
 hi LineNr           ctermfg=8    ctermbg=NONE        cterm=NONE
 
@@ -76,3 +96,4 @@ highlight DiffDelete ctermbg=NONE ctermfg=lightred
 hi CtrlSpaceSelected term=reverse ctermfg=187  ctermbg=23  cterm=bold
 hi CtrlSpaceNormal   term=NONE    ctermfg=244  ctermbg=232 cterm=NONE
 hi CtrlSpaceFound    ctermfg=220  ctermbg=NONE cterm=bold
+
