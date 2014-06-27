@@ -404,8 +404,6 @@ function! HasPaste()
     return ''
 endfunction
 
-au BufEnter * match OverLength /\%82v.*/
-
 " Open QuickFix Window after Grep
 au QuickFixCmdPost *grep* cwindow
 
