@@ -11,25 +11,6 @@ let colors_name = "nk256"
 hi Normal           ctermfg=NONE        ctermbg=black        cterm=NONE
 hi NonText          ctermfg=black       ctermbg=black        cterm=NONE
 
-set fillchars+=vert:\
-highlight clear SignColumn
-
-hi VertSplit ctermbg=16 ctermfg=16
-hi SignColumn ctermfg=black ctermbg=black
-
-" Fold column (extra padding)
-set foldcolumn=1
-hi FoldColumn ctermfg=black ctermbg=black
-
-augroup BgHighlight
-    autocmd!
-    autocmd WinEnter * set cul
-    autocmd WinLeave * set nocul
-augroup END
-
-hi PmenuSbar            ctermfg=black     ctermbg=white     cterm=NONE
-hi Pmenu                ctermfg=246    ctermbg=234
-hi PmenuSel             ctermfg=255    ctermbg=235
 
 hi Cursor           ctermfg=black       ctermbg=white       cterm=reverse
 hi LineNr           ctermfg=8    ctermbg=NONE        cterm=NONE
@@ -97,3 +78,49 @@ hi CtrlSpaceSelected term=reverse ctermfg=187  ctermbg=23  cterm=bold
 hi CtrlSpaceNormal   term=NONE    ctermfg=244  ctermbg=232 cterm=NONE
 hi CtrlSpaceFound    ctermfg=220  ctermbg=NONE cterm=bold
 
+hi PmenuSbar            ctermfg=black     ctermbg=white     cterm=NONE
+hi Pmenu                ctermfg=246    ctermbg=234
+hi PmenuSel             ctermfg=255    ctermbg=235
+
+" Gutters and Columns
+set fillchars+=vert:\
+highlight clear SignColumn
+
+hi VertSplit ctermbg=16 ctermfg=16
+hi SignColumn ctermfg=black ctermbg=black
+
+" Fold column (extra padding)
+set foldcolumn=1
+hi FoldColumn ctermfg=black ctermbg=black
+
+" Only highlight current line for current pane
+augroup BgHighlight
+    autocmd!
+    autocmd WinEnter * set cul
+    autocmd WinLeave * set nocul
+augroup END
+
+
+" Status line highlights
+hi link SyntasticErrorLine ErrorMsg
+hi link SyntasticWarningLine WarningMsg
+hi pastemessage ctermbg=darkblue
+
+highlight clear StatusLine
+highlight clear StatusLineNC
+
+hi StatusLine   ctermfg=darkred ctermbg=7
+hi StatusLineNC ctermfg=white ctermbg=7
+
+"filename
+hi User1 ctermfg=white ctermbg=7
+"line number
+hi User2 ctermfg=NONE ctermbg=black
+"line# seperator
+hi User3 ctermfg=8 ctermbg=black
+"line count
+hi User4 ctermfg=8 ctermbg=black
+"file type
+hi User5 ctermfg=NONE ctermbg=black
+"modified flag
+hi User6 ctermfg=white ctermbg=darkred
