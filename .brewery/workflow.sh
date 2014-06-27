@@ -6,13 +6,8 @@ brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
 brew install gpg
 brew install pass
-brew install offlineimap
-brew install w3m
-brew install urlview
 brew install contacts
 brew install curl-ca-bundle
-brew install msmtp
-brew install mutt --sidebar-patch
 brew install fzf
 
 brew install macvim --override-system-vim
@@ -21,6 +16,7 @@ brew install the_silver_searcher
 brew install ctags
 brew install editorconfig
 brew install todo-txt
+brew install ledger
 
 # Install Heroku
 brew install wget

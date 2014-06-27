@@ -10,23 +10,14 @@ launchctl limit maxfiles 10480 10480
 # Use ligher font smoothing (default is 2)
 defaults write -g AppleFontSmoothing -int 1
 
-# Menu bar: disable transparency
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
-
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Disable automatic termination of inactive apps
-defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
-
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
@@ -46,9 +37,6 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
-
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
@@ -63,12 +51,6 @@ chflags nohidden ~/Applications
 
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Enable the WebKit Developer Tools in the Mac App Store
-defaults write com.apple.appstore WebKitDeveloperExtras -bool true
-
-# Enable Debug Menu in the Mac App Store
-defaults write com.apple.appstore ShowDebugMenu -bool true
 
 # Use multi list view in finder as default
 defaults write com.apple.Finder FXPreferredViewStyle clmv
@@ -110,10 +92,6 @@ osascript -e "tell app \"System Events\"
                 make login item at end with properties {path:\"$HOME/Applications/Shortcat.app\", hidden:true}
                 make login item at end with properties {path:\"$HOME/Applications/Flux.app\", hidden:true}
                 make login item at end with properties {path:\"$HOME/Applications/Alfred 2.app\", hidden:true}
-                make login item at end with properties {path:\"$HOME/Applications/Hiss.app\", hidden:true}
-                make login item at end with properties {path:\"$HOME/Applications/Skype.app\", hidden:true}
               end tell"
-
-
 
 echo "Done. Please restart computer for change to take effect."

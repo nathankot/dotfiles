@@ -27,11 +27,10 @@ installcask caffeine
 installcask f-lux
 installcask alfred
 installcask shortcat
-installcask authy-bluetooth
+installcask daisydisk
 
 installcask google-drive
 installcask dropbox
-installcask layervault
 installcask skype
 
 brew cask linkapps
