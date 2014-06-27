@@ -45,6 +45,7 @@ Plug 'Shougo/vimproc.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'marijnh/tern_for_vim'
 Plug 'jpalardy/vim-slime'
+Plug 'junegunn/goyo.vim'
 
 " Grok these
 Plug 'arecarn/crunch'
