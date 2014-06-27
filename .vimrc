@@ -48,6 +48,7 @@ Plug 'jpalardy/vim-slime'
 
 " Grok these
 Plug 'arecarn/crunch'
+Plug 'szw/vim-g'
 
 call plug#end()
 
