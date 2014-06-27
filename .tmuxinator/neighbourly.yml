@@ -27,6 +27,6 @@ windows:
   - server:
     layout: 2d69,364x67,0,0{182x67,0,0[182x9,0,0,1,182x57,0,10,7],181x67,183,0,3}
     panes:
-      - vagrant rsync-auto
+      - sleep 30; vagrant rsync-auto
       - vagrant up
-      - vagrant ssh
+      - sleep 30; vagrant ssh
