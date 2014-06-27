@@ -5,10 +5,8 @@ hi PmenuSel             ctermfg=255    ctermbg=235
 " No Color columns
 " Don't draw split lines
 set fillchars+=vert:\
-set colorcolumn=+1
 highlight clear SignColumn
 hi VertSplit ctermbg=16 ctermfg=16
-hi ColorColumn ctermfg=darkred
 hi SignColumn ctermfg=black ctermbg=black
 
 " Fold column (extra padding)
