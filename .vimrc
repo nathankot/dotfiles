@@ -44,6 +44,7 @@ Plug 'shawncplus/phpcomplete.vim'
 Plug 'Shougo/vimproc.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'marijnh/tern_for_vim'
+Plug 'jpalardy/vim-slime'
 
 " Grok these
 Plug 'arecarn/crunch'
@@ -152,6 +153,10 @@ set relativenumber
 set number
 
 color nk256
+
+" Slime
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "2"}
 
 " Seek
 let g:seek_enable_jumps = 1
@@ -337,7 +342,7 @@ nnoremap + <C-a>
 noremap <silent> <leader>i :wincmd H<cr>
 noremap <silent> <C-j> :wincmd w<cr>
 noremap <silent> <C-k> :wincmd W<cr>
-noremap <silent> <C-c> :close<cr>
+noremap <silent> <C-q> :close<cr>
 noremap <silent> <C-h> 5<C-w><
 noremap <silent> <C-l> 5<C-w>>
 

@@ -7,7 +7,7 @@ hi PmenuSel             ctermfg=255    ctermbg=235
 set fillchars+=vert:\
 set colorcolumn=+1
 highlight clear SignColumn
-hi VertSplit ctermbg=7 ctermfg=7
+hi VertSplit ctermbg=16 ctermfg=16
 hi ColorColumn ctermbg=7
 hi SignColumn ctermfg=black ctermbg=black
 
