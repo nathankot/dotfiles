@@ -25,7 +25,7 @@ windows:
         - # bash
         - vim
   - server:
-    layout: 2d69,364x67,0,0{182x67,0,0[182x9,0,0,1,182x57,0,10,7],181x67,183,0,3}
+    layout: 1ebc,364x67,0,0{182x67,0,0[182x11,0,0,18,182x55,0,12,21],181x67,183,0,20}
     panes:
       - sleep 30; vagrant rsync-auto
       - vagrant up
