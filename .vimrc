@@ -30,8 +30,6 @@ Plug 'Shougo/unite-outline'
 Plug 'godlygeek/tabular'
 Plug 'szw/vim-ctrlspace'
 Plug 'SirVer/ultisnips'
-Plug 'mattn/webapi-vim'
-Plug 'mattn/gist-vim'
 Plug 'mhinz/vim-signify'
 Plug 'goldfeld/vim-seek'
 Plug 'Keithbsmiley/investigate.vim'
@@ -48,9 +46,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'marijnh/tern_for_vim'
 
 " Grok these
-Plug 'mattboehm/vim-unstack'
 Plug 'arecarn/crunch'
-Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
