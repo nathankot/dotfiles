@@ -17,9 +17,10 @@ pre_window: set -x API_ENV development; set -x NODE_ENV development
 
 windows:
   - web: # Shell
-      layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
+      layout: 06ae,272x55,0,0{168x55,0,0,30,103x55,169,0[103x27,169,0,34,103x27,169,28,38]}
       panes:
         - vim
+        - ultra-repl
         - #
   - app:
       layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
@@ -30,7 +31,7 @@ windows:
       layout: even-vertical
       panes:
         - make serve
-        - ngrok -hostname=xip.wed.is 3000
+        - # ngrok -hostname=xip.wed.is 3000
   - bookmarklet:
       layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
       panes:
