@@ -5,7 +5,7 @@ hi PmenuSel             ctermfg=255    ctermbg=235
 " No Color columns
 " Don't draw split lines
 set fillchars+=vert:\
-set colorcolumn=+1,+2,+3,+4,+5,+6,+7,+8,+9,+10,+11,+12,+13,+14,+15
+set colorcolumn=+1
 highlight clear SignColumn
 hi VertSplit ctermbg=7 ctermfg=7
 hi ColorColumn ctermbg=7
