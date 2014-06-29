@@ -89,6 +89,8 @@ highlight clear SignColumn
 hi VertSplit ctermbg=16 ctermfg=16
 hi SignColumn ctermfg=black ctermbg=black
 
+hi ColorColumn ctermbg=NONE ctermfg=darkred
+
 " Fold column (extra padding)
 set foldcolumn=1
 hi FoldColumn ctermfg=black ctermbg=black
@@ -99,7 +101,6 @@ augroup BgHighlight
     autocmd WinEnter * set cul
     autocmd WinLeave * set nocul
 augroup END
-
 
 " Status line highlights
 hi link SyntasticErrorLine ErrorMsg
