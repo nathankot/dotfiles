@@ -1,6 +1,6 @@
 # **Don't forget to update paths.sh for VIM**
 
-# Python scripts (For Powerline)
+# PythonTests: 89, Assertions: 192, Errors: 2. scripts (For Powerline)
 set -x PYTHONPATH /usr/local/lib/python2.7/site-packages $PYTHONPATH
 
 # Add ~/bin to path
@@ -13,7 +13,7 @@ set -x PATH /usr/local/bin /usr/local/sbin $PATH
 set -x PATH /usr/local/heroku/bin $PATH
 
 # PHP
-set -x PATH (brew --prefix josegonzalez/php/php55)/bin $PATH
+set -x PATH (brew --prefix josegonzalez/php/php54)/bin $PATH
 
 # NPM
 set -x PATH ./node_modules/.bin /usr/local/share/npm/bin $PATH
