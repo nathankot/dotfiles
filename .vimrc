@@ -29,7 +29,6 @@ Plug 'tsukkee/unite-tag'
 Plug 'Shougo/unite-outline'
 Plug 'godlygeek/tabular'
 Plug 'szw/vim-ctrlspace'
-Plug 'SirVer/ultisnips'
 Plug 'mhinz/vim-signify'
 Plug 'goldfeld/vim-seek'
 Plug 'Keithbsmiley/investigate.vim'
@@ -41,10 +40,12 @@ Plug 'mattn/emmet-vim'
 
 " Build step
 Plug 'Shougo/vimproc.vim'
-Plug 'Valloric/YouCompleteMe'
 Plug 'marijnh/tern_for_vim'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/goyo.vim'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 
 " Grok these
 Plug 'arecarn/crunch'
@@ -258,29 +259,51 @@ function! s:unite_my_settings()
   endif
 endfunction
 
-" You Complete me
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_seed_identifiers_with_syntax = 0
-let g:ycm_complete_in_comments = 1
-let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_min_num_identifier_candidate_chars = 2
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_allow_changing_updatetime = 1
-let g:ycm_key_invoke_completion = ''
-let g:ycm_key_list_select_completion = ['<C-i>', '<C-j>']
-let g:ycm_key_list_previous_completion = ['<C-o>', '<C-k>']
-let g:ycm_use_ultisnips_completer = 1
-let g:ycm_server_use_vim_stdout = 0
-let g:ycm_server_log_level = 'critical'
+" NeoComplCache """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#min_syntax_length = 3
+let g:neocomplete#max_list = 10
+let g:neocomplete#enable_underbar_completion =1
 
-""" Ultisnips
-let g:UltiSnipsExpandTrigger = "<C-e>"
-let g:UltiSnipsJumpForwardTrigger = "<C-l>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-h>"
-let g:UltiSnipsListSnippets = "<c-a>"
-let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsSnippetsDir = "~/.vim/ultisnippets"
-let g:UltiSnipsSnippetDirectories = ["UltiSnips", "ultisnippets"]
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=tern#Complete
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#keyword_patterns')
+  let g:neocomplete#keyword_patterns = {}
+endif
+
+let g:neocomplete#keyword_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplete#keyword_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+
+" Snippets
+let g:neosnippet#snippets_directory = '~/.vim/snippets/'
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" Plugin key-mappings.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+inoremap <expr><C-i>  pumvisible() ? "\<C-n>" : "\<C-i>"
+inoremap <expr><C-o>  pumvisible() ? "\<C-p>" : "\<C-o>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Syntastic
 let g:syntastic_check_on_open = 0
