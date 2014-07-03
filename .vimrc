@@ -38,7 +38,6 @@ Plug 'argtextobj.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'mattn/emmet-vim'
-Plug 'shawncplus/phpcomplete.vim'
 
 " Build step
 Plug 'Shougo/vimproc.vim'
