@@ -46,6 +46,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/vimshell.vim'
+Plug 'honza/vim-snippets'
 
 " Grok these
 Plug 'arecarn/crunch'
@@ -155,6 +157,13 @@ set relativenumber
 set number
 
 color nk256
+
+" Vimshell
+let g:vimshell_editor_command = "/usr/local/bin/vim"
+" Use current directory as vimshell prompt.
+let g:vimshell_prompt_expr =
+\ 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
+let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
 
 " Slime
 let g:slime_target = "tmux"
