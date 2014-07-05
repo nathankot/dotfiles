@@ -268,7 +268,7 @@ function! s:unite_my_settings()
   endif
 endfunction
 
-" NeoComplCache """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NeoComplete """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
@@ -295,18 +295,24 @@ let g:neocomplete#keyword_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 " Snippets
 let g:neosnippet#snippets_directory = '~/.vim/snippets/'
 let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#enable_preview = 1
 
 " Plugin key-mappings.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: pumvisible() ? "\<C-n>" : "\<TAB>"
-
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
 
+" Plugin key-mappings.
+imap <C-e>     <Plug>(neosnippet_expand_or_jump)
+smap <C-e>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-e>     <Plug>(neosnippet_expand_target)
 inoremap <expr><C-i>  pumvisible() ? "\<C-n>" : "\<C-i>"
 inoremap <expr><C-o>  pumvisible() ? "\<C-p>" : "\<C-o>"
+inoremap <expr><C-j>  pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr><C-k>  pumvisible() ? "\<C-p>" : "\<C-k>"
 
 " For snippet_complete marker.
 if has('conceal')
