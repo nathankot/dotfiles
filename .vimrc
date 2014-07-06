@@ -285,19 +285,12 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
 " Enable heavy omni completion.
-if !exists('g:neocomplete#keyword_patterns')
-  let g:neocomplete#keyword_patterns = {}
+if !exists('g:neocomplete#sources#omni#input_patterns')
+ let g:neocomplete#sources#omni#input_patterns = {}
 endif
-
-
 if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
+ let g:neocomplete#force_omni_input_patterns = {}
 endif
-
-let g:neocomplete#force_omni_input_patterns.php =
-\ '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplete#force_omni_input_patterns.ruby =
-\ '[^. *\t]\.\w*\|\h\w*::'
 
 " Snippets
 let g:neosnippet#snippets_directory = '~/.vim/snippets/'
