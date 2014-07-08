@@ -8,7 +8,6 @@ Plug 'ledger/vim-ledger'
 Plug 'juvenn/mustache.vim'
 Plug 'dag/vim-fish'
 Plug 'stephpy/vim-yaml'
-Plug 'docteurklein/vim-symfony'
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-repeat'
@@ -158,9 +157,6 @@ set relativenumber
 set number
 
 color nk256
-
-" Symfony
-let g:symfony_enable_shell_mapping = 0
 
 " Vimshell
 let g:vimshell_editor_command = "/usr/local/bin/vim"
