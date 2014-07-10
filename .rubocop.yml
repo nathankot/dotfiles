@@ -9,3 +9,6 @@ Style/Documentation:
 
 Style/StringLiterals:
   Enabled: false
+
+Style/EmptyLinesAroundBody:
+  Enabled: false
