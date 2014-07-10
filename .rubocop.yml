@@ -1,0 +1,9 @@
+Style/ClassLength:
+  Max: 150
+
+Style/MethodLength:
+  Max: 20
+
+Style/Documentation:
+  Enabled: false
+
