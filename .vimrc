@@ -9,6 +9,11 @@ Plug 'juvenn/mustache.vim'
 Plug 'dag/vim-fish'
 Plug 'stephpy/vim-yaml'
 
+" Text Objects
+Plug 'kana/vim-textobj-user'
+Plug 'argtextobj.vim'
+Plug 'nelstrom/vim-textobj-rubyblock'
+
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -32,13 +37,7 @@ Plug 'szw/vim-ctrlspace'
 Plug 'mhinz/vim-signify'
 Plug 'goldfeld/vim-seek'
 Plug 'Keithbsmiley/investigate.vim'
-Plug 'nelstrom/vim-qargs'
-Plug 'argtextobj.vim'
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'mattn/emmet-vim'
-
-Plug 'jpalardy/vim-slime'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'Shougo/neocomplete.vim'
@@ -47,13 +46,14 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/vimshell.vim'
 Plug 'honza/vim-snippets'
 
-" Grok these
-Plug 'arecarn/crunch'
-Plug 'szw/vim-g'
-
 " Build step
 Plug 'Shougo/vimproc.vim'
 Plug 'marijnh/tern_for_vim'
+
+" Grok these
+Plug 'arecarn/crunch'
+Plug 'jpalardy/vim-slime'
+
 
 call plug#end()
 
@@ -362,13 +362,6 @@ let g:ragtag_global_maps = 1
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
-
-" Gists
-let g:gist_clip_command = 'pbcopy'
-let g:gist_open_browser_after_post = 1
-let g:gist_show_privates = 1
-let g:gist_detect_filetype = 1
-let g:gist_update_on_write = 2
 
 " Javascript
 let javascript_enable_domhtmlcss = 1
