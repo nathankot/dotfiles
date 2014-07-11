@@ -412,6 +412,7 @@ nnoremap <F5> :GundoToggle<CR>
 
 " Goyo
 nnoremap <Leader>F :Goyo<CR>
+let g:goyo_width = 120
 
 " Limelight
 function! GoyoBefore()
