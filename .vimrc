@@ -419,6 +419,7 @@ nnoremap <F5> :GundoToggle<CR>
 " Goyo
 nnoremap <Leader>F :Goyo<CR>
 
+" Limelight
 function! GoyoBefore()
   Limelight
 endfunction
@@ -428,6 +429,7 @@ function! GoyoAfter()
 endfunction
 
 let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
+let g:limelight_conceal_ctermfg = 8
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
