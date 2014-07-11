@@ -38,11 +38,9 @@ Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'mattn/emmet-vim'
 
-" Build step
-Plug 'Shougo/vimproc.vim'
-Plug 'marijnh/tern_for_vim'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
@@ -52,6 +50,10 @@ Plug 'honza/vim-snippets'
 " Grok these
 Plug 'arecarn/crunch'
 Plug 'szw/vim-g'
+
+" Build step
+Plug 'Shougo/vimproc.vim'
+Plug 'marijnh/tern_for_vim'
 
 call plug#end()
 
@@ -416,6 +418,16 @@ nnoremap <F5> :GundoToggle<CR>
 
 " Goyo
 nnoremap <Leader>F :Goyo<CR>
+
+function! GoyoBefore()
+  Limelight
+endfunction
+
+function! GoyoAfter()
+  Limelight!
+endfunction
+
+let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
