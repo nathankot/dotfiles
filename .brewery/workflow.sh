@@ -10,7 +10,7 @@ brew install contacts
 brew install curl-ca-bundle
 brew install fzf
 
-brew install macvim --override-system-vim
+brew install macvim --with-cscope --with-lua --HEAD --override-system-vim
 brew install ack
 brew install the_silver_searcher
 brew install ctags
