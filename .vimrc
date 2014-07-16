@@ -219,7 +219,7 @@ let g:unite_prompt = '⚡️  '
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_winheight = 12
 let g:unite_split_rule = 'bot'
-let g:unite_matcher_fuzzy_max_input_length = 20
+let g:unite_matcher_fuzzy_max_input_length = 10
 
 if executable('ag')
   " To keep things consistent, ag will only look @ .agignore
@@ -237,6 +237,7 @@ call unite#custom#source('tags', 'filters', [
       \'sorter_length'])
 
 call unite#custom#source('file_rec/git', 'filters', [
+      \'converter_relative_abbr',
       \'matcher_fuzzy',
       \'sorter_selecta',
       \'converter_file_directory'])
