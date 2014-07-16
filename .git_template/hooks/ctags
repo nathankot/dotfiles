@@ -3,5 +3,5 @@ set -e
 PATH="/usr/local/bin:$PATH"
 trap "rm -f .git/tags.$$" EXIT
 
-git ls-files -cdo | ctags -L - --tag-relative -Rf.git/tags.$$
+git ls-files -cd | ctags -L - --tag-relative -Rf.git/tags.$$
 mv .git/tags.$$ .git/tags
