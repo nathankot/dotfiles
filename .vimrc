@@ -213,13 +213,12 @@ nnoremap <c-p> :Unite -toggle -buffer-name=files -start-insert -auto-resize file
 nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus -auto-resize grep<CR>
 nnoremap <c-s> :UniteResume search<CR>
 nnoremap <Enter> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical -resume outline<CR>
-nnoremap <c-t> :Unite tag -start-insert -buffer-name=tags<CR>
+nnoremap <c-t> :Unite tag/include -start-insert -buffer-name=tags<CR>
 
 let g:unite_prompt = '⚡️  '
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_winheight = 12
 let g:unite_split_rule = 'bot'
-let g:unite_enable_short_source_names = 1
 let g:unite_matcher_fuzzy_max_input_length = 20
 
 if executable('ag')
