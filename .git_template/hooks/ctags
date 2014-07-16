@@ -3,5 +3,6 @@ set -e
 PATH="/usr/local/bin:$PATH"
 trap "rm -f .git/tags.$$" EXIT
 
+# Tell ctags to go through all the git ls-files
 git ls-files -cd | ctags -L - --tag-relative -Rf.git/tags.$$
 mv .git/tags.$$ .git/tags
