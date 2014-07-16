@@ -272,8 +272,8 @@ let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#min_syntax_length = 3
-let g:neocomplete#max_list = 10
-let g:neocomplete#enable_underbar_completion =1
+let g:neocomplete#max_list = 20
+let g:neocomplete#enable_underbar_completion = 1
 let g:neocomplete#sources#tags#cache_limit_size = 5242880 " 5 MB
 
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
