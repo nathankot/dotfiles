@@ -96,7 +96,7 @@
 
     "MISC": "----------------------",
 
-    "floating": ['com.googlecode.iterm2'],
+    "floating": ["com.googlecode.iterm2"],
     "float-small-windows": true,
     "mouse-follows-focus": false
 }
