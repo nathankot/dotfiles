@@ -8,6 +8,7 @@ Plug 'ledger/vim-ledger'
 Plug 'juvenn/mustache.vim'
 Plug 'dag/vim-fish'
 Plug 'stephpy/vim-yaml'
+Plug 'shawncplus/phpcomplete.vim'
 
 " Text Objects
 Plug 'kana/vim-textobj-user'
