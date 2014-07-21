@@ -212,7 +212,7 @@ noremap <C-k><C-r> :NERDTreeFind<CR>
 nnoremap <c-p> :Unite -toggle -buffer-name=files -start-insert -auto-resize file_rec/git:-c:-d<CR>
 nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus -auto-resize grep:!<CR>
 nnoremap <c-s> :UniteResume search<CR>
-nnoremap <Enter> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical -resume outline<CR>
+nnoremap <Enter> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
 nnoremap <c-t> :Unite tag/include -start-insert -buffer-name=tags<CR>
 
 let g:unite_prompt = '⚡️  '
