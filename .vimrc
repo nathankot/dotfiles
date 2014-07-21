@@ -210,6 +210,9 @@ let NERDTreeMapOpenVSplit='v'
 noremap <C-k><C-b> :NERDTreeToggle<CR>
 noremap <C-k><C-r> :NERDTreeFind<CR>
 
+" PHPComplete
+let g:phpcomplete_parse_docblock_comments = 1
+
 " Unite
 nnoremap <c-p> :Unite -toggle -buffer-name=files -start-insert -auto-resize file_rec/git:-c:-d<CR>
 nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus -auto-resize grep:!<CR>
