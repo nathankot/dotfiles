@@ -45,6 +45,7 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/vimshell.vim'
 Plug 'honza/vim-snippets'
+Plug 'mattn/flappyvird-vim'
 
 " Build step
 Plug 'Shougo/vimproc.vim'
