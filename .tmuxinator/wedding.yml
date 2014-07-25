@@ -22,16 +22,16 @@ windows:
         - vim
         - ultra-repl
         - #
-  - app:
-      layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
-      panes:
-        - cd ~/Development/Apps/wedis_v2; vim
-        - cd ~/Development/Apps/wedis_v2
   - processes:
       layout: even-vertical
       panes:
         - make serve
         - # ngrok -hostname=xip.wed.is 3000
+  - app:
+      layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
+      panes:
+        - cd ~/Development/Apps/wedis_v2; vim
+        - cd ~/Development/Apps/wedis_v2
   - bookmarklet:
       layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
       panes:
