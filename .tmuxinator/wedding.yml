@@ -25,8 +25,7 @@ windows:
   - processes:
       layout: even-vertical
       panes:
-        - make serve
-        - # ngrok -hostname=xip.wed.is 3000
+        - npm start
   - app:
       layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
       panes:
