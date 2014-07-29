@@ -25,7 +25,7 @@ windows:
   - processes:
       layout: even-vertical
       panes:
-        - npm start
+        - grunt server
   - app:
       layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
       panes:
