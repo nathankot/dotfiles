@@ -36,3 +36,9 @@ windows:
       panes:
         - cd ~/Development/Sites/wed.is/client/app/vendor/wedis-bookmarklet; vim
         - cd ~/Development/Sites/wed.is/client/app/vendor/wedis-bookmarklet
+  - extension:
+      layout: f611,272x55,0,0{194x55,0,0,0,77x55,195,0,3}
+      panes:
+        - cd ~/Development/Extensions/wed.is/google; vim
+        - cd ~/Development/Extensions/wed.is/google
+
