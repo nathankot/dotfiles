@@ -1,3 +1,6 @@
 [submodule ".config/fish/virtualfish"]
 	path = .config/fish/virtualfish
 	url = https://github.com/adambrenecki/virtualfish.git
+[submodule "boxen"]
+	path = boxen
+	url = https://github.com/nathankot/our-boxen.git
