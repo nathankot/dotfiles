@@ -87,11 +87,11 @@ sudo touch /private/var/db/.AccessibilityAPIEnabled
 
 ### LOGIN ITEMS (Need to run this after installation.)
 osascript -e "tell app \"System Events\"
-                make login item at end with properties {path:\"$HOME/Applications/Amethyst.app\", hidden:true}
-                make login item at end with properties {path:\"$HOME/Applications/Dropbox.app\", hidden:true}
-                make login item at end with properties {path:\"$HOME/Applications/Shortcat.app\", hidden:true}
-                make login item at end with properties {path:\"$HOME/Applications/Flux.app\", hidden:true}
-                make login item at end with properties {path:\"$HOME/Applications/Alfred 2.app\", hidden:true}
+                make login item at end with properties {path:\"/Applications/Amethyst.app\", hidden:true}
+                make login item at end with properties {path:\"/Applications/Dropbox.app\", hidden:true}
+                make login item at end with properties {path:\"/Applications/Shortcat.app\", hidden:true}
+                make login item at end with properties {path:\"/Applications/Flux.app\", hidden:true}
+                make login item at end with properties {path:\"/Applications/Alfred 2.app\", hidden:true}
               end tell"
 
 echo "Done. Please restart computer for change to take effect."
