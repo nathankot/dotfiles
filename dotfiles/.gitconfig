@@ -1,5 +1,5 @@
 [core]
-  excludesfile = /opt/boxen/config/git/gitignore
+  excludesfile = ~/.gitignore
   quotepath = false
   autocrlf = false
   preloadindex = true
