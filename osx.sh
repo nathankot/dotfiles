@@ -89,6 +89,7 @@ sudo touch /private/var/db/.AccessibilityAPIEnabled
 osascript -e "tell app \"System Events\"
                 make login item at end with properties {path:\"/Applications/Amethyst.app\", hidden:true}
                 make login item at end with properties {path:\"/Applications/Dropbox.app\", hidden:true}
+                make login item at end with properties {path:\"/Applications/Google Drive\", hidden:true}
                 make login item at end with properties {path:\"/Applications/Shortcat.app\", hidden:true}
                 make login item at end with properties {path:\"/Applications/Flux.app\", hidden:true}
                 make login item at end with properties {path:\"/Applications/Alfred 2.app\", hidden:true}
