@@ -38,7 +38,7 @@ phpenv rehash 2>/dev/null
 set -x NODENV_ROOT $BOXEN_HOME/nodenv
 set -x PATH $BOXEN_HOME/nodenv/bin $PATH
 set -x PATH node_modules/.bin: PATH
-set -x PATH "/opt/boxen/nodenv/shims:${PATH}"
+set -x PATH /opt/boxen/nodenv/shims:$PATH
 nodenv rehash 2>/dev/null
 
 # RUBY
