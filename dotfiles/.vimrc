@@ -163,7 +163,7 @@ set number
 color nk256
 
 " Vimshell
-let g:vimshell_editor_command = "/usr/local/bin/vim"
+let g:vimshell_editor_command = "/opt/boxen/homebrew/bin/mvim"
 " Use current directory as vimshell prompt.
 let g:vimshell_prompt_expr =
 \ 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
@@ -232,7 +232,8 @@ if executable('ag')
   let g:unite_source_grep_default_opts='--nocolor --nogroup -S -U -C1'
   let g:unite_source_grep_recursive_opt=''
   let g:unite_source_grep_max_candidates=200
-  " let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden -g ""'
+  let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden -g ""'
+  let g:unite_source_rec_max_cache_files = 5000
 endif
 
 call unite#custom#source('grep', 'filters', [
@@ -241,6 +242,8 @@ call unite#custom#source('grep', 'filters', [
 call unite#custom#source('tags', 'filters', [
       \'matcher_glob',
       \'sorter_length'])
+
+call unite#custom#source('file_rec,file_rec/async', 'max_candidates', 5000)
 
 call unite#custom#source('file_rec/async', 'filters', [
       \'converter_relative_abbr',
