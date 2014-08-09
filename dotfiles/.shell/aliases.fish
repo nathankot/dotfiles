@@ -31,3 +31,5 @@ set fish_user_abbreviations $fish_user_abbreviations 'j=jrnl'
 function legedit
   vim ~/Documents/Personal/Accounts/current.ledger
 end
+
+alias git="hub"

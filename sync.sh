@@ -17,4 +17,4 @@ rsync --exclude ".git/" \
       --exclude "install.sh" \
       --exclude "osx.sh" \
       --exclude "README.md" \
-      -av --no-perms ./dotfiles ~
+      -av --no-perms ./dotfiles/ ~

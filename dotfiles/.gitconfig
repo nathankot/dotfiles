@@ -1,5 +1,5 @@
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = /opt/boxen/config/git/gitignore
   quotepath = false
   autocrlf = false
   preloadindex = true
@@ -13,7 +13,7 @@
   user = nathankot
 
 [credential]
-  helper = osxkeychain
+  helper = /opt/boxen/bin/boxen-git-credential
 
 [hub]
   protocol = https
