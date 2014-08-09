@@ -32,14 +32,13 @@ set -x PATH $BOXEN_HOME/heroku/bin $PATH
 # PHP
 set -x PHPENV_ROOT $BOXEN_HOME/phpenv
 set -x PATH $BOXEN_HOME/phpenv/shims $BOXEN_HOME/phpenv/bin $BOXEN_HOME/phpenv/plugins/php-build/bin $PATH
-phpenv rehash 2>/dev/null
+phpenv rehash 2>/dev/null ^&1
 
 # NODE
 set -x NODENV_ROOT $BOXEN_HOME/nodenv
-set -x PATH $BOXEN_HOME/nodenv/bin $PATH
+set -x PATH $BOXEN_HOME/nodenv/shims $BOXEN_HOME/nodenv/bin $PATH
 set -x PATH node_modules/.bin: PATH
-set -x PATH /opt/boxen/nodenv/shims:$PATH
-nodenv rehash 2>/dev/null
+nodenv rehash 2>/dev/null ^&1
 
 # RUBY
 set -x PATH /opt/boxen/ruby-build/bin:$PATH
