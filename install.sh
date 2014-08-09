@@ -15,4 +15,5 @@ cd /opt/boxen/repo
 script/boxen
 
 # Final touches
+cd "$(dirname "${BASH_SOURCE}")"
 source osx.sh
