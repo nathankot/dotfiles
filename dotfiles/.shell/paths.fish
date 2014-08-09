@@ -43,7 +43,7 @@ nodenv rehash 2>/dev/null ^&1
 # RUBY
 set -x PATH /opt/boxen/ruby-build/bin:$PATH
 set -x RBENV_ROOT /opt/boxen/rbenv
-set -x PATH $RBENV_ROOT/bin $PATH
+set -x PATH $RBENV_ROOT/shims $RBENV_ROOT/bin $PATH
 rbenv rehash >/dev/null ^&1
 
 # MONGODB
