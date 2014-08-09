@@ -214,7 +214,7 @@ noremap <C-k><C-r> :NERDTreeFind<CR>
 let g:phpcomplete_parse_docblock_comments = 1
 
 " Unite
-nnoremap <c-p> :Unite -toggle -buffer-name=files -start-insert -auto-resize file_rec/git:-c:-d<CR>
+nnoremap <c-p> :Unite -toggle -buffer-name=files -start-insert -auto-resize file_rec/async<CR>
 nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus -auto-resize grep:!<CR>
 nnoremap <c-s> :UniteResume search<CR>
 nnoremap <Enter> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
@@ -232,6 +232,7 @@ if executable('ag')
   let g:unite_source_grep_default_opts='--nocolor --nogroup -S -U -C1'
   let g:unite_source_grep_recursive_opt=''
   let g:unite_source_grep_max_candidates=200
+  " let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden -g ""'
 endif
 
 call unite#custom#source('grep', 'filters', [
@@ -241,7 +242,7 @@ call unite#custom#source('tags', 'filters', [
       \'matcher_glob',
       \'sorter_length'])
 
-call unite#custom#source('file_rec/git', 'filters', [
+call unite#custom#source('file_rec/async', 'filters', [
       \'converter_relative_abbr',
       \'matcher_fuzzy',
       \'sorter_selecta',
