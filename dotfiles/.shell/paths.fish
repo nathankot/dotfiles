@@ -37,16 +37,12 @@ phpenv rehash 2>/dev/null ^&1
 # NODE
 set -x NODENV_ROOT $BOXEN_HOME/nodenv
 set -x PATH $BOXEN_HOME/nodenv/shims $BOXEN_HOME/nodenv/bin $PATH
-set -x PATH node_modules/.bin: PATH
+set -x PATH node_modules/.bin $PATH
 nodenv rehash 2>/dev/null ^&1
 
 # RUBY
-set -x PATH /opt/boxen/ruby-build/bin:$PATH
+set -x PATH $BOXEN_HOME/ruby-build/bin $PATH
 set -x RBENV_ROOT /opt/boxen/rbenv
-set -x PATH $RBENV_ROOT/shims $RBENV_ROOT/bin $PATH
-rbenv rehash >/dev/null ^&1
+set -x PATH $RBENV_ROOT/bin $PATH
+. (rbenv init -|psub)
 
-# MONGODB
-set -x BOXEN_MONGODB_HOST 127.0.0.1
-set -x BOXEN_MONGODB_PORT 27017
-set -x BOXEN_MONGODB_URL mongodb://$BOXEN_MONGODB_HOST:$BOXEN_MONGODB_PORT/
