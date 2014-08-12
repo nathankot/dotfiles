@@ -1,3 +1,7 @@
+" vim:fdm=marker
+
+" Plugins {{{
+
 set nocompatible
 filetype off
 call plug#begin('~/.vim/plugged')
@@ -15,6 +19,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'argtextobj.vim'
 Plug 'nelstrom/vim-textobj-rubyblock'
 
+Plug 'sjl/vitality.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -56,13 +61,16 @@ Plug 'marijnh/tern_for_vim'
 Plug 'arecarn/crunch'
 Plug 'jpalardy/vim-slime'
 
-
 call plug#end()
 
 filetype on
 filetype plugin indent on
 filetype plugin on
 syntax on
+
+" }}}
+
+
 runtime macros/matchit.vim
 
 if exists("&undodir")
