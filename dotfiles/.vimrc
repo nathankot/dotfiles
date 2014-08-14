@@ -19,7 +19,6 @@ Plug 'kana/vim-textobj-user'
 Plug 'argtextobj.vim'
 Plug 'nelstrom/vim-textobj-rubyblock'
 
-Plug 'sjl/vitality.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
