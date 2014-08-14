@@ -13,7 +13,3 @@ git clone https://github.com/nathankot/our-boxen.git ./repo
 cd /opt/boxen/repo
 
 script/boxen
-
-# Final touches
-cd "$(dirname "${BASH_SOURCE}")"
-source osx.sh
