@@ -1,14 +1,6 @@
 " vim:fdm=marker
 
-" Plugins {{{
-
-set nocompatible
-filetype off
-
 so ~/.vim/plugins.vim
-
-" }}}
-
 
 runtime macros/matchit.vim
 
