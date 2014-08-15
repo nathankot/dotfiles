@@ -384,6 +384,7 @@ set concealcursor=nciv
 
 " Numbering
 nnoremap _ <C-x>
+nnoremap - <C-x>
 nnoremap + <C-a>
 
 " Window management
