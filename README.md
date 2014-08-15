@@ -24,10 +24,68 @@ It's recommended that you make a fork of [these boxen
 configs](https://github.com/nathankot/our-boxen). If you don't know what boxen is yet, don't worry -
 you can read up on it later.
 
+If you've made a fork ensure that you edit `/config/boxen.rb` in your our-boxen fork accordingly.
+
 This will rsync the dotfiles into `~/`, put boxen into `/opt/boxen/repo`
 and run boxen:
 
 ```sh
 cd ~/.dotfiles
 env BOXEN_REPO=https://github.com/{your-github-name}/our-boxen.git bash install.sh
+```
+
+Make your own boxen user configuration in `/opt/boen/repo/modules/people/manifests/$YOURGITHUBUSERNAME.pp`. You can
+comment out anything that you don't want:
+
+```pp
+class people::{YOURGITHUBUSERNAME} {
+
+  $home = "/Users/${::boxen_user}"
+
+  include fish
+
+  # Folder Structure
+  include global::folders
+
+  # Apps
+  include people::nathankot::apps
+
+  # OSX Settings
+  include people::nathankot::osx
+
+  # Binaries
+  include people::nathankot::bins
+
+  # Heroku
+  include people::nathankot::heroku
+
+  # Npm
+  include people::nathankot::node
+
+  # Ruby
+  include people::nathankot::ruby
+
+  # Python
+  include people::nathankot::python
+
+}
+```
+
+Run boxen again to update with your latest config:
+
+```sh
+boxen
+```
+
+Install vim plugins:
+
+```sh
+/opt/boxen/homebrew/bin/vim --noplugin -u ~/.vim/plugins.vim +PlugInstall +qall
+```
+
+Build vim plugins that need it:
+
+```sh
+cd ~/.vim/plugged/vimproc.vim && make && cd -
+cd ~/.vim/plugged/tern_for_vim && npm install && cd -
 ```
