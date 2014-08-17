@@ -27,7 +27,7 @@
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
-	<true/>
+	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Custom - Revised</key>
@@ -1628,6 +1628,34 @@
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x01 0x2D</string>
+				</dict>
+				<key>0x48-0xa0000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>0x01 0x48</string>
+				</dict>
+				<key>0x4a-0xa0000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>0x01 0x4A</string>
+				</dict>
+				<key>0x4b-0xa0000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>0x01 0x4B</string>
+				</dict>
+				<key>0x4c-0xa0000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>0x01 0x4C</string>
 				</dict>
 				<key>0x68-0x80000</key>
 				<dict>
