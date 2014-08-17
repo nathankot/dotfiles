@@ -1,13 +1,8 @@
-" vim:fdm=marker
-
+" Explicitly source the base stuff that works even with `--noplugin`
 so ~/.vim/plugins.vim
 so ~/.vim/core.vim
-so ~/.vim/core_keymap.vim
-
-" Modules
-so ~/.vim/workspace.vim
-so ~/.vim/visual_aid.vim
-so ~/.vim/edit_aid.vim
-so ~/.vim/misc.vim
-
+so ~/.vim/keymap.vim
 color nk256
+
+" @see ./plugin/*.vim for other stuff that automatically
+" gets loaded by vim
