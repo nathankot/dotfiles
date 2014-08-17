@@ -12,4 +12,10 @@ fi
 
 rsync --exclude ".git/" \
       --exclude ".DS_Store" \
+      --exclude ".gitconfig" \
       -av --no-perms ./dotfiles/ ~
+
+rsync --exclude ".git/" \
+      --exclude ".DS_Store" \
+      -av --no-perms --ignore-existing ./dotfiles/ ~
+

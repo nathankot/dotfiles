@@ -1,16 +1,8 @@
 [core]
-  excludesfile = ~/.gitignore
   quotepath = false
   autocrlf = false
   preloadindex = true
   editor = vim
-
-[user]
-  name = Nathan Kot
-  email = me@nathankot.com
-
-[github]
-  user = nathankot
 
 [credential]
   helper = /opt/boxen/bin/boxen-git-credential
