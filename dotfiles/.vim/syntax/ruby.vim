@@ -1,9 +1,3 @@
-" Vroom
-nnoremap <leader>t :Rake<cr>
-nnoremap <leader>T :Rake<cr>
-
-" RUBY "
-
 hi rubyRegexp                  guifg=#B18A3D      guibg=NONE  gui=NONE  ctermfg=brown     ctermbg=NONE  cterm=NONE
 hi rubyRegexpDelimiter         guifg=#FF8000      guibg=NONE  gui=NONE  ctermfg=brown     ctermbg=NONE  cterm=NONE
 hi rubyEscape                  guifg=white        guibg=NONE  gui=NONE  ctermfg=cyan      ctermbg=NONE  cterm=NONE

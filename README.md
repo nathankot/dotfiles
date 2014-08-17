@@ -80,12 +80,5 @@ boxen
 Install vim plugins:
 
 ```sh
-/opt/boxen/homebrew/bin/vim --noplugin -u ~/.vim/plugins.vim +PlugInstall +qall
-```
-
-Build vim plugins that need it:
-
-```sh
-cd ~/.vim/plugged/vimproc.vim && make && cd -
-cd ~/.vim/plugged/tern_for_vim && npm install && cd -
+vim --noplugin +PlugInstall
 ```

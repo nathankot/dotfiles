@@ -50,8 +50,8 @@ Plug 'honza/vim-snippets'
 Plug 'mattn/flappyvird-vim'
 
 " Build step
-Plug 'Shougo/vimproc.vim'
-Plug 'marijnh/tern_for_vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 
 " Grok these
 Plug 'arecarn/crunch'

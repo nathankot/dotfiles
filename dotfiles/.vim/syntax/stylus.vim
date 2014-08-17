@@ -1,5 +1,3 @@
-" STYLUS / CSS "
-
 hi link cssColorVal       Constant
 hi link cssCommonVal      String
 hi link cssFontVal        String

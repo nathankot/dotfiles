@@ -15,4 +15,7 @@ set statusline+=%=                              "seperator
 set statusline+=%#pastemessage#
 set statusline+=%{&paste?'\ paste\ ':''}
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+
+if exists(":SyntasticStatuslineFlag")
+  set statusline+=%{SyntasticStatuslineFlag()}
+endif

@@ -15,4 +15,6 @@ syn keyword specDisabled xit xdescribe
 syn keyword specAsync runs waits waitsFor
 syn match specMatcher "to[A-Za-z0-9_]*"
 
+hi link specControls      Normal
+
 let b:current_syntax = "jasmine"

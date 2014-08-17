@@ -1,5 +1,5 @@
 " Jasmine/Teaspoon Specs
-nnoremap <leader>t :Dispatch grunt test<cr>
+nnoremap <buffer> <leader>t :Dispatch grunt test<cr>
 
 " JASMINE "
 hi link specControls      Normal

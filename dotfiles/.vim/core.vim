@@ -93,3 +93,14 @@ set background=dark
 set tw=80
 set relativenumber
 set number
+set conceallevel=2
+set concealcursor=nciv
+
+" Open QuickFix Window after Grep
+au QuickFixCmdPost *grep* cwindow
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
