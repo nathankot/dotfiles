@@ -127,7 +127,7 @@ let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 " let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
 
 " Snippets
-let g:neosnippet#snippets_directory = '~/.vim/snippets/'
+let g:neosnippet#snippets_directory = '~/.vim/plugged/vim-snippets/snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#disable_runtime_snippets = { '_' : 1 }
 let g:neosnippet#enable_preview = 1

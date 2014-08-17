@@ -49,6 +49,7 @@ nnoremap <F5> :GundoToggle<CR>
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: pumvisible() ? "\<C-n>" : "\<TAB>"
+
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
@@ -56,6 +57,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 imap <C-e>     <Plug>(neosnippet_expand_or_jump)
 smap <C-e>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-e>     <Plug>(neosnippet_expand_target)
+
 inoremap <expr><C-i>  pumvisible() ? "\<C-n>" : "\<C-i>"
 inoremap <expr><C-o>  pumvisible() ? "\<C-p>" : "\<C-o>"
 inoremap <expr><C-j>  pumvisible() ? "\<C-n>" : "\<C-j>"
