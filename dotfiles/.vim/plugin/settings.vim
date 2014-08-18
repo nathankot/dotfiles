@@ -22,7 +22,11 @@ let g:ctrlspace_symbols = {
       \ "s_right" : "‹",
       \ "dot"     : "•",
       \ "star1"   : "☆",
-      \ "star2"   : "★"
+      \ "star2"   : "★",
+      \ "bm"      : "BM",
+      \ "help"    : "?",
+      \ "iv"      : "*",
+      \ "ia"      : "*"
       \ }
 
 " NERDTree
