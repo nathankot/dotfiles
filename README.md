@@ -38,36 +38,39 @@ Make your own boxen user configuration in `/opt/boen/repo/modules/people/manifes
 comment out anything that you don't want:
 
 ```pp
-class people::{YOURGITHUBUSERNAME} {
+class people::your_github_username {
 
   $home = "/Users/${::boxen_user}"
 
   include fish
 
-  # Folder Structure
-  include global::folders
-
   # Apps
-  include global::people::common::apps
+  include common::applications
+
+  # App Config
+  include common::config::iterm
+  include common::config::karabiner
+
+  # Login items
+  include common::login_items
 
   # OSX Settings
-  include global::people::common::osx
+  include common::osx
 
-  # Binaries
-  include global::people::common::bins
+  # Utilities
+  include common::utilities
 
   # Heroku
-  include global::people::common::heroku
+  include common::heroku
 
   # Npm
-  include global::people::common::node
+  include common::node
 
   # Ruby
-  include global::people::common::ruby
+  include common::ruby
 
   # Python
-  include global::people::common::python
-
+  include common::python
 }
 ```
 
