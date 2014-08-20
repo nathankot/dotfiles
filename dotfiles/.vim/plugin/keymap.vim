@@ -29,6 +29,7 @@ function! UniteMySettings()
   let unite = unite#get_current_unite()
 
   if unite.buffer_name == 'outline'
+    nmap <silent><buffer> \ <Plug>(unite_insert_enter)
     nmap <silent><buffer> <Enter> <Plug>(unite_do_default_action)
   endif
 endfunction
