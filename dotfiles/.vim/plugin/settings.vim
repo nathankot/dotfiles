@@ -77,7 +77,7 @@ call unite#custom#source('tags', 'filters', [
       \'matcher_glob',
       \'sorter_length'])
 
-call unite#custom#source('file_rec,file_rec/async', 'max_candidates', 50)
+call unite#custom#source('file_rec,file_rec/async', 'max_candidates', 20)
 
 call unite#custom#source('file_rec/async,file_rec', 'filters', [
       \'matcher_fuzzy',
