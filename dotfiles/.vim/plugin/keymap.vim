@@ -9,7 +9,7 @@ nnoremap <Leader>F :Goyo<CR>
 
 " Unite
 
-nnoremap <c-p> :Unite -toggle -buffer-name=files file_rec/async<CR>
+nnoremap <c-p> :Unite -toggle -start-insert -buffer-name=files file_rec/async<CR>
 nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus -no-resize grep:!<CR>
 nnoremap <c-s> :UniteResume search<CR>
 nnoremap <Enter> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
