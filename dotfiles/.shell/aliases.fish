@@ -27,6 +27,7 @@ set fish_user_abbreviations $fish_user_abbreviations 'todo=todo.sh'
 set fish_user_abbreviations $fish_user_abbreviations 'do=todo.sh do'
 
 set fish_user_abbreviations $fish_user_abbreviations 'j=jrnl'
+set fish_user_abbreviations $fish_user_abbreviations 'nb=newsbeuter'
 
 function legedit
   vim ~/Documents/Personal/Accounts/current.ledger
