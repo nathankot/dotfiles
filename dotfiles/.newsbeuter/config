@@ -23,6 +23,6 @@ color listfocus  default color7
 color listfocus_unread red color7
 color background default black
 
-browser open
+browser open -g
 
 bookmark-cmd "~/.newsbeuter/send-to-pocket.sh"

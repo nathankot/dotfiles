@@ -9,24 +9,22 @@ let g:ctrlspace_use_ruby_bindings = 1
 let g:ctrlspace_show_tab_info = 1
 let g:ctrlspace_symbols = {
       \ "cs"      : "⚡️",
-      \ "tab"     : "⊙",
-      \ "tabs"    : "∘∘∘",
-      \ "all"     : "∷",
-      \ "add"     : "+",
-      \ "load"    : "⋮ → ∙",
-      \ "save"    : "∙ → ⋮",
-      \ "ord"     : "₁²₃",
-      \ "abc"     : "авс",
-      \ "prv"     : "⌕",
-      \ "s_left"  : "›",
-      \ "s_right" : "‹",
-      \ "dot"     : "•",
-      \ "star1"   : "☆",
-      \ "star2"   : "★",
-      \ "bm"      : "BM",
-      \ "help"    : "?",
-      \ "iv"      : "*",
-      \ "ia"      : "*"
+      \ "tab":     "⊙",
+      \ "all":     "∷",
+      \ "file":    "⊚",
+      \ "tabs":    "○",
+      \ "c_tab":   "●",
+      \ "load":    "⋮ → ∙",
+      \ "save":    "∙ → ⋮",
+      \ "zoom":    "⌕",
+      \ "s_left":  "›",
+      \ "s_right": "‹",
+      \ "bm":      "♡",
+      \ "help":    "?",
+      \ "iv":      "☆",
+      \ "ia":      "★",
+      \ "im":      "+",
+      \ "dots":    "…"
       \ }
 
 " NERDTree
