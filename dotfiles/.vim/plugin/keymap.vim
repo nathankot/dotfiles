@@ -7,6 +7,11 @@ noremap <C-k><C-r> :NERDTreeFind<CR>
 
 nnoremap <Leader>F :Goyo<CR>
 
+" CtrlSpace
+
+nmap <TAB> :CtrlSpaceGoNext<CR>
+nmap <BS> :CtrlSpaceGoPrevious<CR>
+
 " Unite
 
 nnoremap <c-p> :Unite -toggle -start-insert -buffer-name=files file_rec/async<CR>

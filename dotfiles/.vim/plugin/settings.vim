@@ -8,7 +8,7 @@ let g:ctrlspace_default_sort_order = 1
 let g:ctrlspace_use_ruby_bindings = 1
 let g:ctrlspace_show_tab_info = 1
 let g:ctrlspace_symbols = {
-      \ "cs"      : "⚡️",
+      \ "cs":      "⚡️",
       \ "tab":     "⊙",
       \ "all":     "∷",
       \ "file":    "⊚",
