@@ -3,7 +3,6 @@
 cd "$(dirname "${BASH_SOURCE}")"
 
 if [ "$1" == "update" ]; then
-  rsync -av ~/.tmuxinator ./dotfiles/
   rsync -av ~/.gitconfig ./dotfiles/
   rsync -av ~/.timetrap.yml ./dotfiles/
   rsync -av ~/.git_template ./dotfiles/
