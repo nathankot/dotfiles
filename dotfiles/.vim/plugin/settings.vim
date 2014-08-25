@@ -61,7 +61,7 @@ let g:unite_matcher_fuzzy_max_input_length = 20
 if executable('ag')
   " To keep things consistent, ag will only look @ .agignore
   let g:unite_source_grep_command='ag'
-  let g:unite_source_grep_default_opts='--nocolor --nogroup -S -U -C1'
+  let g:unite_source_grep_default_opts='--nocolor --nogroup -S -U'
   let g:unite_source_grep_recursive_opt=''
   let g:unite_source_grep_max_candidates=200
   let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden -g ""'
