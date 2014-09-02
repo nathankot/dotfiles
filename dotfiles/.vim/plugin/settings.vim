@@ -56,7 +56,7 @@ let g:unite_prompt = '⚡️  '
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_winheight = 12
 let g:unite_split_rule = 'bot'
-let g:unite_matcher_fuzzy_max_input_length = 30
+let g:unite_matcher_fuzzy_max_input_length = 15
 
 if executable('ag')
   " To keep things consistent, ag will only look @ .agignore
