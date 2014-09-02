@@ -56,21 +56,21 @@ let g:unite_prompt = '⚡️  '
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_winheight = 12
 let g:unite_split_rule = 'bot'
-let g:unite_matcher_fuzzy_max_input_length = 20
+let g:unite_matcher_fuzzy_max_input_length = 30
 
 if executable('ag')
   " To keep things consistent, ag will only look @ .agignore
   let g:unite_source_grep_command='ag'
   let g:unite_source_grep_default_opts='--nocolor --nogroup -S -U'
   let g:unite_source_grep_recursive_opt=''
-  let g:unite_source_grep_max_candidates=200
+  let g:unite_source_grep_max_candidates=500
   let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden -g ""'
   let g:unite_source_rec_max_cache_files = 20000
 endif
 
 call unite#custom#source('tags', 'filters', ['matcher_context', 'sorter_length'])
 " We don't need to choose from a million candidates, just narrow it more
-call unite#custom#source('file_rec,file_rec/async,tag', 'max_candidates', 20)
+call unite#custom#source('file_rec,file_rec/async,tag', 'max_candidates', 10)
 call unite#custom#source('file_rec/async,file_rec', 'filters', ['matcher_fuzzy', 'sorter_selecta', 'converter_file_directory'])
 
 " Syntastic
