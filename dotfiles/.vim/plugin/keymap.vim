@@ -11,8 +11,6 @@ nnoremap <Leader>F :Goyo<CR>
 
 nmap <TAB> :CtrlSpaceGoNext<CR>
 nmap <BS> :CtrlSpaceGoPrevious<CR>
-nmap ] :CtrlSpaceGoNext<CR>
-nmap [ :CtrlSpaceGoPrevious<CR>
 
 " Unite
 
