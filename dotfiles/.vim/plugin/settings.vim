@@ -68,10 +68,13 @@ if executable('ag')
   let g:unite_source_rec_max_cache_files = 20000
 endif
 
-call unite#custom#source('tags', 'filters', ['matcher_context', 'sorter_length'])
+call unite#custom#source('tags', 'matchers', ['matcher_context'])
+call unite#custom#source('tags', 'sorters', ['sorter_length'])
 " We don't need to choose from a million candidates, just narrow it more
 call unite#custom#source('file_rec,file_rec/async,tag', 'max_candidates', 10)
-call unite#custom#source('file_rec/async,file_rec', 'filters', ['matcher_fuzzy', 'sorter_selecta', 'converter_file_directory'])
+call unite#custom#source('file_rec/async,file_rec', 'matchers', ['matcher_fuzzy'])
+call unite#custom#source('file_rec/async,file_rec', 'sorters', ['sorter_selecta'])
+call unite#custom#source('file_rec/async,file_rec', 'converters', ['converter_file_directory'])
 
 " Syntastic
 let g:syntastic_check_on_open = 0
