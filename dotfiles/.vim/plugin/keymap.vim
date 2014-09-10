@@ -32,8 +32,8 @@ function! UniteMySettings()
   imap <silent><buffer> <C-u> <C-k>
   imap <silent><buffer> <ENTER> <Plug>(unite_insert_leave)
   nmap <silent><buffer> <ESC> <Plug>(unite_exit)
-  nmap <silent><buffer> <C-p> <Plug>(unite_exit)
   nmap <silent><buffer><expr> v unite#do_action('vsplit')
+  map <silent><buffer> <C-p> <Plug>(unite_exit)
 
   let unite = unite#get_current_unite()
 
