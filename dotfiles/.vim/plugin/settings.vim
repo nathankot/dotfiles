@@ -36,7 +36,8 @@ let NERDChristmasTree=0
 let NERDTreeMapOpenVSplit='v'
 
 " Goyo
-let g:goyo_width = 120
+let g:goyo_width = 160
+let g:goyo_linenr = 1
 
 " Limelight
 function! GoyoBefore()
