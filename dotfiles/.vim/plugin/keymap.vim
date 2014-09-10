@@ -39,6 +39,9 @@ function! UniteMySettings()
   endif
 endfunction
 
+nnoremap ]c :UniteNext<CR>
+nnoremap [c :UnitePrevious<CR>
+
 " Git
 
 nnoremap <leader>gs :Gstatus<cr>
