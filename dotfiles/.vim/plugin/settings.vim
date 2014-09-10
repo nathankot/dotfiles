@@ -86,12 +86,24 @@ let g:syntastic_enable_balloons = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_jump = 0
-" take the current ruby version specified by rbenv
-let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 let g:syntastic_coffee_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_html_checkers = ['tidy']
+
+if filereadable(expand("/usr/local/tidy"))
+  let g:syntastic_html_tidy_exec = '/usr/local/tidy'
+endif
+
+" angular uses a lot of these
+let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute']
+
+" take the current ruby version specified by rbenv
+if filereadable(expand("/opt/boxen/rbenv/shims/ruby"))
+  let g:syntastic_ruby_exec = '/opt/boxen/rbenv/shims/ruby'
+else
+  let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
+endif
 
 if executable('phpcs')
   let g:syntastic_php_checkers = ['php', 'phpcs']
