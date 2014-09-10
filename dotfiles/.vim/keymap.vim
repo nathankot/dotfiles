@@ -29,8 +29,8 @@ vnoremap <s-k> <nop>
 nnoremap <leader>w :w!<cr>
 
 " Fast tab switching
-noremap <leader><TAB>   :tabnext<cr>
-noremap <leader><S-TAB> :tabprevious<cr>
+noremap ]   :tabnext<cr>
+noremap [   :tabprevious<cr>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
