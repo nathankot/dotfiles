@@ -39,8 +39,8 @@ function! UniteMySettings()
   endif
 endfunction
 
-nnoremap ]c :UniteNext<CR>
-nnoremap [c :UnitePrevious<CR>
+nnoremap ]c :UniteNext search<CR>
+nnoremap [c :UnitePrevious search<CR>
 
 " Git
 
