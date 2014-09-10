@@ -15,10 +15,13 @@ nmap <BS> :CtrlSpaceGoPrevious<CR>
 " Unite
 
 nnoremap <c-p> :Unite -toggle -start-insert -buffer-name=files file_rec/async<CR>
-nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus -no-resize grep:!<CR>
-nnoremap <c-s> :UniteResume search<CR>
+nnoremap <c-s> :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus -no-resize grep:!<CR>
 nnoremap <Enter> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
 nnoremap <c-t> :Unite -toggle -start-insert -buffer-name=tags tag<CR>
+nnoremap <esc><c-p> :UniteResume files<CR>
+nnoremap <esc>\ :UniteResume search<CR>
+
+nmap     \ <c-s>
 
 function! UniteMySettings()
   imap <silent><buffer> <c-j> <Plug>(unite_select_next_line)
