@@ -19,8 +19,8 @@ nnoremap <c-s> :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus 
 nnoremap <Enter> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
 nnoremap <c-t> :Unite -toggle -start-insert -buffer-name=tags tag<CR>
 
-nnoremap <esc><c-p> :UniteResume files<CR>
-nnoremap <esc>\ :UniteResume search<CR>
+nnoremap `<c-p> :UniteResume files<CR>
+nnoremap `\ :UniteResume search<CR>
 
 nmap     \ <c-s>
 
