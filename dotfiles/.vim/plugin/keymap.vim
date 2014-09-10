@@ -15,10 +15,14 @@ nmap <BS> :CtrlSpaceGoPrevious<CR>
 " Unite
 
 nnoremap <c-p> :Unite -toggle -start-insert -buffer-name=files file_rec/async<CR>
-nnoremap \ :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus -no-resize grep:!<CR>
-nnoremap <c-s> :UniteResume search<CR>
+nnoremap <c-s> :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus -no-resize grep:!<CR>
 nnoremap <Enter> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
 nnoremap <c-t> :Unite -toggle -start-insert -buffer-name=tags tag<CR>
+
+nnoremap `<c-p> :UniteResume files<CR>
+nnoremap `\ :UniteResume search<CR>
+
+nmap     \ <c-s>
 
 function! UniteMySettings()
   imap <silent><buffer> <c-j> <Plug>(unite_select_next_line)
@@ -28,16 +32,20 @@ function! UniteMySettings()
   imap <silent><buffer> <C-u> <C-k>
   imap <silent><buffer> <ENTER> <Plug>(unite_insert_leave)
   nmap <silent><buffer> <ESC> <Plug>(unite_exit)
-  nmap <silent><buffer> <C-p> <Plug>(unite_exit)
   nmap <silent><buffer><expr> v unite#do_action('vsplit')
+  map <silent><buffer> <C-p> <Plug>(unite_exit)
 
   let unite = unite#get_current_unite()
 
   if unite.buffer_name == 'outline'
     nmap <silent><buffer> \ <Plug>(unite_insert_enter)
+    nmap <silent><buffer> / <Plug>(unite_insert_enter)
     nmap <silent><buffer> <Enter> <Plug>(unite_do_default_action)
   endif
 endfunction
+
+nnoremap ]s :UniteNext search<CR>
+nnoremap [s :UnitePrevious search<CR>
 
 " Git
 

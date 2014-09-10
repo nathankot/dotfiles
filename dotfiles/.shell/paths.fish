@@ -15,7 +15,7 @@ set -x CFLAGS "-I$HOMEBREW_ROOT/include"
 set -x LDFLAGS "-L$HOMEBREW_ROOT/lib"
 
 if test -f $BOXEN_HOME/repo/.git
-  set -x BOXEN_SETUP_VERSION (GIT_DIR=$BOXEN_HOME/repo/.git git rev-parse --short HEAD)
+  set -x BOXEN_SETUP_VERSION (env GIT_DIR=$BOXEN_HOME/repo/.git git rev-parse --short HEAD)
 end
 
 # Add homebrew'd stuff to the path.
