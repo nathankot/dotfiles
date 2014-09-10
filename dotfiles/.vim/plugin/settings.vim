@@ -79,8 +79,8 @@ call unite#custom#source('file_rec/async,file_rec', 'converters', ['converter_fi
 
 " Syntastic
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_signs = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_enable_signs = 1
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_enable_balloons = 0
 let g:syntastic_auto_loc_list = 0
@@ -92,7 +92,7 @@ let g:syntastic_coffee_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_html_checkers = []
+let g:syntastic_html_checkers = ['tidy']
 let g:syntastic_php_phpcs_args = '--standard=PSR1,PSR2'
 
 " Signify
