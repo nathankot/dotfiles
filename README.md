@@ -80,6 +80,33 @@ Run boxen again to update with your latest config:
 boxen
 ```
 
+## Vim
+
+Below is a annotated list of the most common key binds I use in Vim, many of which are Vim defaults.
+
+#### Navigation
+
+
+#### Search/Code Navigation
+
+* `ctrl + t` - Search ctags
+* `g ctrl + ]` - Jump to first tag match, select if multiple matches
+* `g + ]` - Select from matches, and jump to tag
+* `ctrl + O` - Jump back
+* `Spacebar` - Search (alias of `/`)
+* `Shift + Spacebar` - Backwards search (alias of `?`)
+
+#### File Navigation
+
+#### Better keystrokes for common editing commands
+
+#### Tabs, Windows, Splits
+
+#### Utility
+
+#### PHP
+
+
 Install vim plugins:
 
 ```sh
