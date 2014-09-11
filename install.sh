@@ -6,7 +6,7 @@ source sync.sh
 
 # Okay defer to boxen
 
-BOXEN_REPO=${BOXEN_REPO:-'https://github.com/richardrowe/our-boxen.git'}
+BOXEN_REPO=${BOXEN_REPO:-'https://github.com/nathankot/our-boxen.git'}
 
 sudo mkdir -p /opt/boxen
 sudo chown ${USER}:staff /opt/boxen

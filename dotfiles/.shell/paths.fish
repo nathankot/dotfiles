@@ -1,5 +1,10 @@
 # **Don't forget to update paths.sh for VIM**
 
+set -x GITHUB_USER $USER
+
+# My home folder is diff to my github user
+if test $USER = 'nathan'; set -x GITHUB_USER nathankot; end
+
 set -x BOXEN_HOME /opt/boxen
 set -x BOXEN_BIN_DIR /opt/boxen/bin
 set -x BOXEN_CONFIG_DIR /opt/boxen/config
@@ -7,8 +12,8 @@ set -x BOXEN_DATA_DIR /opt/boxen/data
 set -x BOXEN_ENV_DIR /opt/boxen/env.d
 set -x BOXEN_LOG_DIR /opt/boxen/log
 set -x BOXEN_SOCKET_DIR /opt/boxen/data/project-sockets
-set -x BOXEN_SRC_DIR /Users/richard/Development
-set -x BOXEN_GITHUB_LOGIN richardrowe
+set -x BOXEN_SRC_DIR "/Users/$DOT_USER/Development"
+set -x BOXEN_GITHUB_LOGIN $GITHUB_USER
 set -x HOMEBREW_ROOT /opt/boxen/homebrew
 set -x HOMEBREW_CACHE /opt/boxen/cache/homebrew
 set -x CFLAGS "-I$HOMEBREW_ROOT/include"
