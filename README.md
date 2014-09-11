@@ -132,9 +132,7 @@ Across the current line:
 
 File navigation:
 
-* `<ctrl+]>` - Jump to first tag match,
-* `<g><ctrl+]>` - Jump to first tag match, select if multiple matches
-* `<g><ctrl+]>` - Select from matches, and jump to tag
+* `<ctrl+]>` - Jump to first tag match, or select match if multiple (alias of `<g><ctrl+]>`)
 * `<ctrl+o>` - Jump back
 * `<ctrl+i>` - Jump forwards
 

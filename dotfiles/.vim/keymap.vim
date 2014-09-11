@@ -44,6 +44,9 @@ inoremap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
 " Map <Space> to / (search)
 map <space> /
 
+" Map g<C+]> to <C+]> (jump to tag)
+map <C-]> g<C-]>
+
 " Find the highlight under the cursor
 map <F2> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
