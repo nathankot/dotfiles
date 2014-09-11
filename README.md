@@ -105,12 +105,17 @@ Buffer navigation:
 
 Across the file:
 
+* `<esc>` - Normal mode. _If you're using Karabiner, just tap your left ctrl key (which replaces where the capslock key usually is)_.
 * `<g><;>` - Jump to previous insert point
 * `<spacebar>` - Search (alias of `/`). _Use this to navigate to hard-to-reach places_.
 * `<?>` - Search backwards
 * `<z><z>` - Scroll so cursor is centered on screen
 * `<z><t>` - Scroll so cursor is top of sreen
 * `<z><b>` - Scroll so cursor is bottom of sreen
+* `<ctrl-d>` - Page down
+* `<ctrl-u>` - Page up
+* `<ctrl-e>` - One line down without moving cursor
+* `<ctrl-y>` - One line up without moving cursor
 
 Across the viewport:
 
