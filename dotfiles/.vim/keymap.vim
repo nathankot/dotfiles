@@ -41,9 +41,8 @@ noremap <C-k><C-m> :marks<CR>
 " enter current date
 inoremap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
 
-" Map <Space> to / (search) and Shfit-<Space> to ? (backwards search)
+" Map <Space> to / (search)
 map <space> /
-map <s-space> ?
 
 " Find the highlight under the cursor
 map <F2> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

@@ -94,7 +94,6 @@ Below is a annotated list of the most common key binds I use in Vim, many of whi
 * `g + ]` - Select from matches, and jump to tag
 * `ctrl + O` - Jump back
 * `Spacebar` - Search (alias of `/`)
-* `Shift + Spacebar` - Backwards search (alias of `?`)
 
 #### File Navigation
 
