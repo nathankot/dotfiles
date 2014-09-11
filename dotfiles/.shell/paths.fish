@@ -19,9 +19,6 @@ set -x HOMEBREW_CACHE /opt/boxen/cache/homebrew
 set -x CFLAGS "-I$HOMEBREW_ROOT/include"
 set -x LDFLAGS "-L$HOMEBREW_ROOT/lib"
 
-set -x LUA_PATH $HOMEBREW_ROOT/lib/lua/5.2 $LUA_PATH
-set -x LUAC_PATH $HOMEBREW_ROOT/lib/lua/5.2 $LUAC_PATH
-
 if test -f $BOXEN_HOME/repo/.git
   set -x BOXEN_SETUP_VERSION (env GIT_DIR=$BOXEN_HOME/repo/.git git rev-parse --short HEAD)
 end
