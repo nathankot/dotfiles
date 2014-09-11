@@ -172,3 +172,5 @@ let g:gundo_width = 45
 let g:gundo_preview_height = 30
 let g:gundo_right = 0
 
+" Investigate
+let g:investigate_use_dash = 1 " Will automatically fallback if dash isn't installed
