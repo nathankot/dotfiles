@@ -80,6 +80,12 @@ Run boxen again to update with your latest config:
 boxen
 ```
 
+Install vim plugins:
+
+```sh
+vim --noplugin +PlugInstall
+```
+
 ## Vim
 
 The `.vimrc` is designed to degrade elegantly. So if you chuck it on a remote server without installing any plugins, it
@@ -169,12 +175,6 @@ You should [really read up on ctrlspace][ctrlspace] because there is just too mu
 
 #### Fugitive
 
-
-Install vim plugins:
-
-```sh
-vim --noplugin +PlugInstall
-```
 
 [unite]: https://github.com/Shougo/unite.vim
 [ctrlspace]: https://github.com/szw/vim-ctrlspace
