@@ -82,28 +82,92 @@ boxen
 
 ## Vim
 
-Below is a annotated list of the most common key binds I use in Vim, many of which are Vim defaults.
+The `.vimrc` is designed to degrade elegantly. So if you chuck it on a remote server without installing any plugins, it
+should still work. Hence, the guide for the vimrc below is split into _Core_ for features that will be available
+on a basic install with no plugins. And _Plugins_, which documents features available after you do a `:PlugInstall`. A
+good way to grok these is to start from the core, and learn the kemappings for each plugin one by one, rather than
+trying to understand everything in one big go!
+
+### Core
+
+A lot of these are vim defaults, but documented because they are good to have in your vim-flow ;)
+Leader is mapped to `,`.
 
 #### Navigation
 
+Buffer navigation:
 
-#### Search/Code Navigation
+Across the file:
 
-* `ctrl + t` - Search ctags
-* `g ctrl + ]` - Jump to first tag match, select if multiple matches
-* `g + ]` - Select from matches, and jump to tag
-* `ctrl + O` - Jump back
-* `Spacebar` - Search (alias of `/`)
+* `<g><;>` - Jump to previous insert point
+* `<spacebar>` - Search (alias of `/`). _Use this to navigate to hard-to-reach places_.
+* `<?>` - Search backwards
+* `<z><z>` - Scroll so cursor is centered on screen
+* `<z><t>` - Scroll so cursor is top of sreen
+* `<z><b>` - Scroll so cursor is bottom of sreen
 
-#### File Navigation
+Across the viewport:
 
-#### Better keystrokes for common editing commands
+* `<H>` - Move cursor to top of screen
+* `<M>` - Move cursor to middle of screen
+* `<L>` - Move cursor to bottom of screen
+* `<Number><j/k>` - Move X lines down/up. _Use this in combination with the <Tab> numpad for super fast movements_.
 
-#### Tabs, Windows, Splits
+Across the current line:
 
-#### Utility
+* `<s><*><*>` - Seek to the first occurence of the `**` combination on the line
+* `<f><*>` - Seek to the first occurence of `*` on the line
+* `<t><*>` - Seek to one character before the first occurence of `*` on the line
 
-#### PHP
+File navigation:
+
+* `<ctrl+]>` - Jump to first tag match,
+* `<g><ctrl+]>` - Jump to first tag match, select if multiple matches
+* `<g><ctrl+]>` - Select from matches, and jump to tag
+* `<ctrl+o>` - Jump back
+* `<ctrl+i>` - Jump forwards
+
+Pane navigation:
+
+* `<ctrl+j>` - Next pane
+* `<ctrl+k>` - Previous pane
+* `<ctrl+l>` - Expand current pane
+* `<ctrl+h>` - Compress current pane
+
+#### Editing
+
+* `<,><w>` - Save file
+* `<->` - Reduce number
+* `<+>` - Increase number
+
+### Plugins
+
+#### [Unite][unite]
+
+* `<ctrl+t>` - Search tags
+* `<ctrl+p>` - Search files
+* `<enter>` - Show file annotation
+
+#### [Ctrl-Space][ctrlspace]
+
+You should [really read up on ctrlspace][ctrlspace] because there is just too much too cover here. But the basics are:
+
+* `<ctrl+space>` - Open Ctrl-Space
+* `<l>` - Toggle tablist
+* `<w>` - Toggle workspace list
+* `<enter>` - Open selected element
+
+##### Buffer List
+
+* `<enter>` - Open file
+* `<v>` - Open file in vertical split
+* `<[>` / `<]>` - Prev/Next file
+
+#### Surround
+
+* `cs<old><new>` - Change the `<old>` surrounding characters to `<new>`
+
+#### Fugitive
 
 
 Install vim plugins:
@@ -111,3 +175,7 @@ Install vim plugins:
 ```sh
 vim --noplugin +PlugInstall
 ```
+
+[unite]: https://github.com/Shougo/unite.vim
+[ctrlspace]: https://github.com/szw/vim-ctrlspace
+[surround]: https://github.com/tpope/vim-surround
