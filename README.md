@@ -114,11 +114,11 @@ Across the file:
 * `<z><b>` - Scroll so cursor is bottom of sreen
 * `<ctrl-d>` - Page down
 * `<ctrl-u>` - Page up
-* `<ctrl-e>` - One line down without moving cursor
-* `<ctrl-y>` - One line up without moving cursor
 
 Across the viewport:
 
+* `<ctrl-e>` - One line down without moving cursor
+* `<ctrl-y>` - One line up without moving cursor
 * `<H>` - Move cursor to top of screen
 * `<M>` - Move cursor to middle of screen
 * `<L>` - Move cursor to bottom of screen
