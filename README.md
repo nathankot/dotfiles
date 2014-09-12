@@ -20,9 +20,8 @@ bash sync.sh
 
 ## I want dotfiles, and I want boxen to setup my machine
 
-It's recommended that you make a fork of [these boxen
-configs](https://github.com/nathankot/our-boxen). If you don't know what boxen is yet, don't worry -
-you can read up on it later.
+It's recommended that you make a fork of [these boxen configs][our-boxen]. If you don't know what boxen is yet, don't
+worry - you can read up on it later.
 
 If you've made a fork ensure that you edit `/config/boxen.rb` in your our-boxen fork accordingly.
 
@@ -178,7 +177,31 @@ You should [really read up on ctrlspace][ctrlspace] because there is just too mu
 
 #### Fugitive
 
+## Window Management
 
+You can use [Mjolnir][mjolnir] if you want a tiling window manager. In order to use the custom config you'll need to
+install _Lua_ and some dependencies:
+
+```puppet
+# Lua
+include common::lua
+# Required for Mjolnir
+common::lua::rock { 'mjolnir.hotkey': }
+common::lua::rock { 'mjolnir.application': }
+common::lua::rock { 'mjolnir.alert': }
+```
+
+### Keybindings
+
+These are the keybindings defined in [`init.lua`](blob/master/dotfiles/.mjolnir/init.lua):
+
+* `<ctrl+cmd+c>` - Cycle layouts. Currently there are: _fullscreen_, _main-vertical_
+* `<ctrl+cmd+j>` - Focus next window
+* `<ctrl+cmd+k>` - Focus previous window
+* `<ctrl+cmd+space>` - Promote currently focused window
+
+[our-boxen]: https://github.com/nathankot/our-boxen
 [unite]: https://github.com/Shougo/unite.vim
 [ctrlspace]: https://github.com/szw/vim-ctrlspace
 [surround]: https://github.com/tpope/vim-surround
+[mjolnir]: https://github.com/sdegutis/mjolnir
