@@ -199,7 +199,7 @@ include global::applications::mjolnir
 
 ### Keybindings
 
-These are the keybindings defined in [`init.lua`](blob/master/dotfiles/.mjolnir/init.lua):
+These are the keybindings defined in [`init.lua`](dotfiles/.mjolnir/init.lua):
 
 * `<ctrl+cmd+c>` - Cycle layouts. Currently there are: _fullscreen_, _main-vertical_
 * `<ctrl+cmd+j>` - Focus next window
