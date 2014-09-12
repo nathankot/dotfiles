@@ -91,8 +91,8 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_html_checkers = ['tidy']
 
-if filereadable(expand("/usr/local/tidy"))
-  let g:syntastic_html_tidy_exec = '/usr/local/tidy'
+if filereadable(expand("/usr/local/bin/tidy"))
+  let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'
 endif
 
 " angular uses a lot of these
