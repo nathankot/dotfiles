@@ -30,6 +30,7 @@ function cycle(direction)
   local win = window:focusedwindow() or windows[1]
   local direction = direction or 1
   local currentindex = fnutils.indexof(windows, win)
+  if not currentindex then return end
   local nextindex = currentindex + direction
 
   while nextindex > #windows do
