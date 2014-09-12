@@ -191,6 +191,12 @@ common::lua::rock { 'mjolnir.application': }
 common::lua::rock { 'mjolnir.alert': }
 ```
 
+Remember to install Mjolnir with boxen:
+
+```puppet
+include global::applications::mjolnir
+```
+
 ### Keybindings
 
 These are the keybindings defined in [`init.lua`](blob/master/dotfiles/.mjolnir/init.lua):
