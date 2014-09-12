@@ -9,15 +9,15 @@ local geometry = require "mjolnir.geometry"
 local alert = require "mjolnir.alert"
 
 local layouts = { 'main-vertical', 'fullscreen' }
-local smush = {"ctrl", "cmd"}
+local mash = {"ctrl", "cmd"}
 
 -- BINDINGS
 
-hotkey.bind(smush, "r", function() mjolnir.reload(); mjolnir.openconsole() end)
-hotkey.bind(smush, "c", function() cyclelayout() end)
-hotkey.bind(smush, "j", function() cycle(1) end)
-hotkey.bind(smush, "k", function() cycle(-1) end)
-hotkey.bind(smush, "space", function() promote() end)
+hotkey.bind(mash, "r", function() mjolnir.reload(); mjolnir.openconsole() end)
+hotkey.bind(mash, "c", function() cyclelayout() end)
+hotkey.bind(mash, "j", function() cycle(1) end)
+hotkey.bind(mash, "k", function() cycle(-1) end)
+hotkey.bind(mash, "space", function() promote() end)
 
 -- INTERNALS
 
