@@ -8,9 +8,11 @@ local screen = require "mjolnir.screen"
 local fnutils = require "mjolnir.fnutils"
 local geometry = require "mjolnir.geometry"
 local alert = require "mjolnir.alert"
+local spotify = require "mjolnir.lb.spotify"
 
 local layouts = { 'main-vertical', 'fullscreen' }
 local mash = {"ctrl", "cmd"}
+local musicmash = {"ctrl", "alt"}
 
 -- BINDINGS
 
@@ -19,6 +21,10 @@ hotkey.bind(mash, "c", function() cyclelayout() end)
 hotkey.bind(mash, "j", function() cycle(1) end)
 hotkey.bind(mash, "k", function() cycle(-1) end)
 hotkey.bind(mash, "space", function() promote() end)
+
+hotkey.bind(musicmash, "space", spotify.play)
+hotkey.bind(musicmash, "h", spotify.previous)
+hotkey.bind(musicmash, "k", spotify.pause)
 
 -- INTERNALS
 
