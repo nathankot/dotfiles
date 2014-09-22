@@ -112,6 +112,12 @@ else
   let g:syntastic_php_checkers = ['php']
 endif
 
+let g:syntastic_mode_map = {
+      \ "mode": "active",
+      \ "active_filetypes": [],
+      \ "passive_filetypes": ["twig"]
+      \}
+
 " Signify
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_sign_overwrite = 0
