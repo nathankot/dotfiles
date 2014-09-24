@@ -24,7 +24,7 @@ hotkey.bind(mash, "space", function() promote() end)
 
 hotkey.bind(musicmash, "space", spotify.play)
 hotkey.bind(musicmash, "h", spotify.previous)
-hotkey.bind(musicmash, "k", spotify.pause)
+hotkey.bind(musicmash, "l", spotify.next)
 
 -- INTERNALS
 
