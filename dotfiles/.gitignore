@@ -67,3 +67,7 @@ todo.txt
 # Tags Config #
 ###############
 .ctags
+
+# Investigate confg #
+# #################
+.invrc
