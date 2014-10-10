@@ -48,7 +48,6 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/vimshell.vim'
 Plug 'nathankot/vim-snippets'
 Plug 'mattn/flappyvird-vim'
-Plug 'joonty/vdebug'
 
 " Build step
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
