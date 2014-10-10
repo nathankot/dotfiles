@@ -5,6 +5,9 @@ nnoremap _ <C-x>
 nnoremap - <C-x>
 nnoremap + <C-a>
 
+" Enter to toggle fold
+nnoremap <Enter> za
+
 " Window management
 noremap <silent> <leader>i :wincmd H<cr>
 noremap <silent> <C-j> :wincmd w<cr>

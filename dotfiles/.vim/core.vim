@@ -46,7 +46,7 @@ set listchars=""
 set listchars+=tab:»\ " Note the literal space
 set foldlevelstart=99
 set foldmethod=indent
-set nofoldenable
+set foldenable
 set scroll=20
 set iskeyword -=- " Underscores and hyphens are word separators
 set backspace=indent,eol,start

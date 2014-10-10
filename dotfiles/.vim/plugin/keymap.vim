@@ -16,7 +16,7 @@ nmap <BS> :CtrlSpaceGoPrevious<CR>
 
 nnoremap <c-p> :Unite -toggle -start-insert -buffer-name=files file_rec/async<CR>
 nnoremap <c-s> :Unite -buffer-name=search -no-start-insert -no-quit -keep-focus -no-resize grep:!<CR>
-nnoremap <Enter> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
+nnoremap <c-m> :Unite -buffer-name=outline -no-empty -no-quit -keep-focus -vertical outline<CR>
 nnoremap <c-t> :Unite -toggle -start-insert -buffer-name=tags tag<CR>
 
 nnoremap `<c-p> :UniteResume files<CR>
