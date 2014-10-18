@@ -48,14 +48,11 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/vimshell.vim'
 Plug 'nathankot/vim-snippets'
 Plug 'mattn/flappyvird-vim'
+Plug 'arecarn/crunch'
 
 " Build step
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
-
-" Grok these
-Plug 'arecarn/crunch'
-Plug 'jpalardy/vim-slime'
 
 call plug#end()
 
