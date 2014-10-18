@@ -50,3 +50,6 @@ set -x PATH $BOXEN_HOME/ruby-build/bin $PATH
 set -x RBENV_ROOT /opt/boxen/rbenv
 set -x PATH $RBENV_ROOT/shims $RBENV_ROOT/bin $PATH
 rbenv rehash >/dev/null ^&1
+
+# Haskell
+set -x PATH ~/.cabal/bin $PATH
