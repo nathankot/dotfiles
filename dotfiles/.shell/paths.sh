@@ -3,3 +3,4 @@ if [ -f ~/opt/boxen/env.sh ]; then
 fi
 
 export CHROME_BIN=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+export PATH="$HOME/Library/Haskell/bin:$PATH"
