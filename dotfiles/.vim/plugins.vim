@@ -54,6 +54,9 @@ Plug 'arecarn/crunch'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 
+" Haskell
+Plug 'eagletmt/neco-ghc'
+
 call plug#end()
 
 filetype on

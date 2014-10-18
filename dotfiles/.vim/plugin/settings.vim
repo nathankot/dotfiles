@@ -126,7 +126,6 @@ let g:signify_sign_overwrite = 0
 let g:phpcomplete_parse_docblock_comments = 1
 
 " NeoComplete """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#min_syntax_length = 3
@@ -134,23 +133,21 @@ let g:neocomplete#max_list = 20
 let g:neocomplete#enable_underbar_completion = 1
 let g:neocomplete#sources#tags#cache_limit_size = 10000000 " 10 MB
 
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
- let g:neocomplete#sources#omni#input_patterns = {}
-endif
-
-if !exists('g:neocomplete#force_omni_input_patterns')
- let g:neocomplete#force_omni_input_patterns = {}
-endif
-
-let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+" " Enable heavy omni completion.
+" if !exists('g:neocomplete#sources#omni#input_patterns')
+"  let g:neocomplete#sources#omni#input_patterns = {}
+" endif
+"
+" let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 " let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+" let g:neocomplete#sources#omni#input_patterns.haskell = '[^. *\t]\.\w*\|\h\w*::'
 
 " Snippets
 let g:neosnippet#snippets_directory = '~/.vim/plugged/vim-snippets/snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#disable_runtime_snippets = { '_' : 1 }
 let g:neosnippet#enable_preview = 1
+let g:necoghc_enable_detailed_browse = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
