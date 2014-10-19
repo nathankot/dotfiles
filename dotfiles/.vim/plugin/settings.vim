@@ -62,7 +62,7 @@ let g:unite_matcher_fuzzy_max_input_length = 15
 if executable('ag')
   " To keep things consistent, ag will only look @ .agignore
   let g:unite_source_grep_command='ag'
-  let g:unite_source_grep_default_opts='--nocolor --nogroup -S -U'
+  let g:unite_source_grep_default_opts='--nocolor --nogroup -S -U --silent'
   let g:unite_source_grep_recursive_opt=''
   let g:unite_source_grep_max_candidates=500
   let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden -g ""'
@@ -133,14 +133,11 @@ let g:neocomplete#max_list = 20
 let g:neocomplete#enable_underbar_completion = 1
 let g:neocomplete#sources#tags#cache_limit_size = 50000000 " 50 MB
 
-" " Enable heavy omni completion.
-" if !exists('g:neocomplete#sources#omni#input_patterns')
-"  let g:neocomplete#sources#omni#input_patterns = {}
-" endif
-"
-" let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-" let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
-" let g:neocomplete#sources#omni#input_patterns.haskell = '[^. *\t]\.\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns = {}
+let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::\w*'
+let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::\w*'
+let g:neocomplete#sources#omni#input_patterns.haskell = '[^. *\t]\.\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.stylus = '^\s\+\w\+\|\w\+[):;]\?\s\+\w*\|[@!]'
 
 " Snippets
 let g:neosnippet#snippets_directory = '~/.vim/plugged/vim-snippets/snippets'
