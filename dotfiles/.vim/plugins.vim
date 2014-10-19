@@ -3,19 +3,8 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-" Languages
-Plug 'sheerun/vim-polyglot'
-Plug 'ledger/vim-ledger'
-Plug 'juvenn/mustache.vim'
-Plug 'dag/vim-fish'
-Plug 'stephpy/vim-yaml'
-Plug 'shawncplus/phpcomplete.vim'
-
-" Text Objects
 Plug 'kana/vim-textobj-user'
 Plug 'argtextobj.vim'
-Plug 'nelstrom/vim-textobj-rubyblock'
-
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -47,17 +36,52 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/vimshell.vim'
 Plug 'nathankot/vim-snippets'
-Plug 'mattn/flappyvird-vim'
 Plug 'arecarn/crunch'
 
 " Build step
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 
-" Haskell
+" Languages
+"" Haskell
 Plug 'eagletmt/neco-ghc'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'dag/vim2hs'
+"" CSS
+Plug 'JulesWang/css.vim'
+Plug 'ap/vim-css-color'
+"" Git
+Plug 'tpope/vim-git'
+""  Go
+Plug 'fatih/vim-go'
+"" HTML5
+Plug 'othree/html5.vim'
+"" Javascript
+Plug 'pangloss/vim-javascript'
+"" JSON
+Plug 'leshill/vim-json'
+"" Less
+Plug 'groenewege/vim-less'
+"" Markdown
+Plug 'tpope/vim-markdown'
+"" PHP
+Plug 'StanAngeloff/php.vim'
+Plug 'shawncplus/phpcomplete.vim'
+"" Puppet
+Plug 'rodjek/vim-puppet'
+"" Ruby
+Plug 'vim-ruby/vim-ruby'
+Plug 'nelstrom/vim-textobj-rubyblock'
+"" Stylus
+Plug 'wavded/vim-stylus'
+"" Ledger
+Plug 'ledger/vim-ledger'
+"" Mustache
+Plug 'juvenn/mustache.vim'
+"" Fish
+Plug 'dag/vim-fish'
+"" YAML
+Plug 'stephpy/vim-yaml'
 
 call plug#end()
 
