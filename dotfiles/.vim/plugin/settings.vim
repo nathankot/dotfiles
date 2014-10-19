@@ -137,6 +137,7 @@ let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::\w
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::\w*'
 let g:neocomplete#sources#omni#input_patterns.haskell = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.stylus = '^\s\+\w\+\|\w\+[):;]\?\s\+\w*\|[@!]'
+let g:neocomplete#sources#omni#input_patterns.javascript = '[^. \t]\.\%(\h\w*\)\?'
 
 " Snippets
 let g:neosnippet#snippets_directory = '~/.vim/plugged/vim-snippets/snippets'
