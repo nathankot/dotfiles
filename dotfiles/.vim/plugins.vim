@@ -58,6 +58,7 @@ Plug 'fatih/vim-go'
 Plug 'othree/html5.vim'
 "" Javascript
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 "" JSON
 Plug 'leshill/vim-json'
 "" Less
@@ -82,6 +83,8 @@ Plug 'juvenn/mustache.vim'
 Plug 'dag/vim-fish'
 "" YAML
 Plug 'stephpy/vim-yaml'
+"" Twig
+Plug 'evidens/vim-twig'
 
 call plug#end()
 
