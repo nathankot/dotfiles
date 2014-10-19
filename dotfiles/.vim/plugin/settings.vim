@@ -131,7 +131,7 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#min_syntax_length = 3
 let g:neocomplete#max_list = 20
 let g:neocomplete#enable_underbar_completion = 1
-let g:neocomplete#sources#tags#cache_limit_size = 10000000 " 10 MB
+let g:neocomplete#sources#tags#cache_limit_size = 50000000 " 50 MB
 
 " " Enable heavy omni completion.
 " if !exists('g:neocomplete#sources#omni#input_patterns')
