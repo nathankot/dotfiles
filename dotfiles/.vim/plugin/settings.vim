@@ -128,10 +128,9 @@ let g:phpcomplete_parse_docblock_comments = 1
 " NeoComplete """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#min_syntax_length = 3
-let g:neocomplete#max_list = 20
-let g:neocomplete#enable_underbar_completion = 1
+let g:neocomplete#max_list = 10
 let g:neocomplete#sources#tags#cache_limit_size = 50000000 " 50 MB
+let g:neocomplete#enable_fuzzy_completion* = 0
 
 let g:neocomplete#sources#omni#input_patterns = {}
 let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::\w*'
