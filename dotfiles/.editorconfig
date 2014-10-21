@@ -18,5 +18,9 @@ max_line_length = 80
 indent_style = space
 indent_size = 4
 
+[*.hs]
+indent_style = space
+indent_size = 4
+
 [*.ledger]
 indent_size = 4
