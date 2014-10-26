@@ -22,13 +22,11 @@ hotkey.bind(musicmash, "l", spotify.next)
 -- Easily switch network location
 
 function secure()
-  os.execute('/opt/boxen/homebrew/bin/tor')
   os.execute('networksetup -switchtolocation Secure')
   alert.show('Using SECURE Connection', 1)
 end
 
 function insecure()
-  os.execute('killall tor')
   os.execute('networksetup -switchtolocation Insecure')
   alert.show('Using INSECURE Connection', 1)
 end
