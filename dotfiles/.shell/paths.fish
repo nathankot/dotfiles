@@ -55,4 +55,4 @@ rbenv rehash >/dev/null ^&1
 set -x PATH ~/Library/Haskell/bin $PATH
 
 # Virtualenv
-set -x PATH ./env/bin
+set -x PATH ./env/bin $PATH
