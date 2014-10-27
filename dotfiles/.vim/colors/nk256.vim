@@ -110,11 +110,11 @@ hi pastemessage ctermbg=darkblue
 highlight clear StatusLine
 highlight clear StatusLineNC
 
-hi StatusLine   ctermfg=darkred ctermbg=7
-hi StatusLineNC ctermfg=white ctermbg=7
+hi StatusLine   ctermfg=darkred ctermbg=black
+hi StatusLineNC ctermfg=white ctermbg=black
 
 "filename
-hi User1 ctermfg=white ctermbg=7
+hi User1 ctermfg=white ctermbg=black
 "line number
 hi User2 ctermfg=NONE ctermbg=black
 "line# seperator
