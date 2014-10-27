@@ -42,14 +42,14 @@ hi Todo             ctermfg=red         ctermbg=NONE        cterm=NONE
 hi Constant         ctermfg=cyan        ctermbg=NONE        cterm=NONE
 
 hi Identifier       ctermfg=cyan        ctermbg=NONE        cterm=NONE
-hi Function         ctermfg=darkmagenta       ctermbg=NONE        cterm=NONE
+hi Function         ctermfg=darkmagenta ctermbg=NONE        cterm=NONE
 hi Type             ctermfg=yellow      ctermbg=NONE        cterm=NONE
-hi Statement        ctermfg=lightblue   ctermbg=NONE        cterm=NONE
+hi Statement        ctermfg=4           ctermbg=NONE        cterm=NONE
 
 hi Special          ctermfg=white       ctermbg=NONE        cterm=NONE
 hi Delimiter        ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi Operator         ctermfg=white       ctermbg=NONE        cterm=NONE
-hi Conceal          ctermfg=yellow       ctermbg=NONE        cterm=NONE
+hi Conceal          ctermfg=yellow      ctermbg=NONE        cterm=NONE
 
 hi link Character       Constant
 hi link Boolean         Constant
