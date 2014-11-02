@@ -7,7 +7,8 @@
   "default_minute": 0,
   "highlight": true,
   "journals": {
-    "default": "/Users/nathan/.journal/default.txt"
+    "default": "/Users/nathan/.journal/default.txt",
+    "japanese": "/Users/nathan/.journal/japanese.txt"
   },
   "tagsymbols": "@"
 }
