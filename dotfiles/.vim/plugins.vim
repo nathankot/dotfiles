@@ -55,6 +55,7 @@ Plug 'tpope/vim-git'
 Plug 'fatih/vim-go'
 "" HTML5
 Plug 'othree/html5.vim'
+Plug 'briancollins/vim-jst'
 "" Javascript
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
