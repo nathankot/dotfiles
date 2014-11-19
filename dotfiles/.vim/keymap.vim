@@ -23,7 +23,6 @@ nnoremap Y y$
 nnoremap <leader><space> :noh<cr>
 
 " Common typos
-noremap ; :
 nnoremap K <nop>
 nnoremap Q <nop>
 vnoremap <s-k> <nop>
