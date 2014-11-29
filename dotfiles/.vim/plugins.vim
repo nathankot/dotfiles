@@ -85,6 +85,8 @@ Plug 'dag/vim-fish'
 Plug 'stephpy/vim-yaml'
 "" Twig
 Plug 'evidens/vim-twig'
+"" Rust
+Plug 'wting/rust.vim'
 
 call plug#end()
 
