@@ -39,16 +39,6 @@ let NERDTreeMapOpenVSplit='v'
 let g:goyo_width = 160
 let g:goyo_linenr = 1
 
-" Limelight
-function! GoyoBefore()
-  Limelight
-endfunction
-
-function! GoyoAfter()
-  Limelight!
-endfunction
-
-let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
 let g:limelight_conceal_ctermfg = 8
 
 " Unite
