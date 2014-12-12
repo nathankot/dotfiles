@@ -122,13 +122,6 @@ let g:neocomplete#max_list = 10
 let g:neocomplete#sources#tags#cache_limit_size = 50000000 " 50 MB
 let g:neocomplete#enable_fuzzy_completion = 0
 
-" let g:neocomplete#sources#omni#input_patterns = {}
-" let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::\w*'
-" let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::\w*'
-" let g:neocomplete#sources#omni#input_patterns.haskell = '[^. *\t]\.\w*\|\h\w*::'
-" let g:neocomplete#sources#omni#input_patterns.stylus = '^\s\+\w\+\|\w\+[):;]\?\s\+\w*\|[@!]'
-" let g:neocomplete#sources#omni#input_patterns.javascript = '[^. \t]\.\%(\h\w*\)\?'
-
 " Snippets
 let g:neosnippet#snippets_directory = '~/.vim/plugged/vim-snippets/snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
