@@ -4,4 +4,4 @@ setlocal omnifunc=necoghc#omnifunc
 " ghc-mod
 
 nmap <leader>t :GhcModType<CR>
-nmap <leader>T :GhcModTypeClear<CR>
+nnoremap <leader><space> :noh<cr>:GhcModTypeClear<CR>
