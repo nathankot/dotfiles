@@ -44,6 +44,7 @@ Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 
 " Languages
 "" Haskell
+Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'dag/vim2hs'
 "" CSS
