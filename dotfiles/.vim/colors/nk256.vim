@@ -125,3 +125,6 @@ hi User4 ctermfg=8 ctermbg=black
 hi User5 ctermfg=NONE ctermbg=black
 "modified flag
 hi User6 ctermfg=white ctermbg=darkred
+
+" Haskell
+hi ghcmodType ctermfg=white ctermbg=12

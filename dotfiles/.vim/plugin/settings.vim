@@ -157,3 +157,6 @@ let g:gundo_right = 0
 
 " Investigate
 let g:investigate_use_dash = 1 " Will automatically fallback if dash isn't installed
+
+" Ghc-mod
+let g:ghcmod_type_highlight = 'ghcmodType'
