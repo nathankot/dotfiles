@@ -20,7 +20,7 @@ indent_size = 4
 
 [*.hs, *.lhs]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.ledger]
 indent_size = 4
