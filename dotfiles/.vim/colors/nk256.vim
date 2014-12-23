@@ -94,6 +94,7 @@ hi ColorColumn ctermbg=NONE ctermfg=darkred
 " Fold column (extra padding)
 set foldcolumn=2
 hi FoldColumn ctermfg=8 ctermbg=black
+hi Folded ctermbg=234 ctermfg=7
 
 " Only highlight current line for current pane
 augroup BgHighlight
