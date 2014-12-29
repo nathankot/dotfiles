@@ -160,4 +160,3 @@ let g:investigate_use_dash = 1 " Will automatically fallback if dash isn't insta
 
 " Ghc-mod
 let g:ghcmod_type_highlight = 'ghcmodType'
-let g:haskell_conceal_wide = 1
