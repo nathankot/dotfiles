@@ -5,3 +5,4 @@ setlocal omnifunc=necoghc#omnifunc
 
 nmap <leader>t :GhcModType<CR>
 nnoremap <leader><space> :noh<cr>:GhcModTypeClear<CR>
+nnoremap <leader>e :GhcModExpand<CR>
