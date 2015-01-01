@@ -63,6 +63,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 "" JSON
 Plug 'leshill/vim-json'
+Plug 'tpope/vim-jdaddy'
 "" Less
 Plug 'groenewege/vim-less'
 "" Markdown
