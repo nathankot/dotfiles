@@ -129,3 +129,7 @@ hi User6 ctermfg=white ctermbg=darkred
 
 " Haskell
 hi ghcmodType ctermfg=white ctermbg=12
+
+" Markdown
+hi markdownItalic ctermbg=16 ctermfg=13
+
