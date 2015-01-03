@@ -94,7 +94,7 @@ set tw=80
 set relativenumber
 set number
 set conceallevel=2
-set concealcursor=nciv
+set concealcursor=nc
 
 " Open QuickFix Window after Grep
 au QuickFixCmdPost *grep* cwindow
