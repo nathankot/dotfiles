@@ -131,5 +131,8 @@ hi User6 ctermfg=white ctermbg=darkred
 hi ghcmodType ctermfg=white ctermbg=12
 
 " Markdown
-hi markdownItalic ctermbg=16 ctermfg=13
+hi markdownItalic ctermbg=NONE ctermfg=3
+hi markdownCode ctermbg=234
+hi link markdownBold markdownH2
+hi link mardownCodeBlock markdownCode
 
