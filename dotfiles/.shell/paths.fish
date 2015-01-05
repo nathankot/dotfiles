@@ -56,3 +56,8 @@ set -x PATH ~/Library/Haskell/bin $PATH
 
 # Virtualenv
 set -x PATH ./env/bin $PATH
+
+# Docker
+set -x BOOT2DOCKER_DIR /opt/boxen/data/docker
+set -x BOOT2DOCKER_PROFILE /opt/boxen/config/docker/profile
+boot2docker shellinit 2>/dev/null
