@@ -64,4 +64,5 @@ for line in (boot2docker shellinit 2>/dev/null)
 end
 
 # ./bin should take precedence
+set -x PATH ./.bin $PATH
 set -x PATH ./bin $PATH
