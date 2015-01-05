@@ -28,8 +28,7 @@ set -x PATH $BOXEN_HOME/homebrew/bin $BOXEN_HOME/homebrew/sbin $PATH
 set -x MANPATH $BOXEN_HOME/homebrew/share/man $MANPATH
 set -x PATH $BOXEN_HOME/bin $PATH
 
-# Add ~/bin to path
-set -x PATH ./bin $HOME/bin $PATH
+set -x PATH $HOME/bin $PATH
 
 # Heroku toolbelt
 set -x PATH $BOXEN_HOME/heroku/bin $PATH
@@ -63,3 +62,6 @@ set -x BOOT2DOCKER_PROFILE /opt/boxen/config/docker/profile
 for line in (boot2docker shellinit 2>/dev/null)
   eval $line
 end
+
+# ./bin should take precedence
+set -x PATH ./bin $PATH
