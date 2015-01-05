@@ -10,7 +10,7 @@ let colors_name = "nk256"
 " General colors
 hi Normal           ctermfg=NONE        ctermbg=black        cterm=NONE
 hi NonText          ctermfg=black       ctermbg=black        cterm=NONE
-
+hi Visual           term=reverse        ctermbg=235
 
 hi Cursor           ctermfg=black       ctermbg=white       cterm=reverse
 hi LineNr           ctermfg=8    ctermbg=NONE        cterm=NONE
