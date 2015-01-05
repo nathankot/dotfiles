@@ -90,6 +90,8 @@ Plug 'stephpy/vim-yaml'
 Plug 'evidens/vim-twig'
 "" Rust
 Plug 'wting/rust.vim'
+"" Dockerfile
+Plug 'ekalinin/Dockerfile.vim'
 
 call plug#end()
 
