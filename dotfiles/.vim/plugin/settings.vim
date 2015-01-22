@@ -78,7 +78,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_jump = 0
 let g:syntastic_coffee_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_html_checkers = ['tidy']
 
 if filereadable(expand("/usr/local/bin/tidy"))
