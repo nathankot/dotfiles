@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'kana/vim-textobj-user'
 Plug 'argtextobj.vim'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim', { 'tag': 'v0.3.2' }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
