@@ -136,3 +136,5 @@ hi markdownCode ctermbg=234
 hi link markdownBold markdownH2
 hi link mardownCodeBlock markdownCode
 
+" Javascript
+hi jsFunctionKey ctermfg=168
