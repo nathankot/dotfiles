@@ -42,13 +42,15 @@ ehthumbs.db
 *.sublime-workspace
 .tags_sorted_by_file
 
-# Vim Settings #
+# Editor Settings #
 ################
 Session.vim
 /tags
 .cs_workspaces
 .agignore
 .tern-project
+.tern-port
+.projectile
 
 # Rails #
 #########
