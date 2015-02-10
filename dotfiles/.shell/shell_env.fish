@@ -8,7 +8,7 @@ set -x FISH_CLIPBOARD_CMD pbcopy
 # Colors
 set -x TERM screen-256color
 
-# Like to use vim?
-set -x EDITOR vim
+# Like to use ~vim~ emacs?
+set -x EDITOR emacs
 
 ###
