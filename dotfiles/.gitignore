@@ -73,3 +73,7 @@ todo.txt
 # #################
 .invrc
 .timetrap_sheet
+
+# XCODE #
+# #######
+*.xcuserdatad
