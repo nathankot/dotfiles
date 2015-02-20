@@ -77,3 +77,8 @@ todo.txt
 # XCODE #
 # #######
 *.xcuserdatad
+
+
+# Org mode #
+# ##########
+project.org
