@@ -10,6 +10,11 @@ git ls-files -cd | ctags -e \
                          --exclude=*.min.js \
                          --exclude=*.min.css \
                          --exclude=*.min.* \
+                         --exclude=vendor \
+                         --exclude=components \
+                         --exclude=component \
+                         --exclude=bower_components \
+                         --languages=-html \
                          -R \
                          -f.git/TAGS.$$
 
