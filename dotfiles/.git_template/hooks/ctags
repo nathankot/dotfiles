@@ -13,6 +13,7 @@ git ls-files -cd | ctags -e \
                          --exclude=*.min* \
                          --exclude=*.min.js \
                          --exclude=*.min.css \
+                         --exclude=*-build.js \
                          --exclude=*.gz* \
                          --exclude=*/node_modules/* \
                          --exclude=*/bower_components/* \
