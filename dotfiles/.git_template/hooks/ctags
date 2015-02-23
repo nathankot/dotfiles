@@ -6,16 +6,38 @@ trap "rm -f .git/TAGS.$$" EXIT
 # Tell ctags to go through all the git ls-files
 git ls-files -cd | ctags -e \
                          -L - \
-                         --tag-relative \
+                         -R \
+                         --fields=+l \
+                         --links=yes \
+                         --exclude=.git \
+                         --exclude=*.min* \
                          --exclude=*.min.js \
                          --exclude=*.min.css \
-                         --exclude=*.min.* \
-                         --exclude=vendor \
-                         --exclude=components \
-                         --exclude=component \
-                         --exclude=bower_components \
-                         --languages=-html \
-                         -R \
+                         --exclude=*.gz* \
+                         --exclude=*/node_modules/* \
+                         --exclude=*/bower_components/* \
+                         --exclude=*/component/* \
+                         --exclude=*/components/* \
+                         --exclude=*/tmp/* \
+                         --exclude=*/.tmp/* \
+                         --exclude=*/vendor/* \
+                         --exclude=*/dist/* \
+                         --exclude=*/build/* \
+                         --exclude=*/rtl/* \
+                         --exclude=*/.resources/* \
+                         --exclude=node_modules/* \
+                         --exclude=bower_components/* \
+                         --exclude=component/* \
+                         --exclude=components/* \
+                         --exclude=tmp/* \
+                         --exclude=.tmp/* \
+                         --exclude=vendor/* \
+                         --exclude=dist/* \
+                         --exclude=build/* \
+                         --exclude=rtl/* \
+                         --exclude=.resources/* \
+                         --languages=ruby,c,javascript,python,php,java,lisp,make,sh,sql,vim \
+                         --tag-relative \
                          -f.git/TAGS.$$
 
 mv .git/TAGS.$$ .git/TAGS
