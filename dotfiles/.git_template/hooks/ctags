@@ -4,5 +4,13 @@ PATH="/usr/local/bin:$PATH"
 trap "rm -f .git/TAGS.$$" EXIT
 
 # Tell ctags to go through all the git ls-files
-git ls-files -cd | ctags -e -L - --tag-relative -Rf.git/TAGS.$$
+git ls-files -cd | ctags -e \
+                         -L - \ # Read files from STDIN
+                         --tag-relative \
+                         --exclude=*.min.js \
+                         --exclude=*.min.css \
+                         --exclude=*.min.* \
+                         -R \
+                         -f.git/TAGS.$$
+
 mv .git/TAGS.$$ .git/TAGS
