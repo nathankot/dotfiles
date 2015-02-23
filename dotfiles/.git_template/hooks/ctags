@@ -5,7 +5,8 @@ trap "rm -f .git/TAGS.$$" EXIT
 
 # Tell ctags to go through all the git ls-files
 git ls-files -cd | ctags -e \
-                         -L - \ # Read files from STDIN
+                         # Read files from STDIN \
+                         -L - \
                          --tag-relative \
                          --exclude=*.min.js \
                          --exclude=*.min.css \
