@@ -2,7 +2,7 @@
   quotepath = false
   autocrlf = false
   preloadindex = true
-  editor = vim
+  editor = emacs
 
 [hub]
   protocol = https
