@@ -31,7 +31,7 @@ set fish_user_abbreviations $fish_user_abbreviations 'nb=newsbeuter'
 set fish_user_abbreviations $fish_user_abbreviations 'p=pass'
 
 function legedit
-  vim ~/Documents/Personal/Accounts/current.ledger
+  emacs ~/Documents/Personal/Accounts/current.ledger
 end
 
 alias git="hub"
