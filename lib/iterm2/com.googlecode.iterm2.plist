@@ -1336,9 +1336,9 @@
 	<key>HotkeyAutoHides</key>
 	<false/>
 	<key>HotkeyChar</key>
-	<integer>96</integer>
+	<integer>13</integer>
 	<key>HotkeyCode</key>
-	<integer>50</integer>
+	<integer>36</integer>
 	<key>HotkeyModifiers</key>
 	<integer>262401</integer>
 	<key>HotkeyTermAnimationDuration</key>
@@ -1358,7 +1358,7 @@
 	<key>NSColorPanelMode</key>
 	<string>6</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents</string>
+	<string>~/Development/Packages/iTerm2-Color-Schemes/schemes</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
