@@ -2,3 +2,4 @@ SocksPort 127.0.0.1:9050
 SocksPort 127.0.0.1:9049
 SocksPort 127.0.0.1:9048
 RunAsDaemon 1
+mapaddress 10.40.40.40 frxleqtzgvwkv7oz.onion
