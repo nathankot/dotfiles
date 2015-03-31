@@ -1376,7 +1376,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -1797,7 +1797,7 @@
 			<key>Normal Font</key>
 			<string>mplus-2m-light 14</string>
 			<key>Option Key Sends</key>
-			<integer>2</integer>
+			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
@@ -1998,6 +1998,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>2</integer>
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
