@@ -5,8 +5,6 @@ set -x BOXEN_DATA_DIR /opt/boxen/data
 set -x BOXEN_ENV_DIR /opt/boxen/env.d
 set -x BOXEN_LOG_DIR /opt/boxen/log
 set -x BOXEN_SOCKET_DIR /opt/boxen/data/project-sockets
-set -x BOXEN_SRC_DIR "/Users/$DOT_USER/Development"
-set -x BOXEN_GITHUB_LOGIN $GITHUB_USER
 set -x HOMEBREW_ROOT /opt/boxen/homebrew
 set -x HOMEBREW_CACHE /opt/boxen/cache/homebrew
 set -x CFLAGS "-I$HOMEBREW_ROOT/include"
