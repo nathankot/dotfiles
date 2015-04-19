@@ -3,7 +3,7 @@
   quotepath = false
   autocrlf = false
   preloadindex = true
-  editor = emacs
+  editor = emacsclient -t
 
 [user]
   name = Nathan Kot

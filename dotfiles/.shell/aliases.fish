@@ -1,5 +1,6 @@
 set fish_user_abbreviations $fish_user_abbreviations 'mux=tmuxinator'
 set fish_user_abbreviations $fish_user_abbreviations 'l=ls'
+set fish_user_abbreviations $fish_user_abbreviations 'emacs=emacsclient -t'
 
 set fish_user_abbreviations $fish_user_abbreviations 'g=git'
 set fish_user_abbreviations $fish_user_abbreviations 'gs=git status'
@@ -21,7 +22,7 @@ set fish_user_abbreviations $fish_user_abbreviations 'td=timetrap display'
 set fish_user_abbreviations $fish_user_abbreviations 'tn=timetrap now'
 
 function legedit
-  emacs ~/Documents/Personal/Accounts/current.ledger
+  emacsclient -t ~/Documents/Personal/Accounts/current.ledger
 end
 
 alias git="hub"
