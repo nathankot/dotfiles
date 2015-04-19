@@ -2,8 +2,3 @@
 function cdf # short for `cdfinder`
   cd (osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')
 end
-
-function dockerclean
-  docker rm (docker ps -aq)
-  docker rmi (docker images -q --filter dangling=true)
-end
