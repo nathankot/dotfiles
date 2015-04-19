@@ -1,10 +1,3 @@
-# **Don't forget to update paths.sh for VIM**
-
-set -x GITHUB_USER $USER
-
-# My home folder is diff to my github user
-if test $USER = 'nathan'; set -x GITHUB_USER nathankot; end
-
 set -x BOXEN_HOME /opt/boxen
 set -x BOXEN_BIN_DIR /opt/boxen/bin
 set -x BOXEN_CONFIG_DIR /opt/boxen/config

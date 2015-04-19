@@ -1,8 +1,15 @@
+# Github
+
+set -x GITHUB_USER $USER
+# My home folder is diff to my github user
+if test $USER = 'nathan'; set -x GITHUB_USER nathankot; end
+set -x BOXEN_GITHUB_LOGIN $GITHUB_USER
+
 ### Browser testing
 
 set -x CHROME_BIN /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
-### Ledger
+# Ledger
 
 set -x LEDGER ~/Documents/Personal/Accounts/current.ledger
 
