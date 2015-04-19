@@ -6,6 +6,7 @@ set -x BOXEN_BIN_DIR /opt/boxen/bin
 set -x BOXEN_CONFIG_DIR /opt/boxen/config
 set -x BOXEN_DATA_DIR /opt/boxen/data
 set -x BOXEN_ENV_DIR /opt/boxen/env.d
+set -x BOXEN_SRC_DIR $HOME/Development/Workflow
 set -x BOXEN_LOG_DIR /opt/boxen/log
 set -x BOXEN_SOCKET_DIR /opt/boxen/data/project-sockets
 set -x HOMEBREW_ROOT /opt/boxen/homebrew

@@ -4,6 +4,8 @@ if [ -f ~/opt/boxen/env.sh ]; then
   source /opt/boxen/env.sh
 fi
 
+# Use alernative place to store boxen source
+export BOXEN_SRC_DIR=$HOME/Development/Workflow
 # virtualenv
 export PATH="./env/bin:$PATH"
 # haskell
