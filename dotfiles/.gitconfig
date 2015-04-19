@@ -1,8 +1,20 @@
 [core]
+  excludesfile = /Users/nathan/.gitignore
   quotepath = false
   autocrlf = false
   preloadindex = true
   editor = emacs
+
+[user]
+  name = Nathan Kot
+  email = me@nathankot.com
+
+[github]
+  user = nathankot
+
+[credential]
+  helper = /opt/boxen/bin/boxen-git-credential
+  useHttpPath = true
 
 [hub]
   protocol = https
@@ -38,7 +50,6 @@
 [alias]
   accept-ours = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --ours -- $files; git add -u $files; }; f"
   accept-theirs = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --theirs -- $files; git add -u $files; }; f"
-  todo = grep --heading --break --ignore-case -e '@todo *'
   issues = !ghi
   browse = !hub browse
   hub = !hub
@@ -53,3 +64,7 @@
 
 [init]
   templatedir = ~/.git_template
+
+[pack]
+	windowMemory = 10m
+	packSizeLimit = 20m
