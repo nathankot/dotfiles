@@ -5,7 +5,7 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
 	<key>AllowClipboardAccess</key>
-	<true/>
+	<false/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -1305,6 +1305,8 @@
 	<true/>
 	<key>DisableToolbar</key>
 	<true/>
+	<key>DockIconTogglesWindow</key>
+	<true/>
 	<key>EnableRendezvous</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
@@ -2000,6 +2002,8 @@
 	<false/>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>2</integer>
+	<key>PinchToChangeFontSizeDisabled</key>
+	<true/>
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
@@ -2085,6 +2089,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20141212-nightly</string>
+	<string>2.9.20150417-nightly</string>
 </dict>
 </plist>
