@@ -2,6 +2,8 @@
 
 cd "$(dirname "${BASH_SOURCE}")"
 
+# Things that are updated from time to time
+# programatically.
 if [ "$1" == "update" ]; then
   rsync -av ~/.gitconfig ./dotfiles/
   rsync -av ~/.timetrap.yml ./dotfiles/
@@ -11,10 +13,4 @@ fi
 
 rsync --exclude ".git/" \
       --exclude ".DS_Store" \
-      --exclude ".gitconfig" \
       -av --no-perms ./dotfiles/ ~
-
-rsync --exclude ".git/" \
-      --exclude ".DS_Store" \
-      -av --no-perms --ignore-existing ./dotfiles/ ~
-
