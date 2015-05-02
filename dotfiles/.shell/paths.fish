@@ -66,3 +66,4 @@ set -x PATH ./bin $PATH
 set -x CHROME_BIN /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 # Ledger
 set -x LEDGER ~/Documents/Personal/Accounts/current.ledger
+set -x LEDGER_PRICE_DB ~/Documents/Personal/Accounts/prices.db
