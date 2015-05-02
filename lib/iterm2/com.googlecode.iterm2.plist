@@ -1367,6 +1367,8 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
+	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
 		<data>
@@ -1769,6 +1771,13 @@
 					<key>Text</key>
 					<string>0x01 0x71</string>
 				</dict>
+				<key>0x79-0x80000</key>
+				<dict>
+					<key>Action</key>
+					<integer>12</integer>
+					<key>Text</key>
+					<string>¥</string>
+				</dict>
 				<key>0x7a-0x80000</key>
 				<dict>
 					<key>Action</key>
@@ -2089,6 +2098,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20150417-nightly</string>
+	<string>2.9.20150430-nightly</string>
 </dict>
 </plist>
