@@ -1294,7 +1294,7 @@
 	<key>Default Arrangement Name</key>
 	<string>Null</string>
 	<key>Default Bookmark Guid</key>
-	<string>11EC991D-71D2-4FD7-ADC2-37E3B833CF65</string>
+	<string>6988BDD3-BD49-4D4B-8EE6-5016C1EC7926</string>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
@@ -2673,6 +2673,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20150508-nightly</string>
+	<string>2.9.20150519-nightly</string>
 </dict>
 </plist>
