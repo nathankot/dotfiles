@@ -1394,7 +1394,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>440 429 201 309 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1213 936 796 475 0 0 2560 1417 </string>
+	<string>1213 942 796 475 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>0 1288 400 129 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -1402,7 +1402,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 594 592 584 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 530 850 868 0 0 2560 1417 </string>
+	<string>0 531 850 867 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 572 850 844 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1952,7 +1952,7 @@
 				</dict>
 			</array>
 			<key>Space</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
