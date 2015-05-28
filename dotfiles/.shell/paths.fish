@@ -57,6 +57,8 @@ set -x BOXEN_REDIS_URL "redis://$BOXEN_REDIS_HOST:$BOXEN_REDIS_PORT/"
 set -x PATH ./env/bin $PATH
 # Haskell
 set -x PATH ~/Library/Haskell/bin $PATH
+set -x PATH ~/Development/Packages/ghc-mod/dist/build/ghc-mod $PATH
+set -x PATH ~/Development/Packages/ghc-mod/dist/build/ghc-modi $PATH
 # Home bin
 set -x PATH $HOME/bin $PATH
 # ./bin should take precedence
