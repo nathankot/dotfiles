@@ -1792,6 +1792,13 @@
 					<key>Text</key>
 					<string>0x01 0x7C</string>
 				</dict>
+				<key>0xd-0x20000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>0x0A</string>
+				</dict>
 			</dict>
 			<key>Log Directory</key>
 			<string></string>
@@ -1802,7 +1809,7 @@
 			<key>Name</key>
 			<string>Tileable</string>
 			<key>Non Ascii Font</key>
-			<string>mplus-2m-light 14</string>
+			<string>mplus-2m-thin 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -2673,6 +2680,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20150519-nightly</string>
+	<string>2.9.20150601-nightly</string>
 </dict>
 </plist>
