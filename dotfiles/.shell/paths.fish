@@ -37,8 +37,6 @@ set -x RBENV_ROOT /opt/boxen/rbenv
 set -x PATH $RBENV_ROOT/shims $RBENV_ROOT/bin $PATH
 rbenv rehash >/dev/null ^&1
 # Docker
-set -x BOOT2DOCKER_DIR /opt/boxen/data/docker
-set -x BOOT2DOCKER_PROFILE /opt/boxen/config/docker/profile
 for line in (boot2docker shellinit 2>/dev/null)
   eval $line
 end
