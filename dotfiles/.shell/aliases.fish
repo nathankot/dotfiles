@@ -1,6 +1,6 @@
 set fish_user_abbreviations $fish_user_abbreviations 'mux=tmuxinator'
 set fish_user_abbreviations $fish_user_abbreviations 'l=ls'
-set fish_user_abbreviations $fish_user_abbreviations 'emacs=emacsclient -t'
+set fish_user_abbreviations $fish_user_abbreviations 'emacs=emacsclient -a "" -t'
 
 set fish_user_abbreviations $fish_user_abbreviations 'g=git'
 set fish_user_abbreviations $fish_user_abbreviations 'gs=git status'
