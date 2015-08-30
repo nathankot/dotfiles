@@ -1,14 +1,5 @@
 root = true
 
-[Makefile, *.mk]
-indent_style = tab
-
-[*.md, *.markdown]
-max_line_length = 80
-
-[*.ledger]
-indent_size = 4
-
 [*]
 indent_style = space
 indent_size = 2
@@ -16,3 +7,12 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 charset = utf-8
 max_line_length = 120
+
+[{Makefile, *.mk}]
+indent_style = tab
+
+[{*.md, *.markdown}]
+max_line_length = 80
+
+[*.ledger]
+indent_size = 4
