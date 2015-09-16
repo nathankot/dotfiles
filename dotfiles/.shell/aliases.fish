@@ -23,7 +23,7 @@ set fish_user_abbreviations $fish_user_abbreviations 'td=timetrap display'
 set fish_user_abbreviations $fish_user_abbreviations 'tn=timetrap now'
 
 function legedit
-  emacsclient -t ~/Documents/Personal/Accounts/current.ledger
+  emacsclient -a "" -t ~/Documents/Personal/Accounts/current.ledger
 end
 
 alias git="hub"
