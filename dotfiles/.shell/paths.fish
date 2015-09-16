@@ -54,6 +54,7 @@ set -x BOXEN_REDIS_URL "redis://$BOXEN_REDIS_HOST:$BOXEN_REDIS_PORT/"
 # Virtualenv
 set -x PATH ./env/bin $PATH
 # Haskell
+set -x PATH ./.cabal-sandbox/bin $PATH
 set -x PATH ~/Library/Haskell/bin $PATH
 # Home bin
 set -x PATH $HOME/bin $PATH
