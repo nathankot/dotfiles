@@ -1,1 +1,0 @@
-setlocal omnifunc=rubycomplete#Complete

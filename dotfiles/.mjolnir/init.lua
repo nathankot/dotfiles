@@ -16,22 +16,3 @@ hotkey.bind(mash, "c", function() tiling.cyclelayout() end)
 hotkey.bind(mash, "j", function() tiling.cycle(1) end)
 hotkey.bind(mash, "k", function() tiling.cycle(-1) end)
 hotkey.bind(mash, "space", function() tiling.promote() end)
-
-hotkey.bind(musicmash, "space", spotify.play)
-hotkey.bind(musicmash, "h", spotify.previous)
-hotkey.bind(musicmash, "l", spotify.next)
-
--- Easily switch network location
-
-function secure()
-  os.execute('networksetup -switchtolocation Secure')
-  alert.show('Using SECURE Connection', 1)
-end
-
-function insecure()
-  os.execute('networksetup -switchtolocation Insecure')
-  alert.show('Using INSECURE Connection', 1)
-end
-
-hotkey.bind(mash, "s", function() secure() end)
-hotkey.bind(mash, "i", function() insecure() end)

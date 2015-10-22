@@ -1395,20 +1395,22 @@
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>440 429 201 309 0 0 1440 877 </string>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>2049 110 445 414 0 0 2560 1417 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1213 942 796 475 0 0 2560 1417 </string>
+	<string>739 721 606 456 0 0 1920 1177 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>0 1288 400 129 0 0 2560 1417 </string>
+	<string>726 626 400 129 0 0 1920 1177 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 769 620 392 0 0 2560 1417 </string>
+	<string>650 607 620 392 0 0 1920 1200 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
-	<string>155 594 592 584 0 0 1920 1178 </string>
+	<string>230 833 592 584 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 531 850 867 0 0 2560 1417 </string>
+	<string>0 0 1680 1050 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 572 850 844 0 0 2560 1417 </string>
+	<string>0 287 850 867 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>395 -166 850 845 0 0 2560 1417 </string>
+	<string>247 4 850 867 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2099,7 +2101,7 @@
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1413972224</real>
+	<real>1439137536</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
