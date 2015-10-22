@@ -1,5 +1,4 @@
 set fish_user_abbreviations $fish_user_abbreviations 'l=ls'
-
 set fish_user_abbreviations $fish_user_abbreviations 'g=git'
 set fish_user_abbreviations $fish_user_abbreviations 'gs=git status'
 set fish_user_abbreviations $fish_user_abbreviations 'gd=git diff'
@@ -14,15 +13,15 @@ set fish_user_abbreviations $fish_user_abbreviations 'gaa=git add -A'
 set fish_user_abbreviations $fish_user_abbreviations 'gp=git push'
 set fish_user_abbreviations $fish_user_abbreviations 'gim=git issues milestone'
 
-if (command -v emacs)
+if command -v emacs > /dev/null
   set fish_user_abbreviations $fish_user_abbreviations 'emacs=emacsclient -a "" -t'
 end
 
-if (command -v tmuxinator)
+if command -v tmuxinator > /dev/null
   set fish_user_abbreviations $fish_user_abbreviations 'mux=tmuxinator'
 end
 
-if (command -v timetrap)
+if command -v timetrap > /dev/null
   set fish_user_abbreviations $fish_user_abbreviations 'ts=timetrap sheet'
   set fish_user_abbreviations $fish_user_abbreviations 'ti=timetrap in'
   set fish_user_abbreviations $fish_user_abbreviations 'to=timetrap out'
