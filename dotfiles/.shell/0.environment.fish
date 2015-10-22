@@ -70,9 +70,8 @@ if command -v virtualenv > /dev/null
 end
 
 # Haskell
-if command -v cabal > /dev/null
-  set -x PATH ./.cabal-sandbox/bin $PATH
-  # set -x PATH ~/Library/Haskell/bin $PATH
+if command -v stack > /dev/null
+  set -x PATH $HOME/.local/bin $PATH
 end
 
 # Home bin
