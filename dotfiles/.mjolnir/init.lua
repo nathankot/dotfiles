@@ -2,7 +2,6 @@ package.path = package.path .. ';/opt/boxen/homebrew/share/lua/5.2/?.lua'
 package.cpath = package.cpath .. ';/opt/boxen/homebrew/lib/lua/5.2/?.so'
 
 local hotkey = require "mjolnir.hotkey"
-local spotify = require "mjolnir.lb.spotify"
 local tiling = require "mjolnir.tiling"
 local alert = require "mjolnir.alert"
 
