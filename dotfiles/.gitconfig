@@ -24,7 +24,7 @@
   date = relative
 
 [format]
-  pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
+  pretty = format:%C(yellow)%h %<|(22) %Cgreen%aN %>>(22) %Cblue%ad %Cred%d %Creset%s
 
 [push]
   default = current
