@@ -21,9 +21,10 @@
 [log]
   abbrevCommit = true
   decorate = true
+  date = relative
 
 [format]
-  pretty = oneline
+  pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
 
 [push]
   default = current
