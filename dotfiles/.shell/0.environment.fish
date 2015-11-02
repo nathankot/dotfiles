@@ -35,7 +35,7 @@ if command -v heroku > /dev/null
 end
 
 # PHP
-if command -v phpenv > /dev/null
+if test -d ~/.phpenv
   set -x PHPENV_ROOT ~/.phpenv
   set -x PATH ~/.phpenv/shims ~/.phpenv/bin ~/.phpenv/plugins/php-build/bin $PATH
   phpenv rehash >/dev/null ^&1
