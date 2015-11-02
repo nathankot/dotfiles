@@ -36,8 +36,8 @@ end
 
 # PHP
 if command -v phpenv > /dev/null
-  set -x PHPENV_ROOT $BOXEN_HOME/phpenv
-  set -x PATH $BOXEN_HOME/phpenv/shims $BOXEN_HOME/phpenv/bin $BOXEN_HOME/phpenv/plugins/php-build/bin $PATH
+  set -x PHPENV_ROOT ~/.phpenv
+  set -x PATH ~/.phpenv/shims ~/.phpenv/bin ~/.phpenv/plugins/php-build/bin $PATH
   phpenv rehash >/dev/null ^&1
 end
 
