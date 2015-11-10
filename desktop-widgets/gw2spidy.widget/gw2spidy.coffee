@@ -32,9 +32,8 @@ update: (o, el) ->
      """).appendTo($body)
 style: """
   margin = 24px
-  bottom margin
-  left margin
-  width: 100%
+  top margin
+  right margin
   color: white;
   font-family: "SF UI Display"
   font-size: 16px
