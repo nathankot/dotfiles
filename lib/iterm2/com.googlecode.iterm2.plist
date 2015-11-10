@@ -1386,7 +1386,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>307</string>
+		<string>322</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -1701,13 +1701,6 @@
 			</array>
 			<key>Keyboard Map</key>
 			<dict>
-				<key>0x9-0x80000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x01</string>
-				</dict>
 				<key>0xd-0x20000</key>
 				<dict>
 					<key>Action</key>
@@ -1731,7 +1724,7 @@
 			<key>Normal Font</key>
 			<string>mplus-2m-light 14</string>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
@@ -1910,6 +1903,8 @@
 	</array>
 	<key>NoSyncLastTipTime</key>
 	<real>467464227.85938299</real>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>467377947.32148898</real>
 	<key>OnlyWhenMoreTabs</key>
@@ -1921,7 +1916,7 @@
 	<key>OpenNoWindowsAtStartup</key>
 	<true/>
 	<key>OpenTmuxWindowsIn</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
 	<key>PassOnControlClick</key>
