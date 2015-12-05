@@ -1320,7 +1320,15 @@
 	<key>FsTabDelay</key>
 	<real>1</real>
 	<key>GlobalKeyMap</key>
-	<dict/>
+	<dict>
+		<key>0xd-0x20000</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Text</key>
+			<string>0x1B 0x0D</string>
+		</dict>
+	</dict>
 	<key>HiddenAFRStrokeThickness</key>
 	<real>0.0</real>
 	<key>HiddenAdvancedFontRendering</key>
@@ -1700,15 +1708,7 @@
 				<string>telnet</string>
 			</array>
 			<key>Keyboard Map</key>
-			<dict>
-				<key>0xd-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x0A</string>
-				</dict>
-			</dict>
+			<dict/>
 			<key>Log Directory</key>
 			<string></string>
 			<key>Minimum Contrast</key>
