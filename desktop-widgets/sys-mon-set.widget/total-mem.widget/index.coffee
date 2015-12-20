@@ -6,8 +6,8 @@ command: "vm_stat | awk 'NR==2 {print \"Free,\"($3 / 256) / 1024} NR==3 {print \
 refreshFrequency: 1000
 
 style: """
-  bottom: 0px
-  left: 300px
+  bottom: 12px
+  left: 312px
   color: #fff
   font-family: Helvetica Neue
 
