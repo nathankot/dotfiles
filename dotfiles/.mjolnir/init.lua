@@ -8,7 +8,7 @@ local alert = require "mjolnir.alert"
 local mash = {"ctrl", "cmd"}
 local musicmash = {"ctrl", "alt"}
 
-tiling.set('layouts', { 'fullscreen', 'main-vertical', 'gp-vertical' })
+tiling.set('layouts', { 'fullscreen', 'main-vertical' })
 
 hotkey.bind(mash, "r", function() mjolnir.reload(); mjolnir.openconsole() end)
 hotkey.bind(mash, "c", function() tiling.cyclelayout() end)
