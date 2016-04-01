@@ -33,3 +33,6 @@ todo.txt
 .invrc
 *.xcuserdatad
 bookmarks
+\#*\#
+.\#*
+auto-save-list
