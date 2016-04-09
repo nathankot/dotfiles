@@ -8,7 +8,13 @@ insert_final_newline = true
 charset = utf-8
 max_line_length = 120
 
-[{Makefile, *.mk}]
+[Makefile]
+indent_style = tab
+
+[*.mk]
+indent_style = tab
+
+[Makefile.*]
 indent_style = tab
 
 [{*.md, *.markdown}]
