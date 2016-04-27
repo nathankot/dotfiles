@@ -15,6 +15,12 @@ if command -v stack > /dev/null; then
   export PATH="$HOME/.local/bin:$PATH"
 fi
 
+# go
+if command -v go > /dev/null; then
+  export GOPATH="$HOME/.go"
+  export PATH="$GOPATH/bin:$PATH"
+fi
+
 # virtualenv
 if command -v virtualenv > /dev/null; then
   export PATH="./env/bin:$PATH"

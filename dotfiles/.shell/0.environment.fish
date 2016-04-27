@@ -74,6 +74,12 @@ if command -v stack > /dev/null
   set -x PATH $HOME/.local/bin $PATH
 end
 
+# GO
+if command -v go > /dev/null
+  set -x GOPATH $HOME/.go
+  set -x PATH $GOPATH/bin $PATH
+end
+
 # Home bin
 set -x PATH $HOME/bin $PATH
 # ./bin should take precedence
