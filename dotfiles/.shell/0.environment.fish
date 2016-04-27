@@ -76,7 +76,7 @@ end
 
 # GO
 if command -v go > /dev/null
-  set -x GOPATH $HOME/.go
+  set -x GOPATH $HOME/Development
   set -x PATH $GOPATH/bin $PATH
 end
 

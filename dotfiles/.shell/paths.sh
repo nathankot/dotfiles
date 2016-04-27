@@ -17,7 +17,7 @@ fi
 
 # go
 if command -v go > /dev/null; then
-  export GOPATH="$HOME/.go"
+  export GOPATH="$HOME/Development"
   export PATH="$GOPATH/bin:$PATH"
 fi
 
