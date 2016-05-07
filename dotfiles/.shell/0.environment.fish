@@ -82,6 +82,7 @@ end
 
 # Home bin
 set -x PATH $HOME/bin $PATH
+set -x PATH $HOME/.bin $PATH
 # ./bin should take precedence
 set -x PATH ./.bin $PATH
 set -x PATH ./bin $PATH
