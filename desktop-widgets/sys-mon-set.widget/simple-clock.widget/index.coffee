@@ -11,13 +11,13 @@ render: (output) -> """
 
 style: """
   color: #FFFFFF
-  font-family: Helvetica Neue
-  left: 12px
-  bottom: 52px
+  font-family: "M+ 1m"
+  left: 16px
+  bottom: 64px
 
   h1
-    font-size: 5em
-    font-weight: 100
+    font-weight: 400
+    font-size: 2em
     margin: 0
     padding: 0
   """

@@ -41,8 +41,9 @@ style: """
   top: margin
   right: margin
   color: color
-  font-family: "SF UI Text"
+  font-family: "M+ 1m"
   font-size: fontSize
+  font-weight: 400
 
   table {
     border-collapse: collapse;
@@ -50,7 +51,6 @@ style: """
   }
 
   td {
-    font-weight: 300
     padding: 0.375em 2em
     min-width: 120px;
     margin: 0;

@@ -1,20 +1,20 @@
 command: "ps axro \"pid, %cpu, ucomm\" | awk 'FNR>1' | head -n 3 | awk '{ printf \"%5.1f%%,%s,%s\\n\", $2, $3, $1}'"
 
-refreshFrequency: 2000
+refreshFrequency: 6000
 
 style: """
   bottom: 12px
   left: 12px
   color: #fff
-  font-family: Helvetica Neue
+  font-family: "M+ 1m"
 
   table
     border-collapse: collapse
     table-layout: fixed
 
   td
-    font-size: 24px
-    font-weight: 100
+    font-size: 16px
+    font-weight: normal
     width: 100px
     max-width: 100px
     overflow: ellipsis
@@ -27,7 +27,7 @@ style: """
   p
     padding: 0
     margin: 0
-    font-size: 11px
+    font-size: 13px
     font-weight: normal
     max-width: 100%
     color: #ddd
@@ -66,4 +66,3 @@ update: (output, domEl) ->
   for process, i in processes
     args = process.split(',')
     table.find(".col#{i+1}").html renderProcess(args...)
-
