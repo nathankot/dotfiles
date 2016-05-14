@@ -1,14 +1,11 @@
 command: """
-  curl -s 'http://finance.yahoo.com/webservice/v1/symbols/NZDUSD=X,BTCUSD=X,USDJPY=X,NZDJPY=X/quote?format=json' | \
-  ./bin/jq '[.list.resources[].resource.fields | { name: .symbol, price: .price, type: .type }]'
+  bash ./fx.widget/fx.bash
 """,
 
 refreshFrequency: '1h',
 
 render: () -> """
   <table>
-    <thead>
-    </thead>
     <tbody>
     </tbody>
   </table>
@@ -21,12 +18,12 @@ update: (o, el) ->
     $body = $el.find('tbody')
     $body.empty()
     for item in results
-      if item.type == 'currency'
-        item.name = item.name.replace(/([A-Z]{3})([A-Z]{3}).*/, '$1 $2')
+      item.timeframe = '' if item.history == ''
       $("""
         <tr>
+          <td><span class="timeframe">#{item.timeframe}</span> #{item.history}</td>
           <td>#{item.price}</td>
-          <td>#{item.name}</td>
+          <td>#{item.symbol}</td>
         </tr>
       """).appendTo($body)
   catch error
@@ -52,19 +49,25 @@ style: """
 
   td {
     padding: 0.375em 2em
-    min-width: 120px;
     margin: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.1)
+  }
+
+  td:first-of-type {
+    border-left: 0;
   }
 
   td:last-of-type {
-    border-left: 1px solid rgba(255, 255, 255, 0.1)
     color: rgba(255, 255, 255, 0.7)
     text-align: left
-    min-width: 0
     padding-right: 0;
   }
 
   td.error {
     text-align center
+  }
+
+  .timeframe {
+    font-size: 12px;
   }
 """
