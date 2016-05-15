@@ -1321,6 +1321,13 @@
 	<real>1</real>
 	<key>GlobalKeyMap</key>
 	<dict>
+		<key>0x2e-0x80000</key>
+		<dict>
+			<key>Action</key>
+			<integer>12</integer>
+			<key>Text</key>
+			<string>•</string>
+		</dict>
 		<key>0xd-0x20000</key>
 		<dict>
 			<key>Action</key>
@@ -1372,7 +1379,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.dotfiles/lib/iterm2</string>
+	<string>~/.dotfiles/dotfiles/.iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 459}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -1394,7 +1401,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -1406,9 +1413,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 400 606 456 0 0 2560 1417 </string>
+	<string>269 968 606 456 0 0 2560 1440 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>530 494 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 550 850 867 0 0 2560 1417 </string>
+	<string>0 0 2560 1440 0 0 2560 1440 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>310 5 850 867 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1903,6 +1914,10 @@
 	</array>
 	<key>NoSyncLastTipTime</key>
 	<real>467464227.85938299</real>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -1930,7 +1945,7 @@
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/nathan/.dotfiles/lib/iterm2</string>
+	<string>/Users/nathan/.dotfiles/dotfiles/.iterm2</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1951,10 +1966,14 @@
 	<string>https://iterm2.com/appcasts/nightly.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
+	<key>SULastCheckTime</key>
+	<date>2015-11-10T13:57:35Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
 	<false/>
+	<key>Secure Input</key>
+	<true/>
 	<key>Show Toolbelt</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2012,7 +2031,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20151023-nightly</string>
+	<string>2.9.20151110-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
