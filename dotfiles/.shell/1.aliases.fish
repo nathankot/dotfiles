@@ -12,10 +12,6 @@ abbr --add ga git add
 abbr --add gaa git add -A
 abbr --add gp git push
 
-if command -v emacs > /dev/null
-  abbr --add emacs emacsclient -a "" -t
-end
-
 if command -v tmuxinator > /dev/null
   abbr --add mux tmuxinator
 end
