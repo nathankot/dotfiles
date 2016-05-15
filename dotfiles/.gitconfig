@@ -55,9 +55,6 @@
   hub = !hub
   ctags = !.git/hooks/ctags
 
-[init]
-  templatedir = ~/.git_template
-
 [pack]
 	windowMemory = 10m
 	packSizeLimit = 20m
