@@ -20,8 +20,8 @@ set -x PATH $BOXEN_HOME/bin $PATH
 
 # Emacs
 if command -v emacs > /dev/null
-  set -x EDITOR "emacsclient -a '' -t"
-  set -x ALTERNATIVE_EDITOR emacs # fallback to vanilla
+  set -x EDITOR emacs
+  set -x ALTERNATIVE_EDITOR vim
 end
 
 # Ledger

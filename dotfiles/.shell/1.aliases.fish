@@ -25,7 +25,7 @@ if command -v timetrap > /dev/null
 end
 
 function legedit
-  emacsclient -a "" -t ~/Documents/Personal/Accounts/current.ledger
+  emacs ~/Documents/Personal/Accounts/current.ledger
 end
 
 alias git hub
