@@ -1,5 +1,5 @@
 command: """
-  bash ./fx.widget/fx.bash
+  bash ./fx.widget/fx.bash 2>&1
 """,
 
 refreshFrequency: '1h',
