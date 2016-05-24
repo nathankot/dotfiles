@@ -21,7 +21,7 @@ set -x PATH $BOXEN_HOME/bin $PATH
 # Emacs
 if command -v emacs > /dev/null
   set -x EDITOR emacs
-  set -x GIT_EDITOR 'emacsclient -a ""'
+  set -x GIT_EDITOR 'emacsclient --socket-name="emacsgit" -a ""'
   set -x ALTERNATIVE_EDITOR vim
 end
 
