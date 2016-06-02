@@ -1,5 +1,10 @@
-package.path = package.path .. ';/opt/boxen/homebrew/share/lua/5.2/?.lua'
-package.cpath = package.cpath .. ';/opt/boxen/homebrew/lib/lua/5.2/?.so'
+require "os"
+require "string"
+
+local rocksfolder = string.format("%s/.luarocks", os.getenv("HOME"))
+package.path  = package.path  .. string.format(";%s/share/lua/5.2/?.lua", rocksfolder)
+package.path  = package.path  .. string.format(";%s/share/lua/5.2/?/init.lua", rocksfolder)
+package.cpath = package.cpath .. string.format(";%s/lib/lua/5.2/?.so", rocksfolder)
 
 local hotkey = require "mjolnir.hotkey"
 local tiling = require "mjolnir.tiling"
