@@ -8,10 +8,15 @@ set -x GITHUB_USER nathankot
 #############################################################
 set -x BOXEN_HOME /opt/boxen
 set -x BOXEN_GITHUB_LOGIN $GITHUB_USER
-set -x HOMEBREW_ROOT /opt/boxen/homebrew
-set -x HOMEBREW_CACHE /opt/boxen/cache/homebrew
 set -x CFLAGS "-I$HOMEBREW_ROOT/include"
 set -x LDFLAGS "-L$HOMEBREW_ROOT/lib"
+
+if test -d $BOXEN_HOME/homebrew
+  set -x HOMEBREW_ROOT $BOXEN_HOME/homebrew
+  set -x HOMEBREW_CACHE $BOXEN_HOME/cache/homebrew
+else
+  set -x HOMEBREW_ROOT /usr/local
+end
 
 # Add homebrew'd stuff to the path.
 set -x PATH $BOXEN_HOME/homebrew/bin $BOXEN_HOME/homebrew/sbin $PATH
