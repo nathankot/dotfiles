@@ -1,5 +1,5 @@
 command: """
-  bash ./flights.widget/flights.bash
+  bash ./flights.widget/flights.bash 2>&1
 """,
 
 refreshFrequency: '4h',
