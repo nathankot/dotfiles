@@ -1,8 +1,8 @@
 command: """
-  bash ./flights.widget/flights.bash ./flights.json
+  bash ./flights.widget/flights.bash
 """,
 
-refreshFrequency: '1h',
+refreshFrequency: '4h',
 
 render: () -> """
   <table>
@@ -13,6 +13,7 @@ render: () -> """
 
 update: (o, el) ->
   try
+    console.log(o)
     results = JSON.parse(o)
     $el = $(el)
     $body = $el.find('tbody')

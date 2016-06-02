@@ -1,2 +1,2 @@
 keys.sh
-flights.json
+flight-requests/*.json
