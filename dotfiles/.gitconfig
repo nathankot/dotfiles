@@ -1,4 +1,5 @@
 [core]
+  excludesfile = ~/.gitignore
   quotepath = false
   autocrlf = false
   preloadindex = true
