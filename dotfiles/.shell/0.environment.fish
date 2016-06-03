@@ -56,9 +56,10 @@ if command -v nodenv > /dev/null
 end
 
 # RUBY
-if command -v rbenv > /dev/null
-  set -x PATH $BOXEN_HOME/ruby-build/bin $PATH
-  set -x RBENV_ROOT /opt/boxen/rbenv
+if test -d ~/.rbenv > /dev/null
+  set -x RBENV_ROOT $HOME/.rbenv
+  set -x RUBY_BUILD_ROOT $HOME/.ruby-build
+  set -x PATH $RUBY_BUILD_ROOT/bin $PATH
   set -x PATH $RBENV_ROOT/shims $RBENV_ROOT/bin $PATH
   rbenv rehash >/dev/null ^&1
 end
