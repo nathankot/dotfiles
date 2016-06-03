@@ -1,5 +1,4 @@
 [core]
-  excludesfile = /Users/nathan/.gitignore
   quotepath = false
   autocrlf = false
   preloadindex = true
