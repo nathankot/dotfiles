@@ -11,8 +11,8 @@ set -x BOXEN_GITHUB_LOGIN $GITHUB_USER
 set -x CFLAGS "-I$HOMEBREW_ROOT/include"
 set -x LDFLAGS "-L$HOMEBREW_ROOT/lib"
 
-if test -d $HOMEBREW_ROOT
-  set -x HOMEBREW_ROOT $HOMEBREW_ROOT
+if test -d $BOXEN_HOME/homebrew > /dev/null
+  set -x HOMEBREW_ROOT $BOXEN_HOME/homebrew
   set -x HOMEBREW_CACHE $BOXEN_HOME/cache/homebrew
 else
   set -x HOMEBREW_ROOT /usr/local
