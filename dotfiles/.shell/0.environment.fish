@@ -11,16 +11,16 @@ set -x BOXEN_GITHUB_LOGIN $GITHUB_USER
 set -x CFLAGS "-I$HOMEBREW_ROOT/include"
 set -x LDFLAGS "-L$HOMEBREW_ROOT/lib"
 
-if test -d $BOXEN_HOME/homebrew
-  set -x HOMEBREW_ROOT $BOXEN_HOME/homebrew
+if test -d $HOMEBREW_ROOT
+  set -x HOMEBREW_ROOT $HOMEBREW_ROOT
   set -x HOMEBREW_CACHE $BOXEN_HOME/cache/homebrew
 else
   set -x HOMEBREW_ROOT /usr/local
 end
 
 # Add homebrew'd stuff to the path.
-set -x PATH $BOXEN_HOME/homebrew/bin $BOXEN_HOME/homebrew/sbin $PATH
-set -x MANPATH $BOXEN_HOME/homebrew/share/man $MANPATH
+set -x PATH $HOMEBREW_ROOT/bin $BOXEN_HOME/homebrew/sbin $PATH
+set -x MANPATH $HOMEBREW_ROOT/share/man $MANPATH
 set -x PATH $BOXEN_HOME/bin $PATH
 
 # Emacs
