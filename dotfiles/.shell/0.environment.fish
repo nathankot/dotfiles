@@ -46,7 +46,6 @@ end
 if test -d ~/.rbenv > /dev/null
   set -x RBENV_ROOT $HOME/.rbenv
   set -x RUBY_BUILD_ROOT $HOME/.ruby-build
-  set -x PATH $RUBY_BUILD_ROOT/bin $PATH
   set -x PATH $RBENV_ROOT/shims $RBENV_ROOT/bin $PATH
   rbenv rehash >/dev/null ^&1
 end
