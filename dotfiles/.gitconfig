@@ -21,6 +21,7 @@
 [hub]
   protocol = https
   host = github.plaid.com
+  host = github.com
 
 [log]
   abbrevCommit = true
