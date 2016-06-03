@@ -40,13 +40,6 @@ if command -v heroku > /dev/null
   set -x PATH $BOXEN_HOME/heroku/bin $PATH
 end
 
-# PHP
-if test -d ~/.phpenv
-  set -x PHPENV_ROOT ~/.phpenv
-  set -x PATH ~/.phpenv/shims ~/.phpenv/bin ~/.phpenv/plugins/php-build/bin $PATH
-  phpenv rehash >/dev/null ^&1
-end
-
 # NODE
 if command -v nodenv > /dev/null
   set -x NODENV_ROOT $BOXEN_HOME/nodenv
