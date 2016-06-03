@@ -19,7 +19,7 @@ else
 end
 
 # Add homebrew'd stuff to the path.
-set -x PATH $HOMEBREW_ROOT/bin $BOXEN_HOME/homebrew/sbin $PATH
+set -x PATH $HOMEBREW_ROOT/bin $PATH
 set -x MANPATH $HOMEBREW_ROOT/share/man $MANPATH
 set -x PATH $BOXEN_HOME/bin $PATH
 
@@ -32,12 +32,7 @@ end
 
 # Ledger
 if command -v ledger > /dev/null
-set -x LEDGER_BASE_CURRENCY NZD
-end
-
-# Heroku
-if command -v heroku > /dev/null
-  set -x PATH $BOXEN_HOME/heroku/bin $PATH
+  set -x LEDGER_BASE_CURRENCY NZD
 end
 
 # NODE
@@ -79,9 +74,6 @@ if command -v go > /dev/null
   set -x PATH $GOPATH/bin $PATH
 end
 
-# Home bin
-set -x PATH $HOME/bin $PATH
-set -x PATH $HOME/.bin $PATH
 # ./bin should take precedence
 set -x PATH ./.bin $PATH
 set -x PATH ./bin $PATH
