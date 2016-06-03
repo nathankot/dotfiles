@@ -8,8 +8,9 @@ set -x GITHUB_USER nathankot
 #############################################################
 set -x BOXEN_HOME /opt/boxen
 set -x BOXEN_GITHUB_LOGIN $GITHUB_USER
-set -x CFLAGS "-I$HOMEBREW_ROOT/include"
-set -x LDFLAGS "-L$HOMEBREW_ROOT/lib"
+
+set -x CFLAGS "-I$HOMEBREW_ROOT/include" $CFLAGS
+set -x LDFLAGS "-L$HOMEBREW_ROOT/lib" $LDFLAGS
 
 if test -d $BOXEN_HOME/homebrew > /dev/null
   set -x HOMEBREW_ROOT $BOXEN_HOME/homebrew
