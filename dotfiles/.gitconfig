@@ -8,8 +8,11 @@
   name = Nathan Kot
   email = me@nathankot.com
 
-[github]
+[github "github.com"]
   user = nathankot
+
+[github "github.plaid.com"]
+	user = nkot
 
 [credential]
   helper = /opt/boxen/bin/boxen-git-credential
@@ -17,6 +20,7 @@
 
 [hub]
   protocol = https
+  host = github.plaid.com
 
 [log]
   abbrevCommit = true
