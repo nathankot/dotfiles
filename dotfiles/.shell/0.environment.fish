@@ -42,10 +42,9 @@ end
 
 # NODE
 if command -v nodenv > /dev/null
-  set -x NODENV_ROOT $BOXEN_HOME/nodenv
-  set -x PATH $BOXEN_HOME/nodenv/shims $BOXEN_HOME/nodenv/bin $PATH
+  set -x NODENV_ROOT $HOME/.nodenv
   set -x PATH node_modules/.bin $PATH
-  nodenv rehash >/dev/null ^&1
+  . (nodenv init -|psub)
 end
 
 # RUBY
