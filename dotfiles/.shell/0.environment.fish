@@ -1,4 +1,7 @@
 set fish_greeting "Let's go."
+
+set -x DEVELOPMENT_SRC_PATH $HOME/Development/src
+
 set -x FISH_CLIPBOARD_CMD pbcopy
 set -x TERM screen-256color
 
@@ -69,7 +72,12 @@ end
 
 # Rust
 if test -d $HOME/.cargo/bin > /dev/null
-  set -x PATH $HOME/.cargo/bin $PATH
+  set -x CARGO_HOME $HOME/.cargo
+  set -x PATH $CARGO_HOME/bin $PATH
+end
+
+if test -d $DEVELOPMENT_SRC_PATH/github.com/rust-lang/rust/src > /dev/null
+  set -x RUST_SRC_PATH $DEVELOPMENT_SRC_PATH/github.com/rust-lang/rust/src
 end
 
 # GO

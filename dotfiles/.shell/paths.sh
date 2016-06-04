@@ -1,5 +1,6 @@
-# We don't need to redefine paths for bash.
-# Just use boxen d(*.*)b
+export DEVELOPMENT_SRC_PATH=$HOME/Development/src
+
+# Use boxen defaults where we can
 if [ -f ~/opt/boxen/env.sh ]; then
   source /opt/boxen/env.sh
 fi
@@ -23,7 +24,12 @@ fi
 
 # rust
 if test -d $HOME/.cargo/env > /dev/null; then
-  source $HOME/.cargo/env
+  export CARGO_HOME=$HOME/.cargo
+  source $CARGO_HOME/env
+fi
+
+if test -d $DEVELOPMENT_SRC_PATH/github.com/rust-lang/rust/src > /dev/null; then
+  export RUST_SRC_PATH=$DEVELOPMENT_SRC_PATH/github.com/rust-lang/rust/src
 fi
 
 # virtualenv
