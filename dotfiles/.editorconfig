@@ -22,3 +22,6 @@ max_line_length = 80
 
 [*.ledger]
 indent_size = 4
+
+[*.rs]
+indent_size = 4
