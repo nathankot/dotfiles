@@ -67,6 +67,11 @@ if command -v stack > /dev/null
   set -x PATH $HOME/.local/bin $PATH
 end
 
+# Rust
+if test -d $HOME/.cargo/bin > /dev/null
+  set -x PATH $HOME/.cargo/bin $PATH
+end
+
 # GO
 if command -v go > /dev/null
   set -x GOPATH $HOME/Development

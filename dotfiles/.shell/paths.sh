@@ -21,6 +21,11 @@ if command -v go > /dev/null; then
   export PATH="$GOPATH/bin:$PATH"
 fi
 
+# rust
+if test -d $HOME/.cargo/env > /dev/null; then
+  source $HOME/.cargo/env
+fi
+
 # virtualenv
 if command -v virtualenv > /dev/null; then
   export PATH="./env/bin:$PATH"
