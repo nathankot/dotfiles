@@ -9,6 +9,7 @@ package.cpath = package.cpath .. string.format(";%s/lib/lua/5.2/?.so", rocksfold
 local hotkey = require "mjolnir.hotkey"
 local tiling = require "mjolnir.tiling"
 local alert = require "mjolnir.alert"
+local lockscreen = require "mjolnir.lx.lockscreen"
 
 local mash = {"ctrl", "cmd"}
 local musicmash = {"ctrl", "alt"}
@@ -20,3 +21,4 @@ hotkey.bind(mash, "c", function() tiling.cyclelayout() end)
 hotkey.bind(mash, "j", function() tiling.cycle(1) end)
 hotkey.bind(mash, "k", function() tiling.cycle(-1) end)
 hotkey.bind(mash, "space", function() tiling.promote() end)
+hotkey.bind(mash, "s", function() lockscreen.lockscreen() end)
