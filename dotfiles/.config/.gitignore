@@ -1,1 +1,3 @@
-hub
+*
+!.gitignore
+!fish
