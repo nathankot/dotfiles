@@ -39,17 +39,11 @@
 [color]
   ui = auto
 
-[diff]
-  tool = Kaleidoscope
-
 [difftool]
   prompt = false
 
 [mergetool]
   prompt = false
-
-[merge]
-  tool = Kaleidoscope
 
 [alias]
   accept-ours = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --ours -- $files; git add -u $files; }; f"
