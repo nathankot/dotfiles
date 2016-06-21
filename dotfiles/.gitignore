@@ -37,3 +37,5 @@ bookmarks
 .\#*
 auto-save-list
 .vars
+.node-version
+.npmrc
