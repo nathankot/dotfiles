@@ -59,3 +59,6 @@
 
 [ghi]
 	token = !security find-internet-password -a nathankot -s github.com -l 'ghi token' -w
+[diff]
+	compactionHeuristic = true
+	algorithm = minimal
