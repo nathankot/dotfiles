@@ -1,9 +1,14 @@
+# misc
 abbr --add l ls
+
+# git
+alias git hub
 abbr --add g git
 abbr --add gs git status
 abbr --add gd git diff
 abbr --add gdc git diff --cached
-abbr --add gc git commit -m
+abbr --add gc git commit
+abbr --add gcm git commit -m
 abbr --add gi git issues
 abbr --add gl git log
 abbr --add gca git commit -am
@@ -11,6 +16,8 @@ abbr --add gco git checkout
 abbr --add ga git add
 abbr --add gaa git add -A
 abbr --add gp git push
+
+# make
 abbr --add mt make test
 
 if command -v tmuxinator > /dev/null
@@ -28,5 +35,3 @@ end
 function legedit
   emacs ~/Documents/Personal/Accounts/current.ledger
 end
-
-alias git hub
