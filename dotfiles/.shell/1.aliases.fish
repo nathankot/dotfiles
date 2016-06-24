@@ -11,6 +11,7 @@ abbr --add gco git checkout
 abbr --add ga git add
 abbr --add gaa git add -A
 abbr --add gp git push
+abbr --add mt make test
 
 if command -v tmuxinator > /dev/null
   abbr --add mux tmuxinator
