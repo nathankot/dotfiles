@@ -16,6 +16,7 @@ abbr --add gco git checkout
 abbr --add ga git add
 abbr --add gaa git add -A
 abbr --add gp git push
+abbr --add gpr git pull --rebase
 
 # make
 abbr --add mt make test
