@@ -498,13 +498,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>85 437 606 456 0 0 1440 900 </string>
+	<string>269 968 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 382 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 900 0 0 1440 900 </string>
+	<string>0 573 850 867 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>898 87 850 867 0 0 2560 1440 </string>
+	<string>511 26 850 867 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -900,11 +900,11 @@
 			<key>Name</key>
 			<string>Tileable</string>
 			<key>Non Ascii Font</key>
-			<string>mplus-2m-thin 14</string>
+			<string>mplus-1m-light 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>mplus-2m-light 14</string>
+			<string>mplus-1m-light 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1091,6 +1091,8 @@
 			<string></string>
 		</dict>
 	</array>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>064B861D-C57D-494A-80F7-DA9F8B49FCD6</string>
 	<key>NoSyncLastTipTime</key>
@@ -1148,7 +1150,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-02T23:43:42Z</date>
+	<date>2016-06-15T07:10:23Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
