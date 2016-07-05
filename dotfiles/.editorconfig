@@ -25,3 +25,7 @@ indent_size = 4
 
 [*.rs]
 indent_size = 4
+
+[*.go]
+indent_style = tab
+indent_size = 4
