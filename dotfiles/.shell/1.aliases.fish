@@ -1,6 +1,9 @@
 # misc
 abbr --add l ls
 
+# emacs
+abbr --add e emacs
+
 # git
 alias git hub
 abbr --add g git
