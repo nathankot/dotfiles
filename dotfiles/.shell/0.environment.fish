@@ -83,6 +83,7 @@ end
 # GO
 if command -v go > /dev/null
   set -x GOPATH $HOME/Development
+  set -x GO15VENDOREXPERIMENT 1
   set -x PATH $GOPATH/bin $PATH
 end
 
