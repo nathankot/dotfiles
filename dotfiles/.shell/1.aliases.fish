@@ -19,6 +19,7 @@ abbr --add gco git checkout
 abbr --add ga git add
 abbr --add gaa git add -A
 abbr --add gp git push
+abbr --add gpf git push --force-with-lease
 abbr --add gpr git pull --rebase
 
 # make
