@@ -12,6 +12,8 @@ render: () -> """
 """
 
 update: (o, el) ->
+  console.log("In update")
+  console.log(o)
   try
     results = JSON.parse(o)
     $el = $(el)
