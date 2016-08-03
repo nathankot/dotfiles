@@ -7,6 +7,7 @@ abbr --add e emacs
 # git
 alias git hub
 abbr --add g git
+abbr --add gb git branch --sort=committerdate
 abbr --add gs git status
 abbr --add gd git diff
 abbr --add gdc git diff --cached
