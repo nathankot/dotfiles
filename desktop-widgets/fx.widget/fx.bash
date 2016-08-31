@@ -1,5 +1,5 @@
 TIME_FRAME='1m'
-START_DATE=$(date -v-${TIME_FRAME} +'%Y %m %d')
+START_DATE=$(date -v-${TIME_FRAME} +'%Y %-m %-d')
 SYMBOLS='NZD:JPY:MYR:BTC'
 
 read Y M D <<< ${START_DATE}
