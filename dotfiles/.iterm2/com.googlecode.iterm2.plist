@@ -463,10 +463,6 @@
 	<string>~/.dotfiles/dotfiles/.iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 459}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 521}</string>
-	<key>NSNavPanelExpandedStateForSaveMode</key>
-	<true/>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -498,13 +494,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 968 606 456 0 0 2560 1440 </string>
+	<string>269 906 606 456 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 382 620 392 0 0 1440 900 </string>
+	<string>970 787 620 392 0 0 2560 1440 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>269 214 796 473 0 0 1680 1050 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 573 850 867 0 0 2560 1440 </string>
+	<string>0 0 1440 900 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>511 26 850 867 0 0 1440 900 </string>
+	<string>0 4 850 867 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -532,13 +532,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14783918857574463</real>
+				<real>0.20238141715526581</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.16453593969345093</real>
+				<real>0.23338797688484192</real>
 				<key>Red Component</key>
-				<real>0.3843148946762085</real>
+				<real>0.70520627498626709</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
@@ -1091,20 +1091,14 @@
 			<string></string>
 		</dict>
 	</array>
-	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<key>NoSyncConfirmBeta</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>064B861D-C57D-494A-80F7-DA9F8B49FCD6</string>
-	<key>NoSyncLastTipTime</key>
-	<real>467464227.85938299</real>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<string>404E3B51-7C79-41AB-A63F-987E37821681</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>467377947.32148898</real>
+	<real>486603833.05408502</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1128,7 +1122,7 @@
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/nathan/.dotfiles/dotfiles/.iterm2</string>
+	<string>/Users/nkot/.iterm2</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1142,17 +1136,15 @@
 	<key>RunJobsInServers</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
-	<false/>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/nightly.xml?shard=56</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=64</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-15T07:10:23Z</date>
-	<key>SUSendProfileInfo</key>
-	<false/>
+	<date>2016-09-07T03:31:17Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -1186,6 +1178,8 @@
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1469712128</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
@@ -1214,7 +1208,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.20160602-nightly</string>
+	<string>3.0.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
