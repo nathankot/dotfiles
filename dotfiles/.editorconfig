@@ -8,6 +8,12 @@ insert_final_newline = true
 charset = utf-8
 max_line_length = 120
 
+[COMMIT_EDITMSG]
+max_line_length = off
+
+[PULLREQ_EDITMSG]
+max_line_length = off
+
 [Makefile]
 indent_style = tab
 
