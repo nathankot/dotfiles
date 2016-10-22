@@ -97,3 +97,4 @@ set -x CHROME_BIN /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 # Ledger
 set -x LEDGER ~/Documents/Personal/Accounts/current.ledger
 set -x LEDGER_PRICE_DB ~/Documents/Personal/Accounts/prices.db
+set -x LEDGER_PRICE_FORMAT 'P %{date} %{symbol} %{price}'
