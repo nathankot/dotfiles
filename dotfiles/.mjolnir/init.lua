@@ -9,7 +9,6 @@ package.cpath = package.cpath .. string.format(";%s/lib/lua/5.2/?.so", rocksfold
 local hotkey = require "mjolnir.hotkey"
 local tiling = require "mjolnir.tiling"
 local alert = require "mjolnir.alert"
-local lockscreen = require "mjolnir.lx.lockscreen"
 
 local mash = {"ctrl", "cmd"}
 local musicmash = {"ctrl", "alt"}
