@@ -21,6 +21,8 @@ else
   set -x HOMEBREW_ROOT /usr/local
 end
 
+set -x HOMEBREW_NO_ANALYTICS 1
+
 # Add homebrew'd stuff to the path.
 set -x PATH $HOMEBREW_ROOT/bin $PATH
 set -x MANPATH $HOMEBREW_ROOT/share/man $MANPATH
