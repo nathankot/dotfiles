@@ -1,3 +1,6 @@
+[include]
+  path = ~/.gitconfig.private
+
 [core]
   excludesfile = ~/.gitignore
   quotepath = false
