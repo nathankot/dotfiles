@@ -13,7 +13,7 @@ abbr --add gd git diff
 abbr --add gdc git diff --cached
 abbr --add gc git commit
 abbr --add gcm git commit -m
-abbr --add gi git issues
+abbr --add gi git issue
 abbr --add gl git log
 abbr --add gca git commit -am
 abbr --add gco git checkout

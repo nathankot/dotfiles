@@ -9,12 +9,6 @@
   email = me@nathankot.com
   signingkey = 20BD11703257E7B9
 
-[github "github.com"]
-  user = nathankot
-
-[github "github.plaid.com"]
-  user = nkot
-
 [credential]
   helper = /opt/boxen/bin/boxen-git-credential
   useHttpPath = true
@@ -22,6 +16,7 @@
 [hub]
   protocol = https
   host = github.com
+	host = github.plaid.com
 
 [log]
   abbrevCommit = true
@@ -49,7 +44,7 @@
 [alias]
   accept-ours = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --ours -- $files; git add -u $files; }; f"
   accept-theirs = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --theirs -- $files; git add -u $files; }; f"
-  issues = !ghi
+  issues = !hub issue
   browse = !hub browse
   hub = !hub
   ctags = !.git/hooks/ctags
@@ -57,9 +52,6 @@
 [pack]
   windowMemory = 10m
   packSizeLimit = 20m
-
-[ghi]
-  token = !security find-internet-password -a nathankot -s github.com -l 'ghi token' -w
 
 [diff]
   compactionHeuristic = true
