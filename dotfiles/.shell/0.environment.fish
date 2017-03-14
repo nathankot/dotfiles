@@ -27,6 +27,7 @@ set -x HOMEBREW_NO_ANALYTICS 1
 set -x PATH $HOMEBREW_ROOT/bin $PATH
 set -x MANPATH $HOMEBREW_ROOT/share/man $MANPATH
 set -x PATH $BOXEN_HOME/bin $PATH
+set -x PATH /usr/local/google-cloud-sdk/bin $PATH
 
 # Emacs
 if command -v emacs > /dev/null
