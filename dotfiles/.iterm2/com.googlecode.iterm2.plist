@@ -500,7 +500,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 968 606 456 0 0 2560 1440 </string>
+	<string>394 357 606 456 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 382 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -536,13 +536,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14783918857574463</real>
+				<real>0.40007609128952026</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.16453593969345093</real>
+				<real>0.43449229001998901</real>
 				<key>Red Component</key>
-				<real>0.3843148946762085</real>
+				<real>0.85168445110321045</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
