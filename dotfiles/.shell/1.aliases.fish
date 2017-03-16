@@ -26,6 +26,9 @@ abbr --add gpr git pull --rebase
 # make
 abbr --add mt make test
 
+# kubectl
+abbr --add k kubectl
+
 if command -v tmuxinator > /dev/null
   abbr --add mux tmuxinator
 end
