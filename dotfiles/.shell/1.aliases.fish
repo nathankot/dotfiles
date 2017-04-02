@@ -2,7 +2,7 @@
 abbr --add l ls
 
 # emacs
-abbr --add emacs 'emacsclient --socket-name="emacs" -a ""'
+abbr --add emacs 'emacsclient -c --socket-name="emacs" -a ""'
 
 # git
 alias git hub
