@@ -1,0 +1,3 @@
+[submodule "dotfiles/.hammerspoon/hs/tiling"]
+	path = dotfiles/.hammerspoon/hs/tiling
+	url = https://github.com/dsanson/hs.tiling.git

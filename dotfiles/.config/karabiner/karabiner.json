@@ -6,7 +6,6 @@
     },
     "profiles": [
         {
-            "name": "Default profile",
             "devices": [],
             "fn_function_keys": {
                 "f1": "display_brightness_decrement",
@@ -22,14 +21,18 @@
                 "f8": "play_or_pause",
                 "f9": "fastforward"
             },
-            "one_to_many_mappings": {
-            },
+            "name": "Default profile",
+            "one_to_many_mappings": {},
             "selected": true,
             "simple_modifications": {
-                "caps_lock": "left_control"
+                "caps_lock": "left_control",
+                "tab": "left_option"
             },
             "standalone_keys": {
-                "caps_lock": "escape"
+                "caps_lock": "escape",
+                "left_shift": ["left_shift", "9"],
+                "right_shift": ["right_shift", "0"],
+                "tab": "tab"
             },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
