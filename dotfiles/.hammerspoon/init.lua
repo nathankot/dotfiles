@@ -151,8 +151,8 @@ shiftParens.watcher = hs.eventtap.new({
         local key = "9"
         if keyCode == 0x3C then key = "0" end
         shiftParens.skipStarts = true
-        shiftParens.skipTimer = hs.timer.doAfter(0.2, function() shiftParens.skipStarts = false end)
-        hs.eventtap.keyStroke({"shift"}, key, 100)
+        shiftParens.skipTimer = hs.timer.doAfter(0.07, function() shiftParens.skipStarts = false end)
+        hs.eventtap.keyStroke({"shift"}, key, 10)
         return true
     end
 
