@@ -83,6 +83,10 @@ tabNumpad.watcher = hs.eventtap.new({
     -- Now the actual keymap:
 
     local mods = {}
+    if flags.ctrl then table.insert(mods, "ctrl") end
+    if flags.cmd then table.insert(mods, "cmd") end
+    if flags.alt then table.insert(mods, "alt") end
+    if flags.shift then table.insert(mods, "shift") end
 
     for orig, new in pairs(tabNumpad.keyMap) do
       if keyCode == keyCodes[orig] then
