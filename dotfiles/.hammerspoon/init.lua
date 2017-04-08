@@ -35,7 +35,7 @@ tabNumpad.skipProcessing = false
 tabNumpad.skipTimer = nil
 
 tabNumpad.keyMap = {
-  ["."] = ".",  ["space"] = "0",
+  ["space"] = "0",
   ["n"] = "1",  ["m"] = "2",  [","] = "3",
   ["h"] = "4",  ["j"] = "5",  ["k"] = "6",
   ["y"] = "7",  ["u"] = "8",  ["i"] = "9",
