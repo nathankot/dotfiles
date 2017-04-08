@@ -26,18 +26,18 @@
             "selected": true,
             "simple_modifications": {
                 "caps_lock": "left_control",
+                "f": "fn",
                 "tab": "left_option"
             },
             "standalone_keys": {
                 "caps_lock": "escape",
-                "left_shift": ["left_shift", "9"],
-                "right_shift": ["right_shift", "0"],
+                "f": "f",
                 "tab": "tab"
             },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
                 "keyboard_type": "ansi",
-                "standalone_keys_delay_milliseconds": 200
+                "standalone_keys_delay_milliseconds": 150
             }
         }
     ]
