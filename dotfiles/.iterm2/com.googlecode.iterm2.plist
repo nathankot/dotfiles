@@ -396,6 +396,10 @@
 	<true/>
 	<key>DockIconTogglesWindow</key>
 	<true/>
+	<key>EnableDivisionView</key>
+	<false/>
+	<key>EnableProxyIcon</key>
+	<false/>
 	<key>EnableRendezvous</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
@@ -403,22 +407,7 @@
 	<key>FsTabDelay</key>
 	<real>1</real>
 	<key>GlobalKeyMap</key>
-	<dict>
-		<key>0x2e-0x80000</key>
-		<dict>
-			<key>Action</key>
-			<integer>12</integer>
-			<key>Text</key>
-			<string>•</string>
-		</dict>
-		<key>0xd-0x20000</key>
-		<dict>
-			<key>Action</key>
-			<integer>11</integer>
-			<key>Text</key>
-			<string>0x1B 0x0D</string>
-		</dict>
-	</dict>
+	<dict/>
 	<key>HiddenAFRStrokeThickness</key>
 	<real>0.0</real>
 	<key>HiddenAdvancedFontRendering</key>
@@ -438,13 +427,15 @@
 	<key>HotKeyTogglesWindow</key>
 	<true/>
 	<key>Hotkey</key>
-	<true/>
+	<false/>
 	<key>HotkeyAutoHides</key>
 	<false/>
 	<key>HotkeyChar</key>
-	<integer>13</integer>
+	<integer>0</integer>
 	<key>HotkeyCode</key>
-	<integer>36</integer>
+	<integer>0</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>262401</integer>
 	<key>HotkeyTermAnimationDuration</key>
@@ -452,7 +443,7 @@
 	<key>IRMemory</key>
 	<integer>4</integer>
 	<key>JobName</key>
-	<true/>
+	<false/>
 	<key>LeftCommand</key>
 	<integer>7</integer>
 	<key>LeftOption</key>
@@ -477,34 +468,42 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
-	<key>NSTableView Columns KeyBingingTable</key>
-	<array>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATCG
-		</data>
-		<string>198</string>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATGG
-		</data>
-		<string>307</string>
-	</array>
-	<key>NSTableView Hidden Columns KeyBingingTable</key>
-	<array/>
-	<key>NSTableView Sort Ordering KeyBingingTable</key>
-	<array/>
+	<key>NSTableView Columns v2 KeyBingingTable</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoK4HCA8aGxwdHh8gJjAxMlUkbnVsbNIJCgsOWk5TLm9iamVjdHNWJGNsYXNzogwN
+	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
+	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
+	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
+	DIAIgAlRMSNAdCAAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
+	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
+	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
+	AAAAADoAAAAAAAAAAAAAAAAAAAFM
+	</data>
+	<key>NSTableView Sort Ordering v2 KeyBingingTable</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGFBVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoKMHCA1VJG51bGzSCQoLDFpOUy5vYmplY3RzViRjbGFzc6CAAtIODxARWiRjbGFz
+	c25hbWVYJGNsYXNzZXNeTlNNdXRhYmxlQXJyYXmjEBITV05TQXJyYXlYTlNPYmplY3Rf
+	EA9OU0tleWVkQXJjaGl2ZXLRFhdVQXJyYXmAAQgRGiMtMjc7QUZRWFlbYGt0g4ePmKqt
+	swAAAAAAAAEBAAAAAAAAABgAAAAAAAAAAAAAAAAAAAC1
+	</data>
+	<key>NSTableView Supports v2 KeyBingingTable</key>
+	<true/>
 	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
 	<dict>
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>394 357 606 456 0 0 1680 1050 </string>
+	<string>394 577 606 456 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 382 620 392 0 0 1440 900 </string>
+	<string>530 494 620 392 0 0 1680 1050 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>82 402 1018 447 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1440 0 0 2560 1440 </string>
+	<string>0 184 840 866 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>325 289 850 867 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -726,6 +725,8 @@
 				<key>Red Component</key>
 				<real>0.43619036674499512</real>
 			</dict>
+			<key>Application Keypad Allowed</key>
+			<false/>
 			<key>Automatically Log</key>
 			<false/>
 			<key>BM Growl</key>
@@ -865,10 +866,30 @@
 			</dict>
 			<key>Guid</key>
 			<string>11EC991D-71D2-4FD7-ADC2-37E3B833CF65</string>
+			<key>Has Hotkey</key>
+			<true/>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>HotKey Characters</key>
+			<string></string>
+			<key>HotKey Characters Ignoring Modifiers</key>
+			<string></string>
+			<key>HotKey Key Code</key>
+			<integer>36</integer>
+			<key>HotKey Modifier Flags</key>
+			<integer>262401</integer>
+			<key>HotKey Window Animates</key>
+			<false/>
+			<key>HotKey Window AutoHides</key>
+			<false/>
+			<key>HotKey Window Dock Click Action</key>
+			<integer>2</integer>
+			<key>HotKey Window Floats</key>
+			<false/>
+			<key>HotKey Window Reopens On Activation</key>
+			<false/>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -880,8 +901,6 @@
 				<string>slogin</string>
 				<string>telnet</string>
 			</array>
-			<key>Keyboard Map</key>
-			<dict/>
 			<key>Link Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -911,6 +930,8 @@
 			<string>mplus-1m-light 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
+			<key>Place Prompt at First Column</key>
+			<false/>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
@@ -920,7 +941,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>500</integer>
 			<key>Scrollback With Status Bar</key>
 			<false/>
 			<key>Scrollback in Alternate Screen</key>
@@ -965,7 +986,9 @@
 			<key>Set Local Environment Vars</key>
 			<true/>
 			<key>Shortcut</key>
-			<string>T</string>
+			<string></string>
+			<key>Show Mark Indicators</key>
+			<false/>
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
@@ -1105,6 +1128,8 @@
 	<integer>1</integer>
 	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
 	<true/>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>064B861D-C57D-494A-80F7-DA9F8B49FCD6</string>
 	<key>NoSyncLastTipTime</key>
@@ -1117,6 +1142,8 @@
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>467377947.32148898</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1127,6 +1154,10 @@
 	<true/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>OptionClickMovesCursor</key>
+	<false/>
+	<key>OptionIsMetaForSpecialChars</key>
+	<false/>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
 	<key>PassOnControlClick</key>
@@ -1140,7 +1171,7 @@
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
-	<string>~/.iterm2</string>
+	<string>/Users/nathan/.dotfiles/dotfiles/.iterm2</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1162,7 +1193,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-15T07:10:23Z</date>
+	<date>2017-04-08T01:33:47Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1181,12 +1212,18 @@
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.26152093349358974</real>
+	<key>StretchTabsToFillBar</key>
+	<false/>
 	<key>SwitchTabModifier</key>
 	<integer>9</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>9</integer>
+	<key>TabStyle</key>
+	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>1</integer>
+	<key>TerminalMargin</key>
+	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
 	<false/>
 	<key>TmuxDashboardLimit</key>
@@ -1218,7 +1255,7 @@
 		<array/>
 	</dict>
 	<key>WindowNumber</key>
-	<true/>
+	<false/>
 	<key>WindowStyle</key>
 	<integer>3</integer>
 	<key>WordCharacters</key>
@@ -1228,7 +1265,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.20160602-nightly</string>
+	<string>3.1.20170406-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
