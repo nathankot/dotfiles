@@ -2,6 +2,7 @@ local hotkey = require "hs.hotkey"
 local tiling = require "hs.tiling"
 
 local log = hs.logger.new('nk', 'debug')
+local keyCodes = hs.keycodes.map
 
 local function pressFunc(key)
 	return function() hs.eventtap.keyStroke({}, key, 1000) end
@@ -26,28 +27,74 @@ hotkey.bind(tilingMash, "space", function() tiling.promote() end)
 
 -- TAB-numpad:
 
-hotkey.bind({"alt"}, "space", pressFunc("0"))
-hotkey.bind({"alt"}, "n", pressFunc("1"))
-hotkey.bind({"alt"}, "m", pressFunc("2"))
-hotkey.bind({"alt"}, ",", pressFunc("3"))
-hotkey.bind({"alt"}, "h", pressFunc("4"))
-hotkey.bind({"alt"}, "j", pressFunc("5"))
-hotkey.bind({"alt"}, "k", pressFunc("6"))
-hotkey.bind({"alt"}, "y", pressFunc("7"))
-hotkey.bind({"alt"}, "u", pressFunc("8"))
-hotkey.bind({"alt"}, "i", pressFunc("9"))
-hotkey.bind({"alt"}, ".", pressFunc("."))
+tabNumpad = {}
+tabNumpad.isTabDowned = false
+tabNumpad.canEmitTab = false
+tabNumpad.timeoutTimer = nil
+tabNumpad.skipProcessing = false
+tabNumpad.skipTimer = nil
 
-hotkey.bind({"alt", "shift"}, "space", shiftPressFunc("0"))
-hotkey.bind({"alt", "shift"}, "n", shiftPressFunc("1"))
-hotkey.bind({"alt", "shift"}, "m", shiftPressFunc("2"))
-hotkey.bind({"alt", "shift"}, ",", shiftPressFunc("3"))
-hotkey.bind({"alt", "shift"}, "h", shiftPressFunc("4"))
-hotkey.bind({"alt", "shift"}, "j", shiftPressFunc("5"))
-hotkey.bind({"alt", "shift"}, "k", shiftPressFunc("6"))
-hotkey.bind({"alt", "shift"}, "y", shiftPressFunc("7"))
-hotkey.bind({"alt", "shift"}, "u", shiftPressFunc("8"))
-hotkey.bind({"alt", "shift"}, "i", shiftPressFunc("9"))
+tabNumpad.keyMap = {
+  ["."] = ".",  ["space"] = "0",
+  ["n"] = "1",  ["m"] = "2",  [","] = "3",
+  ["h"] = "4",  ["j"] = "5",  ["k"] = "6",
+  ["y"] = "7",  ["u"] = "8",  ["i"] = "9",
+}
+
+tabNumpad.watcher = hs.eventtap.new({
+    hs.eventtap.event.types.keyDown,
+    hs.eventtap.event.types.keyUp }, function(e)
+
+    local keyCode = e:getKeyCode()
+    local type = e:getType()
+    local isKeyUp = hs.eventtap.event.types[type] == "keyUp"
+    local flags = e:getFlags()
+
+    if tabNumpad.skipProcessing then
+      return false
+    end
+
+    -- When tab is pressed down, set isTabDowned and a timer
+    -- that dictates the window in which a key up translates
+    -- to the tab key:
+    if keyCode == keyCodes["tab"] and not isKeyUp then
+      tabNumpad.isTabDowned = true
+      tabNumpad.canEmitTab = true
+      tabNumpad.timeoutTimer = hs.timer.doAfter(0.1, function() tabNumpad.canEmitTab = false end)
+      return true
+    end
+
+    -- When tab is lifted, emit a tab if we are within the timeout window:
+    if keyCode == keyCodes["tab"] and isKeyUp then
+      tabNumpad.isTabDowned = false
+      if not tabNumpad.canEmitTab then return false end
+      tabNumpad.skipProcessing = true
+      tabNumpad.skipTimer = hs.timer.doAfter(0.07, function() tabNumpad.skipProcessing = false end)
+      hs.eventtap.keyStroke({}, "tab", 10)
+      return true
+    end
+
+    -- Don't bother doing anything if tab is not downed, or if
+    -- we are doing a key up:
+    if not tabNumpad.isTabDowned or isKeyUp then
+      return false
+    end
+
+    -- Now the actual keymap:
+
+    local mods = {}
+
+    for orig, new in pairs(tabNumpad.keyMap) do
+      if keyCode == keyCodes[orig] then
+        hs.eventtap.keyStroke(mods, new, 10)
+        return true
+      end
+    end
+
+    return false
+end)
+
+tabNumpad.watcher:start()
 
 -- f-arrows:
 

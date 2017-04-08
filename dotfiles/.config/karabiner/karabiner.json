@@ -26,13 +26,11 @@
             "selected": true,
             "simple_modifications": {
                 "caps_lock": "left_control",
-                "f": "fn",
-                "tab": "left_option"
+                "f": "fn"
             },
             "standalone_keys": {
                 "caps_lock": "escape",
-                "f": "f",
-                "tab": "tab"
+                "f": "f"
             },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
