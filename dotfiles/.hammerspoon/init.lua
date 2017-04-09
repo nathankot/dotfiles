@@ -113,6 +113,7 @@ farrows.watcher = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(e)
     if flags.ctrl then table.insert(mods, "ctrl") end
     if flags.cmd then table.insert(mods, "cmd") end
     if flags.alt then table.insert(mods, "alt") end
+    if flags.shift then table.insert(mods, "shift") end
     -- H:
     if keyCode == 0x04 then
       hs.eventtap.keyStroke(mods, "left", 100)
