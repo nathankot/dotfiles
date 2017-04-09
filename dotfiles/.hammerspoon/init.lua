@@ -192,7 +192,7 @@ shiftParens.watcher = hs.eventtap.new({
       shiftParens.canShiftParen = true
       -- Allow up to 100ms to release the shift
       shiftParens.timeoutTimer = hs.timer.doAfter(0.1, function() shiftParens.canShiftParen = false end)
-      return true
+      return false
     end
 
     -- If this a modifier event where the shift key has been lifted, try
