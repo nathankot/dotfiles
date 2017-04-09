@@ -1171,7 +1171,7 @@
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/nathan/.dotfiles/dotfiles/.iterm2</string>
+	<string>~/.dotfiles/dotfiles/.iterm2</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
