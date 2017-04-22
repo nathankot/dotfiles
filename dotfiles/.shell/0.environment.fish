@@ -27,7 +27,6 @@ set -x HOMEBREW_NO_ANALYTICS 1
 set -x PATH $HOMEBREW_ROOT/bin $PATH
 set -x MANPATH $HOMEBREW_ROOT/share/man $MANPATH
 set -x PATH $BOXEN_HOME/bin $PATH
-set -x PATH /usr/local/google-cloud-sdk/bin $PATH
 
 # Emacs
 if command -v emacs > /dev/null
@@ -101,3 +100,8 @@ set -x CHROME_BIN /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 set -x LEDGER ~/Documents/Personal/Accounts/current.ledger
 set -x LEDGER_PRICE_DB ~/Documents/Personal/Accounts/prices.db
 set -x LEDGER_PRICE_FORMAT 'P %{date} %{symbol} %{price}'
+
+# Google cloud
+if test -d /usr/local/google-cloud-sdk
+  set -x PATH /usr/local/google-cloud-sdk/bin $PATH
+end

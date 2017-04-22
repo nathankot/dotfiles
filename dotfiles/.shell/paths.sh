@@ -36,3 +36,7 @@ fi
 if command -v virtualenv > /dev/null; then
   export PATH="./env/bin:$PATH"
 fi
+
+if test -d /usr/local/google-cloud-sdk > /dev/null; then
+  export PATH="/usr/local/google-cloud-sdk:$PATH"
+fi
