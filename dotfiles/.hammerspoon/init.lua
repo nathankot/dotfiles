@@ -115,22 +115,22 @@ farrows.watcher = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(e)
     if flags.alt then table.insert(mods, "alt") end
     if flags.shift then table.insert(mods, "shift") end
     -- H:
-    if keyCode == 0x04 then
+    if keyCode == keyCodes["h"] then
       hs.eventtap.keyStroke(mods, "left", 100)
       return true
     end
     -- J:
-    if keyCode == 0x26 then
+    if keyCode == keyCodes["j"] then
       hs.eventtap.keyStroke(mods, "down", 100)
       return true
     end
     -- K:
-    if keyCode == 0x28 then
+    if keyCode == keyCodes["k"] then
       hs.eventtap.keyStroke(mods, "up", 100)
       return true
     end
     -- L:
-    if keyCode == 0x25 then
+    if keyCode == keyCodes["l"] then
       hs.eventtap.keyStroke(mods, "right", 100)
       return true
     end
