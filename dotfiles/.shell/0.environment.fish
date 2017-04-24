@@ -105,3 +105,8 @@ set -x LEDGER_PRICE_FORMAT 'P %{date} %{symbol} %{price}'
 if test -d /usr/local/google-cloud-sdk
   set -x PATH /usr/local/google-cloud-sdk/bin $PATH
 end
+
+# openssl include dir
+set -x OPENSSL_INCLUDE_DIR $HOMEBREW_ROOT/opt/openssl/include
+set -x OPENSSL_LIB_DIR $HOMEBREW_ROOT/opt/openssl/lib
+set -x DEP_OPENSSL_INCLUDE $HOMEBREW_ROOT/opt/openssl/include
