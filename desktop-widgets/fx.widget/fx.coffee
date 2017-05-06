@@ -1,8 +1,8 @@
 command: """
-  bash ./fx.widget/fx.bash 2>&1
+  /usr/local/bin/fish -c 'source ~/.shell/0.environment.fish; and fish ./fx.widget/fx.fish 2>&1'
 """,
 
-refreshFrequency: '1h',
+refreshFrequency: '2h',
 
 render: () -> """
   <table>
@@ -12,24 +12,21 @@ render: () -> """
 """
 
 update: (o, el) ->
-  console.log("In update")
-  console.log(o)
   try
+    console.log(o)
     results = JSON.parse(o)
     $el = $(el)
     $body = $el.find('tbody')
     $body.empty()
-    for item in results
-      item.timeframe = '' if item.history == ''
+    for key, value of results
       $("""
         <tr>
-          <td><span class="timeframe">#{item.timeframe}</span> #{item.history}</td>
-          <td>#{item.price}</td>
-          <td>#{item.symbol}</td>
+          <td>#{key}</td>
+          <td>#{value}</td>
         </tr>
       """).appendTo($body)
   catch error
-    $('<tr><td class="error" colspan="6">Could not fetch prices</td></tr>')
+    $('<tr><td class="error" colspan="2">Could not fetch prices</td></tr>')
       .appendTo($body)
 
 style: """
@@ -67,9 +64,5 @@ style: """
 
   td.error {
     text-align center
-  }
-
-  .timeframe {
-    font-size: 12px;
   }
 """
