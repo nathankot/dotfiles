@@ -18,11 +18,14 @@ update: (o, el) ->
     $el = $(el)
     $body = $el.find('tbody')
     $body.empty()
+
+    results.NZDJPY = results.USDJPY / results.USDNZD
+
     for key, value of results
       $("""
         <tr>
           <td>#{key}</td>
-          <td>#{value}</td>
+          <td>#{value.toFixed(6)}</td>
         </tr>
       """).appendTo($body)
   catch error
@@ -57,8 +60,8 @@ style: """
   }
 
   td:last-of-type {
-    color: rgba(255, 255, 255, 0.7)
-    text-align: left
+    color: rgba(255, 255, 255, 0.7);
+    text-align: right;
     padding-right: 0;
   }
 
