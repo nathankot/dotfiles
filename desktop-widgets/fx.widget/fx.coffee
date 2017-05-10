@@ -13,7 +13,6 @@ render: () -> """
 
 update: (o, el) ->
   try
-    console.log(o)
     results = JSON.parse(o)
     $el = $(el)
     $body = $el.find('tbody')
