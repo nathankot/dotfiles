@@ -12,6 +12,7 @@ abbr --add gs git status
 abbr --add gd git diff
 abbr --add gdc git diff --cached
 abbr --add gc git commit
+abbr --add gcr cherry_request
 abbr --add gcm git commit -m
 abbr --add gi git issue
 abbr --add gl git log
