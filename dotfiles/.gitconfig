@@ -64,3 +64,5 @@
 
 [gpg]
   program = gpg
+[merge]
+  conflictstyle = diff3
