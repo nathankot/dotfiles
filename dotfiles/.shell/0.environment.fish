@@ -99,8 +99,8 @@ set -x PATH ./bin $PATH
 set -x CHROME_BIN /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 # Ledger
-set -x LEDGER ~/Documents/Accounting/current.ledger
-set -x LEDGER_PRICE_DB ~/Documents/Accounting/prices.db
+set -x LEDGER ~/Google\ Drive/Documents/Accounting/current.ledger
+set -x LEDGER_PRICE_DB ~/Google\ Drive/Documents/Accounting/prices.db
 set -x LEDGER_PRICE_FORMAT 'P %{date} %{symbol} %{price}'
 
 # Google cloud
