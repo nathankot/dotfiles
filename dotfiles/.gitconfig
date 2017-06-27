@@ -13,7 +13,7 @@
   signingkey = 20BD11703257E7B9
 
 [credential]
-  helper = /opt/boxen/bin/boxen-git-credential
+  helper = osxkeychain
 
 [hub]
   protocol = https
