@@ -40,3 +40,8 @@ fi
 if test -d /usr/local/google-cloud-sdk > /dev/null; then
   export PATH="/usr/local/google-cloud-sdk:$PATH"
 fi
+
+# node
+if command -v nodenv > /dev/null; then
+  eval "$(nodenv init -)"
+fi
