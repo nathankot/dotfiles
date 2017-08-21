@@ -44,5 +44,5 @@ if command -v timetrap > /dev/null
 end
 
 function legedit
-  emacs ~/Documents/Personal/Accounts/current.ledger
+  emacs ~/Google\ Drive/Documents/Accounting/current.ledger
 end
