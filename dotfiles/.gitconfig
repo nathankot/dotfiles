@@ -64,3 +64,6 @@
 
 [gpg]
   program = gpg
+
+[magit]
+  hideCampaign = true
