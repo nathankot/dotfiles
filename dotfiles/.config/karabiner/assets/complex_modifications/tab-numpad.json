@@ -25,7 +25,18 @@
           },
           "to": [
             {
-              "key_code": "right_option"
+              "set_variable": {
+                "name": "tab_modifier",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "tab_modifier",
+                "value": 0
+              }
             }
           ],
           "to_if_alone": [
@@ -38,6 +49,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "tab_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -49,9 +65,6 @@
           "from": {
             "key_code": "n",
             "modifiers": {
-              "mandatory": [
-                "right_option"
-              ],
               "optional": [
                 "any"
               ]
@@ -67,6 +80,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "tab_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -78,9 +96,6 @@
           "from": {
             "key_code": "m",
             "modifiers": {
-              "mandatory": [
-                "right_option"
-              ],
               "optional": [
                 "any"
               ]
@@ -96,6 +111,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "tab_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -107,9 +127,6 @@
           "from": {
             "key_code": "comma",
             "modifiers": {
-              "mandatory": [
-                "right_option"
-              ],
               "optional": [
                 "any"
               ]
@@ -125,6 +142,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "tab_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -136,9 +158,6 @@
           "from": {
             "key_code": "h",
             "modifiers": {
-              "mandatory": [
-                "right_option"
-              ],
               "optional": [
                 "any"
               ]
@@ -154,6 +173,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "tab_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -165,9 +189,6 @@
           "from": {
             "key_code": "j",
             "modifiers": {
-              "mandatory": [
-                "right_option"
-              ],
               "optional": [
                 "any"
               ]
@@ -183,6 +204,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "tab_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -194,9 +220,6 @@
           "from": {
             "key_code": "k",
             "modifiers": {
-              "mandatory": [
-                "right_option"
-              ],
               "optional": [
                 "any"
               ]
@@ -212,6 +235,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "tab_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -223,9 +251,6 @@
           "from": {
             "key_code": "y",
             "modifiers": {
-              "mandatory": [
-                "right_option"
-              ],
               "optional": [
                 "any"
               ]
@@ -241,6 +266,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "tab_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -252,9 +282,6 @@
           "from": {
             "key_code": "u",
             "modifiers": {
-              "mandatory": [
-                "right_option"
-              ],
               "optional": [
                 "any"
               ]
@@ -270,6 +297,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "tab_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -281,9 +313,6 @@
           "from": {
             "key_code": "i",
             "modifiers": {
-              "mandatory": [
-                "right_option"
-              ],
               "optional": [
                 "any"
               ]
@@ -299,6 +328,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "tab_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -310,9 +344,6 @@
           "from": {
             "key_code": "spacebar",
             "modifiers": {
-              "mandatory": [
-                "right_option"
-              ],
               "optional": [
                 "any"
               ]
