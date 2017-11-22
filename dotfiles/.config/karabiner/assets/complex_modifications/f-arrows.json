@@ -3,18 +3,18 @@
   "rules": [
     {
       "description": "F-arrows",
-      "conditions": [
-        {
-          "type": "device_unless",
-          "identifiers": [
-            {
-              "vendor_id": 65261
-            }
-          ]
-        }
-      ],
       "manipulators": [
         {
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [
+                {
+                  "vendor_id": 65261
+                }
+              ]
+            }
+          ],
           "from": {
             "key_code": "h",
             "modifiers": {
@@ -34,6 +34,16 @@
           "type": "basic"
         },
         {
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [
+                {
+                  "vendor_id": 65261
+                }
+              ]
+            }
+          ],
           "from": {
             "key_code": "j",
             "modifiers": {
@@ -53,6 +63,16 @@
           "type": "basic"
         },
         {
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [
+                {
+                  "vendor_id": 65261
+                }
+              ]
+            }
+          ],
           "from": {
             "key_code": "k",
             "modifiers": {
@@ -72,6 +92,16 @@
           "type": "basic"
         },
         {
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [
+                {
+                  "vendor_id": 65261
+                }
+              ]
+            }
+          ],
           "from": {
             "key_code": "l",
             "modifiers": {
@@ -91,6 +121,16 @@
           "type": "basic"
         },
         {
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [
+                {
+                  "vendor_id": 65261
+                }
+              ]
+            }
+          ],
           "from": {
             "key_code": "f",
             "modifiers": {

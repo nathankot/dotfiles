@@ -3,68 +3,76 @@
   "rules": [
     {
       "description": "Control-Escape",
-      "conditions": [
+      "manipulators": [
         {
-          "type": "device_unless",
-          "identifiers": [
+          "conditions": [
             {
-              "vendor_id": 65261
+              "type": "device_unless",
+              "identifiers": [
+                {
+                  "vendor_id": 65261
+                }
+              ]
             }
-          ]
+          ],
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "type": "basic"
         }
-      ],
-      "from": {
-        "key_code": "caps_lock",
-        "modifiers": {
-          "optional": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "left_control"
-        }
-      ],
-      "to_if_alone": [
-        {
-          "key_code": "escape"
-        }
-      ],
-      "type": "basic"
+      ]
     },
     {
       "description": "Control-Escape for HHKB",
-      "conditions": [
+      "manipulators": [
         {
-          "type": "device_if",
-          "identifiers": [
+          "conditions": [
             {
-              "vendor_id": 1278,
-              "product_id": 514
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1278,
+                  "product_id": 514
+                }
+              ]
             }
-          ]
+          ],
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "type": "basic"
         }
-      ],
-      "from": {
-        "key_code": "left_control",
-        "modifiers": {
-          "optional": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "left_control"
-        }
-      ],
-      "to_if_alone": [
-        {
-          "key_code": "escape"
-        }
-      ],
-      "type": "basic"
+      ]
     }
   ]
 }
