@@ -1,0 +1,68 @@
+{
+  "title": "Alternative quotes",
+  "rules": [
+    {
+      "description": "Map CMD+/ to double-quote",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [
+                {
+                  "vendor_id": 65261
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "slash",
+            "modifiers": {
+                "optional": ["any"],
+                "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "quote",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Map CMD+. to single-quote",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [
+                {
+                  "vendor_id": 65261
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+                "optional": ["any"],
+                "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "quote"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
