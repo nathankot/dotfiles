@@ -1,5 +1,5 @@
 {
-  "tite": "Safe CMD-Q",
+  "title": "Safe CMD-Q",
   "rules": [
     {
       "description": "Disable CMD-SHIFT-Q to logout",

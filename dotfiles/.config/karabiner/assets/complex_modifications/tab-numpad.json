@@ -7,15 +7,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }
@@ -43,15 +38,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }
@@ -77,15 +67,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }
@@ -111,15 +96,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }
@@ -145,15 +125,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }
@@ -179,15 +154,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }
@@ -213,15 +183,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }
@@ -247,15 +212,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }
@@ -281,15 +241,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }
@@ -315,15 +270,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }
@@ -349,15 +299,10 @@
         {
           "conditions": [
             {
-              "type": "device_if",
+              "type": "device_unless",
               "identifiers": [
                 {
-                  "vendor_id": 1452,
-                  "product_id": 632
-                },
-                {
-                  "vendor_id": 1452,
-                  "product_id": 627
+                  "vendor_id": 65261
                 }
               ]
             }

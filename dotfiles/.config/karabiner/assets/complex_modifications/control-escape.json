@@ -2,7 +2,7 @@
   "title": "Control-escape",
   "rules": [
     {
-      "desription": "Control-Escape",
+      "description": "Control-Escape",
       "from": {
         "key_code": "caps_lock",
         "modifiers": {
