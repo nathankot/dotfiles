@@ -16,11 +16,55 @@
             }
           ],
           "from": {
+            "key_code": "f",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "f_modifier",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "f_modifier",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "f"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "f_modifier",
+              "value": 1
+            },
+            {
+              "type": "device_unless",
+              "identifiers": [
+                {
+                  "vendor_id": 65261
+                }
+              ]
+            }
+          ],
+          "from": {
             "key_code": "h",
             "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
               "optional": [
                 "any"
               ]
@@ -36,6 +80,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "f_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -47,9 +96,6 @@
           "from": {
             "key_code": "j",
             "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
               "optional": [
                 "any"
               ]
@@ -65,6 +111,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "f_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -76,9 +127,6 @@
           "from": {
             "key_code": "k",
             "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
               "optional": [
                 "any"
               ]
@@ -94,6 +142,11 @@
         {
           "conditions": [
             {
+              "type": "variable_if",
+              "name": "f_modifier",
+              "value": 1
+            },
+            {
               "type": "device_unless",
               "identifiers": [
                 {
@@ -105,9 +158,6 @@
           "from": {
             "key_code": "l",
             "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
               "optional": [
                 "any"
               ]
@@ -116,37 +166,6 @@
           "to": [
             {
               "key_code": "right_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "type": "device_unless",
-              "identifiers": [
-                {
-                  "vendor_id": 65261
-                }
-              ]
-            }
-          ],
-          "from": {
-            "key_code": "f",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "fn"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "f"
             }
           ],
           "type": "basic"
