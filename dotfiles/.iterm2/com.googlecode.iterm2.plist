@@ -672,13 +672,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.657470703125</real>
+				<real>0.462799072265625</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.49041438102722168</real>
+				<real>0.37507796287536621</real>
 				<key>Red Component</key>
-				<real>0.6336054801940918</real>
+				<real>0.450267493724823</real>
 			</dict>
 			<key>Link Color</key>
 			<dict>
@@ -858,7 +858,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 769 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>37 905 796 473 0 0 3440 1440 </string>
+	<string>1333 760 796 473 0 0 3440 1417 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>332 833 592 584 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1215,13 +1215,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.657470703125</real>
+				<real>0.462799072265625</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.49041439592838287</real>
+				<real>0.37507796287536621</real>
 				<key>Red Component</key>
-				<real>0.63360550942051463</real>
+				<real>0.450267493724823</real>
 			</dict>
 			<key>Guid</key>
 			<string>11EC991D-71D2-4FD7-ADC2-37E3B833CF65</string>
