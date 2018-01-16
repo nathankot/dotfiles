@@ -2,7 +2,7 @@
 abbr --add l ls
 
 # emacs
-abbr --add e emacs
+# abbr --add e emacs
 # abbr --add emacs 'emacsclient -c --socket-name="emacs" -a ""'
 
 # git
