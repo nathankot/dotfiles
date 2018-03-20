@@ -1,0 +1,12 @@
+---
+- name: Install brew-cask dependencies
+  homebrew_cask: name={{ item }}
+  with_items:
+    - iterm2
+    - karabiner-elements
+    - ubersicht
+    - google-backup-and-sync
+    - google-chrome
+    - appcleaner
+    - dropbox
+    - the-unarchiver

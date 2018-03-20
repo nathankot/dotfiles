@@ -1,0 +1,40 @@
+---
+- name: Install homebrew packages
+  homebrew: name={{ item }} state=present
+  with_items:
+    - fish
+    - emacs
+    - aspell
+    - cask
+    - coreutils
+    - editorconfig
+    - gnupg
+    - hledger
+    - httpie
+    - hub
+    - icdiff
+    - jq
+    - ledger
+    - libtool
+    - mcrypt
+    - pass
+    - pinentry-mac
+    - reattach-to-user-namespace
+    - spark
+    - the_silver_searcher
+    - tmux
+    - tmux-mem-cpu-load
+    - tor
+    - transcrypt
+    - watch
+    - wget
+    - x264
+    - postgresql
+    - mysql
+    - rbenv
+    - nodenv
+    - node-build
+    - go
+    - glide
+    - python
+    - python3

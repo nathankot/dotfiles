@@ -1,0 +1,58 @@
+---
+- name: Clone or update password store
+  git:
+    dest: ~/.password-store
+    repo: https://nathankot:{{ github_access_token }}@github.com/nathankot/pass.git
+    update: yes
+
+- name: Clone or update .emacs.d
+  git:
+    dest: ~/.emacs.d
+    repo: https://github.com/nathankot/dotemacs.git
+    update: yes
+
+- name: Ensure the ~/Development/src directory exists
+  file: path=~/Development/src state=directory
+
+- name: Check if homebrew already exists
+  stat:  path=/usr/local/bin/brew
+  register: homebrew_exists
+
+- name: Install homebrew
+  script: install-homebrew.sh
+  when: homebrew_exists is undefined
+
+- name: Install brew-cask dependencies
+  import_tasks: apps.yml
+  tags: [apps]
+
+- name: Install Homebrew packages
+  import_tasks: packages.yml
+  tags: [packages]
+
+- name: Ensure fish is specified in /etc/shells
+  become: true
+  become_method: sudo
+  lineinfile: line=/usr/local/bin/fish path=/etc/shells
+
+- name: Change default shell to fish
+  shell: chsh -s /usr/local/bin/fish
+  become: true
+
+- name: Update iterm2 preferences to point to the one in ~/.dotfiles
+  osx_defaults:
+    domain: com.googlecode.iterm2
+    key: PrefsCustomFolder
+    type: string
+    value: /Users/{{ ansible_user_id }}/.iterm2
+
+- name: Update Ubsersicht to use our dashboard configuration
+  osx_defaults:
+    domain: tracesOf.Uebersicht
+    key: NSNavLastRootDirectory
+    type: string
+    value: /Users/{{ ansible_user_id }}/.dotfiles/desktop-widgets
+
+- name: Setup OS default configuration
+  import_tasks: osx_configuration.yml
+  tags: [configuration]

@@ -1,0 +1,143 @@
+---
+
+# LOGIN ITEMS:
+
+- name: Tap loginitems repository for Homebrew
+  homebrew_tap: name=OJFord/formulae state=present
+
+- name: Install loginitems homebrew tool
+  homebrew: name=loginitems state=present
+
+- name: Setup login items
+  command: "loginitems -a '{{ item }}'"
+  changed_when: false
+  with_items:
+    - Google Drive
+    - Hammerspoon
+    - Karabiner Elements
+    - Übersicht
+
+# OSX DEFAULTS:
+
+- name: Enable full keyboard access for all controls
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleKeyboardUIMode
+    value: 3
+    type: string
+
+- name: Disable remote control infrared receiver
+  osx_defaults:
+    domain: /Library/Preferences/com.apple.driver.AppleIRController
+    key: DeviceEnabled
+    value: false
+    type: boolean
+
+- name: Disable press-and-hold for accented characters
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: ApplePressAndHoldEnabled
+    value: false
+    type: boolean
+
+- name: Enable tap to click (trackpad)
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'Clicking'
+    value: true
+    type: boolean
+
+- name: Enable tap to click (currentHost)
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.mouse.tapBehavior
+    value: 1
+    type: int
+
+- name: Disable natural mouse scrolling
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.swipescrolldirection
+    value: false
+    type: boolean
+
+- name: Disable autocorrect
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticSpellingCorrectionEnabled
+    value: false
+    type: boolean
+
+- name: Unhide ~/Library
+  command: chflags nohidden /Users/{{ ansible_user_id }}/Library
+
+- name: Autohide the dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    value: true
+    type: boolean
+  notify:
+    - restart dock
+
+- name: Disable the downloaded app quarantine
+  osx_defaults:
+    domain: LSQuarantine
+    key: com.apple.LaunchServices
+    value: false
+    type: boolean
+
+- name: Bottom-right hotcorner locks monitor (Action)
+  osx_defaults:
+    domain: com.apple.dock
+    key: wvous-br-corner
+    value: 10
+    type: int
+  notify:
+    - restart dock
+
+- name: Bottom-right hotcorner locks monitor (Modifier)
+  osx_defaults:
+    domain: com.apple.dock
+    key: wvous-br-modifier
+    value: 0
+    type: int
+  notify:
+    - restart dock
+
+- name: Multi-list view default
+  osx_defaults:
+    key: FXPreferredViewStyle
+    domain: com.apple.finder
+    value: 'clmv'
+    type: string
+
+- name: Hide desktop items
+  osx_defaults:
+    key: CreateDesktop
+    domain: com.apple.finder
+    value: 0
+    type: string
+  notify:
+    - restart dock
+
+- name: Require password on screensaver
+  osx_defaults:
+    key: askForPassword
+    domain: com.apple.screensaver
+    value: 1
+    type: int
+
+- name: Set screensaver password delay to 0
+  osx_defaults:
+    key: askForPasswordDelay
+    domain: com.apple.screensaver
+    value: 0
+    type: int
+
+- name: Disable expose animation
+  osx_defaults:
+    key: expose-animation-duration
+    domain: com.apple.dock
+    value: 0.1
+    type: string
