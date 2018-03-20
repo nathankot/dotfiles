@@ -1,26 +1,26 @@
 ---
+- name: Check if homebrew already exists
+  stat:  path=/usr/local/bin/brew
+  register: homebrew_stat_result
+
+- name: Fail if homebrew does not exist
+  fail: msg="Please install homebrew first."
+  when: homebrew_stat_result.stat.exists == False
+
 - name: Clone or update password store
   git:
     dest: ~/.password-store
     repo: https://nathankot:{{ github_access_token }}@github.com/nathankot/pass.git
-    update: yes
+    update: no
 
 - name: Clone or update .emacs.d
   git:
     dest: ~/.emacs.d
     repo: https://github.com/nathankot/dotemacs.git
-    update: yes
+    update: no
 
 - name: Ensure the ~/Development/src directory exists
   file: path=~/Development/src state=directory
-
-- name: Check if homebrew already exists
-  stat:  path=/usr/local/bin/brew
-  register: homebrew_exists
-
-- name: Install homebrew
-  script: install-homebrew.sh
-  when: homebrew_exists is undefined
 
 - name: Install brew-cask dependencies
   import_tasks: apps.yml
@@ -33,3 +33,7 @@
 - name: Setup configuration
   import_tasks: osx_configuration.yml
   tags: [configuration]
+
+- name: Setup .emacs.d dependencies
+  command: chdir=~/.emacs.d creates=~/.emacs.d/.cask cask install
+

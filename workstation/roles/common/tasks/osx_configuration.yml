@@ -8,7 +8,7 @@
   lineinfile: line=/usr/local/bin/fish path=/etc/shells
 
 - name: Change default shell to fish
-  shell: chsh -s /usr/local/bin/fish
+  shell: chsh -s /usr/local/bin/fish nkot
   become: true
 
 
@@ -26,7 +26,7 @@
   with_items:
     - Google Drive
     - Hammerspoon
-    - Karabiner Elements
+    - Karabiner-Elements
     - Übersicht
 
 # OSX DEFAULTS:
@@ -66,11 +66,11 @@
     value: 1
     type: int
 
-- name: Disable natural mouse scrolling
+- name: Enable natural mouse scrolling
   osx_defaults:
     domain: NSGlobalDomain
     key: com.apple.swipescrolldirection
-    value: false
+    value: true
     type: boolean
 
 - name: Disable autocorrect
@@ -145,7 +145,7 @@
     key: askForPasswordDelay
     domain: com.apple.screensaver
     value: 0
-    type: int
+    type: float
 
 - name: Disable expose animation
   osx_defaults:
@@ -162,6 +162,13 @@
     key: PrefsCustomFolder
     type: string
     value: /Users/{{ ansible_user_id }}/.iterm2
+
+- name: Enable iterm2 to read from the prefs folder
+  osx_defaults:
+    domain: com.googlecode.iterm2
+    key: LoadPrefsFromCustomFolder
+    type: bool
+    value: true
 
 - name: Update Ubsersicht to use our dashboard configuration
   osx_defaults:

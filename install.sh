@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 cd "$(dirname "${BASH_SOURCE}")"
 
@@ -10,5 +11,6 @@ xargs -n 1 ln -s <<<"$FILES_SOURCE"
 cd - || exit
 
 cd workstation
-ansible-playbook install.yml
+../env/bin/pip install -r ../requirements.txt
+../env/bin/ansible-playbook install.yml -e "github_access_token=$GITHUB_API_TOKEN"
 cd - || exit

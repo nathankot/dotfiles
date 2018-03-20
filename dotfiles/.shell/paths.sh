@@ -1,10 +1,5 @@
 export DEVELOPMENT_SRC_PATH=$HOME/Development/src
 
-# Use boxen defaults where we can
-if [ -f ~/opt/boxen/env.sh ]; then
-  source /opt/boxen/env.sh
-fi
-
 # home bin
 export PATH="$HOME/bin:$PATH"
 # local bin
