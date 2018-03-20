@@ -40,3 +40,7 @@
     - python
     - python3
     - dockutil
+
+- name: Install tmuxinator
+  command: gem install tmuxinator
+  become: true
