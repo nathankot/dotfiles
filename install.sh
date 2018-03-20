@@ -8,3 +8,7 @@ cd "$HOME" || exit
 xargs -n 1 rm -r <<<"$FILES_DEST"
 xargs -n 1 ln -s <<<"$FILES_SOURCE"
 cd - || exit
+
+cd workstation
+ansible-playbook install.yml
+cd - || exit
