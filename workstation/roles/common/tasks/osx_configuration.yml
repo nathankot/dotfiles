@@ -1,5 +1,17 @@
 ---
 
+# SHELL
+
+- name: Ensure fish is specified in /etc/shells
+  become: true
+  become_method: sudo
+  lineinfile: line=/usr/local/bin/fish path=/etc/shells
+
+- name: Change default shell to fish
+  shell: chsh -s /usr/local/bin/fish
+  become: true
+
+
 # LOGIN ITEMS:
 
 - name: Tap loginitems repository for Homebrew
@@ -141,3 +153,19 @@
     domain: com.apple.dock
     value: 0.1
     type: string
+
+# APPLICATION SETTINGS
+
+- name: Update iterm2 preferences to point to the one in ~/.dotfiles
+  osx_defaults:
+    domain: com.googlecode.iterm2
+    key: PrefsCustomFolder
+    type: string
+    value: /Users/{{ ansible_user_id }}/.iterm2
+
+- name: Update Ubsersicht to use our dashboard configuration
+  osx_defaults:
+    domain: tracesOf.Uebersicht
+    key: NSNavLastRootDirectory
+    type: string
+    value: /Users/{{ ansible_user_id }}/.dotfiles/desktop-widgets
