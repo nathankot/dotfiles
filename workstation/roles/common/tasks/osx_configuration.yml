@@ -11,6 +11,13 @@
   shell: chsh -s /usr/local/bin/fish nkot
   become: true
 
+# DOCK
+
+- name: Remove all dock items
+  command: dockutil --remove all
+  notify:
+    - restart dock
+
 
 # LOGIN ITEMS:
 
@@ -52,14 +59,21 @@
     value: false
     type: boolean
 
-- name: Enable tap to click (trackpad)
+- name: Enable tap to click (com.apple.driver.AppleBluetoothMultitouch.trackpad)
   osx_defaults:
-    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
-    key: 'Clicking'
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: Clicking
     value: true
     type: boolean
 
-- name: Enable tap to click (currentHost)
+- name: Enable tap to click (com.apple.driver.AppleBluetoothMultitouch.trackpad)
+  osx_defaults:
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: Clicking
+    value: true
+    type: boolean
+
+- name: Enable tap to click (com.apple.mouse.tapBehavior)
   osx_defaults:
     domain: NSGlobalDomain
     key: com.apple.mouse.tapBehavior
@@ -154,6 +168,20 @@
     value: 0.1
     type: string
 
+- name: Three finger drag (com.apple.driver.AppleBluetoothMultitouch.trackpad)
+  osx_defaults:
+    key: TrackpadThreeFingerDrag
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    value: true
+    type: bool
+
+- name: Three finger drag (com.apple.AppleMultitouchTrackpad)
+  osx_defaults:
+    key: TrackpadThreeFingerDrag
+    domain: com.apple.AppleMultitouchTrackpad
+    value: true
+    type: bool
+
 # APPLICATION SETTINGS
 
 - name: Update iterm2 preferences to point to the one in ~/.dotfiles
@@ -169,10 +197,3 @@
     key: LoadPrefsFromCustomFolder
     type: bool
     value: true
-
-- name: Update Ubsersicht to use our dashboard configuration
-  osx_defaults:
-    domain: tracesOf.Uebersicht
-    key: NSNavLastRootDirectory
-    type: string
-    value: /Users/{{ ansible_user_id }}/.dotfiles/desktop-widgets
