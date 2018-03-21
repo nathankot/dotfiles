@@ -21,8 +21,7 @@ set -x MANPATH $HOMEBREW_ROOT/share/man $MANPATH
 # Emacs
 if command -v emacs > /dev/null
   set -x EDITOR emacs
-  set -x GIT_EDITOR emacsclient --socket-name="emacsgit" -a "" .
-  set -x ALTERNATIVE_EDITOR vim
+  set -x GIT_EDITOR emacs
 end
 
 # Ledger
