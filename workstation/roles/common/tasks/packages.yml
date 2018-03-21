@@ -37,8 +37,6 @@
     - node-build
     - go
     - glide
-    - python
-    - python3
     - dockutil
 
 - name: Install tmuxinator
