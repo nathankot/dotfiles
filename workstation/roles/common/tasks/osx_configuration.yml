@@ -8,7 +8,7 @@
   lineinfile: line=/usr/local/bin/fish path=/etc/shells
 
 - name: Change default shell to fish
-  shell: chsh -s /usr/local/bin/fish nkot
+  shell: chsh -s /usr/local/bin/fish {{ ansible_user_id }}
   become: true
 
 # DOCK
