@@ -22,7 +22,7 @@
 - name: Ensure the ~/Development/src directory exists
   file: path=~/Development/src state=directory
 
-- name: Install brew-cask dependencies
+- name: Install Applications
   import_tasks: apps.yml
   tags: [apps]
 
@@ -30,9 +30,9 @@
   import_tasks: packages.yml
   tags: [packages]
 
-- name: Setup configuration
-  import_tasks: osx_configuration.yml
-  tags: [configuration]
-
 - name: Setup .emacs.d dependencies
   command: chdir=~/.emacs.d creates=~/.emacs.d/.cask cask install
+
+- name: Setup configuration
+  import_tasks: configuration.yml
+  tags: [configuration]
