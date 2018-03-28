@@ -3,6 +3,7 @@ export DEVELOPMENT_SRC_PATH=$HOME/Development/src
 # home bin
 export PATH="$HOME/bin:$PATH"
 # local bin
+export PATH="/usr/local/bin:$PATH"
 export PATH="./.bin:$PATH"
 export PATH="./bin:$PATH"
 
@@ -38,5 +39,7 @@ fi
 
 # node
 if command -v nodenv > /dev/null; then
+  export NODENV_ROOT=$HOME/.nodenv
+  export PATH=node_modules/.bin:$PATH
   eval "$(nodenv init -)"
 fi
