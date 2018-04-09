@@ -182,6 +182,13 @@
     value: true
     type: bool
 
+- name: Disable Spaces Auto Rearrange
+  osx_defaults:
+    key: mru-spaces
+    domain: com.apple.dock
+    value: false
+    type: bool
+
 # APPLICATION SETTINGS
 
 - name: Update iterm2 preferences to point to the one in ~/.dotfiles
