@@ -37,10 +37,11 @@ if command -v nodenv > /dev/null
 end
 
 # RUBY
-if test -d ~/.rbenv > /dev/null
+if test -d ~/.rbenv > /dev/null; and command -v rbenv
   set -x RBENV_ROOT $HOME/.rbenv
   set -x RUBY_BUILD_ROOT $HOME/.ruby-build
   set -x PATH $RBENV_ROOT/shims $RBENV_ROOT/bin $PATH
+  status --is-interactive; and source (rbenv init -|psub)
   rbenv rehash >/dev/null ^&1
 end
 
