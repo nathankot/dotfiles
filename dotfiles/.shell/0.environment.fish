@@ -5,13 +5,13 @@ set -x DEVELOPMENT_SRC_PATH $HOME/Development/src
 set -x FISH_CLIPBOARD_CMD pbcopy
 set -x TERM screen-256color
 
-set -x CFLAGS "-I$HOMEBREW_ROOT/include" $CFLAGS
-set -x LDFLAGS "-L$HOMEBREW_ROOT/lib" $LDFLAGS
-
 set -x GPG_TTY (tty)
 
 set -x HOMEBREW_ROOT /usr/local
 set -x HOMEBREW_NO_ANALYTICS 1
+
+set -x CFLAGS "-I$HOMEBREW_ROOT/include" $CFLAGS
+set -x LDFLAGS "-L$HOMEBREW_ROOT/lib" $LDFLAGS
 
 # Add homebrew'd stuff to the path.
 set -x PATH $HOMEBREW_ROOT/bin $PATH
@@ -37,12 +37,9 @@ if command -v nodenv > /dev/null
 end
 
 # RUBY
-if test -d ~/.rbenv > /dev/null; and command -v rbenv
+if command -v rbenv
   set -x RBENV_ROOT $HOME/.rbenv
-  set -x RUBY_BUILD_ROOT $HOME/.ruby-build
-  set -x PATH $RBENV_ROOT/shims $RBENV_ROOT/bin $PATH
   status --is-interactive; and source (rbenv init -|psub)
-  rbenv rehash >/dev/null ^&1
 end
 
 # Virtualenv
@@ -71,10 +68,6 @@ if command -v go > /dev/null
   set -x GO15VENDOREXPERIMENT 1
   set -x PATH $GOPATH/bin $PATH
 end
-
-# ./bin should take precedence
-set -x PATH ./.bin $PATH
-set -x PATH ./bin $PATH
 
 # Browser testing
 set -x CHROME_BIN /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
