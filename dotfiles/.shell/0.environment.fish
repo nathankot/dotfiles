@@ -62,6 +62,10 @@ if test -d $DEVELOPMENT_SRC_PATH/github.com/rust-lang/rust/src > /dev/null
   set -x RUST_SRC_PATH $DEVELOPMENT_SRC_PATH/github.com/rust-lang/rust/src
 end
 
+if test -d /Applications/Sketch.app/Contents/Resources/sketchtool/bin > /dev/null
+  set -x PATH /Applications/Sketch.app/Contents/Resources/sketchtool/bin $PATH
+end
+
 # GO
 if command -v go > /dev/null
   set -x GOPATH $HOME/Development
