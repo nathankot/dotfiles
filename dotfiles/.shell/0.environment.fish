@@ -37,9 +37,9 @@ if command -v nodenv > /dev/null
 end
 
 # RUBY
-if command -v rbenv
+if command -v rbenv > /dev/null
   set -x RBENV_ROOT $HOME/.rbenv
-  status --is-interactive; and source (rbenv init -|psub)
+  status --is-interactive; and source (rbenv init -|psub) 2>&1 /dev/null
 end
 
 # Virtualenv
