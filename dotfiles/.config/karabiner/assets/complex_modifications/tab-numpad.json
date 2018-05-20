@@ -7,48 +7,6 @@
         {
           "conditions": [
             {
-              "type": "device_unless",
-              "identifiers": [
-                {
-                  "vendor_id": 65261
-                }
-              ]
-            }
-          ],
-          "from": {
-            "key_code": "tab",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "tab_modifier",
-                "value": 1
-              }
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "tab_modifier",
-                "value": 0
-              }
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "tab"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
               "type": "variable_if",
               "name": "tab_modifier",
               "value": 1
