@@ -20,6 +20,7 @@ Session.vim
 /tags
 .cs_workspaces
 .agignore
+.ignore
 .tern-project
 .tern-port
 .projectile
