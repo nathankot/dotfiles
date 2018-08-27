@@ -1,10 +1,6 @@
 # misc
 abbr --add l ls
 
-# emacs
-# abbr --add e emacs
-# abbr --add emacs 'emacsclient -c --socket-name="emacs" -a ""'
-
 # git
 alias git hub
 abbr --add g git
@@ -45,4 +41,15 @@ end
 
 function legedit
   emacs ~/Google\ Drive/Documents/Accounting/current.ledger
+end
+
+function pfd -d "Return the path of the frontmost Finder window"
+  osascript 2>/dev/null -e '
+    tell application "Finder"
+      return POSIX path of (target of window 1 as alias)
+    end tell'
+end
+
+function cdf -d "cd to the current Finder directory"
+  cd (pfd)
 end
