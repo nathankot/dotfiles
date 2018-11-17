@@ -44,7 +44,7 @@
   become: true
 
 - name: Install gocode
-  command: go get -u github.com/nsf/gocode
+  command: go get -u github.com/mdempsky/gocode
 
 - name: Install goimports
   command: go get golang.org/x/tools/cmd/goimports
