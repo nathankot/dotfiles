@@ -9,7 +9,7 @@ cd "$HOME" || exit
 xargs -n 1 rm -rf <<<"$FILES_DEST"
 xargs -n 1 ln -s <<<"$FILES_SOURCE"
 
-cd "$(dirname "${BASH_SOURDCE}")/workstation"
+cd "$(dirname "${BASH_SOURCE}")/workstation"
 ../env/bin/pip install -r ../requirements.txt
 ../env/bin/ansible-playbook install.yml -e "github_access_token=$GITHUB_API_TOKEN"
 cd - || exit
