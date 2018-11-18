@@ -45,13 +45,6 @@
     value: 3
     type: string
 
-- name: Disable remote control infrared receiver
-  osx_defaults:
-    domain: /Library/Preferences/com.apple.driver.AppleIRController
-    key: DeviceEnabled
-    value: false
-    type: boolean
-
 - name: Disable press-and-hold for accented characters
   osx_defaults:
     domain: NSGlobalDomain
