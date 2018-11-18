@@ -1,6 +1,6 @@
 ---
 - name: Install homebrew packages
-  homebrew: 
+  homebrew:
     state: present
     name:
       - git
@@ -39,6 +39,7 @@
       - go
       - glide
       - dockutil
+      - carthage
 
 - name: Install tmuxinator
   command: gem install tmuxinator
