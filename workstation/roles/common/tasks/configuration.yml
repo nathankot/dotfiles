@@ -56,15 +56,15 @@
   osx_defaults:
     domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
     key: Clicking
-    value: true
-    type: boolean
+    value: 1
+    type: int
 
-- name: Enable tap to click (com.apple.driver.AppleBluetoothMultitouch.trackpad)
+- name: Enable tap to click (com.apple.AppleMultitouchTrackpad)
   osx_defaults:
-    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    domain: com.apple.AppleMultitouchTrackpad
     key: Clicking
-    value: true
-    type: boolean
+    value: 1
+    type: int
 
 - name: Enable tap to click (com.apple.mouse.tapBehavior)
   osx_defaults:
@@ -165,15 +165,15 @@
   osx_defaults:
     key: TrackpadThreeFingerDrag
     domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
-    value: true
-    type: bool
+    value: 1
+    type: int
 
 - name: Three finger drag (com.apple.AppleMultitouchTrackpad)
   osx_defaults:
     key: TrackpadThreeFingerDrag
     domain: com.apple.AppleMultitouchTrackpad
-    value: true
-    type: bool
+    value: 1
+    type: int
 
 - name: Disable Spaces Auto Rearrange
   osx_defaults:
