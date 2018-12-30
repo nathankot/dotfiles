@@ -1,0 +1,17 @@
+{
+  "bridge": {
+    "name": "Nathan's Homebridge",
+    "username": "CC:22:3D:E3:CE:30",
+    "port": 51826,
+    "pin": "066-88-987"
+  },
+  "accessories": [
+    {
+      "accessory": "Hygrotermograph",
+      "name": "Temperature & Humidity",
+      "timeout": 30,
+      "temperatureName": "Temperature",
+      "humidityName": "Humidity"
+    }
+  ]
+}
