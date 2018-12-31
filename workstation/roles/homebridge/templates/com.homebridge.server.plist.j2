@@ -11,11 +11,14 @@
     <key>ProgramArguments</key>
     <array>
       <string>/usr/local/bin/homebridge</string>
+      <string>--no-qrcode</string>
     </array>
     <key>StandardOutPath</key>
     <string>/Users/{{ ansible_user_id }}/.homebridge/logfile.log</string>
     <key>StandardErrorPath</key>
     <string>/Users/{{ ansible_user_id }}/.homebridge/logfile.log</string>
+    <key>ProcessType</key>
+    <string>Background</string>
     <key>EnvironmentVariables</key>
     <dict>
       <key>PATH</key>
