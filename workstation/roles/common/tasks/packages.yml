@@ -41,6 +41,7 @@
       - glide
       - dockutil
       - carthage
+      - python
 
 - name: Install tmuxinator
   command: gem install tmuxinator
@@ -57,6 +58,9 @@
 
 - name: Launch homebridge
   command: launchctl load -w /Users/{{ ansible_user_id }}/Library/LaunchAgents/com.homebridge.server.plist
+
+- name: install python-miio
+  command: pip3 install python-miio
 
 - name: Install gocode
   command: go get -u github.com/mdempsky/gocode
