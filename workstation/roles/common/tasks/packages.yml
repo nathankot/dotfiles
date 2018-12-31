@@ -41,26 +41,10 @@
       - glide
       - dockutil
       - carthage
-      - python
 
 - name: Install tmuxinator
   command: gem install tmuxinator
   become: true
-
-- name: Install homebridge
-  command: npm install -g homebridge nathankot/homebridge-mi-hygrothermograph Timeular/noble-mac
-
-- name: Copy over homebridge template
-  template:
-    src: com.homebridge.server.plist.j2
-    dest: /Users/{{ ansible_user_id }}/Library/LaunchAgents/com.homebridge.server.plist
-    mode: 0600
-
-- name: Launch homebridge
-  command: launchctl load -w /Users/{{ ansible_user_id }}/Library/LaunchAgents/com.homebridge.server.plist
-
-- name: install python-miio
-  command: pip3 install python-miio
 
 - name: Install gocode
   command: go get -u github.com/mdempsky/gocode
