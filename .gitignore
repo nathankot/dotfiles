@@ -1,2 +1,3 @@
 .gitconfig.private
 env
+node_modules
