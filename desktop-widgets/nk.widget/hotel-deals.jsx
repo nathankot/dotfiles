@@ -66,7 +66,7 @@ const PAGES = [{
   title: 'Renaissance Bali',
   url: 'https://www.marriott.com/hotels/hotel-deals/dpsuw-renaissance-bali-uluwatu-resort-and-spa/',
 }, {
-  title: 'Majestic',
+  title: 'Majestic KL',
   url: 'http://www.majestickl.com/offers.html',
   dealsSelector: '.advant-item-offer',
   scraper: dealDOM => ({

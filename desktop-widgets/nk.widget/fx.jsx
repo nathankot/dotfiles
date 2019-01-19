@@ -3,6 +3,8 @@ import * as request from 'superagent';
 
 import { CURRENCY_LAYER_API_KEY } from './private.json';
 
+import { cache } from './lib/localStorage';
+
 const PROXY = 'http://127.0.0.1:41417/';
 const SYMBOLS = ['NZD', 'JPY', 'BTC', 'MYR'];
 
@@ -39,28 +41,35 @@ export const className = css({
   },
 });
 
-export const command = dispatch => {
-  request
-    .get(PROXY + `http://apilayer.net/api/live?access_key=${CURRENCY_LAYER_API_KEY}&currencies=${SYMBOLS}&source=USD&format=1`)
-    .then(response => {
+export const command = dispatch =>
+  cache(
+    `fx_${SYMBOLS.join(',')}`,
+    60 * 60 * 24,
+    () => request
+      .get(PROXY + `http://apilayer.net/api/live?access_key=${CURRENCY_LAYER_API_KEY}&currencies=${SYMBOLS.join(',')}&source=USD&format=1`)
+      .then(response => response.body))
+    .then(body => {
       dispatch({
         type: 'UPDATE_RESULTS',
-        results: response.body,
+        results: body,
       });
     });
-};
 
 export const initialState = {
-  results: {},
+  results: {
+    quotes: {},
+  },
 };
 
 export const updateState = (event, previousState) => {
   switch (event.type) {
     case 'UPDATE_RESULTS':
-      console.log(event.results);
       return {
         ...previousState,
-        results: event.results,
+        results: {
+          ...previousState.results,
+          quotes: event.results.quotes,
+        },
       };
     default:
       return previousState;
