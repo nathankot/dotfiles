@@ -1,5 +1,6 @@
 import { css } from 'uebersicht';
 import * as request from 'superagent';
+import hash from 'object-hash';
 
 import { CURRENCY_LAYER_API_KEY } from './private.json';
 
@@ -43,7 +44,7 @@ export const className = css({
 
 export const command = dispatch =>
   cache(
-    `fx_${SYMBOLS.join(',')}`,
+    hash({ widget: 'fx', SYMBOLS }),
     60 * 60 * 24,
     () => request
       .get(PROXY + `http://apilayer.net/api/live?access_key=${CURRENCY_LAYER_API_KEY}&currencies=${SYMBOLS.join(',')}&source=USD&format=1`)
@@ -80,7 +81,7 @@ export const render = (props, dispatch) => (
   <table>
     <tbody>
       {Object.keys(props.results.quotes).map(key => (
-        <tr>
+        <tr key={key}>
           <td>{key}</td>
           <td>{props.results.quotes[key]}</td>
         </tr>

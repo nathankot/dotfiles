@@ -1,5 +1,8 @@
 import { css } from 'uebersicht';
 import * as request from 'superagent';
+import hash from 'object-hash';
+
+import { cache } from './lib/localStorage';
 
 const TEMPLATE_MARRIOTT = {
   dealsSelector: '.l-deal-wrapper',
@@ -135,17 +138,15 @@ export const className = css({
 export const command = dispatch => {
   for (var i = 0; i < PAGES.length; i++) {
     const page = PAGES[i];
-    request
+    const cacheKey = hash({ widget: 'hotels', url: page.url });
+    cache(cacheKey, 60 * 60 * 24, () => request
       .get(PROXY + page.url)
       .set('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36')
-      .then(response => {
-        const responseDOM = PARSER.parseFromString(response.text, 'text/html');
-        const deals =
-          [...responseDOM.querySelectorAll(page.dealsSelector)]
+      .then(response =>
+        [...(PARSER.parseFromString(response.text, 'text/html').querySelectorAll(page.dealsSelector))]
           .filter(dealDOM => page.dealsFilter == null ? true : page.dealsFilter(dealDOM))
-          .map(page.scraper);
-        dispatch({ type: 'PAGE_UPDATE', page, deals });
-      });
+          .map(page.scraper)))
+      .then(deals => dispatch({ type: 'PAGE_UPDATE', page, deals }));
   }
 };
 
