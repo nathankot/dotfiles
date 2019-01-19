@@ -1,15 +1,22 @@
+export function getObject(key) { // :: Object | null
+  const str = window.localStorage.getItem(key);
+  return JSON.parse(str); // Returns `null` when input is `null`
+}
+
+export function setObject(key, obj) {
+  window.localStorage.setItem(key, JSON.stringify(obj));
+}
+
 export function cache(key, ttlSeconds, promiseProducer) {
   const now = (new Date()).getTime() / 1000;
+  const existingCacheItem = getObject(key);
 
-  const existingCacheItemString = window.localStorage.getItem(key);
-  const existingCacheItemJSON = JSON.parse(existingCacheItemString); // Returns `null` when input is `null`
-
-  if (existingCacheItemJSON != null &&
-      existingCacheItemJSON.ts != null &&
-      existingCacheItemJSON.value != null &&
-      existingCacheItemJSON.ts > now - ttlSeconds) {
+  if (existingCacheItem != null &&
+      existingCacheItem.ts != null &&
+      existingCacheItem.value != null &&
+      existingCacheItem.ts > now - ttlSeconds) {
     console.log(`Returning value from cache for key: ${key}; ttl: ${ttlSeconds}s`);
-    return Promise.resolve(existingCacheItemJSON.value);
+    return Promise.resolve(existingCacheItem.value);
   }
 
   console.log(`Fetching new value for cache key: ${key}`);
@@ -19,7 +26,7 @@ export function cache(key, ttlSeconds, promiseProducer) {
         ts: now,
         value: value,
       };
-      window.localStorage.setItem(key, JSON.stringify(newCacheItem));
+      setObject(key, newCacheItem);
       return value;
     });
 };

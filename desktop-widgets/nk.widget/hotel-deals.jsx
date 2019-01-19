@@ -2,7 +2,11 @@ import { css } from 'uebersicht';
 import * as request from 'superagent';
 import hash from 'object-hash';
 
-import { cache } from './lib/localStorage';
+import {
+  getObject,
+  setObject,
+  cache,
+} from './lib/localStorage';
 
 const TEMPLATE_MARRIOTT = {
   dealsSelector: '.l-deal-wrapper',
@@ -109,6 +113,11 @@ export const className = css({
   li: {
     fontSize: '12px',
   },
+  '.result-title': {
+    '&--unseen': {
+      color: 'orange',
+    },
+  },
   '.expand-result': {
     color: 'cyan',
   },
@@ -138,7 +147,9 @@ export const className = css({
 export const command = dispatch => {
   for (var i = 0; i < PAGES.length; i++) {
     const page = PAGES[i];
-    const cacheKey = hash({ widget: 'hotels', url: page.url });
+    const cacheKeyObj = { widget: 'hotels', url: page.url }
+    const cacheKey = hash(cacheKeyObj);
+
     cache(cacheKey, 60 * 60 * 24, () => request
       .get(PROXY + page.url)
       .set('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36')
@@ -146,7 +157,25 @@ export const command = dispatch => {
         [...(PARSER.parseFromString(response.text, 'text/html').querySelectorAll(page.dealsSelector))]
           .filter(dealDOM => page.dealsFilter == null ? true : page.dealsFilter(dealDOM))
           .map(page.scraper)))
-      .then(deals => dispatch({ type: 'PAGE_UPDATE', page, deals }));
+      .then(deals => {
+
+        const dealsHash = hash(deals);
+
+        let unseen = false;
+        for (var i = 0; i < 7; i++) {
+          const seenHash = getObject(hash({ ...cacheKeyObj, lastSeen: true }));
+          if (seenHash !== dealsHash) {
+            unseen = true;
+          }
+        }
+
+        dispatch({
+          type: 'PAGE_UPDATE',
+          page,
+          deals,
+          unseen,
+        });
+      });
   }
 };
 
@@ -158,19 +187,27 @@ export const initialState = {
 export const updateState = (event, previousState) => {
   switch (event.type) {
     case 'TOGGLE_EXPAND':
+      const newResults1 = { ...previousState.results };
+      newResults1[event.resultTitle] = {
+        ...newResults1[event.resultTitle],
+        unseen: false,
+      };
       return {
         ...previousState,
-        expandedResult: previousState.expandedResult === event.result ? '' : event.result,
+        results: newResults1,
+        expandedResult: previousState.expandedResult === event.resultTitle ? '' : event.resultTitle,
       };
     case 'PAGE_UPDATE':
-      const newResults = { ...previousState.results };
-      newResults[event.page.title] = {
+      const newResults2 = { ...previousState.results };
+      newResults2[event.page.title] = {
         title: event.page.title,
+        url: event.page.url,
         deals: event.deals,
+        unseen: event.unseen,
       };
       return {
         ...previousState,
-        results: newResults,
+        results: newResults2,
       };
     default:
       return {
@@ -181,40 +218,45 @@ export const updateState = (event, previousState) => {
 
 export const render = (props, dispatch) => (
   <ul>
-    {Object.keys(props.results).filter(resultKey => props.results[resultKey].deals.length > 0).map(resultKey => {
-       const result = props.results[resultKey];
+    {Object
+      .keys(props.results)
+      .filter(resultKey => props.results[resultKey].deals.length > 0)
+      .map(resultKey => {
+        const result = props.results[resultKey];
+        return (
+          <li key={result.title}>
+            <h3 className={`result-title ${result.unseen ? 'result-title--unseen' : ''}`}><a
+                  onClick={() => {
+                    setObject(hash({ widget: 'hotels', url: result.url, lastSeen: true }), hash(result.deals));
+                    dispatch({ type: 'TOGGLE_EXPAND', resultTitle: result.title });
+                  }}
+                  className="expand-result">[{result.deals.length}]</a> {result.title}</h3>
 
-       return (
-         <li key={result.title}>
-           <h3><a
-             onClick={() => dispatch({ type: 'TOGGLE_EXPAND', result: result.title })}
-             className="expand-result">[{result.deals.length}]</a> {result.title}</h3>
-
-           <div className={`deals ${props.expandedResult === result.title ? 'deals-expanded' : ''}`}>
-            {result.deals.map(deal => (
-              <table className='deal' key={deal.heading}>
-                <tbody>
-                  <tr>
-                    <td className="deal-heading" colSpan="2">
-                      {deal.heading}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="deal-description" colSpan="2">
-                      {deal.description}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="deal-validity">{deal.validity}</td>
-                    <td className="deal-price">{deal.price}</td>
-                  </tr>
-                </tbody>
-              </table>
-            ))}
-           </div>
-         </li>
-       );
-    })}
+            <div className={`deals ${props.expandedResult === result.title ? 'deals-expanded' : ''}`}>
+              {result.deals.map(deal => (
+                <table className='deal' key={deal.heading}>
+                  <tbody>
+                    <tr>
+                      <td className="deal-heading" colSpan="2">
+                        {deal.heading}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="deal-description" colSpan="2">
+                        {deal.description}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="deal-validity">{deal.validity}</td>
+                      <td className="deal-price">{deal.price}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              ))}
+            </div>
+          </li>
+        );
+      })}
   </ul>
 );
 
