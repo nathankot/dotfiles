@@ -80,12 +80,15 @@ export const updateState = (event, previousState) => {
 export const render = (props, dispatch) => (
   <table>
     <tbody>
-      {Object.keys(props.results.quotes).map(key => (
-        <tr key={key}>
-          <td>{key}</td>
-          <td>{props.results.quotes[key]}</td>
-        </tr>
-      ))}
+      {Object
+        .keys(props.results.quotes)
+        .filter(k => SYMBOLS.includes(k.replace('USD', '')))
+        .map(key => (
+          <tr key={key}>
+            <td>{key}</td>
+            <td>{props.results.quotes[key]}</td>
+          </tr>
+        ))}
     </tbody>
   </table>
 );
