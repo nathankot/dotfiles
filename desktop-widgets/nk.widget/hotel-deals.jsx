@@ -15,7 +15,7 @@ const MARRIOTT_SCRAPE = (dealDoc, dealDOM) => ({
   description: dealDoc.querySelector('.offer-summary p:first-of-type').innerText.replace(/\n\s*\n/g, '\n'),
   price: dealDoc.querySelector('.rates-info') == null ? null : dealDoc.querySelector('.rates-info').innerText,
   url: 'https://www.marriott.com' + dealDOM.querySelector('a').getAttribute('href'),
-  valid: dealDoc.querySelector('.m-offers-quick-info p:first-of-type').innerText,
+  valid: dealDoc.querySelector('.m-offers-quick-info p:first-of-type') == null ? null : dealDoc.querySelector('.m-offers-quick-info p:first-of-type').innerText,
 });
 
 const TEMPLATE_MARRIOTT = {
@@ -166,7 +166,7 @@ export const command = dispatch => {
     const cacheKeyObj = { widget: 'hotels', url: page.url }
     const cacheKey = hash(cacheKeyObj);
 
-    cache(cacheKey, /* 60 * 60 * 24 */ 0, () => request
+    cache(cacheKey, 60 * 60 * 24, () => request
       .get(PROXY + page.url)
       .set('User-Agent', USER_AGENT)
       .then(response =>
