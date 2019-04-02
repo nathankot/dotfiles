@@ -9,19 +9,27 @@ import {
 } from './lib/localStorage';
 
 const TEMPLATE_MARRIOTT = {
-  dealsSelector: '.l-deal-wrapper',
-  scraper: dealDOM => ({
-    heading: dealDOM.querySelector('h3').innerText,
-    description: dealDOM.querySelector('h3 + p').innerText,
-    validity: dealDOM.querySelector('.l-valid-date').innerText,
-    price: (() => {
-      const priceDOM = dealDOM.querySelector('.l-m-margin-bottom-none');
-      if (priceDOM == null) {
-        return '';
-      }
-      return priceDOM.innerText;
-    })(),
-  }),
+  scrapers: [{
+    dealsSelector: '.is-hws-deal-txt',
+    scrape: dealDOM => ({
+      heading: dealDOM.querySelector('h3').innerText,
+      description: dealDOM.querySelector('h3 + p').innerText,
+      price: null,
+      url: dealDOM.querySelector('a') == null
+         ? null
+         : 'https://www.marriott.com' + dealDOM.querySelector('a').getAttribute('href'),
+    }),
+  }, {
+    dealsSelector: '.m-rewards-hub-container',
+    scrape: dealDOM => ({
+      heading: dealDOM.querySelector('h3').innerText,
+      description: dealDOM.querySelector('h3 + p').innerText,
+      url: dealDOM.querySelector('a') == null
+         ? null
+         : 'https://www.marriott.com' + dealDOM.querySelector('a').getAttribute('href'),
+      price: null,
+    }),
+  }],
 };
 
 const PAGES = [{
@@ -75,13 +83,14 @@ const PAGES = [{
 }, {
   title: 'Majestic KL',
   url: 'http://www.majestickl.com/offers.html',
-  dealsSelector: '.advant-item-offer',
-  scraper: dealDOM => ({
-    heading: dealDOM.querySelector('.advant-title').innerText,
-    description: [...dealDOM.querySelectorAll('.advant-text p')].reduce((a, e) => a + '\n' + e.innerText, ''),
-    validity: '',
-    price: lineContainingText(dealDOM.querySelector('.advant-text').innerText, 'per night', /^.*per night/),
-  }),
+  scrapers: [{
+    dealsSelector: '.advant-item-offer',
+    scrape: dealDOM => ({
+      heading: dealDOM.querySelector('.advant-title').innerText,
+      description: [...dealDOM.querySelectorAll('.advant-text p')].reduce((a, e) => a + '\n' + e.innerText, ''),
+      price: lineContainingText(dealDOM.querySelector('.advant-text').innerText, 'per night', /^.*per night/),
+    }),
+  }],
 }];
 
 const PROXY = 'http://127.0.0.1:41417/'
@@ -135,8 +144,11 @@ export const className = css({
   '.deal-description': {
     color: '#ccc',
   },
-  '.deal-validity': {
-    fontStyle: 'italic',
+  '.deal-url': {
+    color: '#fff',
+    a: {
+      color: '#fff',
+    },
   },
   '.deal-price': {
     fontWeight: 'bold',
@@ -150,15 +162,16 @@ export const command = dispatch => {
     const cacheKeyObj = { widget: 'hotels', url: page.url }
     const cacheKey = hash(cacheKeyObj);
 
-    cache(cacheKey, 60 * 60 * 24, () => request
+    cache(cacheKey, /* 60 * 60 * 24 */ 0, () => request
       .get(PROXY + page.url)
       .set('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36')
       .then(response =>
-        [...(PARSER.parseFromString(response.text, 'text/html').querySelectorAll(page.dealsSelector))]
-          .filter(dealDOM => page.dealsFilter == null ? true : page.dealsFilter(dealDOM))
-          .map(page.scraper)))
+        page.scrapers.reduce((results, scraper) => results.concat(
+          [...(PARSER.parseFromString(response.text, 'text/html').querySelectorAll(scraper.dealsSelector))]
+            .filter(dealDOM => scraper.dealsFilter == null ? true : scraper.dealsFilter(dealDOM))
+            .map(scraper.scrape)
+        ), [])))
       .then(deals => {
-
         const dealsHash = hash(deals);
 
         let unseen = false;
@@ -247,8 +260,12 @@ export const render = (props, dispatch) => (
                       </td>
                     </tr>
                     <tr>
-                      <td className="deal-validity">{deal.validity}</td>
-                      <td className="deal-price">{deal.price}</td>
+                      {deal.url == null ? null : (
+                        <td className="deal-url"><a href={deal.url}>View</a></td>
+                      )}
+                      {deal.price == null ? null : (
+                        <td className="deal-price">{deal.price}</td>
+                      )}
                     </tr>
                   </tbody>
                 </table>
