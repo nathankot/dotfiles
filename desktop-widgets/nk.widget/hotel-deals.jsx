@@ -8,27 +8,25 @@ import {
   cache,
 } from './lib/localStorage';
 
+const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36';
+
+const MARRIOTT_SCRAPE = (dealDoc, dealDOM) => ({
+  heading: dealDoc.querySelector('.offer-title').innerText,
+  description: dealDoc.querySelector('.offer-summary p:first-of-type').innerText.replace(/\n\s*\n/g, '\n'),
+  price: dealDoc.querySelector('.rates-info') == null ? null : dealDoc.querySelector('.rates-info').innerText,
+  url: 'https://www.marriott.com' + dealDOM.querySelector('a').getAttribute('href'),
+  valid: dealDoc.querySelector('.m-offers-quick-info p:first-of-type').innerText,
+});
+
 const TEMPLATE_MARRIOTT = {
   scrapers: [{
     dealsSelector: '.is-hws-deal-txt',
-    scrape: dealDOM => ({
-      heading: dealDOM.querySelector('h3').innerText,
-      description: dealDOM.querySelector('h3 + p').innerText,
-      price: null,
-      url: dealDOM.querySelector('a') == null
-         ? null
-         : 'https://www.marriott.com' + dealDOM.querySelector('a').getAttribute('href'),
-    }),
+    navigate: dealDOM => 'https://www.marriott.com' + dealDOM.querySelector('a').getAttribute('href'),
+    scrape: MARRIOTT_SCRAPE,
   }, {
     dealsSelector: '.m-rewards-hub-container',
-    scrape: dealDOM => ({
-      heading: dealDOM.querySelector('h3').innerText,
-      description: dealDOM.querySelector('h3 + p').innerText,
-      url: dealDOM.querySelector('a') == null
-         ? null
-         : 'https://www.marriott.com' + dealDOM.querySelector('a').getAttribute('href'),
-      price: null,
-    }),
+    navigate: dealDOM => 'https://www.marriott.com' + dealDOM.querySelector('a').getAttribute('href'),
+    scrape: MARRIOTT_SCRAPE,
   }],
 };
 
@@ -145,12 +143,18 @@ export const className = css({
     color: '#ccc',
   },
   '.deal-url': {
+    width: '10%',
     color: '#fff',
     a: {
       color: '#fff',
     },
   },
+  '.deal-valid': {
+    width: '45%',
+    color: '#fff',
+  },
   '.deal-price': {
+    width: '45%',
     fontWeight: 'bold',
     textAlign: 'right',
   },
@@ -164,13 +168,23 @@ export const command = dispatch => {
 
     cache(cacheKey, /* 60 * 60 * 24 */ 0, () => request
       .get(PROXY + page.url)
-      .set('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36')
+      .set('User-Agent', USER_AGENT)
       .then(response =>
-        page.scrapers.reduce((results, scraper) => results.concat(
-          [...(PARSER.parseFromString(response.text, 'text/html').querySelectorAll(scraper.dealsSelector))]
-            .filter(dealDOM => scraper.dealsFilter == null ? true : scraper.dealsFilter(dealDOM))
-            .map(scraper.scrape)
-        ), [])))
+        Promise.all(page.scrapers.reduce(
+          (results, scraper) =>
+            results.concat(
+              [...(PARSER.parseFromString(response.text, 'text/html').querySelectorAll(scraper.dealsSelector))]
+                .filter(dealDOM => scraper.dealsFilter == null ? true : scraper.dealsFilter(dealDOM))
+                .map(dealDOM =>
+                  scraper.navigate == null
+                  ? Promise.resolve(scraper.scrape(dealDOM))
+                  : request
+                    .get(PROXY + scraper.navigate(dealDOM))
+                    .set('User-Agent', USER_AGENT)
+                    .then(response => PARSER.parseFromString(response.text, 'text/html'))
+                    .then(dealDoc => scraper.scrape(dealDoc, dealDOM))
+                )
+            ), []))))
       .then(deals => {
         const dealsHash = hash(deals);
 
@@ -250,22 +264,27 @@ export const render = (props, dispatch) => (
                 <table className='deal' key={deal.heading}>
                   <tbody>
                     <tr>
-                      <td className="deal-heading" colSpan="2">
+                      <td className="deal-heading" colSpan="3">
                         {deal.heading}
                       </td>
                     </tr>
                     <tr>
-                      <td className="deal-description" colSpan="2">
+                      <td className="deal-description" colSpan="3">
                         {deal.description}
                       </td>
                     </tr>
                     <tr>
-                      {deal.url == null ? null : (
-                        <td className="deal-url"><a href={deal.url}>View</a></td>
-                      )}
-                      {deal.price == null ? null : (
-                        <td className="deal-price">{deal.price}</td>
-                      )}
+                      <td className="deal-url">
+                        {deal.url == null ? null : (
+                          <a href={deal.url}>View</a>
+                        )}
+                      </td>
+                      <td className="deal-valid">
+                        {deal.valid == null ? null : deal.valid}
+                      </td>
+                      <td className="deal-price">
+                        {deal.price == null ? null : deal.price}
+                      </td>
                     </tr>
                   </tbody>
                 </table>
