@@ -42,9 +42,14 @@
       - dockutil
       - carthage
 
+- name: Install 2.5.1 to rbenv
+  command: rbenv install --skip-existing 2.5.1
+
+- name: Setup rbenv global to 2.5.1
+  command: rbenv global 2.5.1
+
 - name: Install tmuxinator
   command: gem install tmuxinator
-  become: true
 
 - name: Install gocode
   command: go get -u github.com/mdempsky/gocode
