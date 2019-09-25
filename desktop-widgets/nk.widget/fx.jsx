@@ -7,7 +7,7 @@ import { CURRENCY_LAYER_API_KEY } from './private.json';
 import { cache } from './lib/localStorage';
 
 const PROXY = 'http://127.0.0.1:41417/';
-const SYMBOLS = ['NZD', 'JPY', 'BTC', 'MYR'];
+const SYMBOLS = ['NZD', 'JPY', 'BTC', 'MYR', 'SGD'];
 
 export const refreshFrequency = 60 * 1000 * 120;
 
