@@ -33,7 +33,7 @@ end
 if command -v nodenv > /dev/null
   set -x NODENV_ROOT $HOME/.nodenv
   set -x PATH node_modules/.bin $PATH
-  . (nodenv init -|psub)
+  source (nodenv init -|psub)
 end
 
 # RUBY
