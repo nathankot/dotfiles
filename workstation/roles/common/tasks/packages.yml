@@ -34,6 +34,7 @@
       - postgresql
       - mysql
       - rbenv
+      - pyenv
       - node
       - nodenv
       - node-build

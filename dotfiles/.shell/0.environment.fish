@@ -42,6 +42,11 @@ if command -v rbenv > /dev/null
   status --is-interactive; and source (rbenv init -|psub) 2>&1 /dev/null
 end
 
+if command -v pyenv > /dev/null
+  set -x PYENV_ROOT $HOME/.pyenv
+  status --is-interactive; and source (pyenv init -|psub)
+end
+
 # Virtualenv
 if command -v virtualenv > /dev/null
   set -x PATH ./env/bin $PATH
