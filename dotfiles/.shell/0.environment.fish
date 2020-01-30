@@ -50,6 +50,7 @@ end
 # Virtualenv
 if command -v virtualenv > /dev/null
   set -x PATH ./env/bin $PATH
+  set -x PATH ./.env/bin $PATH
 end
 
 # Haskell
