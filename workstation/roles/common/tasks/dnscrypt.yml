@@ -1,0 +1,20 @@
+---
+
+- name: Install dnscrypt-proxy
+  homebrew:
+    state: present
+    name:
+      - dnscrypt-proxy
+
+- name: Copy over conf
+  template:
+    src: dnscrypt-proxy.toml.j2
+    dest: /usr/local/etc/dnscrypt-proxy.toml
+    mode: 0600
+    force: true
+
+- name: Start the service
+  command: brew services start dnscrypt-proxy
+
+- name: Update DNS server
+  command: networksetup -setdnsservers Wi-Fi 127.0.0.1 8.8.8.8 8.8.4.4

@@ -36,3 +36,7 @@
 - name: Setup configuration
   import_tasks: configuration.yml
   tags: [configuration]
+
+- name: Setup dnscrypt
+  import_tasks: dnscrypt.yml
+  tags: [dnscrypt]
