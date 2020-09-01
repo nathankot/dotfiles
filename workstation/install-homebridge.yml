@@ -1,5 +1,0 @@
----
-- hosts: all
-  become: false
-  roles:
-    - homebridge
