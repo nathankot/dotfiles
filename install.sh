@@ -5,8 +5,8 @@ set -e
 # running this script:
 #
 # * Homebrew
-# * Python 2: `brew install python@2`
-# * Virtualenv: `pip install virtualenv`
+# * Python: `brew install pyenv`
+# * Virtualenv: `pip3 install virtualenv`
 # * Env: `virtualenv env`
 
 cd "$(dirname "${BASH_SOURCE}")"

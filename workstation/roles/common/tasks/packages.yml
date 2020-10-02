@@ -7,7 +7,6 @@
       - fish
       - emacs
       - aspell
-      - cask
       - coreutils
       - editorconfig
       - gnupg

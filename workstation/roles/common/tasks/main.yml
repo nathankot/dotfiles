@@ -30,9 +30,6 @@
   import_tasks: packages.yml
   tags: [packages]
 
-- name: Setup .emacs.d dependencies
-  command: chdir=~/.emacs.d creates=~/.emacs.d/.cask cask install
-
 - name: Setup configuration
   import_tasks: configuration.yml
   tags: [configuration]
