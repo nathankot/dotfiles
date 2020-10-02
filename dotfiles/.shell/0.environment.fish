@@ -97,3 +97,6 @@ end
 set -x OPENSSL_INCLUDE_DIR $HOMEBREW_ROOT/opt/openssl/include
 set -x OPENSSL_LIB_DIR $HOMEBREW_ROOT/opt/openssl/lib
 set -x DEP_OPENSSL_INCLUDE $HOMEBREW_ROOT/opt/openssl/include
+
+# fix for pinentry not working within emacs:
+set -x PINENTRY_USER_DATA "USE_CURSES=0"
