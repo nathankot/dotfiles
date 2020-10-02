@@ -205,8 +205,8 @@ colors:
   # Allowed values are CellForeground and CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
   selection:
-   text: #fefffe
-   background: #90d7d5
+   text: '#fefffe'
+   background: '#90d7d5'
 
   # Search colors
   #
@@ -707,7 +707,7 @@ key_bindings:
   - { key: Backslash, mods: Alt,       chars: "\x1b\\"                      } # Alt + \
   - { key: Backslash, mods: Alt|Shift, chars: "\x1b|"                       } # Alt + |
 
-#debug:
+# debug:
   # Display the time it takes to redraw each frame.
   #render_timer: false
 
@@ -723,7 +723,7 @@ key_bindings:
   #   - Info
   #   - Debug
   #   - Trace
-  #log_level: Warn
+  # log_level: Trace
 
   # Print all received window events.
   #print_events: false
