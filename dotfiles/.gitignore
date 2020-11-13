@@ -40,3 +40,4 @@ auto-save-list
 .vars
 .node-version
 .npmrc
+.ccls-cache
