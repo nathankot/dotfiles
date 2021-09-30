@@ -19,9 +19,9 @@ set -x PATH $HOMEBREW_ROOT/sbin $PATH
 set -x MANPATH $HOMEBREW_ROOT/share/man $MANPATH
 
 # Emacs
-if command -v emacs > /dev/null
-  set -x EDITOR emacs
-  set -x GIT_EDITOR emacs
+if command -v emacsclient > /dev/null
+  set -x EDITOR "emacsclient -t"
+  set -x GIT_EDITOR "emacsclient -t"
 end
 
 # Ledger
