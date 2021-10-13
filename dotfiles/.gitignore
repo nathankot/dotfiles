@@ -41,3 +41,4 @@ auto-save-list
 .node-version
 .npmrc
 .ccls-cache
+.dir-locals.el
