@@ -5,3 +5,4 @@ source ~/.shell/paths.sh
 if [ -f ~/.shell/private.sh ]; then
   source ~/.shell/private.sh
 fi
+. "$HOME/.cargo/env"
