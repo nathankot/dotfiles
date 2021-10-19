@@ -31,7 +31,6 @@
   command: "loginitems -a '{{ item }}'"
   changed_when: false
   with_items:
-    - Google Drive
     - Hammerspoon
     - Karabiner-Elements
 
