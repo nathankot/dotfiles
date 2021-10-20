@@ -50,6 +50,13 @@
     value: false
     type: boolean
 
+- name: Disable pin-entry-mac (GPG tools) from storing passwords in the keychain
+  osx_defaults:
+    domain: org.gpgtools.common
+    key: DisableKeychain
+    value: true
+    type: boolean
+
 - name: Enable tap to click (com.apple.driver.AppleBluetoothMultitouch.trackpad)
   osx_defaults:
     domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
