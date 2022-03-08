@@ -43,3 +43,7 @@ if command -v nodenv > /dev/null; then
   export PATH=node_modules/.bin:$PATH
   eval "$(nodenv init -)"
 fi
+
+if command -v asdf > /dev/null; then
+  source $(brew --prefix asdf)/libexec/asdf.sh
+fi
