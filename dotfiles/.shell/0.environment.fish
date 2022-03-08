@@ -36,6 +36,10 @@ if command -v nodenv > /dev/null
   source (nodenv init -|psub)
 end
 
+if command -v asdf > /dev/null
+  source ~/.asdf/asdf.fish
+end
+
 # RUBY
 if command -v rbenv > /dev/null
   set -x RBENV_ROOT $HOME/.rbenv
