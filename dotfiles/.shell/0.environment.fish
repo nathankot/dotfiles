@@ -79,7 +79,8 @@ end
 # GO
 if command -v go > /dev/null
   set -x GOPATH $HOME/Development
-  set -x GOROOT /usr/local/opt/go/libexec
+  # asdf should manage GOROOT
+  # set -x GOROOT /usr/local/opt/go/libexec
   set -x GO15VENDOREXPERIMENT 1
   set -x PATH $GOPATH/bin $PATH
 end
