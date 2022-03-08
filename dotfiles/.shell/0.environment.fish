@@ -37,7 +37,7 @@ if command -v nodenv > /dev/null
 end
 
 if command -v asdf > /dev/null
-  source ~/.asdf/asdf.fish
+  source (brew --prefix asdf)/libexec/asdf.fish
 end
 
 # RUBY
