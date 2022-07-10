@@ -7,11 +7,6 @@
   autocrlf = false
   preloadindex = true
 
-[user]
-  name = Nathan Kot
-  email = me@nathankot.com
-  signingkey = 20BD11703257E7B9
-
 [credential]
   helper = osxkeychain
 
@@ -44,8 +39,6 @@
   prompt = false
 
 [alias]
-  accept-ours = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --ours -- $files; git add -u $files; }; f"
-  accept-theirs = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --theirs -- $files; git add -u $files; }; f"
   issues = !hub issue
   browse = !hub browse
   hub = !hub
@@ -67,6 +60,7 @@
 
 [magit]
   hideCampaign = true
+
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
 

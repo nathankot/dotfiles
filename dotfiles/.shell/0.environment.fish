@@ -7,7 +7,7 @@ set -x TERM screen-256color
 
 set -x GPG_TTY (tty)
 
-set -x HOMEBREW_ROOT /usr/local
+set -x HOMEBREW_ROOT (brew --prefix)
 set -x HOMEBREW_NO_ANALYTICS 1
 set -x HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK 1
 
@@ -31,32 +31,14 @@ if command -v ledger > /dev/null
 end
 
 # NODE
-if command -v nodenv > /dev/null
-  set -x NODENV_ROOT $HOME/.nodenv
-  set -x PATH node_modules/.bin $PATH
-  source (nodenv init -|psub)
-end
+set -x PATH node_modules/.bin $PATH
 
 if command -v asdf > /dev/null
   source (brew --prefix asdf)/libexec/asdf.fish
 end
 
-# RUBY
-if command -v rbenv > /dev/null
-  set -x RBENV_ROOT $HOME/.rbenv
-  status --is-interactive; and source (rbenv init -|psub) 2>&1 /dev/null
-end
-
-if command -v pyenv > /dev/null
-  set -x PYENV_ROOT $HOME/.pyenv
-  status --is-interactive; and source (pyenv init -|psub)
-end
-
-# Virtualenv
-if command -v virtualenv > /dev/null
-  set -x PATH ./env/bin $PATH
-  set -x PATH ./.env/bin $PATH
-end
+set -x PATH ./env/bin $PATH
+set -x PATH ./.env/bin $PATH
 
 # Haskell
 if command -v stack > /dev/null

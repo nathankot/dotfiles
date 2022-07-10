@@ -21,22 +21,11 @@ abbr --add gp git push
 abbr --add gpf git push --force-with-lease
 abbr --add gpr git pull --rebase
 
-# make
-abbr --add mt make test
-
 # kubectl
 abbr --add k kubectl
 
 if command -v tmuxinator > /dev/null
   abbr --add mux tmuxinator
-end
-
-if command -v timetrap > /dev/null
-  abbr --add ts timetrap sheet
-  abbr --add ti timetrap in
-  abbr --add to timetrap out
-  abbr --add td timetrap display
-  abbr --add tn timetrap now
 end
 
 function legedit

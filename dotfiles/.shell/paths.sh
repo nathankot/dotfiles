@@ -28,21 +28,14 @@ if test -d $DEVELOPMENT_SRC_PATH/github.com/rust-lang/rust/src > /dev/null; then
   export RUST_SRC_PATH=$DEVELOPMENT_SRC_PATH/github.com/rust-lang/rust/src
 fi
 
-# virtualenv
-if command -v virtualenv > /dev/null; then
-  export PATH="./env/bin:$PATH"
-fi
+export PATH="./env/bin:$PATH"
 
 if test -d /usr/local/google-cloud-sdk > /dev/null; then
   export PATH="/usr/local/google-cloud-sdk:$PATH"
 fi
 
 # node
-if command -v nodenv > /dev/null; then
-  export NODENV_ROOT=$HOME/.nodenv
-  export PATH=node_modules/.bin:$PATH
-  eval "$(nodenv init -)"
-fi
+export PATH=node_modules/.bin:$PATH
 
 if command -v asdf > /dev/null; then
   source $(brew --prefix asdf)/libexec/asdf.sh
