@@ -1,8 +1,9 @@
 ---
 - name: Install homebrew packages
-  homebrew:
+  community.general.homebrew:
     state: present
     name:
+      - python3
       - git
       - fish
       - emacs
@@ -21,7 +22,6 @@
       - pass
       - pinentry-mac
       - reattach-to-user-namespace
-      - spark
       - the_silver_searcher
       - tmux
       - tmux-mem-cpu-load
@@ -32,39 +32,50 @@
       - x264
       - postgresql
       - mysql
-      - rbenv
-      - pyenv
       - node
-      - nodenv
-      - node-build
       - dockutil
-      - carthage
       - asdf
 
-- name: Install 2.7.1 to rbenv
-  command: rbenv install --skip-existing 2.7.1
+- name: Remove obsolete homebrew packages
+  community.general.homebrew:
+    state: absent
+    name:
+      - nodenv
+      - nodebuild
+      - rbenv
+      - pyenv
+      - glide
+      - dockutil
 
-- name: Setup rbenv global to 2.7.1
-  command: rbenv global 2.7.1
+- name: Install asdf plugins
+  shell: "asdf plugin-add {{ item }}"
+  creates: "~/.asdf/plugins/{{ item }}"
+  loop:
+    - golang
+    - ruby
+    - python
+    - deno
 
-- name: Add asdf golang plugin
-  command: asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-  ignore_errors: yes
+- name: Install asdf plugin versions
+  shell: "asdf install {{ item.name }} {{ item.version }}"
+  creates: "~/.asdf/installs/{{ item.name }}/{{ item.version }}"
+  loop:
+    - { name: golang, version: 1.18.3 }
+    - { name: golang, version: 1.17.1 }
+    - { name: ruby, version: 3.1.2 }
+    - { name: ruby, version: 2.7.1 }
+    - { name: deno, version: 1.21.3 }
 
-- name: Install golang version
-  command: asdf install golang 1.17.1
+- name: Set adsf globals
+  shell: "asdf global {{ item.name }} {{ item.version }}"
+  loop:
+    - { name: golang, version: latest }
+    - { name: ruby, version: latest }
+    - { name: deno, version: latest }
 
-- name: Set golang version
-  command: asdf global golang 1.17.1
-
-- name: Install tmuxinator
-  command: gem install tmuxinator
-
-- name: Install gopls
-  command: asdf exec go install golang.org/x/tools/gopls@latest
-
-- name: Install goimports
-  command: asdf exec go install golang.org/x/tools/cmd/goimports
-
-- name: Install captive browser
-  command: asdf exec go install github.com/FiloSottile/captive-browser
+- name: Install go utils
+  shell: "asdf exec go install {{ item }}"
+  loop:
+    - golang.org/x/tools/gopls@latest
+    - golang.org/x/tools/cmd/goimports
+    - github.com/FiloSottile/captive-browser

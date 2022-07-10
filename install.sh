@@ -5,9 +5,9 @@ set -e
 # running this script:
 #
 # * Homebrew
-# * Python: `brew install pyenv`
+# * Python: `brew install python3`
 # * Virtualenv: `pip3 install virtualenv`
-# * Env: `virtualenv env`
+# * Env: `python3 -m venv env`
 
 cd "$(dirname "${BASH_SOURCE}")"
 
@@ -20,5 +20,6 @@ xargs -n 1 ln -s <<<"$FILES_SOURCE"
 
 cd "$ROOT/workstation"
 ../env/bin/pip install -r ../requirements.txt
+../env/bin/ansible-galaxy install -r ./requirements.yml
 ../env/bin/ansible-playbook install.yml -e "github_access_token=$GITHUB_API_TOKEN"
 cd - || exit

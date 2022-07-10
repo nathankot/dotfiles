@@ -1,7 +1,10 @@
 ---
 - name: Install brew-cask dependencies
-  homebrew_cask: name={{ item }}
-  with_items:
+  community.general.homebrew_cask:
+    name: "{{ item }}"
+    state: present
+    accept_external_apps: yes
+  loop:
     - iterm2
     - karabiner-elements
     - ubersicht

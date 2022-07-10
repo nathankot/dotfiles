@@ -22,10 +22,6 @@
 - name: Ensure the ~/Development/src directory exists
   file: path=~/Development/src state=directory
 
-- name: Install Applications
-  import_tasks: apps.yml
-  tags: [apps]
-
 - name: Install Homebrew packages
   import_tasks: packages.yml
   tags: [packages]
@@ -37,3 +33,7 @@
 - name: Setup dnscrypt
   import_tasks: dnscrypt.yml
   tags: [dnscrypt]
+
+- name: Install Applications
+  import_tasks: apps.yml
+  tags: [apps]

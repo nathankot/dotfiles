@@ -2,8 +2,7 @@
 - hosts: all
   become: false
   roles:
-    - common
-
+    - role: common
   vars_prompt:
     - name: github_access_token
       prompt: "Enter github access token"
