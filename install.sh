@@ -6,8 +6,7 @@ set -e
 #
 # * Homebrew
 # * Python: `brew install python3`
-# * Virtualenv: `pip3 install virtualenv`
-# * Env: `python3 -m venv env`
+# * Setup Virtual Env: `python3 -m venv env`
 
 cd "$(dirname "${BASH_SOURCE}")"
 
