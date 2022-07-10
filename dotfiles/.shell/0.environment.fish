@@ -3,7 +3,6 @@ set fish_greeting "Let's go."
 set -x DEVELOPMENT_SRC_PATH $HOME/Development/src
 
 set -x FISH_CLIPBOARD_CMD pbcopy
-set -x TERM screen-256color
 
 set -x GPG_TTY (tty)
 
