@@ -42,7 +42,6 @@
     name:
       - nodenv
       - node-build
-      - node
       - rbenv
       - ruby-build
       - pyenv
