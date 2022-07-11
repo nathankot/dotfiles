@@ -7,13 +7,15 @@
   autocrlf = false
   preloadindex = true
 
-[credential]
+[credential "https://github.com"]
   helper = osxkeychain
+
+[url "https://github.com"]
+  insteadOf = ssh://git@github.com
 
 [hub]
   protocol = https
   host = github.com
-  host = github.plaid.com
 
 [log]
   abbrevCommit = true
