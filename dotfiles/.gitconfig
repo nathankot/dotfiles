@@ -74,3 +74,6 @@
 
 [rerere]
   enabled = true
+
+[http]
+  cookiefile = ~/.gitcookies
