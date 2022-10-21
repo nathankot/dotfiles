@@ -28,6 +28,10 @@ if command -v tmuxinator > /dev/null
   abbr --add mux tmuxinator
 end
 
+function activate_conda
+  eval conda "shell.fish" "hook" $argv | source
+end
+
 function legedit
   emacs ~/Google\ Drive/Documents/Accounting/current.ledger
 end

@@ -60,6 +60,7 @@
     - { name: ruby, version: 3.1.2 }
     - { name: deno, version: 1.21.3 }
     - { name: nodejs, version: 18.5.0 }
+    - { name: python, version: 3.10.8 }
 
 - name: Install go utils
   shell:
