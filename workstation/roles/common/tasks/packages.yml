@@ -2,6 +2,7 @@
 - name: Install homebrew packages
   community.general.homebrew:
     state: present
+    path: /opt/homebrew/bin
     name:
       - python3
       - git
@@ -40,6 +41,7 @@
 - name: Remove obsolete homebrew packages
   community.general.homebrew:
     state: absent
+    path: /opt/homebrew/bin
     name:
       - nodenv
       - node-build
