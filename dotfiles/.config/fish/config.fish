@@ -1,5 +1,3 @@
-set -x SHELL /usr/local/bin/fish
-
 set fish_color_autosuggestion normal
 set fish_color_command cyan
 set fish_color_comment brblack
