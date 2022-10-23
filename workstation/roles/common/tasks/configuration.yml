@@ -5,10 +5,10 @@
 - name: Ensure fish is specified in /etc/shells
   become: true
   become_method: sudo
-  lineinfile: line=/usr/local/bin/fish path=/etc/shells
+  lineinfile: line=/opt/homebrew/bin/fish path=/etc/shells
 
 - name: Change default shell to fish
-  shell: chsh -s /usr/local/bin/fish {{ ansible_user_id }}
+  shell: chsh -s /opt/homebrew/bin/fish {{ ansible_user_id }}
   become: true
 
 # DOCK

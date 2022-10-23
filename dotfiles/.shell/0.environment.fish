@@ -6,17 +6,32 @@ set -x FISH_CLIPBOARD_CMD pbcopy
 
 set -x GPG_TTY (tty)
 
-set -x HOMEBREW_ROOT (brew --prefix)
 set -x HOMEBREW_NO_ANALYTICS 1
 set -x HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK 1
 
+if command -v /usr/local/bin/brew > /dev/null
+  set -x HOMEBREW_ROOT (/usr/local/bin/brew --prefix)
+  # Add homebrew'd stuff to the path.
+  set -x PATH $HOMEBREW_ROOT/bin $PATH
+  set -x PATH $HOMEBREW_ROOT/sbin $PATH
+  set -x MANPATH $HOMEBREW_ROOT/share/man $MANPATH
+end
+
+# Prefer the arm64 installation of homebrew if available
+if command -v /opt/homebrew/bin/brew > /dev/null
+  set -x HOMEBREW_ROOT (/opt/homebrew/bin/brew --prefix)
+  # Add homebrew'd stuff to the path.
+  set -x PATH $HOMEBREW_ROOT/bin $PATH
+  set -x PATH $HOMEBREW_ROOT/sbin $PATH
+  set -x MANPATH $HOMEBREW_ROOT/share/man $MANPATH
+end
+
+if command -v brew > /dev/null
+    eval (brew shellenv)
+end
+
 set -x CFLAGS "-I$HOMEBREW_ROOT/include" $CFLAGS
 set -x LDFLAGS "-L$HOMEBREW_ROOT/lib" $LDFLAGS
-
-# Add homebrew'd stuff to the path.
-set -x PATH $HOMEBREW_ROOT/bin $PATH
-set -x PATH $HOMEBREW_ROOT/sbin $PATH
-set -x MANPATH $HOMEBREW_ROOT/share/man $MANPATH
 
 # Emacs
 if command -v emacsclient > /dev/null
