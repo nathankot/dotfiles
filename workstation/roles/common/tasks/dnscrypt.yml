@@ -2,6 +2,7 @@
 
 - name: Install dnscrypt-proxy
   community.general.homebrew:
+    path: /opt/homebrew/bin
     state: present
     name:
       - dnscrypt-proxy

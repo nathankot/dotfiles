@@ -26,11 +26,13 @@
 
 - name: Tap loginitems repository for Homebrew
   community.general.homebrew_tap:
+    path: /opt/homebrew/bin
     name: OJFord/formulae
     state: present
 
 - name: Install loginitems homebrew tool
   community.general.homebrew:
+    path: /opt/homebrew/bin
     name: loginitems
     state: present
 

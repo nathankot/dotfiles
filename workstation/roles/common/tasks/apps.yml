@@ -1,6 +1,7 @@
 ---
 - name: Install brew-cask dependencies
   community.general.homebrew_cask:
+    path: /opt/homebrew/bin
     name: "{{ item }}"
     state: present
     accept_external_apps: yes
