@@ -37,6 +37,7 @@
       - dockutil
       - asdf
       - freetype
+      - qmk/qmk/qmk
 
 - name: Remove obsolete homebrew packages
   community.general.homebrew:
