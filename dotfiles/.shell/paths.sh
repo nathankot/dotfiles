@@ -30,6 +30,10 @@ fi
 
 export PATH="./env/bin:$PATH"
 
+if test -d ~/opt/miniconda3/bin; then
+  export PATH="~/opt/miniconda3/bin:$PATH"
+fi
+
 if test -d /usr/local/google-cloud-sdk > /dev/null; then
   export PATH="/usr/local/google-cloud-sdk:$PATH"
 fi
