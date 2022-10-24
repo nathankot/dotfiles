@@ -1,6 +1,6 @@
 ---
 - name: Check if homebrew already exists
-  stat:  path=/usr/local/bin/brew
+  stat:  path=/opt/homebrew/bin/brew
   register: homebrew_stat_result
 
 - name: Fail if homebrew does not exist

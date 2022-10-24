@@ -9,7 +9,7 @@
 - name: Copy over conf
   template:
     src: dnscrypt-proxy.toml.j2
-    dest: /usr/local/etc/dnscrypt-proxy.toml
+    dest: /opt/homebrew/etc/dnscrypt-proxy.toml
     mode: 0600
     force: true
 
