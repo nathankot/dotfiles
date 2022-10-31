@@ -34,9 +34,9 @@ set -x CFLAGS "-I$HOMEBREW_ROOT/include" $CFLAGS
 set -x LDFLAGS "-L$HOMEBREW_ROOT/lib" $LDFLAGS
 
 # Emacs
-if command -v emacsclient > /dev/null
-  set -x EDITOR "emacsclient -t"
-  set -x GIT_EDITOR "emacsclient -t"
+if command -v emacs > /dev/null
+  set -x EDITOR "emacs"
+  set -x GIT_EDITOR "emacs"
 end
 
 # Ledger
