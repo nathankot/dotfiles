@@ -33,3 +33,12 @@ hotkey.bind({"ctrl"}, "return", function()
     hs.application.launchOrFocus("/Applications/kitty.app")
   end
 end)
+
+hotkey.bind({"ctrl", "shift"}, "return", function()
+  local terminal = hs.application.find('Obsidian')
+  if terminal:isFrontmost() then
+    terminal:hide()
+  else
+    hs.application.launchOrFocus("/Applications/Obsidian.app")
+  end
+end)
