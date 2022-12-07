@@ -8,7 +8,6 @@
   loop:
     - iterm2
     - karabiner-elements
-    - ubersicht
     - google-chrome
     - appcleaner
     - the-unarchiver
