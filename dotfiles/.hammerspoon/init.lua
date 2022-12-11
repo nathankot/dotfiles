@@ -1,5 +1,6 @@
 local hotkey = require "hs.hotkey"
 local tiling = require "hs.tiling"
+local window = require "hs.window"
 
 local log = hs.logger.new('nk', 'debug')
 local keyCodes = hs.keycodes.map
@@ -16,14 +17,11 @@ hotkey.bind(tilingMash, "j", function() tiling.cycle(1) end)
 hotkey.bind(tilingMash, "k", function() tiling.cycle(-1) end)
 hotkey.bind(tilingMash, "space", function() tiling.promote() end)
 
--- hotkey.bind({"ctrl"}, "return", function()
---   local terminal = hs.application.find('alacritty')
---   if terminal:isFrontmost() then
---     terminal:hide()
---   else
---     hs.application.launchOrFocus("/Applications/Alacritty.app")
---   end
--- end)
+hotkey.bind({"ctrl", "command"}, "return", function()
+    local win = window.focusedWindow()
+    win:maximize()
+end)
+
 
 hotkey.bind({"ctrl"}, "return", function()
   local terminal = hs.application.find('kitty')
