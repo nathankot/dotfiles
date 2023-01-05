@@ -42,3 +42,5 @@ auto-save-list
 .npmrc
 .ccls-cache
 .dir-locals.el
+*.code-workspace
+.vscode
