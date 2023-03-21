@@ -6,12 +6,9 @@
     state: present
     accept_external_apps: yes
   loop:
-    - iterm2
     - karabiner-elements
     - google-chrome
     - appcleaner
     - the-unarchiver
     - hammerspoon
-    - alacritty
     - kitty
-    - openzfs
