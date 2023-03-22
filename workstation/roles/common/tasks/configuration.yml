@@ -194,3 +194,10 @@
     domain: com.apple.dock
     value: false
     type: bool
+
+- name: Don't write .DS_Store to network stores
+  community.general.osx_defaults:
+    key: DSDontWriteNetworkStores
+    domain: com.apple.desktopservices
+    value: true
+    type: bool
