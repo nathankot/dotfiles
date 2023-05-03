@@ -6,6 +6,7 @@ node_modules/
 vendor/
 bower_components/
 cache/
+env/
 .log
 .log*
 .tags
