@@ -3,4 +3,5 @@
 --write-subs
 --write-auto-subs
 --sub-format 'best'
---sub-langs 'en.*'
+--sub-langs 'en,en-orig,en-en'
+--restrict-filenames
