@@ -100,9 +100,12 @@ if test -d ~/opt/miniconda3/bin
 end
 
 # openssl include dir
-set -x OPENSSL_INCLUDE_DIR $HOMEBREW_ROOT/opt/openssl/include
-set -x OPENSSL_LIB_DIR $HOMEBREW_ROOT/opt/openssl/lib
-set -x DEP_OPENSSL_INCLUDE $HOMEBREW_ROOT/opt/openssl/include
+if command -v brew > /dev/null
+  set OPENSSL_PREFIX (brew --prefix openssl)
+  set -x OPENSSL_INCLUDE_DIR $OPENSSL_PREFIX/include
+  set -x OPENSSL_LIB_DIR $OPENSSL_PREFIX/lib
+  set -x DEP_OPENSSL_INCLUDE $OPENSSL_PREFIX/include
+end
 
 # fix for pinentry not working within emacs:
 set -x PINENTRY_USER_DATA "USE_CURSES=0"
