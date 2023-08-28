@@ -14,7 +14,6 @@
       - gnupg
       - hledger
       - httpie
-      - hub
       - icdiff
       - jq
       - ledger
