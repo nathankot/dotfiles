@@ -77,14 +77,14 @@
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
 
+[rerere]
+  enabled = true
+
+[http]
+	cookiefile = /Users/nathan/.gitcookies
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-
-[rerere]
-  enabled = true
-
-[http]
-  cookiefile = ~/.gitcookies
