@@ -36,6 +36,7 @@
   changed_when: false
   loop:
     - Hammerspoon
+    - MonitorControl
     - Karabiner-Elements
 
 # OSX DEFAULTS:
