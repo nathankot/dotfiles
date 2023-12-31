@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-# Please ensure you have the following requirements before
-# running this script:
-#
-# * Homebrew
-# * Python: `brew install python3` (probably not necessary anymore)
-# * Setup Virtual Env: `/usr/bin/python3 -m venv env`
-
 if [[ "$1" == "" ]]; then
   echo Please provide 'user' or 'admin' as the first argument
   exit
