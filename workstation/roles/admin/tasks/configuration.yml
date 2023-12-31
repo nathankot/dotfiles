@@ -6,10 +6,6 @@
   become_method: sudo
   lineinfile: line=/opt/homebrew/bin/fish path=/etc/shells
 
-- name: Change default shell to fish
-  shell: chsh -s /opt/homebrew/bin/fish {{ ansible_user_id }}
-  become: true
-
 - name: Tap loginitems repository for Homebrew
   community.general.homebrew_tap:
     path: /opt/homebrew/bin
