@@ -1,8 +1,8 @@
+---
 - name: Change default shell to fish
   shell: chsh -s /opt/homebrew/bin/fish {{ ansible_user_id }}
   become: true
 
----
 # DOCK
 
 - name: Remove all dock items
