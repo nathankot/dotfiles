@@ -42,9 +42,9 @@ cd "$ROOT/workstation"
 ../env/bin/ansible-galaxy install -r ./requirements.yml
 
 if [[ "$1" == "user" ]]; then
-  ../env/bin/ansible-playbook -v install_user.yml -e "github_access_token=$GITHUB_API_TOKEN"
+  ../env/bin/ansible-playbook install_user.yml -e "github_access_token=$GITHUB_API_TOKEN"
 elif [[ "$1" == "admin" ]]; then
-  ANSIBLE_BECOME_ASK_PASS=True ../env/bin/ansible-playbook -v install.yml -e "github_access_token=$GITHUB_API_TOKEN"
+  ANSIBLE_BECOME_ASK_PASS=True ../env/bin/ansible-playbook install.yml -e "github_access_token=$GITHUB_API_TOKEN"
 fi
 
 cd - || exit
