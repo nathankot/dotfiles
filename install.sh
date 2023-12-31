@@ -8,6 +8,11 @@ set -e
 # * Python: `brew install python3` (probably not necessary anymore)
 # * Setup Virtual Env: `/usr/bin/python3 -m venv env`
 
+if [[ "$1" == "" ]]; then
+  echo Please provide 'user' or 'admin' as the first argument
+  exit
+fi
+
 cd "$(dirname "${BASH_SOURCE}")"
 
 ROOT=$PWD
@@ -20,5 +25,11 @@ xargs -n 1 ln -s <<<"$FILES_SOURCE"
 cd "$ROOT/workstation"
 ../env/bin/pip install -r ../requirements.txt
 ../env/bin/ansible-galaxy install -r ./requirements.yml
-../env/bin/ansible-playbook -v install.yml -e "github_access_token=$GITHUB_API_TOKEN"
+
+if [[ "$1" == "user" ]]; then
+  ../env/bin/ansible-playbook -v install_user.yml -e "github_access_token=$GITHUB_API_TOKEN"
+elif [[ "$1" == "admin" ]]; then
+  ANSIBLE_BECOME_ASK_PASS=True ../env/bin/ansible-playbook -v install.yml -e "github_access_token=$GITHUB_API_TOKEN"
+fi
+
 cd - || exit

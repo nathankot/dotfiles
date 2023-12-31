@@ -1,0 +1,23 @@
+---
+# SHELL
+
+- name: Ensure fish is specified in /etc/shells
+  become: true
+  become_method: sudo
+  lineinfile: line=/opt/homebrew/bin/fish path=/etc/shells
+
+- name: Change default shell to fish
+  shell: chsh -s /opt/homebrew/bin/fish {{ ansible_user_id }}
+  become: true
+
+- name: Tap loginitems repository for Homebrew
+  community.general.homebrew_tap:
+    path: /opt/homebrew/bin
+    name: OJFord/formulae
+    state: present
+
+- name: Install loginitems homebrew tool
+  community.general.homebrew:
+    path: /opt/homebrew/bin
+    name: loginitems
+    state: present

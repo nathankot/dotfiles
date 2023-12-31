@@ -1,15 +1,4 @@
 ---
-# SHELL
-
-- name: Ensure fish is specified in /etc/shells
-  become: true
-  become_method: sudo
-  lineinfile: line=/opt/homebrew/bin/fish path=/etc/shells
-
-- name: Change default shell to fish
-  shell: chsh -s /opt/homebrew/bin/fish {{ ansible_user_id }}
-  become: true
-
 # DOCK
 
 - name: Remove all dock items
@@ -21,26 +10,24 @@
   notify:
     - restart dock
 
-# LOGIN ITEMS:
-
-- name: Tap loginitems repository for Homebrew
-  community.general.homebrew_tap:
-    path: /opt/homebrew/bin
-    name: OJFord/formulae
-    state: present
-
-- name: Install loginitems homebrew tool
-  community.general.homebrew:
-    path: /opt/homebrew/bin
-    name: loginitems
-    state: present
-
 - name: Setup login items
   command: "loginitems -a '{{ item }}'"
   changed_when: false
   loop:
     - Hammerspoon
     - Karabiner-Elements
+
+# KEYBOARD SHORTCUTS
+
+# TODO: this isn't quite working
+- name: Disable most unused screenshot shortcuts
+  command: >-
+    plutil -replace 'AppleSymbolicHotKeys.{{ item }}.enabled' -bool NO  /Users/{{ ansible_user_id }}/Library/Preferences/com.apple.symbolichotkeys.plist
+  loop:
+    - 28
+    - 29
+    - 31
+    - 184
 
 # OSX DEFAULTS:
 

@@ -26,8 +26,20 @@
   cron:
     name: Check Z pool health
     minute: "0"
-    job: /opt/homebrew/bin/fish /Users/{{ ansible_user_id }}/.dotfiles/check_zfs.fish
+    job: /opt/homebrew/bin/fish /Users/nathan/.dotfiles/check_zfs.fish
+
+- name: Install Homebrew packages
+  import_tasks: packages.yml
+  tags: [packages]
 
 - name: Setup configuration
   import_tasks: configuration.yml
   tags: [configuration]
+
+- name: Setup dnscrypt
+  import_tasks: dnscrypt.yml
+  tags: [dnscrypt]
+
+- name: Install Applications
+  import_tasks: apps.yml
+  tags: [apps]
