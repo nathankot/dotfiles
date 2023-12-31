@@ -13,6 +13,21 @@ if [[ "$1" == "" ]]; then
   exit
 fi
 
+# Support the new homebrew path if it is available:
+export PATH="$PATH:/opt/homebrew/bin"
+
+# Try to grab api token from fish private env file
+if [[ "$GITHUB_API_TOKEN" == "" ]]; then
+  export GITHUB_API_TOKEN=$(tac ./dotfiles/.shell/private.fish | grep -m 1 GITHUB_API_TOKEN | awk '{ print $4 }')
+fi
+
+# If we still don't have it, ask for it
+if [[ "$GITHUB_API_TOKEN" == "" ]]; then
+  read -p "Enter github access token: " GITHUB_API_TOKEN
+  export GITHUB_API_TOKEN
+  echo "set -x GITHUB_API_TOKEN $GITHUB_API_TOKEN" >> ./dotfiles/.shell/private.fish
+fi
+
 cd "$(dirname "${BASH_SOURCE}")"
 
 ROOT=$PWD
