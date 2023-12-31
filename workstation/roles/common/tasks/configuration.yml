@@ -1,7 +1,24 @@
 ---
+# Change default shell to fish
+
+- name: Check if we already did a chsh
+  stat: path=/Users/{{ ansible_user_id }}/.ansible_chsh_complete
+  register: chsh_complete_stat_result
+
+- name: Prompt for current users password
+  when: chsh_complete_stat_result.stat.exists == False
+  register: chshpwd
+  pause:
+    prompt: "Enter your current users password in order to chsh to fish"
+    echo: no
+
 - name: Change default shell to fish
-  shell: chsh -s /opt/homebrew/bin/fish {{ ansible_user_id }}
-  become: true
+  when: chsh_complete_stat_result.stat.exists == False
+  expect:
+    command: chsh -s /opt/homebrew/bin/fish {{ ansible_user_id }}
+    responses:
+      Password for: "{{ chshpwd.user_input }}"
+    creates: /Users/{{ ansible_user_id }}/.ansible_chsh_complete
 
 # DOCK
 
