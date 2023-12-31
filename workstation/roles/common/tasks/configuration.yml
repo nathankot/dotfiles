@@ -17,18 +17,6 @@
     - Hammerspoon
     - Karabiner-Elements
 
-# KEYBOARD SHORTCUTS
-
-# TODO: this isn't quite working
-- name: Disable most unused screenshot shortcuts
-  command: >-
-    plutil -replace 'AppleSymbolicHotKeys.{{ item }}.enabled' -bool NO  /Users/{{ ansible_user_id }}/Library/Preferences/com.apple.symbolichotkeys.plist
-  loop:
-    - 28
-    - 29
-    - 31
-    - 184
-
 # OSX DEFAULTS:
 
 - name: Enable full keyboard access for all controls
