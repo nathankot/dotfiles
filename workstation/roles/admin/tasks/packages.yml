@@ -37,6 +37,10 @@
       - asdf
       - freetype
       - qmk/qmk/qmk
+      # haskell support
+      - haskell-language-server
+      - hlint
+      - ormolu
 
 - name: Remove obsolete homebrew packages
   community.general.homebrew:
