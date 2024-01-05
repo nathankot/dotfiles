@@ -11,6 +11,9 @@ export PATH="./bin:$PATH"
 if command -v stack > /dev/null; then
   export PATH="$HOME/.local/bin:$PATH"
 fi
+if command -v ghcup > /dev/null; then
+  export PATH="$HOME/.ghcup/bin:$PATH"
+fi
 
 # go
 if command -v go > /dev/null; then

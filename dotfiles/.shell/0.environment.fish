@@ -58,6 +58,9 @@ set -x PATH ./.env/bin $PATH
 if command -v stack > /dev/null
   set -x PATH $HOME/.local/bin $PATH
 end
+if command -v ghcup > /dev/null
+  set -x PATH $HOME/.ghcup/bin $PATH
+end
 
 # Rust
 if test -d $HOME/.cargo/bin > /dev/null
