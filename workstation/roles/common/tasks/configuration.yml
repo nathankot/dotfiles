@@ -116,16 +116,16 @@
     value: false
     type: boolean
 
-- name: Bottom-right hotcorner locks monitor (Action)
+- name: Bottom-right hotcorner turns on screensaver (Action)
   community.general.osx_defaults:
     domain: com.apple.dock
     key: wvous-br-corner
-    value: 10
+    value: 5
     type: int
   notify:
     - restart dock
 
-- name: Bottom-right hotcorner locks monitor (Modifier)
+- name: Bottom-right hotcorner turns on screensaver (Modifier)
   community.general.osx_defaults:
     domain: com.apple.dock
     key: wvous-br-modifier
