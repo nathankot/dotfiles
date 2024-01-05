@@ -15,7 +15,7 @@
 - name: Change default shell to fish
   when: chsh_complete_stat_result.stat.exists == False
   expect:
-    command: chsh -s /opt/homebrew/bin/fish {{ ansible_user_id }}
+    command: /bin/bash -c 'chsh -s /opt/homebrew/bin/fish {{ ansible_user_id }} && touch /Users/{{ansible_user_id}}/.ansible_chsh_complete'
     responses:
       Password for: "{{ chshpwd.user_input }}"
     creates: /Users/{{ ansible_user_id }}/.ansible_chsh_complete
