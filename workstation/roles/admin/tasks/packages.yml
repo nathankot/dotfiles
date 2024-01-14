@@ -76,3 +76,5 @@
       bin: goimports
     - url: github.com/FiloSottile/captive-browser
       bin: captive-browser
+    - url: github.com/google/git-appraise/git-appraise@latest
+      bin: git-appraise
