@@ -38,6 +38,7 @@
       - freetype
       - qmk/qmk/qmk
       - ghcup
+      - jj
 
 - name: Remove obsolete homebrew packages
   community.general.homebrew:
