@@ -1,3 +1,6 @@
 [submodule "dotfiles/.hammerspoon/hs/tiling"]
 	path = dotfiles/.hammerspoon/hs/tiling
 	url = https://github.com/nathankot/mjolnir.tiling.git
+[submodule "dotfiles/.config/kitty/kitty-themes"]
+	path = dotfiles/.config/kitty/kitty-themes
+	url = https://github.com/dexpota/kitty-themes.git
