@@ -39,6 +39,9 @@
       - qmk/qmk/qmk
       - ghcup
       - jj
+      - fd
+      - bat
+      - fzf
 
 - name: Remove obsolete homebrew packages
   community.general.homebrew:

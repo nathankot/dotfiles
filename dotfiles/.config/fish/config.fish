@@ -1,10 +1,4 @@
-set fish_color_valid_path \x2d\x2dunderline
-set fish_greeting Let\x27s\x20go\x2e
-set fish_key_bindings fish_default_key_bindings
-set fish_pager_color_completion normal
-set fish_pager_color_description 555\x1eyellow
-set fish_pager_color_prefix cyan
-set fish_pager_color_progress cyan
+fish_config theme choose "ayu Dark"
 
 # Paths
 source ~/.shell/0.environment.fish

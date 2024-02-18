@@ -1,7 +1,8 @@
 *
 !.gitignore
-!fish
 !karabiner
 !captive-browser.toml
 !kitty.conf
-!kitty/kitty-themes
+
+!fish/*
+!kitty/kitty-themes/*
