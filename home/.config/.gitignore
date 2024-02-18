@@ -1,8 +1,2 @@
-*
-!.gitignore
-!karabiner
-!captive-browser.toml
-!kitty.conf
-
-!fish/*
-!kitty/kitty-themes/*
+fish/fish_variables
+fishd.*
