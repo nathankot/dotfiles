@@ -1,4 +1,4 @@
-fish_config theme choose "ayu Dark"
+fish_config theme choose "Solarized Light"
 
 # Paths
 source ~/.shell/0.environment.fish
