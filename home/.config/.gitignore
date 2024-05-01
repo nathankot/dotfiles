@@ -2,3 +2,5 @@ fish/fish_variables
 fishd.*
 gh
 gcloud
+packer
+hcloud
