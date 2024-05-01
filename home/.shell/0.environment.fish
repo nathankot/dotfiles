@@ -112,3 +112,9 @@ end
 
 # fix for pinentry not working within emacs:
 set -x PINENTRY_USER_DATA "USE_CURSES=0"
+
+# direnv
+if command -v direnv > /dev/null
+  direnv hook fish | source
+  set -g direnv_fish_mode disable_arrow
+end

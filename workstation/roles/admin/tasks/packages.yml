@@ -7,6 +7,7 @@
       - python@3.10
       - git
       - fish
+      - direnv
       - emacs
       - aspell
       - coreutils
@@ -23,8 +24,6 @@
       - pinentry-mac
       - reattach-to-user-namespace
       - the_silver_searcher
-      - tmux
-      - tmux-mem-cpu-load
       - tor
       - transcrypt
       - watch
@@ -55,6 +54,8 @@
       - pyenv
       - glide
       - dockutil
+      - tmux
+      - tmux-mem-cpu-load
 
 - name: Install asdf plugins and latest known versions
   shell:
