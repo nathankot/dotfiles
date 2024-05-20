@@ -42,6 +42,7 @@
       - bat
       - fzf
       - sqlfmt
+      - pgformatter
 
 - name: Remove obsolete homebrew packages
   community.general.homebrew:
