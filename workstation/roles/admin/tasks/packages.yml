@@ -41,6 +41,7 @@
       - fd
       - bat
       - fzf
+      - sqlfmt
 
 - name: Remove obsolete homebrew packages
   community.general.homebrew:
