@@ -1,5 +1,5 @@
 -o '/Volumes/shared/archive/videos/%(uploader)s/%(upload_date)s_%(title)s.%(ext)s'
--f '(bv*[res=1080][ext=mp4]+ba[ext=m4a][abr<=129]) / b[ext=mp4]+ba'
+-f '(bv*[res=1080][ext=mp4]+ba[ext=m4a][abr<=129]) / bv[ext=mp4]+ba'
 --write-subs
 --write-auto-subs
 --sub-format 'best'
