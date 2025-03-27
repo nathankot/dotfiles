@@ -21,6 +21,7 @@
       - libtool
       - netcat
       - pass
+      - pass-otp
       - pinentry-mac
       - reattach-to-user-namespace
       - the_silver_searcher
