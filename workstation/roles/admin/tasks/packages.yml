@@ -44,6 +44,7 @@
       - fzf
       - sqlfmt
       - pgformatter
+      - borgbackup
 
 - name: Remove obsolete homebrew packages
   community.general.homebrew:
