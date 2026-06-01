@@ -65,7 +65,7 @@
     cmd: |
       asdf plugin add {{ item.name }}
       asdf install {{ item.name }} {{ item.version }}
-      asdf global {{ item.name }} {{ item.version }}
+      asdf set --home {{ item.name }} {{ item.version }}
     creates: "~/.asdf/installs/{{ item.name }}/{{ item.version }}"
   loop:
     - { name: golang, version: 1.18.3 }
