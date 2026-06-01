@@ -36,7 +36,6 @@
       - dockutil
       - asdf
       - freetype
-      - qmk/qmk/qmk
       - ghcup
       - jj
       - fd
