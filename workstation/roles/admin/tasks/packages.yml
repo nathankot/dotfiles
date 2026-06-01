@@ -63,26 +63,19 @@
 - name: Install asdf plugins and latest known versions
   shell:
     cmd: |
-      asdf plugin-add {{ item.name }}
+      asdf plugin add {{ item.name }}
       asdf install {{ item.name }} {{ item.version }}
       asdf global {{ item.name }} {{ item.version }}
     creates: "~/.asdf/installs/{{ item.name }}/{{ item.version }}"
   loop:
     - { name: golang, version: 1.18.3 }
-    - { name: ruby, version: 3.1.2 }
-    - { name: deno, version: 1.21.3 }
-    - { name: nodejs, version: 18.5.0 }
+    - { name: ruby, version: 3.4.9 }
+    - { name: nodejs, version: 24.3.0 }
 
 - name: Install go utils
   shell:
     cmd: "asdf exec go get -u {{ item.url }}"
     creates: "~/Development/bin/{{ item.bin }}"
   loop:
-    - url: golang.org/x/tools/gopls@latest
-      bin: gopls
-    - url: golang.org/x/tools/cmd/goimports
-      bin: goimports
     - url: github.com/FiloSottile/captive-browser
       bin: captive-browser
-    - url: github.com/google/git-appraise/git-appraise@latest
-      bin: git-appraise
