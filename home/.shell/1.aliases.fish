@@ -2,7 +2,6 @@
 abbr --add l ls
 
 # git
-alias git hub
 abbr --add g git
 abbr --add gb git branch --sort=committerdate
 abbr --add gs git status
