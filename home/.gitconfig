@@ -88,3 +88,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[user]
+	signingkey = 9C87E68A04D703062516C89820BD11703257E7B9
+	name = Nathan Kot
+	email = me@nathankot.com
