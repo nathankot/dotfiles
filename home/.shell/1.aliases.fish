@@ -27,14 +27,6 @@ if command -v tmuxinator > /dev/null
   abbr --add mux tmuxinator
 end
 
-function activate_conda
-  eval conda "shell.fish" "hook" $argv | source
-end
-
-function legedit
-  emacs ~/Google\ Drive/Documents/Accounting/current.ledger
-end
-
 function pfd -d "Return the path of the frontmost Finder window"
   osascript 2>/dev/null -e '
     tell application "Finder"
