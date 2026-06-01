@@ -48,7 +48,7 @@ end
 set -x PATH node_modules/.bin $PATH
 
 if command -v asdf > /dev/null
-  source (brew --prefix asdf)/libexec/asdf.fish
+  asdf completion fish > ~/.config/fish/completions/asdf.fish
 end
 
 set -x PATH ./env/bin $PATH
