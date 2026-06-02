@@ -731,7 +731,6 @@
             ],
             "name": "NK",
             "one_to_many_mappings": null,
-            "selected": true,
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
                 "country_code": 0,
@@ -854,6 +853,12 @@
                                   "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "right_shift" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "0",
+                                        "modifiers": ["right_shift"]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -1584,7 +1589,7 @@
             ],
             "name": "NK - JIS",
             "one_to_many_mappings": null,
-            "selected": false,
+            "selected": true,
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
                 "country_code": 0,
