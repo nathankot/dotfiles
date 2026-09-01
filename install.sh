@@ -24,11 +24,25 @@ fi
 cd "$(dirname "${BASH_SOURCE}")"
 
 ROOT=$PWD
-FILES_SOURCE=$(find "$ROOT/home" -depth 1)
+# Everything except .config is symlinked as a whole top-level entry.
+FILES_SOURCE=$(find "$ROOT/home" -depth 1 -not -name .config)
 FILES_DEST=${FILES_SOURCE//$ROOT\/home/$HOME}
 cd "$HOME" || exit
 xargs -n 1 rm -rf <<<"$FILES_DEST"
 xargs -n 1 ln -s <<<"$FILES_SOURCE"
+
+# ~/.config must be a REAL directory, linked one child at a time. Some apps
+# canonicalize their config path and refuse to run when it resolves elsewhere
+# (AWS VPN Client 6.x aborts with "Path is not canonical"). Linking per-child
+# also means unmanaged state under ~/.config (e.g. ~/.config/AWSVPNClient)
+# survives a re-run of this script.
+mkdir -p "$HOME/.config"
+while IFS= read -r src; do
+  dest="$HOME/.config/$(basename "$src")"
+  rm -rf "$dest"
+  ln -s "$src" "$dest"
+done < <(find "$ROOT/home/.config" -depth 1)
+
 chmod 700 ~/.gnupg
 
 cd "$ROOT/workstation"
